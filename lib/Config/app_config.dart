@@ -1,1 +1,1 @@
-class AppConfig {}
+class AppConfig {  static const String appName= 'Zan';}
