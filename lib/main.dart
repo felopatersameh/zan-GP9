@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:zan/Config/Themes/light.dart';
 import 'Config/Cubit/settings_cubit.dart';
 import 'Config/Routes/Navigation/navigation_service.dart';
 import 'Config/Routes/route_constants.dart';
 import 'Config/Routes/route_generator.dart';
+import 'Config/Themes/dark_theme.dart';
 import 'Config/app_config.dart';
 import 'generated/l10n.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -35,8 +37,8 @@ class MyApp extends StatelessWidget {
                 title: AppConfig.appName,
                 locale: state.locale,
                 themeMode: state.themeMode,
-                theme: ThemeData.light(),
-                darkTheme: ThemeData.dark(),
+                theme: lightThemes(),
+                darkTheme: darkThemes(),
                 localizationsDelegates: const [
                   S.delegate,
                   GlobalMaterialLocalizations.delegate,

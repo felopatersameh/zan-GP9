@@ -1,0 +1,1 @@
+import 'package:flutter/material.dart';import 'package:zan/Core/Resources/app_colors.dart';ThemeData lightThemes() {  return ThemeData(    brightness: Brightness.light,    visualDensity: VisualDensity.adaptivePlatformDensity,    primaryColor: AppColors.primaryColor,  );}
