@@ -1,0 +1,1 @@
+import 'package:flutter/material.dart';import '../../Core/Resources/app_colors.dart';ThemeData darkThemes() {  return ThemeData(    brightness: Brightness.dark,    visualDensity: VisualDensity.adaptivePlatformDensity,    primaryColor: AppColors.primaryColor,  );}
