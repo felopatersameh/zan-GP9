@@ -21,5 +21,25 @@ class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'ar';
 
   final messages = _notInlinedMessages(_notInlinedMessages);
-  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{};
+  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "LoginByApple": MessageLookupByLibrary.simpleMessage(
+      "المتابعة باستخدام ابل",
+    ),
+    "LoginByEmail": MessageLookupByLibrary.simpleMessage(
+      "المتابعة باستخدام البريد الإلكتروني",
+    ),
+    "LoginByFacebook": MessageLookupByLibrary.simpleMessage(
+      "المتابعة باستخدام فيسبوك",
+    ),
+    "LoginByGoogle": MessageLookupByLibrary.simpleMessage(
+      "المتابعة باستخدام جوجل",
+    ),
+    "SkipLogin": MessageLookupByLibrary.simpleMessage("ربما لاحقًا"),
+    "TitleLogoSplash": MessageLookupByLibrary.simpleMessage(
+      "ابحث عن أفضل الأجزاء لمنزلك",
+    ),
+    "TitleStartApp": MessageLookupByLibrary.simpleMessage(
+      "ابحث عن الأثاث المثالي لمنزلك الجميل",
+    ),
+  };
 }

@@ -54,6 +54,71 @@ class S {
   static S? maybeOf(BuildContext context) {
     return Localizations.of<S>(context, S);
   }
+
+  /// `Find the best parts for your home`
+  String get TitleLogoSplash {
+    return Intl.message(
+      'Find the best parts for your home',
+      name: 'TitleLogoSplash',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Find your perfect furniture for your sweet hom`
+  String get TitleStartApp {
+    return Intl.message(
+      'Find your perfect furniture for your sweet hom',
+      name: 'TitleStartApp',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Continue with Apple`
+  String get LoginByApple {
+    return Intl.message(
+      'Continue with Apple',
+      name: 'LoginByApple',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Continue with Google`
+  String get LoginByGoogle {
+    return Intl.message(
+      'Continue with Google',
+      name: 'LoginByGoogle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Continue with Facebook`
+  String get LoginByFacebook {
+    return Intl.message(
+      'Continue with Facebook',
+      name: 'LoginByFacebook',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Continue with email`
+  String get LoginByEmail {
+    return Intl.message(
+      'Continue with email',
+      name: 'LoginByEmail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Maybe Later`
+  String get SkipLogin {
+    return Intl.message('Maybe Later', name: 'SkipLogin', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
