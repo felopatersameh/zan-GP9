@@ -1,1 +1,1 @@
-class AppConfig {  static const String appName= 'Zan';}
+import 'package:flutter/cupertino.dart';class AppConfig {  static const String appName= 'Zan';  static const ScrollPhysics physicsCustomScrollView =RangeMaintainingScrollPhysics();}

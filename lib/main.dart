@@ -13,9 +13,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 
 final NavigationService navigationService = NavigationService();
 
-void main() {
-  runApp(const MyApp());
-}
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -29,11 +27,14 @@ class MyApp extends StatelessWidget {
         minTextAdapt: true,
         splitScreenMode: true,
         useInheritedMediaQuery: true,
+        enableScaleWH: () => false,
+        enableScaleText: () => true,
         builder: (context, child) {
           ScreenUtil.init(context);
           return BlocBuilder<SettingsCubit, SettingsState>(
             builder: (context, state) {
               return MaterialApp(
+                debugShowCheckedModeBanner: false,
                 title: AppConfig.appName,
                 locale: state.locale,
                 themeMode: state.themeMode,
