@@ -1,1 +1,0 @@
-import 'package:flutter/material.dart';import 'package:flutter_screenutil/flutter_screenutil.dart';extension ScreenUtilExtension on BuildContext {  bool get isSmallScreen => ScreenUtil().screenWidth < 600;}
