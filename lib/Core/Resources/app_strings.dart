@@ -1,1 +1,1 @@
-class AppStrings {}
+class AppStrings {  static const String titleLogoSplash = "Find the best parts for your home";}
