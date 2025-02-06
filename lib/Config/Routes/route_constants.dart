@@ -1,1 +1,0 @@
-class RouteNames {  static const String splash = '/';  static const String start = '/Start';  static const String home = '/Home';}
