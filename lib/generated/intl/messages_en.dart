@@ -22,6 +22,10 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "Cart": MessageLookupByLibrary.simpleMessage("Cart"),
+    "Explore": MessageLookupByLibrary.simpleMessage("Explore"),
+    "Favourite": MessageLookupByLibrary.simpleMessage("Favourite"),
+    "Home": MessageLookupByLibrary.simpleMessage("Home"),
     "LoginByApple": MessageLookupByLibrary.simpleMessage("Continue with Apple"),
     "LoginByEmail": MessageLookupByLibrary.simpleMessage("Continue with email"),
     "LoginByFacebook": MessageLookupByLibrary.simpleMessage(
@@ -30,6 +34,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "LoginByGoogle": MessageLookupByLibrary.simpleMessage(
       "Continue with Google",
     ),
+    "Profile": MessageLookupByLibrary.simpleMessage("Profile"),
+    "Scan": MessageLookupByLibrary.simpleMessage("Scan"),
+    "Search": MessageLookupByLibrary.simpleMessage("Search"),
     "SkipLogin": MessageLookupByLibrary.simpleMessage("Maybe Later"),
     "TitleLogoSplash": MessageLookupByLibrary.simpleMessage(
       "Find the best parts for your home",

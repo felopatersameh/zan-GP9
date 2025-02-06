@@ -119,6 +119,41 @@ class S {
   String get SkipLogin {
     return Intl.message('Maybe Later', name: 'SkipLogin', desc: '', args: []);
   }
+
+  /// `Home`
+  String get Home {
+    return Intl.message('Home', name: 'Home', desc: '', args: []);
+  }
+
+  /// `Explore`
+  String get Explore {
+    return Intl.message('Explore', name: 'Explore', desc: '', args: []);
+  }
+
+  /// `Scan`
+  String get Scan {
+    return Intl.message('Scan', name: 'Scan', desc: '', args: []);
+  }
+
+  /// `Cart`
+  String get Cart {
+    return Intl.message('Cart', name: 'Cart', desc: '', args: []);
+  }
+
+  /// `Profile`
+  String get Profile {
+    return Intl.message('Profile', name: 'Profile', desc: '', args: []);
+  }
+
+  /// `Favourite`
+  String get Favourite {
+    return Intl.message('Favourite', name: 'Favourite', desc: '', args: []);
+  }
+
+  /// `Search`
+  String get Search {
+    return Intl.message('Search', name: 'Search', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
