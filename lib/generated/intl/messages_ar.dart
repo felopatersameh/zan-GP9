@@ -22,9 +22,13 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "Back": MessageLookupByLibrary.simpleMessage("السابق"),
     "Cart": MessageLookupByLibrary.simpleMessage("عربة التسوق"),
+    "Continue": MessageLookupByLibrary.simpleMessage("واصل"),
     "Explore": MessageLookupByLibrary.simpleMessage("استكشاف"),
     "Favourite": MessageLookupByLibrary.simpleMessage("المفضلة"),
+    "GoodMorning": MessageLookupByLibrary.simpleMessage("صباح الخير"),
+    "GoodNight": MessageLookupByLibrary.simpleMessage("مساء خير"),
     "Home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
     "LoginByApple": MessageLookupByLibrary.simpleMessage(
       "المتابعة باستخدام ابل",
@@ -38,15 +42,36 @@ class MessageLookup extends MessageLookupByLibrary {
     "LoginByGoogle": MessageLookupByLibrary.simpleMessage(
       "المتابعة باستخدام جوجل",
     ),
-    "Profile": MessageLookupByLibrary.simpleMessage("الملف الشخصي"),
+    "Next": MessageLookupByLibrary.simpleMessage("التالي"),
+    "Popular": MessageLookupByLibrary.simpleMessage("شائع 🔥"),
+    "Profile": MessageLookupByLibrary.simpleMessage("حسابي"),
     "Scan": MessageLookupByLibrary.simpleMessage("مسح ضوئي"),
     "Search": MessageLookupByLibrary.simpleMessage("بحث"),
+    "SeeAll": MessageLookupByLibrary.simpleMessage("عرض الكل"),
     "SkipLogin": MessageLookupByLibrary.simpleMessage("ربما لاحقًا"),
     "TitleLogoSplash": MessageLookupByLibrary.simpleMessage(
       "ابحث عن أفضل الأجزاء لمنزلك",
     ),
     "TitleStartApp": MessageLookupByLibrary.simpleMessage(
       "ابحث عن الأثاث المثالي لمنزلك الجميل",
+    ),
+    "boarding1_body": MessageLookupByLibrary.simpleMessage(
+      "دائمًا في دورة كبيرة ومتنوعة من الخيارات. عناصر مضمونة، وتصميم رائع.",
+    ),
+    "boarding1_title": MessageLookupByLibrary.simpleMessage(
+      "منتجات بجودة مضمونة",
+    ),
+    "boarding2_body": MessageLookupByLibrary.simpleMessage(
+      "دائمًا في دورة كبيرة ومتنوعة من الخيارات. عناصر مضمونة، وتصميم رائع.",
+    ),
+    "boarding2_title": MessageLookupByLibrary.simpleMessage(
+      "ضمان شامل إذا لم يناسبك المنتج",
+    ),
+    "boarding3_body": MessageLookupByLibrary.simpleMessage(
+      "هذا النص هو مثال لنص يمكن استبداله في نفس المساحة.",
+    ),
+    "boarding3_title": MessageLookupByLibrary.simpleMessage(
+      "لنحقق معًا احتياجاتك السكنية",
     ),
   };
 }
