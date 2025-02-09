@@ -22,9 +22,13 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "Back": MessageLookupByLibrary.simpleMessage("Back"),
     "Cart": MessageLookupByLibrary.simpleMessage("Cart"),
+    "Continue": MessageLookupByLibrary.simpleMessage("Continue"),
     "Explore": MessageLookupByLibrary.simpleMessage("Explore"),
     "Favourite": MessageLookupByLibrary.simpleMessage("Favourite"),
+    "GoodMorning": MessageLookupByLibrary.simpleMessage("Good Morning"),
+    "GoodNight": MessageLookupByLibrary.simpleMessage("Good Night"),
     "Home": MessageLookupByLibrary.simpleMessage("Home"),
     "LoginByApple": MessageLookupByLibrary.simpleMessage("Continue with Apple"),
     "LoginByEmail": MessageLookupByLibrary.simpleMessage("Continue with email"),
@@ -34,15 +38,36 @@ class MessageLookup extends MessageLookupByLibrary {
     "LoginByGoogle": MessageLookupByLibrary.simpleMessage(
       "Continue with Google",
     ),
+    "Next": MessageLookupByLibrary.simpleMessage("Next"),
+    "Popular": MessageLookupByLibrary.simpleMessage("Popular 🔥"),
     "Profile": MessageLookupByLibrary.simpleMessage("Profile"),
     "Scan": MessageLookupByLibrary.simpleMessage("Scan"),
     "Search": MessageLookupByLibrary.simpleMessage("Search"),
+    "SeeAll": MessageLookupByLibrary.simpleMessage("See All"),
     "SkipLogin": MessageLookupByLibrary.simpleMessage("Maybe Later"),
     "TitleLogoSplash": MessageLookupByLibrary.simpleMessage(
       "Find the best parts for your home",
     ),
     "TitleStartApp": MessageLookupByLibrary.simpleMessage(
       "Find your perfect furniture for your sweet hom",
+    ),
+    "boarding1_body": MessageLookupByLibrary.simpleMessage(
+      "Semper in cursus magna et eu varius nunc adipiscing. Elementum justo, laoreet id sem.",
+    ),
+    "boarding1_title": MessageLookupByLibrary.simpleMessage(
+      "Goods with guaranteed quality",
+    ),
+    "boarding2_body": MessageLookupByLibrary.simpleMessage(
+      "Semper in cursus magna et eu varius nunc adipiscing. Elementum justo, laoreet id sem.",
+    ),
+    "boarding2_title": MessageLookupByLibrary.simpleMessage(
+      "Total warranty if the product doesn\'t fit",
+    ),
+    "boarding3_body": MessageLookupByLibrary.simpleMessage(
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    ),
+    "boarding3_title": MessageLookupByLibrary.simpleMessage(
+      "Let\'s fulfill your housing needs in logo.",
     ),
   };
 }

@@ -65,6 +65,81 @@ class S {
     );
   }
 
+  /// `Goods with guaranteed quality`
+  String get boarding1_title {
+    return Intl.message(
+      'Goods with guaranteed quality',
+      name: 'boarding1_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Semper in cursus magna et eu varius nunc adipiscing. Elementum justo, laoreet id sem.`
+  String get boarding1_body {
+    return Intl.message(
+      'Semper in cursus magna et eu varius nunc adipiscing. Elementum justo, laoreet id sem.',
+      name: 'boarding1_body',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Total warranty if the product doesn't fit`
+  String get boarding2_title {
+    return Intl.message(
+      'Total warranty if the product doesn\'t fit',
+      name: 'boarding2_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Semper in cursus magna et eu varius nunc adipiscing. Elementum justo, laoreet id sem.`
+  String get boarding2_body {
+    return Intl.message(
+      'Semper in cursus magna et eu varius nunc adipiscing. Elementum justo, laoreet id sem.',
+      name: 'boarding2_body',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Let's fulfill your housing needs in logo.`
+  String get boarding3_title {
+    return Intl.message(
+      'Let\'s fulfill your housing needs in logo.',
+      name: 'boarding3_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Lorem Ipsum is simply dummy text of the printing and typesetting industry.`
+  String get boarding3_body {
+    return Intl.message(
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+      name: 'boarding3_body',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Next`
+  String get Next {
+    return Intl.message('Next', name: 'Next', desc: '', args: []);
+  }
+
+  /// `Back`
+  String get Back {
+    return Intl.message('Back', name: 'Back', desc: '', args: []);
+  }
+
+  /// `Continue`
+  String get Continue {
+    return Intl.message('Continue', name: 'Continue', desc: '', args: []);
+  }
+
   /// `Find your perfect furniture for your sweet hom`
   String get TitleStartApp {
     return Intl.message(
@@ -153,6 +228,31 @@ class S {
   /// `Search`
   String get Search {
     return Intl.message('Search', name: 'Search', desc: '', args: []);
+  }
+
+  /// `Popular 🔥`
+  String get Popular {
+    return Intl.message('Popular 🔥', name: 'Popular', desc: '', args: []);
+  }
+
+  /// `See All`
+  String get SeeAll {
+    return Intl.message('See All', name: 'SeeAll', desc: '', args: []);
+  }
+
+  /// `Good Morning`
+  String get GoodMorning {
+    return Intl.message(
+      'Good Morning',
+      name: 'GoodMorning',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Good Night`
+  String get GoodNight {
+    return Intl.message('Good Night', name: 'GoodNight', desc: '', args: []);
   }
 }
 
