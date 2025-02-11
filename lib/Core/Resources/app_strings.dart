@@ -1,1 +1,0 @@
-// class AppStrings {//   static const String titleLogoSplash = "Find the best parts for your home";//   static const String titleStartApp =//       "Find your perfect furniture for your sweet home";// }

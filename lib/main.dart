@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:sentry_flutter/sentry_flutter.dart';
 import 'package:zan/Config/Themes/light.dart';
 import 'Config/Cubit/settings_cubit.dart';
 import 'Config/Routes/Navigation/navigation_service.dart';
@@ -14,16 +13,18 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 final AppNavigationService kNavigationService = AppNavigationService();
 
 Future<void> main() async {
-  await SentryFlutter.init(
-        (options) {
-      options.dsn = 'https://3af3a95877cbfcc6f2d362c3e9922af3@o4508230445236224.ingest.de.sentry.io/4508770274181200';
-    },
-    appRunner: () => runApp(
-      SentryWidget(
-        child: MyApp(),
-      ),
-    ),
-  );
+  // await SentryFlutter.init(
+  //       (options) {
+  //     options.dsn = 'https://3af3a95877cbfcc6f2d362c3e9922af3@o4508230445236224.ingest.de.sentry.io/4508770274181200';
+  //   },
+  //   appRunner: () => runApp(
+  //     SentryWidget(
+  //       child: MyApp(),
+  //     ),
+  //   ),
+  // );
+  runApp(MyApp());
+
 }
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -58,7 +59,7 @@ class MyApp extends StatelessWidget {
                 ],
                 supportedLocales: S.delegate.supportedLocales,
                 onGenerateRoute: RouteGenerator.generateRoute,
-                initialRoute: AppRouteNames.splash,
+                initialRoute: AppRouteNames.main,
                 navigatorKey: kNavigationService.navigatorKey,
               );
             },

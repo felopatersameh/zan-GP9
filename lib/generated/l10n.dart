@@ -230,14 +230,14 @@ class S {
     return Intl.message('Search', name: 'Search', desc: '', args: []);
   }
 
-  /// `Popular 🔥`
-  String get Popular {
-    return Intl.message('Popular 🔥', name: 'Popular', desc: '', args: []);
-  }
-
   /// `See All`
   String get SeeAll {
     return Intl.message('See All', name: 'SeeAll', desc: '', args: []);
+  }
+
+  /// `Popular 🔥`
+  String get Popular {
+    return Intl.message('Popular 🔥', name: 'Popular', desc: '', args: []);
   }
 
   /// `Good Morning`
@@ -253,6 +253,46 @@ class S {
   /// `Good Night`
   String get GoodNight {
     return Intl.message('Good Night', name: 'GoodNight', desc: '', args: []);
+  }
+
+  /// `Latest Products`
+  String get LatestProduct {
+    return Intl.message(
+      'Latest Products',
+      name: 'LatestProduct',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `All`
+  String get all {
+    return Intl.message('All', name: 'all', desc: '', args: []);
+  }
+
+  /// `Sofa`
+  String get sofa {
+    return Intl.message('Sofa', name: 'sofa', desc: '', args: []);
+  }
+
+  /// `Table`
+  String get table {
+    return Intl.message('Table', name: 'table', desc: '', args: []);
+  }
+
+  /// `Chair`
+  String get chair {
+    return Intl.message('Chair', name: 'chair', desc: '', args: []);
+  }
+
+  /// `Lamp`
+  String get lamp {
+    return Intl.message('Lamp', name: 'lamp', desc: '', args: []);
+  }
+
+  /// `Bed`
+  String get bed {
+    return Intl.message('Bed', name: 'bed', desc: '', args: []);
   }
 }
 

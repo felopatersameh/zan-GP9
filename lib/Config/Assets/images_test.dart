@@ -1,0 +1,1 @@
+const String pathTestImages = 'Assets/Png';class AppImagesTest {  static const String bestOffers = 'Assets/test_images/BestOffers.png';  static const String testPhoto = "Assets/test_images/Rectangle 22485.png";}

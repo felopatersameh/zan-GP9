@@ -30,6 +30,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "GoodMorning": MessageLookupByLibrary.simpleMessage("Good Morning"),
     "GoodNight": MessageLookupByLibrary.simpleMessage("Good Night"),
     "Home": MessageLookupByLibrary.simpleMessage("Home"),
+    "LatestProduct": MessageLookupByLibrary.simpleMessage("Latest Products"),
     "LoginByApple": MessageLookupByLibrary.simpleMessage("Continue with Apple"),
     "LoginByEmail": MessageLookupByLibrary.simpleMessage("Continue with email"),
     "LoginByFacebook": MessageLookupByLibrary.simpleMessage(
@@ -51,6 +52,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "TitleStartApp": MessageLookupByLibrary.simpleMessage(
       "Find your perfect furniture for your sweet hom",
     ),
+    "all": MessageLookupByLibrary.simpleMessage("All"),
     "boarding1_body": MessageLookupByLibrary.simpleMessage(
       "Semper in cursus magna et eu varius nunc adipiscing. Elementum justo, laoreet id sem.",
     ),
@@ -69,5 +71,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "boarding3_title": MessageLookupByLibrary.simpleMessage(
       "Let\'s fulfill your housing needs in logo.",
     ),
+    "chair": MessageLookupByLibrary.simpleMessage("Chair"),
+    "lamp": MessageLookupByLibrary.simpleMessage("Lamp"),
+    "sofa": MessageLookupByLibrary.simpleMessage("Sofa"),
+    "table": MessageLookupByLibrary.simpleMessage("Table"),
   };
 }

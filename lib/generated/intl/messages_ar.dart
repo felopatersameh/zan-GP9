@@ -30,6 +30,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "GoodMorning": MessageLookupByLibrary.simpleMessage("صباح الخير"),
     "GoodNight": MessageLookupByLibrary.simpleMessage("مساء خير"),
     "Home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
+    "LatestProduct": MessageLookupByLibrary.simpleMessage("أحدث منتجات"),
     "LoginByApple": MessageLookupByLibrary.simpleMessage(
       "المتابعة باستخدام ابل",
     ),
@@ -55,6 +56,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "TitleStartApp": MessageLookupByLibrary.simpleMessage(
       "ابحث عن الأثاث المثالي لمنزلك الجميل",
     ),
+    "all": MessageLookupByLibrary.simpleMessage("الكل"),
     "boarding1_body": MessageLookupByLibrary.simpleMessage(
       "دائمًا في دورة كبيرة ومتنوعة من الخيارات. عناصر مضمونة، وتصميم رائع.",
     ),
@@ -73,5 +75,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "boarding3_title": MessageLookupByLibrary.simpleMessage(
       "لنحقق معًا احتياجاتك السكنية",
     ),
+    "chair": MessageLookupByLibrary.simpleMessage("كرسي"),
+    "lamp": MessageLookupByLibrary.simpleMessage("مصباح"),
+    "sofa": MessageLookupByLibrary.simpleMessage("أريكة"),
+    "table": MessageLookupByLibrary.simpleMessage("طاولة"),
   };
 }
