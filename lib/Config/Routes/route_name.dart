@@ -1,1 +1,1 @@
-class  AppRouteNames {  static const String splash = '/';  static const String boarding = '/Boarding';  static const String start = '/Start';  static const String main = '/main';}
+class  AppRouteNames {  static const String splash = '/';  static const String boarding = '/Boarding';  static const String start = '/Start';  static const String main = '/Main';  static const String search = '/Search';}

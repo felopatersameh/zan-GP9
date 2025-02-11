@@ -225,9 +225,9 @@ class S {
     return Intl.message('Favourite', name: 'Favourite', desc: '', args: []);
   }
 
-  /// `Search`
+  /// `Search...`
   String get Search {
-    return Intl.message('Search', name: 'Search', desc: '', args: []);
+    return Intl.message('Search...', name: 'Search', desc: '', args: []);
   }
 
   /// `See All`
@@ -293,6 +293,26 @@ class S {
   /// `Bed`
   String get bed {
     return Intl.message('Bed', name: 'bed', desc: '', args: []);
+  }
+
+  /// `Your Card`
+  String get YourCard {
+    return Intl.message('Your Card', name: 'YourCard', desc: '', args: []);
+  }
+
+  /// `Security`
+  String get Security {
+    return Intl.message('Security', name: 'Security', desc: '', args: []);
+  }
+
+  /// `Languages`
+  String get Languages {
+    return Intl.message('Languages', name: 'Languages', desc: '', args: []);
+  }
+
+  /// `Help and Support`
+  String get Info {
+    return Intl.message('Help and Support', name: 'Info', desc: '', args: []);
   }
 }
 
