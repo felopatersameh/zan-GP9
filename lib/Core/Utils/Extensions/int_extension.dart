@@ -1,0 +1,1 @@
+import 'package:flutter_screenutil/flutter_screenutil.dart';extension IntegerExtension on int {  int get crossAxisCount => (1.sw ~/ 150).clamp(1, this).toInt();  int get mainAxisCount => (1.sh ~/ 150).clamp(1, this).toInt();}

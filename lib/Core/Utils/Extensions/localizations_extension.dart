@@ -1,1 +1,1 @@
-import 'package:flutter/material.dart';import '../../../generated/l10n.dart';extension AppLocalizationsExtension on BuildContext {  S get appStrings => S.of(this);}
+import 'package:flutter/material.dart';import '../../../generated/l10n.dart';extension AppLocalizationsExtension on BuildContext {  S get local => S.of(this);}
