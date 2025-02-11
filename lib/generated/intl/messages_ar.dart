@@ -30,6 +30,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "GoodMorning": MessageLookupByLibrary.simpleMessage("صباح الخير"),
     "GoodNight": MessageLookupByLibrary.simpleMessage("مساء خير"),
     "Home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
+    "Info": MessageLookupByLibrary.simpleMessage("المساعدة والدعم"),
+    "Languages": MessageLookupByLibrary.simpleMessage("اللغات"),
     "LatestProduct": MessageLookupByLibrary.simpleMessage("أحدث منتجات"),
     "LoginByApple": MessageLookupByLibrary.simpleMessage(
       "المتابعة باستخدام ابل",
@@ -47,7 +49,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "Popular": MessageLookupByLibrary.simpleMessage("شائع 🔥"),
     "Profile": MessageLookupByLibrary.simpleMessage("حسابي"),
     "Scan": MessageLookupByLibrary.simpleMessage("مسح ضوئي"),
-    "Search": MessageLookupByLibrary.simpleMessage("بحث"),
+    "Search": MessageLookupByLibrary.simpleMessage("بحث..."),
+    "Security": MessageLookupByLibrary.simpleMessage("حماية"),
     "SeeAll": MessageLookupByLibrary.simpleMessage("عرض الكل"),
     "SkipLogin": MessageLookupByLibrary.simpleMessage("ربما لاحقًا"),
     "TitleLogoSplash": MessageLookupByLibrary.simpleMessage(
@@ -56,7 +59,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "TitleStartApp": MessageLookupByLibrary.simpleMessage(
       "ابحث عن الأثاث المثالي لمنزلك الجميل",
     ),
+    "YourCard": MessageLookupByLibrary.simpleMessage("بطاقتك"),
     "all": MessageLookupByLibrary.simpleMessage("الكل"),
+    "bed": MessageLookupByLibrary.simpleMessage("سرير"),
     "boarding1_body": MessageLookupByLibrary.simpleMessage(
       "دائمًا في دورة كبيرة ومتنوعة من الخيارات. عناصر مضمونة، وتصميم رائع.",
     ),

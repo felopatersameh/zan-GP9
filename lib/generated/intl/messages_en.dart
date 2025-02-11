@@ -30,6 +30,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "GoodMorning": MessageLookupByLibrary.simpleMessage("Good Morning"),
     "GoodNight": MessageLookupByLibrary.simpleMessage("Good Night"),
     "Home": MessageLookupByLibrary.simpleMessage("Home"),
+    "Info": MessageLookupByLibrary.simpleMessage("Help and Support"),
+    "Languages": MessageLookupByLibrary.simpleMessage("Languages"),
     "LatestProduct": MessageLookupByLibrary.simpleMessage("Latest Products"),
     "LoginByApple": MessageLookupByLibrary.simpleMessage("Continue with Apple"),
     "LoginByEmail": MessageLookupByLibrary.simpleMessage("Continue with email"),
@@ -43,7 +45,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "Popular": MessageLookupByLibrary.simpleMessage("Popular 🔥"),
     "Profile": MessageLookupByLibrary.simpleMessage("Profile"),
     "Scan": MessageLookupByLibrary.simpleMessage("Scan"),
-    "Search": MessageLookupByLibrary.simpleMessage("Search"),
+    "Search": MessageLookupByLibrary.simpleMessage("Search..."),
+    "Security": MessageLookupByLibrary.simpleMessage("Security"),
     "SeeAll": MessageLookupByLibrary.simpleMessage("See All"),
     "SkipLogin": MessageLookupByLibrary.simpleMessage("Maybe Later"),
     "TitleLogoSplash": MessageLookupByLibrary.simpleMessage(
@@ -52,7 +55,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "TitleStartApp": MessageLookupByLibrary.simpleMessage(
       "Find your perfect furniture for your sweet hom",
     ),
+    "YourCard": MessageLookupByLibrary.simpleMessage("Your Card"),
     "all": MessageLookupByLibrary.simpleMessage("All"),
+    "bed": MessageLookupByLibrary.simpleMessage("Bed"),
     "boarding1_body": MessageLookupByLibrary.simpleMessage(
       "Semper in cursus magna et eu varius nunc adipiscing. Elementum justo, laoreet id sem.",
     ),
