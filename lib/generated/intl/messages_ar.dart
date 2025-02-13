@@ -46,12 +46,14 @@ class MessageLookup extends MessageLookupByLibrary {
       "المتابعة باستخدام جوجل",
     ),
     "Next": MessageLookupByLibrary.simpleMessage("التالي"),
+    "Notifications": MessageLookupByLibrary.simpleMessage("إشعارات"),
     "Popular": MessageLookupByLibrary.simpleMessage("شائع 🔥"),
     "Profile": MessageLookupByLibrary.simpleMessage("حسابي"),
     "Scan": MessageLookupByLibrary.simpleMessage("مسح ضوئي"),
     "Search": MessageLookupByLibrary.simpleMessage("بحث..."),
     "Security": MessageLookupByLibrary.simpleMessage("حماية"),
     "SeeAll": MessageLookupByLibrary.simpleMessage("عرض الكل"),
+    "Setting": MessageLookupByLibrary.simpleMessage("الاعدادات"),
     "SkipLogin": MessageLookupByLibrary.simpleMessage("ربما لاحقًا"),
     "TitleLogoSplash": MessageLookupByLibrary.simpleMessage(
       "ابحث عن أفضل الأجزاء لمنزلك",
@@ -80,8 +82,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "boarding3_title": MessageLookupByLibrary.simpleMessage(
       "لنحقق معًا احتياجاتك السكنية",
     ),
+    "cart": MessageLookupByLibrary.simpleMessage("عناصر"),
     "chair": MessageLookupByLibrary.simpleMessage("كرسي"),
     "lamp": MessageLookupByLibrary.simpleMessage("مصباح"),
+    "massageInCart": MessageLookupByLibrary.simpleMessage(
+      "آسف! لا توجد عناصر هنا بعد.",
+    ),
     "sofa": MessageLookupByLibrary.simpleMessage("أريكة"),
     "table": MessageLookupByLibrary.simpleMessage("طاولة"),
   };

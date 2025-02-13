@@ -9,13 +9,16 @@ import 'Config/Routes/route_generator.dart';
 import 'Config/Themes/dark_theme.dart';
 import 'Config/app_config.dart';
 import 'generated/l10n.dart';
+// import 'package:sentry_flutter/sentry_flutter.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+
 final AppNavigationService kNavigationService = AppNavigationService();
 
 Future<void> main() async {
   // await SentryFlutter.init(
-  //       (options) {
-  //     options.dsn = 'https://3af3a95877cbfcc6f2d362c3e9922af3@o4508230445236224.ingest.de.sentry.io/4508770274181200';
+  //   (options) {
+  //     options.dsn =
+  //         'https://3af3a95877cbfcc6f2d362c3e9922af3@o4508230445236224.ingest.de.sentry.io/4508770274181200';
   //   },
   //   appRunner: () => runApp(
   //     SentryWidget(
@@ -24,8 +27,8 @@ Future<void> main() async {
   //   ),
   // );
   runApp(MyApp());
-
 }
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -59,7 +62,7 @@ class MyApp extends StatelessWidget {
                 ],
                 supportedLocales: S.delegate.supportedLocales,
                 onGenerateRoute: RouteGenerator.generateRoute,
-                initialRoute: AppRouteNames.main,
+                initialRoute: AppRoutes.splash,
                 navigatorKey: kNavigationService.navigatorKey,
               );
             },

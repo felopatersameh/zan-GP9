@@ -295,6 +295,11 @@ class S {
     return Intl.message('Bed', name: 'bed', desc: '', args: []);
   }
 
+  /// `Setting`
+  String get Setting {
+    return Intl.message('Setting', name: 'Setting', desc: '', args: []);
+  }
+
   /// `Your Card`
   String get YourCard {
     return Intl.message('Your Card', name: 'YourCard', desc: '', args: []);
@@ -305,6 +310,16 @@ class S {
     return Intl.message('Security', name: 'Security', desc: '', args: []);
   }
 
+  /// `Notifications`
+  String get Notifications {
+    return Intl.message(
+      'Notifications',
+      name: 'Notifications',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Languages`
   String get Languages {
     return Intl.message('Languages', name: 'Languages', desc: '', args: []);
@@ -313,6 +328,21 @@ class S {
   /// `Help and Support`
   String get Info {
     return Intl.message('Help and Support', name: 'Info', desc: '', args: []);
+  }
+
+  /// `Sorry! No items are here yet.`
+  String get massageInCart {
+    return Intl.message(
+      'Sorry! No items are here yet.',
+      name: 'massageInCart',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cart`
+  String get cart {
+    return Intl.message('Cart', name: 'cart', desc: '', args: []);
   }
 }
 
