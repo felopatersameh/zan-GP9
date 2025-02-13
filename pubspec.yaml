@@ -48,6 +48,7 @@ dependencies:
   skeletonizer: ^1.4.3
   dio: ^5.8.0+1
   choice: ^2.3.2
+  flutter_launcher_icons: ^0.14.3
 
 
 dev_dependencies:
@@ -105,3 +106,10 @@ flutter:
   # see https://flutter.dev/to/font-from-package
 flutter_intl:
   enabled: true
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  image_path: "Assets/Png/ic_launcher_foreground.png"
+  adaptive_icon_background: "Assets/Png/ic_launcher_background.png"
+  adaptive_icon_foreground: "Assets/Png/ic_launcher_foreground.png"
+
