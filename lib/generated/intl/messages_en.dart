@@ -42,12 +42,14 @@ class MessageLookup extends MessageLookupByLibrary {
       "Continue with Google",
     ),
     "Next": MessageLookupByLibrary.simpleMessage("Next"),
+    "Notifications": MessageLookupByLibrary.simpleMessage("Notifications"),
     "Popular": MessageLookupByLibrary.simpleMessage("Popular 🔥"),
     "Profile": MessageLookupByLibrary.simpleMessage("Profile"),
     "Scan": MessageLookupByLibrary.simpleMessage("Scan"),
     "Search": MessageLookupByLibrary.simpleMessage("Search..."),
     "Security": MessageLookupByLibrary.simpleMessage("Security"),
     "SeeAll": MessageLookupByLibrary.simpleMessage("See All"),
+    "Setting": MessageLookupByLibrary.simpleMessage("Setting"),
     "SkipLogin": MessageLookupByLibrary.simpleMessage("Maybe Later"),
     "TitleLogoSplash": MessageLookupByLibrary.simpleMessage(
       "Find the best parts for your home",
@@ -76,8 +78,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "boarding3_title": MessageLookupByLibrary.simpleMessage(
       "Let\'s fulfill your housing needs in logo.",
     ),
+    "cart": MessageLookupByLibrary.simpleMessage("Cart"),
     "chair": MessageLookupByLibrary.simpleMessage("Chair"),
     "lamp": MessageLookupByLibrary.simpleMessage("Lamp"),
+    "massageInCart": MessageLookupByLibrary.simpleMessage(
+      "Sorry! No items are here yet.",
+    ),
     "sofa": MessageLookupByLibrary.simpleMessage("Sofa"),
     "table": MessageLookupByLibrary.simpleMessage("Table"),
   };
