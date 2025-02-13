@@ -22,11 +22,14 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "ApplyFilters": MessageLookupByLibrary.simpleMessage("تطبيق المرشحات"),
     "Back": MessageLookupByLibrary.simpleMessage("السابق"),
     "Cart": MessageLookupByLibrary.simpleMessage("عربة التسوق"),
+    "Categories": MessageLookupByLibrary.simpleMessage("فئات"),
     "Continue": MessageLookupByLibrary.simpleMessage("واصل"),
     "Explore": MessageLookupByLibrary.simpleMessage("استكشاف"),
     "Favourite": MessageLookupByLibrary.simpleMessage("المفضلة"),
+    "Filter": MessageLookupByLibrary.simpleMessage("فلتر"),
     "GoodMorning": MessageLookupByLibrary.simpleMessage("صباح الخير"),
     "GoodNight": MessageLookupByLibrary.simpleMessage("مساء خير"),
     "Home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
@@ -48,13 +51,16 @@ class MessageLookup extends MessageLookupByLibrary {
     "Next": MessageLookupByLibrary.simpleMessage("التالي"),
     "Notifications": MessageLookupByLibrary.simpleMessage("إشعارات"),
     "Popular": MessageLookupByLibrary.simpleMessage("شائع 🔥"),
+    "Price": MessageLookupByLibrary.simpleMessage("سعر"),
     "Profile": MessageLookupByLibrary.simpleMessage("حسابي"),
+    "ResetFilters": MessageLookupByLibrary.simpleMessage("إعادة تعيين مرشحات"),
     "Scan": MessageLookupByLibrary.simpleMessage("مسح ضوئي"),
     "Search": MessageLookupByLibrary.simpleMessage("بحث..."),
     "Security": MessageLookupByLibrary.simpleMessage("حماية"),
     "SeeAll": MessageLookupByLibrary.simpleMessage("عرض الكل"),
     "Setting": MessageLookupByLibrary.simpleMessage("الاعدادات"),
     "SkipLogin": MessageLookupByLibrary.simpleMessage("ربما لاحقًا"),
+    "StarRating": MessageLookupByLibrary.simpleMessage("تصنيف"),
     "TitleLogoSplash": MessageLookupByLibrary.simpleMessage(
       "ابحث عن أفضل الأجزاء لمنزلك",
     ),
