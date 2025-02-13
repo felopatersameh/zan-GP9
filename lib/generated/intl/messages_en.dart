@@ -22,11 +22,14 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "ApplyFilters": MessageLookupByLibrary.simpleMessage("Apply Filters"),
     "Back": MessageLookupByLibrary.simpleMessage("Back"),
     "Cart": MessageLookupByLibrary.simpleMessage("Cart"),
+    "Categories": MessageLookupByLibrary.simpleMessage("Categories"),
     "Continue": MessageLookupByLibrary.simpleMessage("Continue"),
     "Explore": MessageLookupByLibrary.simpleMessage("Explore"),
     "Favourite": MessageLookupByLibrary.simpleMessage("Favourite"),
+    "Filter": MessageLookupByLibrary.simpleMessage("Filter"),
     "GoodMorning": MessageLookupByLibrary.simpleMessage("Good Morning"),
     "GoodNight": MessageLookupByLibrary.simpleMessage("Good Night"),
     "Home": MessageLookupByLibrary.simpleMessage("Home"),
@@ -44,13 +47,16 @@ class MessageLookup extends MessageLookupByLibrary {
     "Next": MessageLookupByLibrary.simpleMessage("Next"),
     "Notifications": MessageLookupByLibrary.simpleMessage("Notifications"),
     "Popular": MessageLookupByLibrary.simpleMessage("Popular 🔥"),
+    "Price": MessageLookupByLibrary.simpleMessage("Price"),
     "Profile": MessageLookupByLibrary.simpleMessage("Profile"),
+    "ResetFilters": MessageLookupByLibrary.simpleMessage("Reset Filters"),
     "Scan": MessageLookupByLibrary.simpleMessage("Scan"),
     "Search": MessageLookupByLibrary.simpleMessage("Search..."),
     "Security": MessageLookupByLibrary.simpleMessage("Security"),
     "SeeAll": MessageLookupByLibrary.simpleMessage("See All"),
     "Setting": MessageLookupByLibrary.simpleMessage("Setting"),
     "SkipLogin": MessageLookupByLibrary.simpleMessage("Maybe Later"),
+    "StarRating": MessageLookupByLibrary.simpleMessage("Star Rating"),
     "TitleLogoSplash": MessageLookupByLibrary.simpleMessage(
       "Find the best parts for your home",
     ),

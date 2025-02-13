@@ -295,6 +295,46 @@ class S {
     return Intl.message('Bed', name: 'bed', desc: '', args: []);
   }
 
+  /// `Categories`
+  String get Categories {
+    return Intl.message('Categories', name: 'Categories', desc: '', args: []);
+  }
+
+  /// `Price`
+  String get Price {
+    return Intl.message('Price', name: 'Price', desc: '', args: []);
+  }
+
+  /// `Star Rating`
+  String get StarRating {
+    return Intl.message('Star Rating', name: 'StarRating', desc: '', args: []);
+  }
+
+  /// `Filter`
+  String get Filter {
+    return Intl.message('Filter', name: 'Filter', desc: '', args: []);
+  }
+
+  /// `Reset Filters`
+  String get ResetFilters {
+    return Intl.message(
+      'Reset Filters',
+      name: 'ResetFilters',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Apply Filters`
+  String get ApplyFilters {
+    return Intl.message(
+      'Apply Filters',
+      name: 'ApplyFilters',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Setting`
   String get Setting {
     return Intl.message('Setting', name: 'Setting', desc: '', args: []);
