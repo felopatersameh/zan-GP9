@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-// import 'package:sentry_flutter/sentry_flutter.dart';
 import 'Config/Themes/light.dart';
 import 'Config/Cubit/settings_cubit.dart';
 import 'Config/Routes/Navigation/navigation_service.dart';
@@ -9,23 +8,15 @@ import 'Config/Routes/route_name.dart';
 import 'Config/Routes/route_generator.dart';
 import 'Config/Themes/dark_theme.dart';
 import 'Config/app_config.dart';
+import 'Core/Services/service_locator.dart';
 import 'generated/l10n.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 final AppNavigationService kNavigationService = AppNavigationService();
 
 Future<void> main() async {
-  // await SentryFlutter.init(
-  //   (options) {
-  //     options.dsn =
-  //         'https://3af3a95877cbfcc6f2d362c3e9922af3@o4508230445236224.ingest.de.sentry.io/4508770274181200';
-  //   },
-  //   appRunner: () => runApp(
-  //     SentryWidget(
-  //       child: MyApp(),
-  //     ),
-  //   ),
-  // );
+  WidgetsFlutterBinding.ensureInitialized();
+  await setupServiceLocator();
   runApp(MyApp());
 }
 
@@ -45,6 +36,7 @@ class MyApp extends StatelessWidget {
         enableScaleText: () => true,
         builder: (_, child) {
           ScreenUtil.init(context);
+          //! DioHelper.init(context);
           return BlocBuilder<SettingsCubit, SettingsState>(
             builder: (context, state) {
               return MaterialApp(

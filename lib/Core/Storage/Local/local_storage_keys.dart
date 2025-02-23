@@ -1,1 +1,1 @@
-class LocalStorageKeys {}
+import '../../../Config/app_config.dart';class LocalStorageKeys {  static const String boxName = "${AppConfig.appName}Box";  static const String token = 'token';  static const String isFirstTime = 'isFirstTime';  static const String isLoggedIn = 'isLoggedIn';  static const String isOnboardingCompleted = 'isOnboardingCompleted';  static const String additionalData = 'additionalData';}

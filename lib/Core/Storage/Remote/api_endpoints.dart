@@ -1,1 +1,1 @@
-class ApiEndpoints {}
+class ApiEndpoints {  static var baseUrl = '';}
