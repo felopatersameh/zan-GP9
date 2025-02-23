@@ -215,6 +215,11 @@ class S {
     return Intl.message('Cart', name: 'Cart', desc: '', args: []);
   }
 
+  /// `Services`
+  String get services {
+    return Intl.message('Services', name: 'services', desc: '', args: []);
+  }
+
   /// `Profile`
   String get Profile {
     return Intl.message('Profile', name: 'Profile', desc: '', args: []);
