@@ -90,6 +90,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "massageInCart": MessageLookupByLibrary.simpleMessage(
       "Sorry! No items are here yet.",
     ),
+    "services": MessageLookupByLibrary.simpleMessage("Services"),
     "sofa": MessageLookupByLibrary.simpleMessage("Sofa"),
     "table": MessageLookupByLibrary.simpleMessage("Table"),
   };

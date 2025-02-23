@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:zan/Config/Themes/light.dart';
+// import 'package:sentry_flutter/sentry_flutter.dart';
+import 'Config/Themes/light.dart';
 import 'Config/Cubit/settings_cubit.dart';
 import 'Config/Routes/Navigation/navigation_service.dart';
 import 'Config/Routes/route_name.dart';
@@ -9,7 +10,6 @@ import 'Config/Routes/route_generator.dart';
 import 'Config/Themes/dark_theme.dart';
 import 'Config/app_config.dart';
 import 'generated/l10n.dart';
-// import 'package:sentry_flutter/sentry_flutter.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 final AppNavigationService kNavigationService = AppNavigationService();

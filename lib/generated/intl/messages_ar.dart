@@ -94,6 +94,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "massageInCart": MessageLookupByLibrary.simpleMessage(
       "آسف! لا توجد عناصر هنا بعد.",
     ),
+    "services": MessageLookupByLibrary.simpleMessage("خدمات"),
     "sofa": MessageLookupByLibrary.simpleMessage("أريكة"),
     "table": MessageLookupByLibrary.simpleMessage("طاولة"),
   };
