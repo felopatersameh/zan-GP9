@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../Config/Assets/image_png.dart';
 import '../../../../Config/Routes/route_name.dart';
+import '../../../../Core/Storage/Local/local_storage.dart';
+import '../../../../Core/Storage/Local/local_storage_keys.dart';
 import '../../../../main.dart';
 import '../../../../Core/Resources/app_fonts.dart';
 import '../../../../Core/Utils/Extensions/localizations_extension.dart';
@@ -76,7 +78,8 @@ class ContainerAuthenticationBody extends StatelessWidget {
 
                 16.verticalSpace,
                 TextButton(
-                  onPressed: () {
+                  onPressed: () async {
+                    await LocalStorageService.setValue(LocalStorageKeys.isFirstTime, true);
                     kNavigationService.clearAndNavigateTo(AppRoutes.main);
                   },
                   child: Text(
