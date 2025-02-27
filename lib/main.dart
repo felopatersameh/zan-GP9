@@ -36,9 +36,9 @@ class MyApp extends StatelessWidget {
         enableScaleText: () => true,
         builder: (_, child) {
           ScreenUtil.init(context);
-          //! DioHelper.init(context);
           return BlocBuilder<SettingsCubit, SettingsState>(
             builder: (context, state) {
+              // DioHelper.init(state.locale.languageCode);
               return MaterialApp(
                 debugShowCheckedModeBanner: false,
                 title: AppConfig.appName,

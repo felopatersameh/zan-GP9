@@ -1,0 +1,1 @@
+enum NumbersOfCrossAxisCount {  small([150, (52 / 75)]),  large([400, 2.5]);  final List<num> value;  const NumbersOfCrossAxisCount(this.value);}
