@@ -75,10 +75,10 @@ class S {
     );
   }
 
-  /// `Semper in cursus magna et eu varius nunc adipiscing. Elementum justo, laoreet id sem.`
+  /// `Sempre in curses magna et eu various nuns adipiscing. Elementum justo, laoreet id sem.`
   String get boarding1_body {
     return Intl.message(
-      'Semper in cursus magna et eu varius nunc adipiscing. Elementum justo, laoreet id sem.',
+      'Sempre in curses magna et eu various nuns adipiscing. Elementum justo, laoreet id sem.',
       name: 'boarding1_body',
       desc: '',
       args: [],
@@ -95,10 +95,10 @@ class S {
     );
   }
 
-  /// `Semper in cursus magna et eu varius nunc adipiscing. Elementum justo, laoreet id sem.`
+  /// `Sempre in curses magna et eu various nuns adipiscing. Elementum justo, laoreet id sem.`
   String get boarding2_body {
     return Intl.message(
-      'Semper in cursus magna et eu varius nunc adipiscing. Elementum justo, laoreet id sem.',
+      'Sempre in curses magna et eu various nuns adipiscing. Elementum justo, laoreet id sem.',
       name: 'boarding2_body',
       desc: '',
       args: [],
@@ -190,9 +190,9 @@ class S {
     );
   }
 
-  /// `Maybe Later`
+  /// `Maybe Later >`
   String get SkipLogin {
-    return Intl.message('Maybe Later', name: 'SkipLogin', desc: '', args: []);
+    return Intl.message('Maybe Later >', name: 'SkipLogin', desc: '', args: []);
   }
 
   /// `Home`
@@ -241,8 +241,8 @@ class S {
   }
 
   /// `Popular 🔥`
-  String get Popular {
-    return Intl.message('Popular 🔥', name: 'Popular', desc: '', args: []);
+  String get popular {
+    return Intl.message('Popular 🔥', name: 'popular', desc: '', args: []);
   }
 
   /// `Good Morning`
@@ -388,6 +388,111 @@ class S {
   /// `Cart`
   String get cart {
     return Intl.message('Cart', name: 'cart', desc: '', args: []);
+  }
+
+  /// `32% OFF`
+  String get offerPrice {
+    return Intl.message('32% OFF', name: 'offerPrice', desc: '', args: []);
+  }
+
+  /// `the highest quality products`
+  String get offerTittle {
+    return Intl.message(
+      'the highest quality products',
+      name: 'offerTittle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Check it out >`
+  String get checkout {
+    return Intl.message('Check it out >', name: 'checkout', desc: '', args: []);
+  }
+
+  /// `Recommendation Service`
+  String get Recommendation {
+    return Intl.message(
+      'Recommendation Service',
+      name: 'Recommendation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Can take any photo in your room and get recommendation for you what is best for you`
+  String get RecommendationDes {
+    return Intl.message(
+      'Can take any photo in your room and get recommendation for you what is best for you',
+      name: 'RecommendationDes',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `More Service`
+  String get Service {
+    return Intl.message('More Service', name: 'Service', desc: '', args: []);
+  }
+
+  /// `tap here to get more service`
+  String get ServiceDes {
+    return Intl.message(
+      'tap here to get more service',
+      name: 'ServiceDes',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Carpenter`
+  String get Carpenter {
+    return Intl.message('Carpenter', name: 'Carpenter', desc: '', args: []);
+  }
+
+  /// `can show you what is best for you`
+  String get CarpenterDes {
+    return Intl.message(
+      'can show you what is best for you',
+      name: 'CarpenterDes',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Trucks`
+  String get Trucks {
+    return Intl.message('Trucks', name: 'Trucks', desc: '', args: []);
+  }
+
+  /// `Trucks can take ant Drivers you need to  To transfer the foundation`
+  String get TrucksDes {
+    return Intl.message(
+      'Trucks can take ant Drivers you need to  To transfer the foundation',
+      name: 'TrucksDes',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Rent`
+  String get Rent {
+    return Intl.message('Rent', name: 'Rent', desc: '', args: []);
+  }
+
+  /// `For Rent Tools and Materials you need`
+  String get RentDes {
+    return Intl.message(
+      'For Rent Tools and Materials you need',
+      name: 'RentDes',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Skip`
+  String get Skip {
+    return Intl.message('Skip', name: 'Skip', desc: '', args: []);
   }
 }
 
