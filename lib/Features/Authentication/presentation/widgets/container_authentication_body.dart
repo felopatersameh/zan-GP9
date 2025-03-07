@@ -46,7 +46,7 @@ class ContainerAuthenticationBody extends StatelessWidget {
                 BuildSocialLoginButton(
                   imagePath: AppImagesPng.apple,
                   text: local.LoginByApple,
-                  backgroundColor: Colors.black,
+                  backgroundColor: AppColors.textColorBlack,
                   onPressed: () {
                     // Handle Apple login
                   },
@@ -72,7 +72,7 @@ class ContainerAuthenticationBody extends StatelessWidget {
                   imagePathSvg: AppImagesSvg.email,
                   text: local.LoginByEmail,
                   backgroundColor: AppColors.primaryColor,
-                  textColor: Colors.white,
+                  textColor:AppColors.textColorBlack,
                   onPressed: () {
                     // Handle Google Email
                   },
