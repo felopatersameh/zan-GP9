@@ -9,6 +9,7 @@ import 'Config/Routes/route_generator.dart';
 import 'Config/Themes/dark_theme.dart';
 import 'Config/app_config.dart';
 import 'Core/Services/service_locator.dart';
+import 'Core/Storage/Remote/api_service.dart';
 import 'generated/l10n.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
@@ -25,8 +26,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => SettingsCubit(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(create:  (context) => SettingsCubit()),
+        // BlocProvider()
+      ],
       child: ScreenUtilInit(
         designSize: const Size(375, 812),
         minTextAdapt: true,
@@ -38,7 +42,7 @@ class MyApp extends StatelessWidget {
           ScreenUtil.init(context);
           return BlocBuilder<SettingsCubit, SettingsState>(
             builder: (context, state) {
-              // DioHelper.init(state.locale.languageCode);
+               DioHelper.init(state.locale.languageCode);
               return MaterialApp(
                 debugShowCheckedModeBanner: false,
                 title: AppConfig.appName,
