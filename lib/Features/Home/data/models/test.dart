@@ -1,1 +1,0 @@
-class Test {  final String image;  final String title;  Test(this.image, this.title);}

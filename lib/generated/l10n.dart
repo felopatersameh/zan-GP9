@@ -140,10 +140,10 @@ class S {
     return Intl.message('Continue', name: 'Continue', desc: '', args: []);
   }
 
-  /// `Find your perfect furniture for your sweet hom`
+  /// `Find your perfect furniture for your sweet home`
   String get TitleStartApp {
     return Intl.message(
-      'Find your perfect furniture for your sweet hom',
+      'Find your perfect furniture for your sweet home',
       name: 'TitleStartApp',
       desc: '',
       args: [],
@@ -180,19 +180,74 @@ class S {
     );
   }
 
-  /// `Continue with email`
+  /// `Email`
   String get LoginByEmail {
+    return Intl.message('Email', name: 'LoginByEmail', desc: '', args: []);
+  }
+
+  /// `Login`
+  String get Login {
+    return Intl.message('Login', name: 'Login', desc: '', args: []);
+  }
+
+  /// `Sign Up`
+  String get SignUp {
+    return Intl.message('Sign Up', name: 'SignUp', desc: '', args: []);
+  }
+
+  /// `Forget Password ?`
+  String get forgetPassword {
     return Intl.message(
-      'Continue with email',
-      name: 'LoginByEmail',
+      'Forget Password ?',
+      name: 'forgetPassword',
       desc: '',
       args: [],
     );
   }
 
-  /// `Maybe Later >`
-  String get SkipLogin {
-    return Intl.message('Maybe Later >', name: 'SkipLogin', desc: '', args: []);
+  /// `Name`
+  String get name {
+    return Intl.message('Name', name: 'name', desc: '', args: []);
+  }
+
+  /// `Phone`
+  String get phone {
+    return Intl.message('Phone', name: 'phone', desc: '', args: []);
+  }
+
+  /// `Password`
+  String get password {
+    return Intl.message('Password', name: 'password', desc: '', args: []);
+  }
+
+  /// ` Enter Your`
+  String get Enter {
+    return Intl.message(' Enter Your', name: 'Enter', desc: '', args: []);
+  }
+
+  /// `Already have an account?`
+  String get orLogin {
+    return Intl.message(
+      'Already have an account?',
+      name: 'orLogin',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Don't have an account?`
+  String get orSingUp {
+    return Intl.message(
+      'Don\'t have an account?',
+      name: 'orSingUp',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Later`
+  String get later {
+    return Intl.message('Later', name: 'later', desc: '', args: []);
   }
 
   /// `Home`
@@ -230,9 +285,9 @@ class S {
     return Intl.message('Favourite', name: 'Favourite', desc: '', args: []);
   }
 
-  /// `Search...`
+  /// `Search`
   String get Search {
-    return Intl.message('Search...', name: 'Search', desc: '', args: []);
+    return Intl.message('Search', name: 'Search', desc: '', args: []);
   }
 
   /// `See All`
