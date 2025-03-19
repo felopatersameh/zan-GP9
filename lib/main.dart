@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:zan/Features/Home/presentation/manager/home_cubit.dart';
 import 'Config/Themes/light.dart';
 import 'Config/Cubit/settings_cubit.dart';
 import 'Config/Routes/Navigation/navigation_service.dart';
@@ -29,6 +30,7 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(create:  (context) => SettingsCubit()),
+        BlocProvider(create:  (context) => sl<HomeCubit>()),
         // BlocProvider()
       ],
       child: ScreenUtilInit(

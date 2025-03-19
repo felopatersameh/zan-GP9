@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'switch_pages_authentications.dart';
 import '../../../../../Core/Utils/Extensions/widget_extension.dart';
-import '../Controller/AnimatedCrossFade/animated_cross_fade_cubit.dart';
+import '../Cubit/AnimatedCrossFade/animated_cross_fade_cubit.dart';
 import '../../../../../Config/Assets/image_png.dart';
 import '../../../../../Config/Routes/route_name.dart';
 import '../../../../../Core/Storage/Local/local_storage_service.dart';
@@ -37,17 +37,16 @@ class ContainerAuthenticationBody extends StatelessWidget {
           color: AppColors.backgroundColor,
           borderRadius: BorderRadius.circular(25).r,
         ),
-        child:  [
-            SliverToBoxAdapter(
-              child: _buildTitleSplit(local),
-            ),
-            SliverFillRemaining(
-              hasScrollBody: false,
-              fillOverscroll: true,
-              child: SwitchPagesAuthentications(),
-            )
-          ].styledAppPages(withScroll: true),
-
+        child: [
+          SliverToBoxAdapter(
+            child: _buildTitleSplit(local),
+          ),
+          SliverFillRemaining(
+            hasScrollBody: false,
+            fillOverscroll: true,
+            child: SwitchPagesAuthentications(),
+          )
+        ].styledAppPages(withScroll: true),
       ),
     );
   }
@@ -89,6 +88,7 @@ class ContainerAuthenticationBody extends StatelessWidget {
             ),
             Text(
               local.TitleStartApp,
+              softWrap: true,
               style: AppTextStyles.h7Bold,
               textAlign: TextAlign.center,
               maxLines: local.TitleStartApp.length,
@@ -97,4 +97,3 @@ class ContainerAuthenticationBody extends StatelessWidget {
         ),
       );
 }
-
