@@ -34,6 +34,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "Enter": MessageLookupByLibrary.simpleMessage(" ادخل"),
     "Explore": MessageLookupByLibrary.simpleMessage("استكشاف"),
     "Favourite": MessageLookupByLibrary.simpleMessage("المفضلة"),
+    "Featured": MessageLookupByLibrary.simpleMessage("مميز"),
     "Filter": MessageLookupByLibrary.simpleMessage("فلتر"),
     "GoodMorning": MessageLookupByLibrary.simpleMessage("صباح الخير"),
     "GoodNight": MessageLookupByLibrary.simpleMessage("مساء خير"),
@@ -41,12 +42,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "Info": MessageLookupByLibrary.simpleMessage("المساعدة والدعم"),
     "Languages": MessageLookupByLibrary.simpleMessage("اللغات"),
     "LatestProduct": MessageLookupByLibrary.simpleMessage("أحدث منتجات"),
-    "Login": MessageLookupByLibrary.simpleMessage("تسجيل"),
-    "LoginByApple": MessageLookupByLibrary.simpleMessage("تسجيل باستخدام ابل"),
-    "LoginByEmail": MessageLookupByLibrary.simpleMessage(" البريد الإلكتروني"),
-    "LoginByFacebook": MessageLookupByLibrary.simpleMessage(
-      "تسجيل باستخدام فيسبوك",
-    ),
+    "Login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
     "LoginByGoogle": MessageLookupByLibrary.simpleMessage(
       "تسجيل باستخدام جوجل",
     ),
@@ -87,7 +83,6 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "YourCard": MessageLookupByLibrary.simpleMessage("بطاقتك"),
     "all": MessageLookupByLibrary.simpleMessage("الكل"),
-    "bed": MessageLookupByLibrary.simpleMessage("سرير"),
     "boarding1_body": MessageLookupByLibrary.simpleMessage(
       "دائمًا في دورة كبيرة ومتنوعة من الخيارات. عناصر مضمونة، وتصميم رائع.",
     ),
@@ -107,15 +102,26 @@ class MessageLookup extends MessageLookupByLibrary {
       "لنحقق معًا احتياجاتك السكنية",
     ),
     "cart": MessageLookupByLibrary.simpleMessage("عناصر"),
-    "chair": MessageLookupByLibrary.simpleMessage("كرسي"),
     "checkout": MessageLookupByLibrary.simpleMessage("تحقق من ذلك >"),
+    "email": MessageLookupByLibrary.simpleMessage("بريد إلكتروني"),
     "forgetPassword": MessageLookupByLibrary.simpleMessage(
       "هل نسيت كلمة المرور؟",
     ),
-    "lamp": MessageLookupByLibrary.simpleMessage("مصباح"),
     "later": MessageLookupByLibrary.simpleMessage("لاحقًا"),
     "massageInCart": MessageLookupByLibrary.simpleMessage(
       "آسف! لا توجد عناصر هنا بعد.",
+    ),
+    "messageChangeLanguageSuccess": MessageLookupByLibrary.simpleMessage(
+      "تم تغيير اللغة بنجاح",
+    ),
+    "messageLoginSuccess": MessageLookupByLibrary.simpleMessage(
+      "تم تسجيل الدخول بنجاح",
+    ),
+    "messageLogoutSuccess": MessageLookupByLibrary.simpleMessage(
+      "تم تسجيل الخروج بنجاح",
+    ),
+    "messageRegisterSuccess": MessageLookupByLibrary.simpleMessage(
+      "تم التسجيل بنجاح",
     ),
     "name": MessageLookupByLibrary.simpleMessage(" الاسم"),
     "offerPrice": MessageLookupByLibrary.simpleMessage("32 ٪ خصم"),
@@ -124,9 +130,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "orSingUp": MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),
     "password": MessageLookupByLibrary.simpleMessage(" كلمه المرور"),
     "phone": MessageLookupByLibrary.simpleMessage(" الموبيل"),
-    "popular": MessageLookupByLibrary.simpleMessage("شائع 🔥"),
+    "popular": MessageLookupByLibrary.simpleMessage("شائع "),
     "services": MessageLookupByLibrary.simpleMessage("خدمات"),
-    "sofa": MessageLookupByLibrary.simpleMessage("أريكة"),
-    "table": MessageLookupByLibrary.simpleMessage("طاولة"),
   };
 }

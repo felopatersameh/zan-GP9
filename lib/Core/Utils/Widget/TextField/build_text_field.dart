@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../../Features/Global/Authentication/presentation/Controller/AnimatedCrossFade/animated_cross_fade_cubit.dart';
+import '../../../../Features/Global/Authentication/presentation/Cubit/AnimatedCrossFade/animated_cross_fade_cubit.dart';
 import '../../../Resources/app_fonts.dart';
 import '../../Extensions/localizations_extension.dart';
 
@@ -60,7 +60,7 @@ class DefaultTextFormField extends StatelessWidget {
             obscureText: isPassword ?? false,
             validator: inputValidator,
             decoration: InputDecoration(
-              hintText: "${context.local.Enter}$text",
+              hintText: "${context.local.Enter} $text",
               hintStyle: AppTextStyles.bodyMediumBold
                   .copyWith(color: AppColors.grayscale70),
               fillColor: AppColors.backgroundColor,
