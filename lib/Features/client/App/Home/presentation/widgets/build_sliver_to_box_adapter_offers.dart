@@ -1,0 +1,1 @@
+// import 'package:flutter/material.dart';//// import '../../../../Config/Assets/images_test.dart';//// class SliverToBoxAdapterOffers extends StatelessWidget {//   const SliverToBoxAdapterOffers({//     super.key,//   });////   @override//   Widget build(BuildContext context) {//     return SliverToBoxAdapter(//       child: ,//     );//   }// }

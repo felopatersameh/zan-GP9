@@ -1,0 +1,1 @@
+import 'package:dartz/dartz.dart';import '../../../../../../Core/Storage/Remote/api_error_handler.dart';import '../../../../App/Home/data/models/product_preview_entities.dart';abstract class SearchRepo {  Future<Either<Failure, List<ProductPreviewEntities>>> searchProducts(      {required String category});}
