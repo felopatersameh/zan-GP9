@@ -1,16 +1,17 @@
 import 'package:get_it/get_it.dart';
 import 'package:hive_flutter/adapters.dart';
-import 'package:zan/Features/Explore/presentation/Cubit/explore_cubit.dart';
 
-import '../../Features/Explore/domain/UseCase/all_categories_use_case.dart';
-import '../../Features/Explore/domain/UseCase/preview_categories_use_case.dart';
-import '../../Features/Explore/domain/repositories/explore_repo_impl.dart';
 import '../../Features/Global/Authentication/domain/UseCase/login_use_case.dart';
 import '../../Features/Global/Authentication/domain/UseCase/register_use_case.dart';
 import '../../Features/Global/Authentication/domain/repository/authentication_repo_impl.dart';
 import '../../Features/Global/Authentication/presentation/Cubit/authentication_cubit.dart';
-import '../../Features/Home/domain/repositories/home_repo_impl.dart';
-import '../../Features/Home/presentation/manager/home_cubit.dart';
+
+import '../../Features/client/App/Explore/domain/UseCase/all_categories_use_case.dart';
+import '../../Features/client/App/Explore/domain/UseCase/preview_categories_use_case.dart';
+import '../../Features/client/App/Explore/domain/repositories/explore_repo_impl.dart';
+import '../../Features/client/App/Explore/presentation/Cubit/explore_cubit.dart';
+import '../../Features/client/App/Home/domain/repositories/home_repo_impl.dart';
+import '../../Features/client/App/Home/presentation/manager/home_cubit.dart';
 import '../Storage/Local/local_storage_service.dart';
 
 final sl = GetIt.instance;
