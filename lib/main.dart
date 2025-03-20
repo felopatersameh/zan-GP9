@@ -44,7 +44,7 @@ class MyApp extends StatelessWidget {
           ScreenUtil.init(context);
           return BlocBuilder<SettingsCubit, SettingsState>(
             builder: (context, state) {
-               DioHelper.init(state.locale.languageCode);
+               DioHelper.init();
               return MaterialApp(
                 debugShowCheckedModeBanner: false,
                 title: AppConfig.appName,
