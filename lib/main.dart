@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:zan/Features/Home/presentation/manager/home_cubit.dart';
 import 'Config/Themes/light.dart';
 import 'Config/Cubit/settings_cubit.dart';
 import 'Config/Routes/Navigation/navigation_service.dart';
@@ -11,6 +10,7 @@ import 'Config/Themes/dark_theme.dart';
 import 'Config/app_config.dart';
 import 'Core/Services/service_locator.dart';
 import 'Core/Storage/Remote/api_service.dart';
+import 'Features/client/App/Home/presentation/manager/home_cubit.dart';
 import 'generated/l10n.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
