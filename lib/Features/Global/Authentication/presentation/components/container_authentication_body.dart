@@ -55,20 +55,21 @@ class ContainerAuthenticationBody extends StatelessWidget {
         padding: EdgeInsets.all(0).w,
         width: 318.w,
         child: Column(
+          mainAxisSize: MainAxisSize.min,
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                GestureDetector(
-                    onTap: () async {
-                      await LocalStorageService.setValue(
-                          LocalStorageKeys.isFirstTime, true);
+            Padding(
+              padding: const EdgeInsets.only(right: 25, left: 15, top: 0),
+              child: Row(
+                children: [
+                  InkWell(
+                      onTap: () async {
+                        await LocalStorageService.setValue(
+                          LocalStorageKeys.isFirstTime,
+                          true,
+                        );
 
-                      kNavigationService.clearAndNavigateTo(AppRoutes.main);
-                    },
-                    child: Padding(
-                      padding:
-                          const EdgeInsets.only(right: 15, left: 15, top: 0),
+                        kNavigationService.clearAndNavigateTo(AppRoutes.main);
+                      },
                       child: FaIcon(
                         FontAwesomeIcons.x,
                         color: AppColors.primaryColor,
@@ -79,9 +80,9 @@ class ContainerAuthenticationBody extends StatelessWidget {
                             blurRadius: 5,
                           ),
                         ],
-                      ),
-                    )),
-              ],
+                      )),
+                ],
+              ),
             ),
             Image.asset(
               AppImagesPng.icon,
