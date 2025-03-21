@@ -1,0 +1,1 @@
+import 'package:dartz/dartz.dart';import '../entities/product_details.dart';import '../../../../../../Core/Storage/Remote/api_error_handler.dart';abstract class ProductDetailsRepo {  Future<Either<Failure, ProductDetailsEntities>> getProductDetails(      {required int id});}
