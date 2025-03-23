@@ -549,6 +549,86 @@ class S {
   String get Skip {
     return Intl.message('Skip', name: 'Skip', desc: '', args: []);
   }
+
+  /// `In Stock`
+  String get InStock {
+    return Intl.message('In Stock', name: 'InStock', desc: '', args: []);
+  }
+
+  /// `Out of Stock`
+  String get OutStock {
+    return Intl.message('Out of Stock', name: 'OutStock', desc: '', args: []);
+  }
+
+  /// `Color`
+  String get Color {
+    return Intl.message('Color', name: 'Color', desc: '', args: []);
+  }
+
+  /// `Size`
+  String get Size {
+    return Intl.message('Size', name: 'Size', desc: '', args: []);
+  }
+
+  /// `Quantity`
+  String get Quantity {
+    return Intl.message('Quantity', name: 'Quantity', desc: '', args: []);
+  }
+
+  /// `Add to Cart`
+  String get AddToCart {
+    return Intl.message('Add to Cart', name: 'AddToCart', desc: '', args: []);
+  }
+
+  /// `Buy Now`
+  String get BuyNow {
+    return Intl.message('Buy Now', name: 'BuyNow', desc: '', args: []);
+  }
+
+  /// `Reviews`
+  String get Reviews {
+    return Intl.message('Reviews', name: 'Reviews', desc: '', args: []);
+  }
+
+  /// `Details`
+  String get Details {
+    return Intl.message('Details', name: 'Details', desc: '', args: []);
+  }
+
+  /// `Description`
+  String get Description {
+    return Intl.message('Description', name: 'Description', desc: '', args: []);
+  }
+
+  /// `Customer Reviews`
+  String get CustomerReviews {
+    return Intl.message(
+      'Customer Reviews',
+      name: 'CustomerReviews',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add Review`
+  String get AddReview {
+    return Intl.message('Add Review', name: 'AddReview', desc: '', args: []);
+  }
+
+  /// `Your Rating`
+  String get YourRating {
+    return Intl.message('Your Rating', name: 'YourRating', desc: '', args: []);
+  }
+
+  /// `Submit`
+  String get Submit {
+    return Intl.message('Submit', name: 'Submit', desc: '', args: []);
+  }
+
+  /// `CM`
+  String get CM {
+    return Intl.message('CM', name: 'CM', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
