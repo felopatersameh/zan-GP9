@@ -1,5 +1,5 @@
 class ApiEndpoints {
-  static var baseUrl = 'https://darkturquoise-eagle-921470.hostingersite.com/api';
+  static var baseUrl = 'https://moccasin-manatee-172732.hostingersite.com/api';
   
   static const String loginUser = '/login';
   static const String registerUser = '/register';
@@ -10,4 +10,6 @@ class ApiEndpoints {
   static const String productPopular = '$product/popular';
   static const String allCategory = '/categories';
   static const String getProductsByCategories = '$allCategory/'; // + products
+  static const String cart = '/cart'; // + products
+  static const String addCart = '/$cart/add'; // + products
 }
