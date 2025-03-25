@@ -36,6 +36,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "Categories": MessageLookupByLibrary.simpleMessage("فئات"),
     "Color": MessageLookupByLibrary.simpleMessage("لون"),
     "Continue": MessageLookupByLibrary.simpleMessage("واصل"),
+    "CouponCode": MessageLookupByLibrary.simpleMessage("رمز القسيمة"),
     "CustomerReviews": MessageLookupByLibrary.simpleMessage("مراجعات العملاء"),
     "Description": MessageLookupByLibrary.simpleMessage("الوصف"),
     "Details": MessageLookupByLibrary.simpleMessage("التفاصيل"),
