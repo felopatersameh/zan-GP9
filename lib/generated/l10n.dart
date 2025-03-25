@@ -629,6 +629,11 @@ class S {
   String get CM {
     return Intl.message('CM', name: 'CM', desc: '', args: []);
   }
+
+  /// `Coupon Code`
+  String get CouponCode {
+    return Intl.message('Coupon Code', name: 'CouponCode', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
