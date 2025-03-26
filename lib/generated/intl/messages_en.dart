@@ -22,8 +22,10 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "AddAddress": MessageLookupByLibrary.simpleMessage("Add Address"),
     "AddReview": MessageLookupByLibrary.simpleMessage("Add Review"),
     "AddToCart": MessageLookupByLibrary.simpleMessage("Add to Cart"),
+    "Address": MessageLookupByLibrary.simpleMessage("Address"),
     "ApplyFilters": MessageLookupByLibrary.simpleMessage("Apply Filters"),
     "Back": MessageLookupByLibrary.simpleMessage("Back"),
     "BuyNow": MessageLookupByLibrary.simpleMessage("Buy Now"),
@@ -34,9 +36,14 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "Cart": MessageLookupByLibrary.simpleMessage("Cart"),
     "Categories": MessageLookupByLibrary.simpleMessage("Categories"),
+    "ChangePassword": MessageLookupByLibrary.simpleMessage("Change Password"),
     "Color": MessageLookupByLibrary.simpleMessage("Color"),
+    "ConfirmationPassword": MessageLookupByLibrary.simpleMessage(
+      "Confirmation Password",
+    ),
     "Continue": MessageLookupByLibrary.simpleMessage("Continue"),
     "CouponCode": MessageLookupByLibrary.simpleMessage("Coupon Code"),
+    "CurrentPassword": MessageLookupByLibrary.simpleMessage("Current Password"),
     "CustomerReviews": MessageLookupByLibrary.simpleMessage("Customer Reviews"),
     "Description": MessageLookupByLibrary.simpleMessage("Description"),
     "Details": MessageLookupByLibrary.simpleMessage("Details"),
@@ -56,6 +63,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "LoginByGoogle": MessageLookupByLibrary.simpleMessage(
       "Sign in with Google",
     ),
+    "NewPassword": MessageLookupByLibrary.simpleMessage("New Password"),
     "Next": MessageLookupByLibrary.simpleMessage("Next"),
     "Notifications": MessageLookupByLibrary.simpleMessage("Notifications"),
     "OutStock": MessageLookupByLibrary.simpleMessage("Out of Stock"),
@@ -74,6 +82,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "ResetFilters": MessageLookupByLibrary.simpleMessage("Reset Filters"),
     "Reviews": MessageLookupByLibrary.simpleMessage("Reviews"),
+    "Save": MessageLookupByLibrary.simpleMessage("Save"),
     "Scan": MessageLookupByLibrary.simpleMessage("Scan"),
     "Search": MessageLookupByLibrary.simpleMessage("Search"),
     "Security": MessageLookupByLibrary.simpleMessage("Security"),
@@ -100,7 +109,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "YourCard": MessageLookupByLibrary.simpleMessage("Your Card"),
     "YourRating": MessageLookupByLibrary.simpleMessage("Your Rating"),
+    "address_line": MessageLookupByLibrary.simpleMessage("Address Line"),
     "all": MessageLookupByLibrary.simpleMessage("All"),
+    "area": MessageLookupByLibrary.simpleMessage("Area"),
     "boarding1_body": MessageLookupByLibrary.simpleMessage(
       "Always in a large and diverse selection of options. Guaranteed items, great design.",
     ),
@@ -121,6 +132,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "cart": MessageLookupByLibrary.simpleMessage("Items"),
     "checkout": MessageLookupByLibrary.simpleMessage("Check it out >"),
+    "city": MessageLookupByLibrary.simpleMessage("City"),
     "email": MessageLookupByLibrary.simpleMessage("Email"),
     "forgetPassword": MessageLookupByLibrary.simpleMessage(
       "Forgot your password?",
@@ -149,6 +161,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "password": MessageLookupByLibrary.simpleMessage("Password"),
     "phone": MessageLookupByLibrary.simpleMessage("Phone"),
     "popular": MessageLookupByLibrary.simpleMessage("Popular"),
+    "postal_code": MessageLookupByLibrary.simpleMessage("Postal Code"),
     "services": MessageLookupByLibrary.simpleMessage("Services"),
+    "state": MessageLookupByLibrary.simpleMessage("State"),
   };
 }

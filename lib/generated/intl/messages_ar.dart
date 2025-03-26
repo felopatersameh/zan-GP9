@@ -22,8 +22,10 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "AddAddress": MessageLookupByLibrary.simpleMessage("أضف العنوان"),
     "AddReview": MessageLookupByLibrary.simpleMessage("أضف مراجعة"),
     "AddToCart": MessageLookupByLibrary.simpleMessage("أضف إلى السلة"),
+    "Address": MessageLookupByLibrary.simpleMessage("العنوان"),
     "ApplyFilters": MessageLookupByLibrary.simpleMessage("تطبيق المرشحات"),
     "Back": MessageLookupByLibrary.simpleMessage("السابق"),
     "BuyNow": MessageLookupByLibrary.simpleMessage("اشتري الآن"),
@@ -34,9 +36,16 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "Cart": MessageLookupByLibrary.simpleMessage("عربة التسوق"),
     "Categories": MessageLookupByLibrary.simpleMessage("فئات"),
+    "ChangePassword": MessageLookupByLibrary.simpleMessage("تغيير كلمة المرور"),
     "Color": MessageLookupByLibrary.simpleMessage("لون"),
+    "ConfirmationPassword": MessageLookupByLibrary.simpleMessage(
+      "كلمة مرور التأكيد",
+    ),
     "Continue": MessageLookupByLibrary.simpleMessage("واصل"),
     "CouponCode": MessageLookupByLibrary.simpleMessage("رمز القسيمة"),
+    "CurrentPassword": MessageLookupByLibrary.simpleMessage(
+      "كلمة المرور الحالية",
+    ),
     "CustomerReviews": MessageLookupByLibrary.simpleMessage("مراجعات العملاء"),
     "Description": MessageLookupByLibrary.simpleMessage("الوصف"),
     "Details": MessageLookupByLibrary.simpleMessage("التفاصيل"),
@@ -56,6 +65,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "LoginByGoogle": MessageLookupByLibrary.simpleMessage(
       "تسجيل باستخدام جوجل",
     ),
+    "NewPassword": MessageLookupByLibrary.simpleMessage("كلمة المرور الجديدة"),
     "Next": MessageLookupByLibrary.simpleMessage("التالي"),
     "Notifications": MessageLookupByLibrary.simpleMessage("إشعارات"),
     "OutStock": MessageLookupByLibrary.simpleMessage("غير متوفر"),
@@ -72,6 +82,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "ResetFilters": MessageLookupByLibrary.simpleMessage("إعادة تعيين مرشحات"),
     "Reviews": MessageLookupByLibrary.simpleMessage("المراجعات"),
+    "Save": MessageLookupByLibrary.simpleMessage("حفظ"),
     "Scan": MessageLookupByLibrary.simpleMessage("مسح ضوئي"),
     "Search": MessageLookupByLibrary.simpleMessage("بحث"),
     "Security": MessageLookupByLibrary.simpleMessage("حماية"),
@@ -98,7 +109,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "YourCard": MessageLookupByLibrary.simpleMessage("بطاقتك"),
     "YourRating": MessageLookupByLibrary.simpleMessage("تقييمك"),
+    "address_line": MessageLookupByLibrary.simpleMessage("خط العنوان"),
     "all": MessageLookupByLibrary.simpleMessage("الكل"),
+    "area": MessageLookupByLibrary.simpleMessage("منطقة"),
     "boarding1_body": MessageLookupByLibrary.simpleMessage(
       "دائمًا في دورة كبيرة ومتنوعة من الخيارات. عناصر مضمونة، وتصميم رائع.",
     ),
@@ -119,6 +132,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "cart": MessageLookupByLibrary.simpleMessage("عناصر"),
     "checkout": MessageLookupByLibrary.simpleMessage("تحقق من ذلك >"),
+    "city": MessageLookupByLibrary.simpleMessage("مدينة"),
     "email": MessageLookupByLibrary.simpleMessage("بريد إلكتروني"),
     "forgetPassword": MessageLookupByLibrary.simpleMessage(
       "هل نسيت كلمة المرور؟",
@@ -147,6 +161,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "password": MessageLookupByLibrary.simpleMessage(" كلمه المرور"),
     "phone": MessageLookupByLibrary.simpleMessage(" الموبيل"),
     "popular": MessageLookupByLibrary.simpleMessage("شائع "),
+    "postal_code": MessageLookupByLibrary.simpleMessage("رمز بريدي"),
     "services": MessageLookupByLibrary.simpleMessage("خدمات"),
+    "state": MessageLookupByLibrary.simpleMessage("ولاية"),
   };
 }

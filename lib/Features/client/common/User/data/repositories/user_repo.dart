@@ -1,0 +1,1 @@
+import 'package:dartz/dartz.dart';import '../models/update_password.dart';import '../../../../../../Core/Storage/Remote/api_error_handler.dart';import '../models/update_user.dart';abstract class UserRepo {  Future<Either<Failure, UpdateUser>> updateUser(UpdateUser updateUser);  Future<Either<Failure, bool>> updatePassword(UpdatePassword updatePassword);}

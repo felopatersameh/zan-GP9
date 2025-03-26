@@ -190,6 +190,36 @@ class S {
     return Intl.message('Password', name: 'password', desc: '', args: []);
   }
 
+  /// `Current Password`
+  String get CurrentPassword {
+    return Intl.message(
+      'Current Password',
+      name: 'CurrentPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `New Password`
+  String get NewPassword {
+    return Intl.message(
+      'New Password',
+      name: 'NewPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirmation Password`
+  String get ConfirmationPassword {
+    return Intl.message(
+      'Confirmation Password',
+      name: 'ConfirmationPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Forgot your password?`
   String get forgetPassword {
     return Intl.message(
@@ -268,6 +298,61 @@ class S {
   /// `Enter`
   String get Enter {
     return Intl.message('Enter', name: 'Enter', desc: '', args: []);
+  }
+
+  /// `Save`
+  String get Save {
+    return Intl.message('Save', name: 'Save', desc: '', args: []);
+  }
+
+  /// `Add Address`
+  String get AddAddress {
+    return Intl.message('Add Address', name: 'AddAddress', desc: '', args: []);
+  }
+
+  /// `Change Password`
+  String get ChangePassword {
+    return Intl.message(
+      'Change Password',
+      name: 'ChangePassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Address Line`
+  String get address_line {
+    return Intl.message(
+      'Address Line',
+      name: 'address_line',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Address`
+  String get Address {
+    return Intl.message('Address', name: 'Address', desc: '', args: []);
+  }
+
+  /// `Area`
+  String get area {
+    return Intl.message('Area', name: 'area', desc: '', args: []);
+  }
+
+  /// `City`
+  String get city {
+    return Intl.message('City', name: 'city', desc: '', args: []);
+  }
+
+  /// `State`
+  String get state {
+    return Intl.message('State', name: 'state', desc: '', args: []);
+  }
+
+  /// `Postal Code`
+  String get postal_code {
+    return Intl.message('Postal Code', name: 'postal_code', desc: '', args: []);
   }
 
   /// `Home`
