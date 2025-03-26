@@ -9,7 +9,8 @@ import '../../../Resources/app_colors.dart';
 
 class DefaultTextFormField extends StatelessWidget {
   final String text;
-  final bool? isText;
+  final bool? isTextOut;
+  final bool? isTextIn;
   final TextInputType type;
   final Widget? suffixIcon;
   final bool? isPassword;
@@ -34,7 +35,7 @@ class DefaultTextFormField extends StatelessWidget {
     this.onTap,
     this.maxLine,
     this.isLogin = false,
-    this.isText = true,
+    this.isTextOut = true, this.isTextIn = true,
   });
 
   @override
@@ -44,7 +45,7 @@ class DefaultTextFormField extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          isText == true
+          isTextOut == true
               ? Text(
                   text,
                   style: AppTextStyles.bodyMediumBold,
@@ -52,7 +53,7 @@ class DefaultTextFormField extends StatelessWidget {
               : SizedBox(),
           10.verticalSpace,
           TextFormField(
-            autofocus: true,
+            autofocus: false,
             onTapAlwaysCalled: true,
             maxLines: maxLine ?? 1,
             onTap: onTap,
@@ -64,7 +65,7 @@ class DefaultTextFormField extends StatelessWidget {
             obscureText: isPassword ?? false,
             validator: inputValidator,
             decoration: InputDecoration(
-              hintText: "${context.local.Enter} $text",
+              hintText: "${isTextIn == true ? context.local.Enter:""} $text",
               hintStyle: AppTextStyles.bodyMediumBold
                   .copyWith(color: AppColors.grayscale70),
               fillColor: AppColors.backgroundColor,
