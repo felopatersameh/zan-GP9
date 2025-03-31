@@ -43,10 +43,12 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "Continue": MessageLookupByLibrary.simpleMessage("واصل"),
     "CouponCode": MessageLookupByLibrary.simpleMessage("رمز القسيمة"),
+    "CouponDiscount": MessageLookupByLibrary.simpleMessage("خصم القسيمة"),
     "CurrentPassword": MessageLookupByLibrary.simpleMessage(
       "كلمة المرور الحالية",
     ),
     "CustomerReviews": MessageLookupByLibrary.simpleMessage("مراجعات العملاء"),
+    "DeliveryCharge": MessageLookupByLibrary.simpleMessage("رسوم التوصيل"),
     "Description": MessageLookupByLibrary.simpleMessage("الوصف"),
     "Details": MessageLookupByLibrary.simpleMessage("التفاصيل"),
     "Enter": MessageLookupByLibrary.simpleMessage(" ادخل"),
@@ -71,6 +73,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "OutStock": MessageLookupByLibrary.simpleMessage("غير متوفر"),
     "Price": MessageLookupByLibrary.simpleMessage("سعر"),
     "Profile": MessageLookupByLibrary.simpleMessage("حسابي"),
+    "PromoCode": MessageLookupByLibrary.simpleMessage("كود الترويجي"),
     "Quantity": MessageLookupByLibrary.simpleMessage("كمية"),
     "Recommendation": MessageLookupByLibrary.simpleMessage("توصية الخدمة"),
     "RecommendationDes": MessageLookupByLibrary.simpleMessage(
@@ -97,12 +100,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "Skip": MessageLookupByLibrary.simpleMessage("تخطي"),
     "StarRating": MessageLookupByLibrary.simpleMessage("تصنيف"),
     "Submit": MessageLookupByLibrary.simpleMessage("إرسال"),
+    "Subtotal": MessageLookupByLibrary.simpleMessage("المجموع الفرعي"),
     "TitleLogoSplash": MessageLookupByLibrary.simpleMessage(
       "ابحث عن أفضل الأجزاء لمنزلك",
     ),
     "TitleStartApp": MessageLookupByLibrary.simpleMessage(
       "ابحث عن الأثاث المثالي لمنزلك الجميل",
     ),
+    "TotalAmount": MessageLookupByLibrary.simpleMessage("المبلغ الكلي"),
     "Trucks": MessageLookupByLibrary.simpleMessage("الشاحنات"),
     "TrucksDes": MessageLookupByLibrary.simpleMessage(
       "يمكن للشاحنات أن تأخذ برامج تشغيل النمل التي تحتاجها لنقل الأساس",

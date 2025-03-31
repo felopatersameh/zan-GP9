@@ -18,7 +18,7 @@ class DefaultTextFormField extends StatelessWidget {
   final TextEditingController? controller;
   final Function()? pressSuffix;
   final String? Function(String?)? inputValidator;
-  final ValueChanged<String>? submitted;
+  final ValueChanged<String>? onChanged;
   final void Function()? onTap;
   final int? maxLine;
 
@@ -28,7 +28,7 @@ class DefaultTextFormField extends StatelessWidget {
     required this.type,
     this.suffixIcon,
     this.inputValidator,
-    this.submitted,
+    this.onChanged,
     this.isPassword,
     this.pressSuffix,
     this.controller,
@@ -59,7 +59,7 @@ class DefaultTextFormField extends StatelessWidget {
             onTap: onTap,
             style: AppTextStyles.bodyMediumBold
                 .copyWith(color: AppColors.grayscale70),
-            onFieldSubmitted: submitted,
+            onChanged: onChanged,
             controller: controller,
             keyboardType: type,
             obscureText: isPassword ?? false,

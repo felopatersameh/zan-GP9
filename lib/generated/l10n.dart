@@ -719,6 +719,46 @@ class S {
   String get CouponCode {
     return Intl.message('Coupon Code', name: 'CouponCode', desc: '', args: []);
   }
+
+  /// `Promo code`
+  String get PromoCode {
+    return Intl.message('Promo code', name: 'PromoCode', desc: '', args: []);
+  }
+
+  /// `Subtotal`
+  String get Subtotal {
+    return Intl.message('Subtotal', name: 'Subtotal', desc: '', args: []);
+  }
+
+  /// `Delivery Charge`
+  String get DeliveryCharge {
+    return Intl.message(
+      'Delivery Charge',
+      name: 'DeliveryCharge',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Coupon Discount`
+  String get CouponDiscount {
+    return Intl.message(
+      'Coupon Discount',
+      name: 'CouponDiscount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Total amount`
+  String get TotalAmount {
+    return Intl.message(
+      'Total amount',
+      name: 'TotalAmount',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
