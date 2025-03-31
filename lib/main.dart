@@ -10,7 +10,9 @@ import 'Config/Themes/dark_theme.dart';
 import 'Config/app_config.dart';
 import 'Core/Services/service_locator.dart';
 import 'Core/Storage/Remote/api_service.dart';
+import 'Features/client/App/Explore/presentation/Cubit/explore_cubit.dart';
 import 'Features/client/App/Home/presentation/manager/home_cubit.dart';
+import 'Features/client/common/User/presentation/Cubit/user_cubit.dart';
 import 'generated/l10n.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
@@ -29,9 +31,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider(create:  (context) => SettingsCubit()),
-        BlocProvider(create:  (context) => sl<HomeCubit>()),
-        // BlocProvider()
+        BlocProvider(create: (_) => SettingsCubit(), lazy: false),
+        BlocProvider.value(value: sl<UserCubit>()..init()),
+        BlocProvider.value(value: sl<ExploreCubit>()..init()),
+        BlocProvider.value(value: sl< HomeCubit>()..init()),
+
       ],
       child: ScreenUtilInit(
         designSize: const Size(375, 812),
@@ -44,7 +48,7 @@ class MyApp extends StatelessWidget {
           ScreenUtil.init(context);
           return BlocBuilder<SettingsCubit, SettingsState>(
             builder: (context, state) {
-               DioHelper.init();
+              DioHelper.init();
               return MaterialApp(
                 debugShowCheckedModeBanner: false,
                 title: AppConfig.appName,

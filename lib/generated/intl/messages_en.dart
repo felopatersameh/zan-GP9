@@ -43,8 +43,10 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "Continue": MessageLookupByLibrary.simpleMessage("Continue"),
     "CouponCode": MessageLookupByLibrary.simpleMessage("Coupon Code"),
+    "CouponDiscount": MessageLookupByLibrary.simpleMessage("Coupon Discount"),
     "CurrentPassword": MessageLookupByLibrary.simpleMessage("Current Password"),
     "CustomerReviews": MessageLookupByLibrary.simpleMessage("Customer Reviews"),
+    "DeliveryCharge": MessageLookupByLibrary.simpleMessage("Delivery Charge"),
     "Description": MessageLookupByLibrary.simpleMessage("Description"),
     "Details": MessageLookupByLibrary.simpleMessage("Details"),
     "Enter": MessageLookupByLibrary.simpleMessage("Enter"),
@@ -69,6 +71,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "OutStock": MessageLookupByLibrary.simpleMessage("Out of Stock"),
     "Price": MessageLookupByLibrary.simpleMessage("Price"),
     "Profile": MessageLookupByLibrary.simpleMessage("Profile"),
+    "PromoCode": MessageLookupByLibrary.simpleMessage("Promo code"),
     "Quantity": MessageLookupByLibrary.simpleMessage("Quantity"),
     "Recommendation": MessageLookupByLibrary.simpleMessage(
       "Service Recommendation",
@@ -97,12 +100,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "Skip": MessageLookupByLibrary.simpleMessage("Skip"),
     "StarRating": MessageLookupByLibrary.simpleMessage("Rating"),
     "Submit": MessageLookupByLibrary.simpleMessage("Submit"),
+    "Subtotal": MessageLookupByLibrary.simpleMessage("Subtotal"),
     "TitleLogoSplash": MessageLookupByLibrary.simpleMessage(
       "Find the best parts for your home",
     ),
     "TitleStartApp": MessageLookupByLibrary.simpleMessage(
       "Find the perfect furniture for your beautiful home",
     ),
+    "TotalAmount": MessageLookupByLibrary.simpleMessage("Total amount"),
     "Trucks": MessageLookupByLibrary.simpleMessage("Trucks"),
     "TrucksDes": MessageLookupByLibrary.simpleMessage(
       "Trucks can take the loads you need to move the furniture",
