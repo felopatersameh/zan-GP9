@@ -759,6 +759,56 @@ class S {
       args: [],
     );
   }
+
+  /// `Smart Assistant`
+  String get SmartAssistantFeature {
+    return Intl.message(
+      'Smart Assistant',
+      name: 'SmartAssistantFeature',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Furniture Recommendation`
+  String get FurnitureRecommendationFeature {
+    return Intl.message(
+      'Furniture Recommendation',
+      name: 'FurnitureRecommendationFeature',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Empty Space Calculator`
+  String get EmptySpaceCalculatorFeature {
+    return Intl.message(
+      'Empty Space Calculator',
+      name: 'EmptySpaceCalculatorFeature',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Furniture Measurement`
+  String get FurnitureMeasurementFeature {
+    return Intl.message(
+      'Furniture Measurement',
+      name: 'FurnitureMeasurementFeature',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Room Measurement`
+  String get RoomMeasurementFeature {
+    return Intl.message(
+      'Room Measurement',
+      name: 'RoomMeasurementFeature',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
