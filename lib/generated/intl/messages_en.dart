@@ -49,11 +49,20 @@ class MessageLookup extends MessageLookupByLibrary {
     "DeliveryCharge": MessageLookupByLibrary.simpleMessage("Delivery Charge"),
     "Description": MessageLookupByLibrary.simpleMessage("Description"),
     "Details": MessageLookupByLibrary.simpleMessage("Details"),
+    "EmptySpaceCalculatorFeature": MessageLookupByLibrary.simpleMessage(
+      "Empty Space Calculator",
+    ),
     "Enter": MessageLookupByLibrary.simpleMessage("Enter"),
     "Explore": MessageLookupByLibrary.simpleMessage("Explore"),
     "Favourite": MessageLookupByLibrary.simpleMessage("Favorite"),
     "Featured": MessageLookupByLibrary.simpleMessage("Featured"),
     "Filter": MessageLookupByLibrary.simpleMessage("Filter"),
+    "FurnitureMeasurementFeature": MessageLookupByLibrary.simpleMessage(
+      "Furniture Measurement",
+    ),
+    "FurnitureRecommendationFeature": MessageLookupByLibrary.simpleMessage(
+      "Furniture Recommendation",
+    ),
     "GoodMorning": MessageLookupByLibrary.simpleMessage("Good Morning"),
     "GoodNight": MessageLookupByLibrary.simpleMessage("Good Night"),
     "Home": MessageLookupByLibrary.simpleMessage("Home"),
@@ -85,6 +94,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "ResetFilters": MessageLookupByLibrary.simpleMessage("Reset Filters"),
     "Reviews": MessageLookupByLibrary.simpleMessage("Reviews"),
+    "RoomMeasurementFeature": MessageLookupByLibrary.simpleMessage(
+      "Room Measurement",
+    ),
     "Save": MessageLookupByLibrary.simpleMessage("Save"),
     "Scan": MessageLookupByLibrary.simpleMessage("Scan"),
     "Search": MessageLookupByLibrary.simpleMessage("Search"),
@@ -98,6 +110,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "SignUp": MessageLookupByLibrary.simpleMessage("Sign Up"),
     "Size": MessageLookupByLibrary.simpleMessage("Size"),
     "Skip": MessageLookupByLibrary.simpleMessage("Skip"),
+    "SmartAssistantFeature": MessageLookupByLibrary.simpleMessage(
+      "Smart Assistant",
+    ),
     "StarRating": MessageLookupByLibrary.simpleMessage("Rating"),
     "Submit": MessageLookupByLibrary.simpleMessage("Submit"),
     "Subtotal": MessageLookupByLibrary.simpleMessage("Subtotal"),

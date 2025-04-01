@@ -30,7 +30,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "Back": MessageLookupByLibrary.simpleMessage("السابق"),
     "BuyNow": MessageLookupByLibrary.simpleMessage("اشتري الآن"),
     "CM": MessageLookupByLibrary.simpleMessage("سم"),
-    "Carpenter": MessageLookupByLibrary.simpleMessage("النجار"),
+    "Carpenter": MessageLookupByLibrary.simpleMessage("النجارين"),
     "CarpenterDes": MessageLookupByLibrary.simpleMessage(
       "يمكن أن تظهر لك ما هو الأفضل لك",
     ),
@@ -51,11 +51,20 @@ class MessageLookup extends MessageLookupByLibrary {
     "DeliveryCharge": MessageLookupByLibrary.simpleMessage("رسوم التوصيل"),
     "Description": MessageLookupByLibrary.simpleMessage("الوصف"),
     "Details": MessageLookupByLibrary.simpleMessage("التفاصيل"),
+    "EmptySpaceCalculatorFeature": MessageLookupByLibrary.simpleMessage(
+      "حساب المساحة الفارغة",
+    ),
     "Enter": MessageLookupByLibrary.simpleMessage(" ادخل"),
     "Explore": MessageLookupByLibrary.simpleMessage("استكشاف"),
     "Favourite": MessageLookupByLibrary.simpleMessage("المفضلة"),
     "Featured": MessageLookupByLibrary.simpleMessage("مميز"),
     "Filter": MessageLookupByLibrary.simpleMessage("فلتر"),
+    "FurnitureMeasurementFeature": MessageLookupByLibrary.simpleMessage(
+      "قياس أبعاد الأثاث",
+    ),
+    "FurnitureRecommendationFeature": MessageLookupByLibrary.simpleMessage(
+      "توصيات الأثاث واقتراح المنتجات",
+    ),
     "GoodMorning": MessageLookupByLibrary.simpleMessage("صباح الخير"),
     "GoodNight": MessageLookupByLibrary.simpleMessage("مساء خير"),
     "Home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
@@ -85,6 +94,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "ResetFilters": MessageLookupByLibrary.simpleMessage("إعادة تعيين مرشحات"),
     "Reviews": MessageLookupByLibrary.simpleMessage("المراجعات"),
+    "RoomMeasurementFeature": MessageLookupByLibrary.simpleMessage(
+      "قياس أبعاد الغرفة",
+    ),
     "Save": MessageLookupByLibrary.simpleMessage("حفظ"),
     "Scan": MessageLookupByLibrary.simpleMessage("مسح ضوئي"),
     "Search": MessageLookupByLibrary.simpleMessage("بحث"),
@@ -98,6 +110,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "SignUp": MessageLookupByLibrary.simpleMessage("انشاء حساب"),
     "Size": MessageLookupByLibrary.simpleMessage("حجم"),
     "Skip": MessageLookupByLibrary.simpleMessage("تخطي"),
+    "SmartAssistantFeature": MessageLookupByLibrary.simpleMessage(
+      "المساعد الذكي",
+    ),
     "StarRating": MessageLookupByLibrary.simpleMessage("تصنيف"),
     "Submit": MessageLookupByLibrary.simpleMessage("إرسال"),
     "Subtotal": MessageLookupByLibrary.simpleMessage("المجموع الفرعي"),
