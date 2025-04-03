@@ -29,4 +29,7 @@ class ApiEndpoints {
   static const String removeCart = '$cart/remove';
   static const String applyCoupon = '$cart/apply-coupon';
   static const String removeCoupon = '$cart/remove-coupon';
+
+  //* Carpenter Services EndPoint
+  static const String allCarpentryServices = "carpentry-services";
 }

@@ -34,10 +34,15 @@ class MessageLookup extends MessageLookupByLibrary {
     "CarpenterDes": MessageLookupByLibrary.simpleMessage(
       "يمكن أن تظهر لك ما هو الأفضل لك",
     ),
+    "Carpenter_service": MessageLookupByLibrary.simpleMessage("خدمة النجار"),
+    "Carpentry_selection": MessageLookupByLibrary.simpleMessage(
+      "حدد نوع الخدمة التي تحتاجها.",
+    ),
     "Cart": MessageLookupByLibrary.simpleMessage("عربة التسوق"),
     "Categories": MessageLookupByLibrary.simpleMessage("فئات"),
     "ChangePassword": MessageLookupByLibrary.simpleMessage("تغيير كلمة المرور"),
     "Color": MessageLookupByLibrary.simpleMessage("لون"),
+    "Confirm": MessageLookupByLibrary.simpleMessage("تأكيد"),
     "ConfirmationPassword": MessageLookupByLibrary.simpleMessage(
       "كلمة مرور التأكيد",
     ),
@@ -80,7 +85,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "Next": MessageLookupByLibrary.simpleMessage("التالي"),
     "Notifications": MessageLookupByLibrary.simpleMessage("إشعارات"),
     "OutStock": MessageLookupByLibrary.simpleMessage("غير متوفر"),
+    "PickTime": MessageLookupByLibrary.simpleMessage("اختر الوقت"),
     "Price": MessageLookupByLibrary.simpleMessage("سعر"),
+    "Proceed": MessageLookupByLibrary.simpleMessage("تابع"),
     "Profile": MessageLookupByLibrary.simpleMessage("حسابي"),
     "PromoCode": MessageLookupByLibrary.simpleMessage("كود الترويجي"),
     "Quantity": MessageLookupByLibrary.simpleMessage("كمية"),
@@ -88,10 +95,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "RecommendationDes": MessageLookupByLibrary.simpleMessage(
       "يمكنك التقاط أي صورة في غرفتك والحصول على توصية بما هو الأفضل لك",
     ),
+    "Regular_cost": MessageLookupByLibrary.simpleMessage(
+      "التكلفة العادية هي 252 جنيهًا. سيتم حساب التكلفة الإجمالية لاحقًا.",
+    ),
     "Rent": MessageLookupByLibrary.simpleMessage("التاجير"),
     "RentDes": MessageLookupByLibrary.simpleMessage(
       "لأدوات الإيجار والمواد التي تحتاجها",
     ),
+    "Required_person": MessageLookupByLibrary.simpleMessage("الشخص المطلوب"),
     "ResetFilters": MessageLookupByLibrary.simpleMessage("إعادة تعيين مرشحات"),
     "Reviews": MessageLookupByLibrary.simpleMessage("المراجعات"),
     "RoomMeasurementFeature": MessageLookupByLibrary.simpleMessage(
@@ -174,7 +185,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "تم التسجيل بنجاح",
     ),
     "name": MessageLookupByLibrary.simpleMessage(" الاسم"),
-    "offerPrice": MessageLookupByLibrary.simpleMessage("32 ٪ خصم"),
+    "offerPrice": MessageLookupByLibrary.simpleMessage("خصم"),
     "offerTittle": MessageLookupByLibrary.simpleMessage("أعلى منتجات جودة"),
     "orLogin": MessageLookupByLibrary.simpleMessage("هل لديك بالفعل حساب؟"),
     "orSingUp": MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),

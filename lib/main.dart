@@ -16,7 +16,7 @@ import 'Features/client/common/User/presentation/Cubit/user_cubit.dart';
 import 'generated/l10n.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
-final AppNavigationService kNavigationService = AppNavigationService();
+final AppNavigationService  kNavigationService = AppNavigationService();
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -32,9 +32,9 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(create: (_) => SettingsCubit(), lazy: false),
-        BlocProvider(create: (_) => sl<UserCubit>()..init()),
-        BlocProvider(create: (_) => sl<ExploreCubit>()..init()),
-        BlocProvider(create: (_) => sl< HomeCubit>()..init()),
+        BlocProvider(create: (_) => sl<UserCubit>()),
+        BlocProvider(create: (_) => sl<ExploreCubit>()),
+        BlocProvider(create: (_) => sl< HomeCubit>()),
 
       ],
       child: ScreenUtilInit(
