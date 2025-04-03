@@ -44,6 +44,7 @@ class MyApp extends StatelessWidget {
         useInheritedMediaQuery: true,
         enableScaleWH: () => false,
         enableScaleText: () => true,
+
         builder: (_, child) {
           ScreenUtil.init(context);
           return BlocBuilder<SettingsCubit, SettingsState>(
