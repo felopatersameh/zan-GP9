@@ -864,6 +864,86 @@ class S {
   String get PickTime {
     return Intl.message('Pick time', name: 'PickTime', desc: '', args: []);
   }
+
+  /// `Age`
+  String get age {
+    return Intl.message('Age', name: 'age', desc: '', args: []);
+  }
+
+  /// `Years Experience`
+  String get years_experience {
+    return Intl.message(
+      'Years Experience',
+      name: 'years_experience',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Hourly Rate`
+  String get hourly_rate {
+    return Intl.message('Hourly Rate', name: 'hourly_rate', desc: '', args: []);
+  }
+
+  /// `Average Rating`
+  String get average_rating {
+    return Intl.message(
+      'Average Rating',
+      name: 'average_rating',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Completed Services`
+  String get completed_services {
+    return Intl.message(
+      'Completed Services',
+      name: 'completed_services',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Is Available`
+  String get available {
+    return Intl.message('Is Available', name: 'available', desc: '', args: []);
+  }
+
+  /// `Experience`
+  String get experience {
+    return Intl.message('Experience', name: 'experience', desc: '', args: []);
+  }
+
+  /// `ID Card Photo`
+  String get id_card_photo_url {
+    return Intl.message(
+      'ID Card Photo',
+      name: 'id_card_photo_url',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Police Record Photo`
+  String get police_record_photo_url {
+    return Intl.message(
+      'Police Record Photo',
+      name: 'police_record_photo_url',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Workshop Photo`
+  String get workshop_photo_url {
+    return Intl.message(
+      'Workshop Photo',
+      name: 'workshop_photo_url',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

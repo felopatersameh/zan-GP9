@@ -32,4 +32,5 @@ class ApiEndpoints {
 
   //* Carpenter Services EndPoint
   static const String allCarpentryServices = "carpentry-services";
+  static const String carpenters = "carpenters";
 }
