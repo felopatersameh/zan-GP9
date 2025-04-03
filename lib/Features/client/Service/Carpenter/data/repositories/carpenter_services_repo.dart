@@ -1,0 +1,1 @@
+import 'package:dartz/dartz.dart';import '../../../../../../Core/Storage/Remote/api_error_handler.dart';import '../Models/get_all_services_model.dart';abstract class CarpenterServicesRepo {  Future<Either<Failure,List<GetAllServicesModel>>> getAllServices() ;}

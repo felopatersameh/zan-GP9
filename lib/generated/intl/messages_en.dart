@@ -34,10 +34,17 @@ class MessageLookup extends MessageLookupByLibrary {
     "CarpenterDes": MessageLookupByLibrary.simpleMessage(
       "It can show you what is best for you",
     ),
+    "Carpenter_service": MessageLookupByLibrary.simpleMessage(
+      "Carpenter Service",
+    ),
+    "Carpentry_selection": MessageLookupByLibrary.simpleMessage(
+      "Select the type of Service you need.",
+    ),
     "Cart": MessageLookupByLibrary.simpleMessage("Cart"),
     "Categories": MessageLookupByLibrary.simpleMessage("Categories"),
     "ChangePassword": MessageLookupByLibrary.simpleMessage("Change Password"),
     "Color": MessageLookupByLibrary.simpleMessage("Color"),
+    "Confirm": MessageLookupByLibrary.simpleMessage("Confirm"),
     "ConfirmationPassword": MessageLookupByLibrary.simpleMessage(
       "Confirmation Password",
     ),
@@ -78,7 +85,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "Next": MessageLookupByLibrary.simpleMessage("Next"),
     "Notifications": MessageLookupByLibrary.simpleMessage("Notifications"),
     "OutStock": MessageLookupByLibrary.simpleMessage("Out of Stock"),
+    "PickTime": MessageLookupByLibrary.simpleMessage("Pick time"),
     "Price": MessageLookupByLibrary.simpleMessage("Price"),
+    "Proceed": MessageLookupByLibrary.simpleMessage("Proceed"),
     "Profile": MessageLookupByLibrary.simpleMessage("Profile"),
     "PromoCode": MessageLookupByLibrary.simpleMessage("Promo code"),
     "Quantity": MessageLookupByLibrary.simpleMessage("Quantity"),
@@ -88,10 +97,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "RecommendationDes": MessageLookupByLibrary.simpleMessage(
       "You can take any picture in your room and get a recommendation on what\'s best for you",
     ),
+    "Regular_cost": MessageLookupByLibrary.simpleMessage(
+      "Regular cost is 252 EGP/hr. Total cost will be calculated later.",
+    ),
     "Rent": MessageLookupByLibrary.simpleMessage("Rent"),
     "RentDes": MessageLookupByLibrary.simpleMessage(
       "For rental tools and materials you need",
     ),
+    "Required_person": MessageLookupByLibrary.simpleMessage("Required Person"),
     "ResetFilters": MessageLookupByLibrary.simpleMessage("Reset Filters"),
     "Reviews": MessageLookupByLibrary.simpleMessage("Reviews"),
     "RoomMeasurementFeature": MessageLookupByLibrary.simpleMessage(
@@ -174,7 +187,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Registered successfully",
     ),
     "name": MessageLookupByLibrary.simpleMessage("Name"),
-    "offerPrice": MessageLookupByLibrary.simpleMessage("32% Off"),
+    "offerPrice": MessageLookupByLibrary.simpleMessage("Off"),
     "offerTittle": MessageLookupByLibrary.simpleMessage("Top Quality Products"),
     "orLogin": MessageLookupByLibrary.simpleMessage("Already have an account?"),
     "orSingUp": MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),

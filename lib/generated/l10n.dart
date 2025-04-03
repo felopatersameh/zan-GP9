@@ -530,9 +530,9 @@ class S {
     );
   }
 
-  /// `32% Off`
+  /// `Off`
   String get offerPrice {
-    return Intl.message('32% Off', name: 'offerPrice', desc: '', args: []);
+    return Intl.message('Off', name: 'offerPrice', desc: '', args: []);
   }
 
   /// `Top Quality Products`
@@ -808,6 +808,61 @@ class S {
       desc: '',
       args: [],
     );
+  }
+
+  /// `Carpenter Service`
+  String get Carpenter_service {
+    return Intl.message(
+      'Carpenter Service',
+      name: 'Carpenter_service',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select the type of Service you need.`
+  String get Carpentry_selection {
+    return Intl.message(
+      'Select the type of Service you need.',
+      name: 'Carpentry_selection',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Required Person`
+  String get Required_person {
+    return Intl.message(
+      'Required Person',
+      name: 'Required_person',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Regular cost is 252 EGP/hr. Total cost will be calculated later.`
+  String get Regular_cost {
+    return Intl.message(
+      'Regular cost is 252 EGP/hr. Total cost will be calculated later.',
+      name: 'Regular_cost',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Proceed`
+  String get Proceed {
+    return Intl.message('Proceed', name: 'Proceed', desc: '', args: []);
+  }
+
+  /// `Confirm`
+  String get Confirm {
+    return Intl.message('Confirm', name: 'Confirm', desc: '', args: []);
+  }
+
+  /// `Pick time`
+  String get PickTime {
+    return Intl.message('Pick time', name: 'PickTime', desc: '', args: []);
   }
 }
 
