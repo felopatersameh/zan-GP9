@@ -57,32 +57,30 @@ class ContainerAuthenticationBody extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Padding(
-              padding: const EdgeInsets.only(right: 25, left: 15, top: 0),
-              child: Row(
-                children: [
-                  InkWell(
-                      onTap: () async {
-                        await LocalStorageService.setValue(
-                          LocalStorageKeys.isFirstTime,
-                          true,
-                        );
+            Row(
+              children: [
+                30.horizontalSpace,
+                InkWell(
+                    onTap: ()  {
+                       LocalStorageService.setValue(
+                        LocalStorageKeys.isFirstTime,
+                        true,
+                      );
 
-                        kNavigationService.clearAndNavigateTo(AppRoutes.main);
-                      },
-                      child: FaIcon(
-                        FontAwesomeIcons.x,
-                        color: AppColors.primaryColor,
-                        shadows: [
-                          Shadow(
-                            color: AppColors.grayscale60,
-                            offset: Offset(0, 0),
-                            blurRadius: 5,
-                          ),
-                        ],
-                      )),
-                ],
-              ),
+                      kNavigationService.clearAndNavigateTo(AppRoutes.main);
+                    },
+                    child: FaIcon(
+                      FontAwesomeIcons.x,
+                      color: AppColors.primaryColor,
+                      shadows: [
+                        Shadow(
+                          color: AppColors.grayscale60,
+                          offset: Offset(0, 0),
+                          blurRadius: 5,
+                        ),
+                      ],
+                    )),
+              ],
             ),
             Image.asset(
               AppImagesPng.icon,
