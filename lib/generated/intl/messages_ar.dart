@@ -141,8 +141,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "YourCard": MessageLookupByLibrary.simpleMessage("بطاقتك"),
     "YourRating": MessageLookupByLibrary.simpleMessage("تقييمك"),
     "address_line": MessageLookupByLibrary.simpleMessage("خط العنوان"),
+    "age": MessageLookupByLibrary.simpleMessage("العمر"),
     "all": MessageLookupByLibrary.simpleMessage("الكل"),
     "area": MessageLookupByLibrary.simpleMessage("منطقة"),
+    "available": MessageLookupByLibrary.simpleMessage("متوفر"),
+    "average_rating": MessageLookupByLibrary.simpleMessage("تقييم متوسط"),
     "boarding1_body": MessageLookupByLibrary.simpleMessage(
       "دائمًا في دورة كبيرة ومتنوعة من الخيارات. عناصر مضمونة، وتصميم رائع.",
     ),
@@ -164,9 +167,15 @@ class MessageLookup extends MessageLookupByLibrary {
     "cart": MessageLookupByLibrary.simpleMessage("عناصر"),
     "checkout": MessageLookupByLibrary.simpleMessage("تحقق من ذلك >"),
     "city": MessageLookupByLibrary.simpleMessage("مدينة"),
+    "completed_services": MessageLookupByLibrary.simpleMessage("خدمات مكتملة"),
     "email": MessageLookupByLibrary.simpleMessage("بريد إلكتروني"),
+    "experience": MessageLookupByLibrary.simpleMessage("خبرة"),
     "forgetPassword": MessageLookupByLibrary.simpleMessage(
       "هل نسيت كلمة المرور؟",
+    ),
+    "hourly_rate": MessageLookupByLibrary.simpleMessage("معدل السعر بالساعة"),
+    "id_card_photo_url": MessageLookupByLibrary.simpleMessage(
+      "صورة بطاقة الهوية",
     ),
     "later": MessageLookupByLibrary.simpleMessage("لاحقًا"),
     "massageInCart": MessageLookupByLibrary.simpleMessage(
@@ -191,9 +200,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "orSingUp": MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),
     "password": MessageLookupByLibrary.simpleMessage(" كلمه المرور"),
     "phone": MessageLookupByLibrary.simpleMessage(" الموبيل"),
+    "police_record_photo_url": MessageLookupByLibrary.simpleMessage(
+      "صورة السجل الجنائي",
+    ),
     "popular": MessageLookupByLibrary.simpleMessage("شائع "),
     "postal_code": MessageLookupByLibrary.simpleMessage("رمز بريدي"),
     "services": MessageLookupByLibrary.simpleMessage("خدمات"),
     "state": MessageLookupByLibrary.simpleMessage("ولاية"),
+    "workshop_photo_url": MessageLookupByLibrary.simpleMessage("صورة الورشة"),
+    "years_experience": MessageLookupByLibrary.simpleMessage("سنوات الخبرة"),
   };
 }

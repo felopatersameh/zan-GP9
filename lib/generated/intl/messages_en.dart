@@ -143,8 +143,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "YourCard": MessageLookupByLibrary.simpleMessage("Your Card"),
     "YourRating": MessageLookupByLibrary.simpleMessage("Your Rating"),
     "address_line": MessageLookupByLibrary.simpleMessage("Address Line"),
+    "age": MessageLookupByLibrary.simpleMessage("Age"),
     "all": MessageLookupByLibrary.simpleMessage("All"),
     "area": MessageLookupByLibrary.simpleMessage("Area"),
+    "available": MessageLookupByLibrary.simpleMessage("Is Available"),
+    "average_rating": MessageLookupByLibrary.simpleMessage("Average Rating"),
     "boarding1_body": MessageLookupByLibrary.simpleMessage(
       "Always in a large and diverse selection of options. Guaranteed items, great design.",
     ),
@@ -166,10 +169,16 @@ class MessageLookup extends MessageLookupByLibrary {
     "cart": MessageLookupByLibrary.simpleMessage("Items"),
     "checkout": MessageLookupByLibrary.simpleMessage("Check it out >"),
     "city": MessageLookupByLibrary.simpleMessage("City"),
+    "completed_services": MessageLookupByLibrary.simpleMessage(
+      "Completed Services",
+    ),
     "email": MessageLookupByLibrary.simpleMessage("Email"),
+    "experience": MessageLookupByLibrary.simpleMessage("Experience"),
     "forgetPassword": MessageLookupByLibrary.simpleMessage(
       "Forgot your password?",
     ),
+    "hourly_rate": MessageLookupByLibrary.simpleMessage("Hourly Rate"),
+    "id_card_photo_url": MessageLookupByLibrary.simpleMessage("ID Card Photo"),
     "later": MessageLookupByLibrary.simpleMessage("Later"),
     "massageInCart": MessageLookupByLibrary.simpleMessage(
       "Sorry! No items here yet.",
@@ -193,9 +202,18 @@ class MessageLookup extends MessageLookupByLibrary {
     "orSingUp": MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
     "password": MessageLookupByLibrary.simpleMessage("Password"),
     "phone": MessageLookupByLibrary.simpleMessage("Phone"),
+    "police_record_photo_url": MessageLookupByLibrary.simpleMessage(
+      "Police Record Photo",
+    ),
     "popular": MessageLookupByLibrary.simpleMessage("Popular"),
     "postal_code": MessageLookupByLibrary.simpleMessage("Postal Code"),
     "services": MessageLookupByLibrary.simpleMessage("Services"),
     "state": MessageLookupByLibrary.simpleMessage("State"),
+    "workshop_photo_url": MessageLookupByLibrary.simpleMessage(
+      "Workshop Photo",
+    ),
+    "years_experience": MessageLookupByLibrary.simpleMessage(
+      "Years Experience",
+    ),
   };
 }
