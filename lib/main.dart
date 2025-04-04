@@ -32,9 +32,10 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(create: (_) => SettingsCubit(), lazy: false),
+        BlocProvider(create: (_) => sl< HomeCubit>()),
         BlocProvider(create: (_) => sl<UserCubit>()),
         BlocProvider(create: (_) => sl<ExploreCubit>()),
-        BlocProvider(create: (_) => sl< HomeCubit>()),
+
 
       ],
       child: ScreenUtilInit(
