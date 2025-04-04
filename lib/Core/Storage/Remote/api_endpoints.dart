@@ -27,6 +27,7 @@ class ApiEndpoints {
   static const String addCart = '$cart/add';
   static const String updateCart = '$cart/update';
   static const String removeCart = '$cart/remove';
+  static const String clearCart = '$cart/clear';
   static const String applyCoupon = '$cart/apply-coupon';
   static const String removeCoupon = '$cart/remove-coupon';
 

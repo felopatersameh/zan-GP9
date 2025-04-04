@@ -172,6 +172,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "completed_services": MessageLookupByLibrary.simpleMessage(
       "Completed Services",
     ),
+    "couponDiscount": MessageLookupByLibrary.simpleMessage("Coupon Discount"),
     "email": MessageLookupByLibrary.simpleMessage("Email"),
     "experience": MessageLookupByLibrary.simpleMessage("Experience"),
     "forgetPassword": MessageLookupByLibrary.simpleMessage(
