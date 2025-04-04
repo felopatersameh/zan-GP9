@@ -944,6 +944,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Coupon Discount`
+  String get couponDiscount {
+    return Intl.message(
+      'Coupon Discount',
+      name: 'couponDiscount',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -70,6 +70,7 @@ class DefaultTextFormField extends StatelessWidget {
                   .copyWith(color: AppColors.grayscale70),
               fillColor: AppColors.backgroundColor,
               filled: true,
+              // suffix:suffixIcon ,
               suffixIcon: suffixIcon,
               border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(20),

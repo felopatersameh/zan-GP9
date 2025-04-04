@@ -168,6 +168,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "checkout": MessageLookupByLibrary.simpleMessage("تحقق من ذلك >"),
     "city": MessageLookupByLibrary.simpleMessage("مدينة"),
     "completed_services": MessageLookupByLibrary.simpleMessage("خدمات مكتملة"),
+    "couponDiscount": MessageLookupByLibrary.simpleMessage("خصم القسيمة"),
     "email": MessageLookupByLibrary.simpleMessage("بريد إلكتروني"),
     "experience": MessageLookupByLibrary.simpleMessage("خبرة"),
     "forgetPassword": MessageLookupByLibrary.simpleMessage(
