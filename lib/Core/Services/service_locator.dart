@@ -1,5 +1,8 @@
 import 'package:get_it/get_it.dart';
 import 'package:hive_flutter/adapters.dart';
+import '../../Features/client/App/Cart/domain/repositories/cart_repo_impl.dart';
+import '../../Features/client/App/Cart/domain/useCases/cart_use_case.dart';
+import '../../Features/client/App/Cart/presentation/Cubit/Cart/cart_cubit.dart';
 import '../../Features/client/App/Home/domain/useCase/get_popular.dart';
 
 import '../../Features/Global/Authentication/domain/UseCase/login_use_case.dart';
@@ -42,6 +45,7 @@ Future<void> _getAllRepos() async {
   sl.registerLazySingleton<ExploreRepoImpl>(() => ExploreRepoImpl());
   sl.registerLazySingleton<HomeRepoImpl>(() => HomeRepoImpl());
   sl.registerLazySingleton<UserRepoImp>(() => UserRepoImp());
+  sl.registerLazySingleton<CartRepoImpl>(() => CartRepoImpl());
 }
 
 Future<void> _getAllUseCase() async {
@@ -72,6 +76,19 @@ Future<void> _getAllUseCase() async {
   sl.registerLazySingleton<RefreshTokenUseCase>(
       () => RefreshTokenUseCase(sl<UserRepoImp>()));
   //----------------------------------------------
+
+   sl.registerLazySingleton<GetCartUseCase>(
+         () => GetCartUseCase(sl<CartRepoImpl>()));
+   sl.registerLazySingleton<UpdateCartUseCase>(
+         () => UpdateCartUseCase(sl<CartRepoImpl>()));
+   sl.registerLazySingleton<RemoveItemUseCase>(
+         () => RemoveItemUseCase(sl<CartRepoImpl>()));
+   sl.registerLazySingleton<ClearItemUseCase>(
+         () => ClearItemUseCase(sl<CartRepoImpl>()));
+   sl.registerLazySingleton<ApplyCouponUseCase>(
+         () => ApplyCouponUseCase(sl<CartRepoImpl>()));
+   sl.registerLazySingleton<RemoveCouponUseCase>(
+         () => RemoveCouponUseCase(sl<CartRepoImpl>()));
 }
 
 Future<void> _getManyCubit() async {
@@ -104,4 +121,15 @@ Future<void> _getManyCubit() async {
       sl<RefreshTokenUseCase>(),
     ),
   );
+  //--------------------------------------------------
+  sl.registerFactory<CartCubit>(
+      () =>CartCubit(
+            sl<GetCartUseCase>(),
+            sl<UpdateCartUseCase>(),
+            sl<RemoveItemUseCase>(),
+            sl<ClearItemUseCase>(),
+            sl<ApplyCouponUseCase>(),
+            sl<RemoveCouponUseCase>(),
+        )
+    );
 }
