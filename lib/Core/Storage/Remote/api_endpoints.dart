@@ -30,7 +30,14 @@ class ApiEndpoints {
   static const String clearCart = '$cart/clear';
   static const String applyCoupon = '$cart/apply-coupon';
   static const String removeCoupon = '$cart/remove-coupon';
+
   //* Carpenter Services EndPoint
   static const String allCarpentryServices = "carpentry-services";
   static const String carpenters = "carpenters";
+
+  //* Chat Ai
+  static const String chat = "/chat";
+  static const String chatAiSend = "$chat/send";
+  static const String chatAiGet = "$chat/history";
+  static const String chatAiFaqs = "$chat/faqs";
 }
