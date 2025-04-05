@@ -1,0 +1,1 @@
+import 'package:dartz/dartz.dart';import '../repository/chat_ai_repo_imp.dart';import '../../../../../../Core/Storage/Remote/api_error_handler.dart';import '../../data/Model/faqs_model.dart';class GetFaqsUseCase {  final ChatAiRepoImp repo;  GetFaqsUseCase(this.repo);  Future<Either<Failure, List<FaqsModel>>> call() => repo.getFaqs();}
