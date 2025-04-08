@@ -770,6 +770,16 @@ class S {
     );
   }
 
+  /// `can chat with it and answer any question you have about furniture`
+  String get SmartAssistantFeatureDes {
+    return Intl.message(
+      'can chat with it and answer any question you have about furniture',
+      name: 'SmartAssistantFeatureDes',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Furniture Recommendation`
   String get FurnitureRecommendationFeature {
     return Intl.message(
