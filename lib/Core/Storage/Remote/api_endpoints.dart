@@ -15,6 +15,7 @@ class ApiEndpoints {
   //* home page
   static const String product = 'products';
   static const String productDetails = '$product/';
+  static const String productReview = '/review';
   static const String productFeatured = '$product/featured';
   static const String productPopular = '$product/popular';
 
