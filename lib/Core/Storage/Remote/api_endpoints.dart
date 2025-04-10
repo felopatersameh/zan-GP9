@@ -11,6 +11,11 @@ class ApiEndpoints {
   static const String getUser = 'profile';
   static const String updateUser = 'user/profile/update';
   static const String changePassword = 'user/change-password';
+  static const String getAddress = 'user/addresses';
+  static const String addNewAddress = 'user/addresses';
+  static const String updateAddress = 'user/addresses';
+  static const String removeAddress = 'user/addresses';
+  static const String setDefaultAddress = 'user/addresses/0/default';
 
   //* home page
   static const String product = 'products';
@@ -34,7 +39,8 @@ class ApiEndpoints {
 
   //* Carpenter Services EndPoint
   static const String allCarpentryServices = "carpentry-services";
-  static const String carpenters = "carpenters";
+  static const String carpenters = "carpentry-orders/available-carpenters";
+  static const String createOrderCarpenters = "carpentry-orders";
 
   //* Chat Ai
   static const String chat = "/chat";

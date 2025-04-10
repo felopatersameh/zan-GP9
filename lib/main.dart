@@ -12,8 +12,11 @@ import 'Core/Services/service_locator.dart';
 import 'Core/Storage/Remote/api_service.dart';
 import 'Features/client/App/Explore/presentation/Cubit/explore_cubit.dart';
 import 'Features/client/App/Home/presentation/manager/home_cubit.dart';
+import 'Features/client/Service/AreaMeasurement/Cubit/area_measurement_cubit.dart';
 import 'Features/client/common/User/presentation/Cubit/user_cubit.dart';
+import 'Core/Services/Payment/Strip/data/data_sources/api_keys.dart';
 import 'generated/l10n.dart';
+import 'package:flutter_stripe/flutter_stripe.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 final AppNavigationService  kNavigationService = AppNavigationService();
@@ -21,6 +24,7 @@ final AppNavigationService  kNavigationService = AppNavigationService();
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await setupServiceLocator();
+  Stripe.publishableKey = ApiKeys.publishKey;
   runApp(MyApp());
 }
 
@@ -35,6 +39,7 @@ class MyApp extends StatelessWidget {
         BlocProvider(create: (_) => sl< HomeCubit>()),
         BlocProvider(create: (_) => sl<UserCubit>()),
         BlocProvider(create: (_) => sl<ExploreCubit>()),
+        BlocProvider(create: (context) => AreaMeasurementCubit(),),
 
 
       ],

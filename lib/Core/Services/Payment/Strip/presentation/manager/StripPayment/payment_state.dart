@@ -1,0 +1,1 @@
+part of 'payment_cubit.dart';sealed class PaymentState {}final class StripPaymentInitial extends PaymentState {}final class Loading extends PaymentState {}final class Success extends PaymentState {  final bool item;  Success({required this.item});}final class Failure extends PaymentState {  final String error;  Failure({required this.error});}

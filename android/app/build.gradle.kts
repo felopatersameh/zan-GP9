@@ -7,7 +7,7 @@ plugins {
 
 android {
     namespace = "com.example.zan"
-    compileSdk = flutter.compileSdkVersion
+    compileSdk = 35
     ndkVersion = "27.0.12077973"
 
     compileOptions {
@@ -35,10 +35,22 @@ android {
             // TODO: Add your own signing config for the release build.
             // Signing with the debug keys for now, so `flutter run --release` works.
             signingConfig = signingConfigs.getByName("debug")
+
         }
     }
 }
 
 flutter {
     source = "../.."
+}
+
+dependencies {
+    // Other dependencies...
+    implementation("com.google.ar.sceneform:core:1.17.1")
+    implementation("com.google.ar.sceneform:animation:1.17.1")
+    implementation("com.google.ar.sceneform:assets:1.17.1")
+
+    implementation("com.google.ar.sceneform.ux:sceneform-ux:1.17.1")
+    // If you're using ARCore directly
+    implementation("com.google.ar:core:1.25.0")
 }

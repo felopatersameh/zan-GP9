@@ -39,6 +39,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "حدد نوع الخدمة التي تحتاجها.",
     ),
     "Cart": MessageLookupByLibrary.simpleMessage("عربة التسوق"),
+    "Cash": MessageLookupByLibrary.simpleMessage("نقدي"),
     "Categories": MessageLookupByLibrary.simpleMessage("فئات"),
     "ChangePassword": MessageLookupByLibrary.simpleMessage("تغيير كلمة المرور"),
     "Color": MessageLookupByLibrary.simpleMessage("لون"),
@@ -56,10 +57,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "DeliveryCharge": MessageLookupByLibrary.simpleMessage("رسوم التوصيل"),
     "Description": MessageLookupByLibrary.simpleMessage("الوصف"),
     "Details": MessageLookupByLibrary.simpleMessage("التفاصيل"),
+    "Discount": MessageLookupByLibrary.simpleMessage("خصم"),
     "EmptySpaceCalculatorFeature": MessageLookupByLibrary.simpleMessage(
       "حساب المساحة الفارغة",
     ),
     "Enter": MessageLookupByLibrary.simpleMessage(" ادخل"),
+    "EstimatedCost": MessageLookupByLibrary.simpleMessage("التكلفة التقديرية"),
     "Explore": MessageLookupByLibrary.simpleMessage("استكشاف"),
     "Favourite": MessageLookupByLibrary.simpleMessage("المفضلة"),
     "Featured": MessageLookupByLibrary.simpleMessage("مميز"),
@@ -83,7 +86,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "NewPassword": MessageLookupByLibrary.simpleMessage("كلمة المرور الجديدة"),
     "Next": MessageLookupByLibrary.simpleMessage("التالي"),
+    "Note": MessageLookupByLibrary.simpleMessage("ملاحظة"),
     "Notifications": MessageLookupByLibrary.simpleMessage("إشعارات"),
+    "OnlinePayment": MessageLookupByLibrary.simpleMessage("دفع عبر الإنترنت"),
     "OutStock": MessageLookupByLibrary.simpleMessage("غير متوفر"),
     "PickTime": MessageLookupByLibrary.simpleMessage("اختر الوقت"),
     "Price": MessageLookupByLibrary.simpleMessage("سعر"),
@@ -114,6 +119,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "Security": MessageLookupByLibrary.simpleMessage("حماية"),
     "SeeAll": MessageLookupByLibrary.simpleMessage("عرض الكل"),
     "Service": MessageLookupByLibrary.simpleMessage("المزيد من الخدمات"),
+    "ServiceCharge": MessageLookupByLibrary.simpleMessage("رسوم الخدمة"),
     "ServiceDes": MessageLookupByLibrary.simpleMessage(
       "اضغط هنا للحصول على المزيد من الخدمات",
     ),
@@ -123,6 +129,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "Skip": MessageLookupByLibrary.simpleMessage("تخطي"),
     "SmartAssistantFeature": MessageLookupByLibrary.simpleMessage(
       "المساعد الذكي",
+    ),
+    "SmartAssistantFeatureDes": MessageLookupByLibrary.simpleMessage(
+      "يمكنه الدردشة معك والإجابة على أي سؤال لديك حول الأثاث",
     ),
     "StarRating": MessageLookupByLibrary.simpleMessage("تصنيف"),
     "Submit": MessageLookupByLibrary.simpleMessage("إرسال"),
@@ -138,6 +147,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "TrucksDes": MessageLookupByLibrary.simpleMessage(
       "يمكن للشاحنات أن تأخذ برامج تشغيل النمل التي تحتاجها لنقل الأساس",
     ),
+    "WorkingPrice": MessageLookupByLibrary.simpleMessage("ساعات العمل"),
     "YourCard": MessageLookupByLibrary.simpleMessage("بطاقتك"),
     "YourRating": MessageLookupByLibrary.simpleMessage("تقييمك"),
     "address_line": MessageLookupByLibrary.simpleMessage("خط العنوان"),
@@ -174,6 +184,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "forgetPassword": MessageLookupByLibrary.simpleMessage(
       "هل نسيت كلمة المرور؟",
     ),
+    "hour": MessageLookupByLibrary.simpleMessage("ساعة واحدة"),
     "hourly_rate": MessageLookupByLibrary.simpleMessage("معدل السعر بالساعة"),
     "id_card_photo_url": MessageLookupByLibrary.simpleMessage(
       "صورة بطاقة الهوية",

@@ -1,5 +1,6 @@
 import 'package:get_it/get_it.dart';
 import 'package:hive_flutter/adapters.dart';
+import 'package:zan/Features/client/common/User/domain/useCase/address_use_case.dart';
 import '../../Features/client/App/Cart/domain/repositories/cart_repo_impl.dart';
 import '../../Features/client/App/Cart/domain/useCases/cart_use_case.dart';
 import '../../Features/client/App/Cart/presentation/Cubit/Cart/cart_cubit.dart';
@@ -25,6 +26,9 @@ import '../../Features/client/common/User/domain/useCase/update_password_use_cas
 import '../../Features/client/common/User/domain/useCase/update_user_use_case.dart';
 import '../../Features/client/common/User/presentation/Cubit/user_cubit.dart';
 import '../Storage/Local/local_storage_service.dart';
+import 'Payment/Strip/data/repositories/payment_repo.dart';
+import 'Payment/Strip/domain/repositories/payment_repo_impl.dart';
+import 'Payment/Strip/domain/use_cases/payment_use_case.dart';
 
 final sl = GetIt.instance;
 
@@ -36,6 +40,12 @@ Future<void> setupServiceLocator() async {
   _getAllRepos();
   _getAllUseCase();
   _getManyCubit();
+
+  sl.registerLazySingleton<PaymentRepo>(() => PaymentStripRepoImpl());
+
+  //------------------------------------------------------------------
+  sl.registerLazySingleton<PaymentStripUseCase>(
+          () => PaymentStripUseCase( sl<PaymentRepo>()));
 }
 
 Future<void> _getAllRepos() async {
@@ -75,6 +85,8 @@ Future<void> _getAllUseCase() async {
       () => GetUserDataUseCase(sl<UserRepoImp>()));
   sl.registerLazySingleton<RefreshTokenUseCase>(
       () => RefreshTokenUseCase(sl<UserRepoImp>()));
+  sl.registerLazySingleton<AddressUseCase>(
+      () => AddressUseCase(sl<UserRepoImp>()));
   //----------------------------------------------
 
    sl.registerLazySingleton<GetCartUseCase>(
@@ -119,6 +131,7 @@ Future<void> _getManyCubit() async {
       sl<UpdatePasswordUseCase>(),
       sl<GetUserDataUseCase>(),
       sl<RefreshTokenUseCase>(),
+      sl<AddressUseCase>(),
     ),
   );
   //--------------------------------------------------
