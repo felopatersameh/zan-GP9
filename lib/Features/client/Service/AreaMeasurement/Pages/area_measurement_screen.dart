@@ -14,7 +14,6 @@ import 'package:ar_flutter_plugin_updated/models/ar_node.dart';
 import 'package:ar_flutter_plugin_updated/widgets/ar_view.dart';
 import 'package:vector_math/vector_math_64.dart' as math;
 import 'package:ar_flutter_plugin_updated/models/ar_anchor.dart';
-import 'package:sensors_plus/sensors_plus.dart';
 
 import '../Cubit/area_measurement_cubit.dart';
 import '../Cubit/area_measurement_state.dart';
@@ -37,30 +36,6 @@ class _AreaMeasurementScreenState extends State<AreaMeasurementScreen> {
   List<ARNode> addedNodes = [];
   List<ARNode> lineNodes = [];
   StreamSubscription ? _accelerometerSubscription;
-
-  @override
-  void initState() {
-    super.initState();
-    // Start monitoring phone stability via accelerometer
-    _startStabilityMonitoring();
-  }
-
-  void _startStabilityMonitoring() {
-    _accelerometerSubscription = accelerometerEventStream().listen((AccelerometerEvent event) {
-      // Calculate magnitude of acceleration
-      final double magnitude = math1.sqrt(
-          event.x * event.x +
-              event.y * event.y +
-              event.z * event.z
-      );
-
-      // Phone is stable if acceleration is close to gravitational constant
-      // (9.8 m/s² ± small tolerance for minor movements)
-      final bool isStable = (magnitude > 9.5 && magnitude < 10.1);
-
-      context.read<AreaMeasurementCubit>().updateStabilityStatus(isStable);
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -98,35 +73,35 @@ class _AreaMeasurementScreenState extends State<AreaMeasurementScreen> {
               ARView(onARViewCreated: _onARViewCreated),
 
               // Polygon Overlay
-              if (state.points.length >= 3)
-                PolygonOverlay(points: state.points),
+              // if (state.points.length >= 3)
+              //   PolygonOverlay(points: state.points),
 
-              // Instruction text
-              Positioned(
-                top: 20,
-                left: 20,
-                right: 20,
-                child: Container(
-                  padding: const EdgeInsets.all(12),
-                  decoration: BoxDecoration(
-                    color: Colors.black.withOpacity(0.7),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: Text(
-                    state.instructionText,
-                    style: const TextStyle(color: Colors.white, fontSize: 16),
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-              ),
+              // // Instruction text
+              // Positioned(
+              //   top: 20,
+              //   left: 20,
+              //   right: 20,
+              //   child: Container(
+              //     padding: const EdgeInsets.all(12),
+              //     decoration: BoxDecoration(
+              //       color: Colors.black.withOpacity(0.7),
+              //       borderRadius: BorderRadius.circular(10),
+              //     ),
+              //     child: Text(
+              //       state.instructionText,
+              //       style: const TextStyle(color: Colors.white, fontSize: 16),
+              //       textAlign: TextAlign.center,
+              //     ),
+              //   ),
+              // ),
 
               // Stability indicator
-              Positioned(
-                top: 90,
-                left: 20,
-                right: 20,
-                child: StabilityIndicator(isStable: state.isPhoneStable),
-              ),
+              // Positioned(
+              //   top: 90,
+              //   left: 20,
+              //   right: 20,
+              //   child: StabilityIndicator(isStable: state.isPhoneStable),
+              // ),
 
               // Area display
               Positioned(
@@ -184,13 +159,13 @@ class _AreaMeasurementScreenState extends State<AreaMeasurementScreen> {
     arAnchorManager = anchorManager;
 
     arSessionManager.onInitialize(
-      showAnimatedGuide: false,
+      showAnimatedGuide: true,
       showFeaturePoints: true,
       showPlanes: true,
       customPlaneTexturePath: null,
       showWorldOrigin: false,
       handleTaps: true,
-      handlePans: false,
+      handlePans: true,
       handleRotation: false,
     );
 
@@ -198,7 +173,6 @@ class _AreaMeasurementScreenState extends State<AreaMeasurementScreen> {
   }
 
   Future<void> _onPlaneTapped(List<ARHitTestResult> hits) async {
-    if (hits.isEmpty) return;
 
     final hit = hits.first;
     final position = math.Vector3(
