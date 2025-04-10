@@ -21,6 +21,7 @@ class DefaultTextFormField extends StatelessWidget {
   final ValueChanged<String>? onChanged;
   final void Function()? onTap;
   final int? maxLine;
+  final bool? enable;
 
   const DefaultTextFormField({
     super.key,
@@ -35,6 +36,7 @@ class DefaultTextFormField extends StatelessWidget {
     this.onTap,
     this.maxLine,
     this.isLogin = false,
+    this.enable = true,
     this.isTextOut = true, this.isTextIn = true,
   });
 
@@ -53,6 +55,7 @@ class DefaultTextFormField extends StatelessWidget {
               : SizedBox(),
           10.verticalSpace,
           TextFormField(
+            enabled: enable,
             autofocus: false,
             onTapAlwaysCalled: true,
             maxLines: maxLine ?? 1,

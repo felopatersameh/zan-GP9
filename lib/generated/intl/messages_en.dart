@@ -41,6 +41,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Select the type of Service you need.",
     ),
     "Cart": MessageLookupByLibrary.simpleMessage("Cart"),
+    "Cash": MessageLookupByLibrary.simpleMessage("Cash"),
     "Categories": MessageLookupByLibrary.simpleMessage("Categories"),
     "ChangePassword": MessageLookupByLibrary.simpleMessage("Change Password"),
     "Color": MessageLookupByLibrary.simpleMessage("Color"),
@@ -56,10 +57,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "DeliveryCharge": MessageLookupByLibrary.simpleMessage("Delivery Charge"),
     "Description": MessageLookupByLibrary.simpleMessage("Description"),
     "Details": MessageLookupByLibrary.simpleMessage("Details"),
+    "Discount": MessageLookupByLibrary.simpleMessage("Discount"),
     "EmptySpaceCalculatorFeature": MessageLookupByLibrary.simpleMessage(
       "Empty Space Calculator",
     ),
     "Enter": MessageLookupByLibrary.simpleMessage("Enter"),
+    "EstimatedCost": MessageLookupByLibrary.simpleMessage("Estimated Cost"),
     "Explore": MessageLookupByLibrary.simpleMessage("Explore"),
     "Favourite": MessageLookupByLibrary.simpleMessage("Favorite"),
     "Featured": MessageLookupByLibrary.simpleMessage("Featured"),
@@ -83,7 +86,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "NewPassword": MessageLookupByLibrary.simpleMessage("New Password"),
     "Next": MessageLookupByLibrary.simpleMessage("Next"),
+    "Note": MessageLookupByLibrary.simpleMessage("Note"),
     "Notifications": MessageLookupByLibrary.simpleMessage("Notifications"),
+    "OnlinePayment": MessageLookupByLibrary.simpleMessage("OnlinePayment"),
     "OutStock": MessageLookupByLibrary.simpleMessage("Out of Stock"),
     "PickTime": MessageLookupByLibrary.simpleMessage("Pick time"),
     "Price": MessageLookupByLibrary.simpleMessage("Price"),
@@ -116,6 +121,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "Security": MessageLookupByLibrary.simpleMessage("Security"),
     "SeeAll": MessageLookupByLibrary.simpleMessage("See All"),
     "Service": MessageLookupByLibrary.simpleMessage("More Services"),
+    "ServiceCharge": MessageLookupByLibrary.simpleMessage("Service Charge"),
     "ServiceDes": MessageLookupByLibrary.simpleMessage(
       "Tap here for more services",
     ),
@@ -125,6 +131,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "Skip": MessageLookupByLibrary.simpleMessage("Skip"),
     "SmartAssistantFeature": MessageLookupByLibrary.simpleMessage(
       "Smart Assistant",
+    ),
+    "SmartAssistantFeatureDes": MessageLookupByLibrary.simpleMessage(
+      "can chat with it and answer any question you have about furniture",
     ),
     "StarRating": MessageLookupByLibrary.simpleMessage("Rating"),
     "Submit": MessageLookupByLibrary.simpleMessage("Submit"),
@@ -140,6 +149,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "TrucksDes": MessageLookupByLibrary.simpleMessage(
       "Trucks can take the loads you need to move the furniture",
     ),
+    "WorkingPrice": MessageLookupByLibrary.simpleMessage("Working Hour"),
     "YourCard": MessageLookupByLibrary.simpleMessage("Your Card"),
     "YourRating": MessageLookupByLibrary.simpleMessage("Your Rating"),
     "address_line": MessageLookupByLibrary.simpleMessage("Address Line"),
@@ -178,6 +188,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "forgetPassword": MessageLookupByLibrary.simpleMessage(
       "Forgot your password?",
     ),
+    "hour": MessageLookupByLibrary.simpleMessage("One Hour"),
     "hourly_rate": MessageLookupByLibrary.simpleMessage("Hourly Rate"),
     "id_card_photo_url": MessageLookupByLibrary.simpleMessage("ID Card Photo"),
     "later": MessageLookupByLibrary.simpleMessage("Later"),

@@ -964,6 +964,66 @@ class S {
       args: [],
     );
   }
+
+  /// `Note`
+  String get Note {
+    return Intl.message('Note', name: 'Note', desc: '', args: []);
+  }
+
+  /// `Working Hour`
+  String get WorkingPrice {
+    return Intl.message(
+      'Working Hour',
+      name: 'WorkingPrice',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Service Charge`
+  String get ServiceCharge {
+    return Intl.message(
+      'Service Charge',
+      name: 'ServiceCharge',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Discount`
+  String get Discount {
+    return Intl.message('Discount', name: 'Discount', desc: '', args: []);
+  }
+
+  /// `Estimated Cost`
+  String get EstimatedCost {
+    return Intl.message(
+      'Estimated Cost',
+      name: 'EstimatedCost',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cash`
+  String get Cash {
+    return Intl.message('Cash', name: 'Cash', desc: '', args: []);
+  }
+
+  /// `OnlinePayment`
+  String get OnlinePayment {
+    return Intl.message(
+      'OnlinePayment',
+      name: 'OnlinePayment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `One Hour`
+  String get hour {
+    return Intl.message('One Hour', name: 'hour', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

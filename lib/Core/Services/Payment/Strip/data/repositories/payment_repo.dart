@@ -1,0 +1,1 @@
+import 'package:dartz/dartz.dart';import '../../../../../Storage/Remote/api_error_handler.dart';import '../../domain/entities/payment_input_entities.dart';abstract class PaymentRepo {  Future<Either<Failure, bool>> makePaymentIntentStrip(      {required PaymentInputEntities paymentInputEntities});}
