@@ -1,6 +1,6 @@
 import 'package:get_it/get_it.dart';
 import 'package:hive_flutter/adapters.dart';
-import 'package:zan/Features/client/common/User/domain/useCase/address_use_case.dart';
+import '../../Features/client/common/User/domain/useCase/address_use_case.dart';
 import '../../Features/client/App/Cart/domain/repositories/cart_repo_impl.dart';
 import '../../Features/client/App/Cart/domain/useCases/cart_use_case.dart';
 import '../../Features/client/App/Cart/presentation/Cubit/Cart/cart_cubit.dart';

@@ -1,1 +1,36 @@
-import 'package:flutter/material.dart';import 'package:flutter_bloc/flutter_bloc.dart';import '../../../../../Core/Services/service_locator.dart';import '../Cubit/authentication_cubit.dart';import '../../../../../Core/Resources/app_list.dart';import '../Cubit/AnimatedCrossFade/animated_cross_fade_cubit.dart';import 'container_authentication_body.dart';class AuthenticationBody extends StatelessWidget {  const AuthenticationBody({    super.key,  });  @override  Widget build(BuildContext context) {    return Scaffold(        body: Stack(      clipBehavior: Clip.none,      children: [        ...AppList.gradientColorsBackground,        MultiBlocProvider(          providers: [            BlocProvider(              create: (context) => AnimatedCrossFadeCubit(),            ),            BlocProvider(              create: (context) => sl<AuthenticationCubit>(),            ),          ],          child: ContainerAuthenticationBody(),        ),      ],    ));  }}
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import '../../../../../Core/Services/ServiceLocator/service_locator.dart';
+
+import '../Cubit/authentication_cubit.dart';
+import '../../../../../Core/Resources/app_list.dart';
+import '../Cubit/AnimatedCrossFade/animated_cross_fade_cubit.dart';
+import 'container_authentication_body.dart';
+
+class AuthenticationBody extends StatelessWidget {
+  const AuthenticationBody({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: Stack(
+      clipBehavior: Clip.none,
+      children: [
+        ...AppList.gradientColorsBackground,
+        MultiBlocProvider(
+          providers: [
+            BlocProvider(
+              create: (context) => AnimatedCrossFadeCubit(),
+            ),
+            BlocProvider(
+              create: (context) => sl<AuthenticationCubit>(),
+            ),
+          ],
+          child: ContainerAuthenticationBody(),
+        ),
+      ],
+    ));
+  }
+}

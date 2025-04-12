@@ -1,1 +1,109 @@
-import 'package:buttons_tabbar/buttons_tabbar.dart';import 'package:flutter/material.dart';import 'package:flutter_bloc/flutter_bloc.dart';import 'package:flutter_screenutil/flutter_screenutil.dart';import '../../../../../../Core/Models/review_products_model.dart';import '../../../../../../Core/Utils/Widget/custom_massage.dart';import '../../../../../../Core/Utils/Widget/loading_animation.dart';import '../../../../../../Core/Utils/Extensions/widget_extension.dart';import '../../../../../../Config/app_config.dart';import '../../../../../../Core/Resources/app_colors.dart';import '../../../../../../Core/Utils/Widget/custom_sliver_grid_builder.dart';import '../Cubit/explore_cubit.dart';int index = 0;class ExploreScreen extends StatelessWidget {  const ExploreScreen({super.key});  @override  Widget build(BuildContext context) {    return BlocBuilder<ExploreCubit, ExploreStateClass>(        builder: (context, state) {      return [        SliverPadding(          padding: EdgeInsets.only(            top: AppConfig.customPaddingFromTopBottom,          ).r,          sliver: SliverFillRemaining(            fillOverscroll: false,            hasScrollBody: true,            child:state.loading              ? CustomLoadingAnimation(): DefaultTabController(              length: state.categories.length,              initialIndex: context.watch<ExploreCubit>().index,              child: Column(                children: [                  ButtonsTabBar(                    buttonMargin: EdgeInsets.symmetric(horizontal: 8.w),                    physics: AppConfig.physicsCustomScrollView,                    backgroundColor: AppColors.primaryColor,                    unselectedBackgroundColor: AppColors.backgroundColor,                    borderWidth: 1.w,                    borderColor: AppColors.grayscale30,                    unselectedBorderColor: AppColors.grayscale30,                    labelStyle: TextStyle(                      color: Colors.white,                      fontWeight: FontWeight.bold,                    ),                    unselectedLabelStyle: TextStyle(                      color: AppColors.grayscale60,                      fontWeight: FontWeight.bold,                    ),                    radius: 24.r,                    contentPadding: EdgeInsets.symmetric(                      horizontal: 22.5,                      vertical: 8,                    ).w,                    contentCenter: true,                    tabs: [                      ...state.categories.map(                        (category) => Tab(                          text: category.name,                          // icon:category.createdAt. FaIcon(FontAwesomeIcons.solidNewspaper),                        ),                      )                    ],                    onTap: (p0) {                      context.read<ExploreCubit>().index = p0;                      context.read<ExploreCubit>().previewCategories(                            id: state.categories[p0].id,                          );                    },                  ),                  Expanded(                    child: Padding(                      padding: EdgeInsets.only(                        top: AppConfig.customPaddingFromTopBottom,                      ).r,                      child:state.categoryDataPreview.isEmpty?  CustomMassage(massage: "No Products"): TabBarView(                        physics: NeverScrollableScrollPhysics(),                        children:List.generate(                          state.categories.length,                          (index) {                            final List<ReviewProductsModel>                                categoryData =                                state.categoryDataPreview.isNotEmpty                                    ? state.categoryDataPreview                                    : [];                            return BuildCustomGridBuilder(                              loading: categoryData.isEmpty,                              model: categoryData,                              isSliver: false,                            );                          },                        ),                      ),                    ),                  ),                ],              ),            ),          ),        ),      ].styledAppPages(withPadding: true, withScroll: true);    });  }}
+import 'package:buttons_tabbar/buttons_tabbar.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../../../../../Core/Utils/Extensions/localizations_extension.dart';
+import '../../../../../../Core/Models/review_products_model.dart';
+import '../../../../../../Core/Utils/Widget/custom_massage.dart';
+import '../../../../../../Core/Utils/Widget/loading_animation.dart';
+import '../../../../../../Core/Utils/Extensions/widget_extension.dart';
+import '../../../../../../Config/app_config.dart';
+import '../../../../../../Core/Resources/app_colors.dart';
+import '../../../../../../Core/Utils/Widget/custom_sliver_grid_builder.dart';
+import '../Cubit/explore_cubit.dart';
+
+int index = 0;
+
+class ExploreScreen extends StatelessWidget {
+  const ExploreScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final local = context.local;
+    return BlocBuilder<ExploreCubit, ExploreStateClass>(
+        builder: (context, state) {
+      return [
+        SliverPadding(
+          padding: EdgeInsets.only(
+            top: AppConfig.customPaddingFromTopBottom,
+          ).r,
+          sliver: SliverFillRemaining(
+            fillOverscroll: false,
+            hasScrollBody: true,
+            child:state.loading
+              ? CustomLoadingAnimation(): DefaultTabController(
+              length: state.categories.length,
+              initialIndex: context.watch<ExploreCubit>().index,
+              child: Column(
+                children: [
+                  ButtonsTabBar(
+                    buttonMargin: EdgeInsets.symmetric(horizontal: 8.w),
+                    physics: AppConfig.physicsCustomScrollView,
+                    backgroundColor: AppColors.primaryColor,
+                    unselectedBackgroundColor: AppColors.backgroundColor,
+                    borderWidth: 1.w,
+                    borderColor: AppColors.grayscale30,
+                    unselectedBorderColor: AppColors.grayscale30,
+                    labelStyle: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    unselectedLabelStyle: TextStyle(
+                      color: AppColors.grayscale60,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    radius: 24.r,
+                    contentPadding: EdgeInsets.symmetric(
+                      horizontal: 22.5,
+                      vertical: 8,
+                    ).w,
+                    contentCenter: true,
+                    tabs: [
+                      ...state.categories.map(
+                        (category) => Tab(
+                          text: category.name,
+                        ),
+                      )
+                    ],
+                    onTap: (p0) {
+                      context.read<ExploreCubit>().index = p0;
+                      context.read<ExploreCubit>().previewCategories(
+                            id: state.categories[p0].id,
+                          );
+                    },
+                  ),
+                  Expanded(
+                    child: Padding(
+                      padding: EdgeInsets.only(
+                        top: AppConfig.customPaddingFromTopBottom,
+                      ).r,
+                      child:state.categoryDataPreview.isEmpty?  CustomMassage(massage: local.MessageEmptyProduct): TabBarView(
+                        physics: NeverScrollableScrollPhysics(),
+                        children:List.generate(
+                          state.categories.length,
+                          (index) {
+                            final List<ReviewProductsModel>
+                                categoryData =
+                                state.categoryDataPreview.isNotEmpty
+                                    ? state.categoryDataPreview
+                                    : [];
+
+                            return BuildCustomGridBuilder(
+                              loading: categoryData.isEmpty,
+                              model: categoryData,
+                              isSliver: false,
+                            );
+                          },
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ].styledAppPages(withPadding: true, withScroll: true);
+    });
+  }
+}

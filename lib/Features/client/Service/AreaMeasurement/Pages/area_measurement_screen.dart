@@ -18,9 +18,7 @@ import 'package:ar_flutter_plugin_updated/models/ar_anchor.dart';
 import '../Cubit/area_measurement_cubit.dart';
 import '../Cubit/area_measurement_state.dart';
 import '../components/area_instructions_dialog.dart';
-import '../components/stability_indicator.dart';
 import '../components/measurement_controls.dart';
-import '../components/polygon_overlay.dart';
 
 class AreaMeasurementScreen extends StatefulWidget {
   const AreaMeasurementScreen({super.key});
@@ -211,41 +209,41 @@ class _AreaMeasurementScreenState extends State<AreaMeasurementScreen> {
     }
   }
 
-  Future<void> _addLineBetweenLastPoints(List<math.Vector3> points) async {
-    if (points.length < 2) return;
+  // Future<void> _addLineBetweenLastPoints(List<math.Vector3> points) async {
+  //   if (points.length < 2) return;
 
-    final p1 = points[points.length - 2];
-    final p2 = points[points.length - 1];
+  //   final p1 = points[points.length - 2];
+  //   final p2 = points[points.length - 1];
 
-    final midPoint = math.Vector3(
-      (p1.x + p2.x) / 2,
-      (p1.y + p2.y) / 2,
-      (p1.z + p2.z) / 2,
-    );
+  //   final midPoint = math.Vector3(
+  //     (p1.x + p2.x) / 2,
+  //     (p1.y + p2.y) / 2,
+  //     (p1.z + p2.z) / 2,
+  //   );
 
-    final direction = p2 - p1;
-    final length = direction.length;
-    direction.normalize();
+  //   final direction = p2 - p1;
+  //   final length = direction.length;
+  //   direction.normalize();
 
-    // Calculate angle for rotation (around Y axis)
-    final angle = math1.atan2(direction.z, direction.x);
+  //   // Calculate angle for rotation (around Y axis)
+  //   final angle = math1.atan2(direction.z, direction.x);
 
-    // Create line node
-    final lineNode = ARNode(
-      type: NodeType.webGLB,
-      uri: "https://raw.githubusercontent.com/felopatersameh/Models3DCreator/main/line.glb",
-      position: midPoint,
-      scale: math.Vector3(0.02, 0.02, length),
-      rotation: math.Vector4(0, 1, 0, angle),
-    );
+  //   // Create line node
+  //   final lineNode = ARNode(
+  //     type: NodeType.webGLB,
+  //     uri: "https://raw.githubusercontent.com/felopatersameh/Models3DCreator/main/line.glb",
+  //     position: midPoint,
+  //     scale: math.Vector3(0.02, 0.02, length),
+  //     rotation: math.Vector4(0, 1, 0, angle),
+  //   );
 
-    await arObjectManager.addNode(lineNode);
-    lineNodes.add(lineNode);
+  //   await arObjectManager.addNode(lineNode);
+  //   lineNodes.add(lineNode);
 
-    // Add distance label
-    // In a real implementation, you would add a text node here
-    // showing the distance between points
-  }
+  //   // Add distance label
+  //   // In a real implementation, you would add a text node here
+  //   // showing the distance between points
+  // }
 
   Future<void> _updatePolygonLines(List<math.Vector3> points) async {
     if (points.length < 3) return;

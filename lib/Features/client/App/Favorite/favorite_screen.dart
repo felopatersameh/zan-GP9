@@ -1,1 +1,34 @@
-import 'package:flutter/material.dart';import '../../../../Core/Utils/Extensions/localizations_extension.dart';import '../../../../Core/Utils/Widget/default_app_bar.dart';import '../../../../Core/Models/review_products_model.dart';import '../../../../Core/Utils/Extensions/widget_extension.dart';import '../../../../Core/Storage/Local/local_storage_service.dart';import '../../../../Core/Utils/Widget/custom_sliver_grid_builder.dart';class FavoriteScreen extends StatefulWidget {  const FavoriteScreen({super.key});  @override  State<FavoriteScreen> createState() => _FavoriteScreenState();}class _FavoriteScreenState extends State<FavoriteScreen> {  List<ReviewProductsModel> model = [];  @override  void initState() {    model = ProductStorageService.getAllProducts();    super.initState();  }  @override  Widget build(BuildContext context) {    return [      BuildCustomGridBuilder(        model: model,        loading: false,      ),    ].styledAppPages(withAll: true,widgetAppbar: DefaultAppBar(local: context.local.Favourite));  }}
+import 'package:flutter/material.dart';
+import '../../../../Core/Utils/Extensions/localizations_extension.dart';
+import '../../../../Core/Utils/Widget/default_app_bar.dart';
+import '../../../../Core/Models/review_products_model.dart';
+import '../../../../Core/Utils/Extensions/widget_extension.dart';
+import '../../../../Core/Storage/Local/local_storage_service.dart';
+import '../../../../Core/Utils/Widget/custom_sliver_grid_builder.dart';
+
+class FavoriteScreen extends StatefulWidget {
+  const FavoriteScreen({super.key});
+
+  @override
+  State<FavoriteScreen> createState() => _FavoriteScreenState();
+}
+
+class _FavoriteScreenState extends State<FavoriteScreen> {
+  List<ReviewProductsModel> model = [];
+
+  @override
+  void initState() {
+    model = ProductStorageService.getAllProducts();
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return [
+      BuildCustomGridBuilder(
+        model: model,
+        loading: false,
+      ),
+    ].styledAppPages(withAll: true,widgetAppbar: DefaultAppBar(local: context.local.Favourite),appbar: true);
+  }
+}

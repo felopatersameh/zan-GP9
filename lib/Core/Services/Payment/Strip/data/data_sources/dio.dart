@@ -14,23 +14,6 @@ class DioHelperPayment {
         receiveTimeout: const Duration(seconds: 5),
       ),
     );
-
-    dio.interceptors.add(
-      InterceptorsWrapper(
-        onRequest: (options, handler) {
-          print('Request[${options.method}] => PATH: ${options.path}');
-          return handler.next(options);
-        },
-        onResponse: (response, handler) {
-          print('Response[${response.statusCode}] => DATA: ${response.data}');
-          return handler.next(response);
-        },
-        onError: (DioException e, handler) {
-          print('Error[${e.response?.statusCode}] => MESSAGE: ${e.message}');
-          return handler.next(e);
-        },
-      ),
-    );
     // dio.interceptors.add(LogInterceptor(
     //   request: true,
     //   requestHeader: true,
