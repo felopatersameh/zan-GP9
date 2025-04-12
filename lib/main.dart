@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_stripe/flutter_stripe.dart';
 import 'Config/Themes/light.dart';
 import 'Config/Cubit/settings_cubit.dart';
 import 'Config/Routes/Navigation/navigation_service.dart';
@@ -8,18 +10,16 @@ import 'Config/Routes/route_name.dart';
 import 'Config/Routes/route_generator.dart';
 import 'Config/Themes/dark_theme.dart';
 import 'Config/app_config.dart';
+import 'Core/Services/Payment/Strip/data/data_sources/api_keys.dart';
 import 'Core/Services/service_locator.dart';
 import 'Core/Storage/Remote/api_service.dart';
 import 'Features/client/App/Explore/presentation/Cubit/explore_cubit.dart';
 import 'Features/client/App/Home/presentation/manager/home_cubit.dart';
 import 'Features/client/Service/AreaMeasurement/Cubit/area_measurement_cubit.dart';
 import 'Features/client/common/User/presentation/Cubit/user_cubit.dart';
-import 'Core/Services/Payment/Strip/data/data_sources/api_keys.dart';
 import 'generated/l10n.dart';
-import 'package:flutter_stripe/flutter_stripe.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 
-final AppNavigationService  kNavigationService = AppNavigationService();
+final AppNavigationService kNavigationService = AppNavigationService();
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -36,12 +36,12 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(create: (_) => SettingsCubit(), lazy: false),
-        BlocProvider(create: (_) => sl< HomeCubit>()),
+        BlocProvider(create: (_) => sl<HomeCubit>()),
         BlocProvider(create: (_) => sl<UserCubit>()),
         BlocProvider(create: (_) => sl<ExploreCubit>()),
-        BlocProvider(create: (context) => AreaMeasurementCubit(),),
-
-
+        BlocProvider(
+          create: (_) => AreaMeasurementCubit(),
+        ),
       ],
       child: ScreenUtilInit(
         designSize: const Size(375, 812),
@@ -50,7 +50,6 @@ class MyApp extends StatelessWidget {
         useInheritedMediaQuery: true,
         enableScaleWH: () => false,
         enableScaleText: () => true,
-
         builder: (_, child) {
           ScreenUtil.init(context);
           return BlocBuilder<SettingsCubit, SettingsState>(

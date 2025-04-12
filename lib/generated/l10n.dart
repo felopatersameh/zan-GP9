@@ -55,6 +55,16 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
+  /// `No Product Found`
+  String get MessageEmptyProduct {
+    return Intl.message(
+      'No Product Found',
+      name: 'MessageEmptyProduct',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Find the best parts for your home`
   String get TitleLogoSplash {
     return Intl.message(
@@ -370,11 +380,6 @@ class S {
     return Intl.message('Explore', name: 'Explore', desc: '', args: []);
   }
 
-  /// `Cart`
-  String get Cart {
-    return Intl.message('Cart', name: 'Cart', desc: '', args: []);
-  }
-
   /// `Profile`
   String get Profile {
     return Intl.message('Profile', name: 'Profile', desc: '', args: []);
@@ -393,6 +398,11 @@ class S {
   /// `Search`
   String get Search {
     return Intl.message('Search', name: 'Search', desc: '', args: []);
+  }
+
+  /// `Cart`
+  String get cart {
+    return Intl.message('Cart', name: 'cart', desc: '', args: []);
   }
 
   /// `See All`
@@ -513,11 +523,6 @@ class S {
   /// `Help & Support`
   String get Info {
     return Intl.message('Help & Support', name: 'Info', desc: '', args: []);
-  }
-
-  /// `Items`
-  String get cart {
-    return Intl.message('Items', name: 'cart', desc: '', args: []);
   }
 
   /// `Sorry! No items here yet.`

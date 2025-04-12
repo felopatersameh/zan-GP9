@@ -1,1 +1,151 @@
-import 'package:flutter/material.dart';import 'package:flutter_screenutil/flutter_screenutil.dart';import 'package:flutter_expandable_fab/flutter_expandable_fab.dart';import '../../../../../Config/Assets/image_png.dart';import '../../../../../Core/Utils/Widget/Images/build_image.dart';import '../../../../../Config/Routes/route_name.dart';import '../../../../../Core/Utils/Extensions/localizations_extension.dart';import '../../../../../Core/Resources/app_colors.dart';import '../../../../../Core/Resources/app_constants.dart';import '../../../../../Core/Resources/app_fonts.dart';import '../../../../../Core/Resources/app_icons.dart';import '../../../../../Core/Storage/Local/local_storage_keys.dart';import '../../../../../Core/Storage/Local/local_storage_service.dart';import '../../../../../Core/Utils/Widget/tutorial_helper.dart';import '../../../../../main.dart';class BuildFadeFloatingActionButton extends StatefulWidget {  const BuildFadeFloatingActionButton({    super.key,    required this.floating,  });  final GlobalKey floating;  @override  State<BuildFadeFloatingActionButton> createState() => _BuildFadeFloatingActionButtonState();}class _BuildFadeFloatingActionButtonState extends State<BuildFadeFloatingActionButton> {  final GlobalKey columnService = GlobalKey();  final GlobalKey truckService = GlobalKey();  final GlobalKey carpenterService = GlobalKey();  final GlobalKey rentService = GlobalKey();  final GlobalKey chatService = GlobalKey();  @override  Widget build(BuildContext context) {    final local = context.local;    return ExpandableFab(      type: ExpandableFabType.fan,      childrenAnimation: ExpandableFabAnimation.rotate,      overlayStyle: ExpandableFabOverlayStyle(        blur: 10,        color: AppColors.grayscale20.withAlpha(0x40),      ),      afterOpen: () {        final bool isTutorialDone = LocalStorageService.getValue(          LocalStorageKeys.keyTutorialHome,          defaultValue: false,        );        if (isTutorialDone) return;        TutorialHelper(          context: context,          steps: AppConstants.tutorialFloatingStep(            local: local,            carpenterService: carpenterService,            columnService: columnService,            truckService: truckService,            rentService: rentService,            chatService: chatService          ),          () => LocalStorageService.setValue(              LocalStorageKeys.keyTutorialHome, true),        ).showTutorial();      },      pos: context.isRtl ? ExpandableFabPos.left : ExpandableFabPos.right,      openButtonBuilder: RotateFloatingActionButtonBuilder(        child: Container(key: widget.floating, child: AppIcons.servicesOutline),        backgroundColor: AppColors.backgroundColor,        shape: const CircleBorder(),      ),      closeButtonBuilder: DefaultFloatingActionButtonBuilder(        child: AppIcons.servicesFill,        backgroundColor: AppColors.backgroundColor,        shape: const CircleBorder(),      ),      children: [        Column(          key: columnService,          spacing: 15.h,          children: [            _buildRowService(              key: chatService,              title: local.SmartAssistantFeature,              icon: BuildImageAssets(png: AppImagesPng.chat,),              onPressed: (){                kNavigationService.navigateTo(AppRoutes.chatPage);              }            ),            _buildRowService(              key: carpenterService,              title: local.Carpenter,              icon: AppIcons.carpenterFill,              onPressed: (){                kNavigationService.navigateTo(AppRoutes.carpenterScreen);                // context.read<MainCubit>().closeFab(false);              }            ),            _buildRowService(              key: truckService,              title: local.Trucks,              icon: Icon(Icons.email),            ),            _buildRowService(              key: rentService,              title: local.Rent,              icon: Icon(Icons.star),            ),          ],        )      ],    );  }  Widget _buildRowService({    required String title,    required Widget icon,    void Function()? onPressed,    required Key key,  }) =>      Row(        key: key,        children: [          Container(              padding: EdgeInsets.symmetric(vertical: 1.h, horizontal: 7.w),              decoration: BoxDecoration(                color: Colors.white.withAlpha(0x40),                borderRadius: BorderRadius.circular(10.r),                border: Border.all(color: Colors.white, width: 1.5),                boxShadow: [                  BoxShadow(                    color: Colors.white.withAlpha(0x50),                    blurRadius: 6,                    spreadRadius: 1,                    offset: Offset(2, 3),                  ),                ],              ),              child: Text(                title,                style: AppTextStyles.h7Medium,              )),          20.horizontalSpace,          FloatingActionButton.small(            backgroundColor: Colors.transparent,            heroTag: null,            onPressed: onPressed,            child: icon,          ),        ],      );}
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_expandable_fab/flutter_expandable_fab.dart';
+import '../../../../../Config/Assets/image_png.dart';
+import '../../../../../Core/Utils/Widget/Images/build_image.dart';
+import '../../../../../Config/Routes/route_name.dart';
+import '../../../../../Core/Utils/Extensions/localizations_extension.dart';
+
+import '../../../../../Core/Resources/app_colors.dart';
+import '../../../../../Core/Resources/app_constants.dart';
+import '../../../../../Core/Resources/app_fonts.dart';
+import '../../../../../Core/Resources/app_icons.dart';
+import '../../../../../Core/Storage/Local/local_storage_keys.dart';
+import '../../../../../Core/Storage/Local/local_storage_service.dart';
+import '../../../../../Core/Utils/Widget/tutorial_helper.dart';
+import '../../../../../main.dart';
+
+class BuildFadeFloatingActionButton extends StatefulWidget {
+  const BuildFadeFloatingActionButton({
+    super.key,
+    required this.floating,
+  });
+
+  final GlobalKey floating;
+  @override
+  State<BuildFadeFloatingActionButton> createState() => _BuildFadeFloatingActionButtonState();
+}
+
+class _BuildFadeFloatingActionButtonState extends State<BuildFadeFloatingActionButton> {
+  final GlobalKey columnService = GlobalKey();
+  final GlobalKey truckService = GlobalKey();
+  final GlobalKey carpenterService = GlobalKey();
+  final GlobalKey rentService = GlobalKey();
+  final GlobalKey chatService = GlobalKey();
+  @override
+  Widget build(BuildContext context) {
+    final local = context.local;
+    return ExpandableFab(
+      type: ExpandableFabType.fan,
+      childrenAnimation: ExpandableFabAnimation.rotate,
+      overlayStyle: ExpandableFabOverlayStyle(
+        blur: 10,
+        color: AppColors.grayscale20.withAlpha(0x40),
+      ),
+
+      afterOpen: () {
+        final bool isTutorialDone = LocalStorageService.getValue(
+          LocalStorageKeys.keyTutorialHome,
+          defaultValue: false,
+        );
+        if (isTutorialDone) return;
+        TutorialHelper(
+          context: context,
+          steps: AppConstants.tutorialFloatingStep(
+            local: local,
+            carpenterService: carpenterService,
+            columnService: columnService,
+            truckService: truckService,
+            rentService: rentService,
+            chatService: chatService
+          ),
+          () => LocalStorageService.setValue(
+              LocalStorageKeys.keyTutorialHome, true),
+        ).showTutorial(context);
+      },
+      pos: context.isRtl ? ExpandableFabPos.left : ExpandableFabPos.right,
+      openButtonBuilder: RotateFloatingActionButtonBuilder(
+        child: Container(key: widget.floating, child: AppIcons.iconsServicesIn),
+        backgroundColor: AppColors.backgroundColor,
+        shape: const CircleBorder(),
+      ),
+      closeButtonBuilder: DefaultFloatingActionButtonBuilder(
+        child: AppIcons.iconsServicesOut,
+        backgroundColor: AppColors.backgroundColor,
+        shape: const CircleBorder(),
+      ),
+
+      children: [
+        Column(
+          key: columnService,
+          spacing: 15.h,
+          children: [
+            _buildRowService(
+              key: chatService,
+              title: local.SmartAssistantFeature,
+              icon: BuildImageAssets(png: AppImagesPng.chat,),
+              onPressed: (){
+                kNavigationService.navigateTo(AppRoutes.chatPage);
+              }
+            ),
+            _buildRowService(
+              key: carpenterService,
+              title: local.Carpenter,
+              icon: AppIcons.carpenter,
+              onPressed: (){
+                kNavigationService.navigateTo(AppRoutes.carpenterScreen);
+                // context.read<MainCubit>().closeFab(false);
+              }
+            ),
+            _buildRowService(
+              key: truckService,
+              title: local.Trucks,
+              icon:  AppIcons.trucks,
+            ),
+            _buildRowService(
+              key: rentService,
+              title: local.Rent,
+              icon:  AppIcons.rentTools,
+            ),
+          ],
+        )
+      ],
+    );
+  }
+  Widget _buildRowService({
+    required String title,
+    required Widget icon,
+    void Function()? onPressed,
+    required Key key,
+  }) =>
+      Row(
+        key: key,
+        children: [
+          Container(
+              padding: EdgeInsets.symmetric(vertical: 1.h, horizontal: 7.w),
+              decoration: BoxDecoration(
+                color: Colors.white.withAlpha(0x40),
+                borderRadius: BorderRadius.circular(10.r),
+                border: Border.all(color: Colors.white, width: 1.5),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.white.withAlpha(0x50),
+                    blurRadius: 6,
+                    spreadRadius: 1,
+                    offset: Offset(2, 3),
+                  ),
+                ],
+              ),
+              child: Text(
+                title,
+                style: AppTextStyles.h7Medium,
+              )),
+          20.horizontalSpace,
+          FloatingActionButton.small(
+            backgroundColor: Colors.transparent,
+            heroTag: null,
+            onPressed: onPressed,
+            child: icon,
+          ),
+        ],
+      );}

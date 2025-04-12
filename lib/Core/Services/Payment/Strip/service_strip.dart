@@ -1,1 +1,91 @@
-import 'package:dio/dio.dart';import 'package:flutter_stripe/flutter_stripe.dart';import 'data/data_sources/api_keys.dart';import 'data/data_sources/dio.dart' ;import 'data/models/ModelsStrip/ephemeral_keys_model.dart';import 'data/models/ModelsStrip/init_payment_sheet_input_model.dart';import 'data/models/ModelsStrip/payment_model.dart';import 'domain/entities/payment_input_entities.dart';class StripService {  //1- Create Payment Intent  Future<PaymentModel> _createPaymentIntent(      PaymentInputEntities paymentInputEntities) async {    var response = await DioHelperPayment.postData(      options: Options(contentType: Headers.formUrlEncodedContentType),      path: AppEndPoint.stripe,      data: paymentInputEntities.toJson(),      token: ApiKeys.secretKey,    );    var paymentModel = PaymentModel.fromJson(response.data);    return paymentModel;  }  Future<EphemeralKeysModel> _createEphemeralKeys(      {required String customerID}) async {    var response = await DioHelperPayment.postData(      options: Options(          contentType: Headers.formUrlEncodedContentType,          headers: {            'Authorization': 'Bearer ${ApiKeys.secretKey}',            'Stripe-Version': '2024-06-20'          }),      path: AppEndPoint.ephemeral,      data: {'customer': customerID},    );    var ephemeralKey = EphemeralKeysModel.fromJson(response.data);    return ephemeralKey;  }  //2- init Payment Sheet  Future _initPaymentSheet(      {required InitPaymentSheetInputModel initPaymentSheetInputModel}) async {    await Stripe.instance.initPaymentSheet(      paymentSheetParameters: SetupPaymentSheetParameters(        paymentIntentClientSecret: initPaymentSheetInputModel.clientSecret,        customerEphemeralKeySecret:            initPaymentSheetInputModel.ephemeralKeySecret,        customerId: initPaymentSheetInputModel.customerId,        merchantDisplayName: "Felopater Sameh",      ),    );  }  // 3- display Present Sheet  Future _displayPresentSheet() async {    await Stripe.instance.presentPaymentSheet();  }  //*** using  Future makePaymentIntent({    required PaymentInputEntities paymentInputEntities,  }) async {    try {      var paymentInput = await _createPaymentIntent(paymentInputEntities);      var ephemeralKeys = await _createEphemeralKeys(        customerID: paymentInputEntities.idCustomer,      );      var initPaymentSheet = InitPaymentSheetInputModel(        ephemeralKeySecret: ephemeralKeys.secret!,        clientSecret: paymentInput.clientSecret!,        customerId: paymentInputEntities.idCustomer,      );      await _initPaymentSheet(initPaymentSheetInputModel: initPaymentSheet);      await _displayPresentSheet();      print("✅ Payment successful");    } on StripeException catch (e) {      print('❌ Stripe Exception: ${e.error.localizedMessage}');      // ممكن ترجع حالة فشل هنا      throw Exception("Stripe Error: ${e.error.localizedMessage}");    } catch (e) {      print('❌ General Error: $e');      // هنا ممكن تبعت ServerFailure مثلاً      throw Exception("General Error: $e");    }  }}
+import 'package:dio/dio.dart';
+import 'package:flutter_stripe/flutter_stripe.dart';
+
+import 'data/data_sources/api_keys.dart';
+import 'data/data_sources/dio.dart' ;
+import 'data/models/ModelsStrip/ephemeral_keys_model.dart';
+import 'data/models/ModelsStrip/init_payment_sheet_input_model.dart';
+import 'data/models/ModelsStrip/payment_model.dart';
+import 'domain/entities/payment_input_entities.dart';
+
+class StripService {
+  //1- Create Payment Intent
+  Future<PaymentModel> _createPaymentIntent(
+      PaymentInputEntities paymentInputEntities) async {
+    var response = await DioHelperPayment.postData(
+      options: Options(contentType: Headers.formUrlEncodedContentType),
+      path: AppEndPoint.stripe,
+      data: paymentInputEntities.toJson(),
+      token: ApiKeys.secretKey,
+    );
+    var paymentModel = PaymentModel.fromJson(response.data);
+    return paymentModel;
+  }
+
+  Future<EphemeralKeysModel> _createEphemeralKeys(
+      {required String customerID}) async {
+    var response = await DioHelperPayment.postData(
+      options: Options(
+          contentType: Headers.formUrlEncodedContentType,
+          headers: {
+            'Authorization': 'Bearer ${ApiKeys.secretKey}',
+            'Stripe-Version': '2024-06-20'
+          }),
+      path: AppEndPoint.ephemeral,
+      data: {'customer': customerID},
+    );
+    var ephemeralKey = EphemeralKeysModel.fromJson(response.data);
+    return ephemeralKey;
+  }
+
+  //2- init Payment Sheet
+  Future _initPaymentSheet(
+      {required InitPaymentSheetInputModel initPaymentSheetInputModel}) async {
+    await Stripe.instance.initPaymentSheet(
+      paymentSheetParameters: SetupPaymentSheetParameters(
+        paymentIntentClientSecret: initPaymentSheetInputModel.clientSecret,
+        customerEphemeralKeySecret:
+            initPaymentSheetInputModel.ephemeralKeySecret,
+        customerId: initPaymentSheetInputModel.customerId,
+        merchantDisplayName: "Felopater Sameh",
+      ),
+    );
+  }
+
+  // 3- display Present Sheet
+  Future _displayPresentSheet() async {
+    await Stripe.instance.presentPaymentSheet();
+  }
+
+  //*** using
+  Future makePaymentIntent({
+    required PaymentInputEntities paymentInputEntities,
+  }) async {
+    try {
+      var paymentInput = await _createPaymentIntent(paymentInputEntities);
+      var ephemeralKeys = await _createEphemeralKeys(
+        customerID: paymentInputEntities.idCustomer,
+      );
+
+      var initPaymentSheet = InitPaymentSheetInputModel(
+        ephemeralKeySecret: ephemeralKeys.secret!,
+        clientSecret: paymentInput.clientSecret!,
+        customerId: paymentInputEntities.idCustomer,
+      );
+
+      await _initPaymentSheet(initPaymentSheetInputModel: initPaymentSheet);
+
+      await _displayPresentSheet();
+      // print("✅ Payment successful");
+
+    } on StripeException catch (e) {
+      // print('❌ Stripe Exception: ${e.error.localizedMessage}');
+      // ممكن ترجع حالة فشل هنا
+      throw Exception("Stripe Error: ${e.error.localizedMessage}");
+    } catch (e) {
+      // print('❌ General Error: $e');
+      // هنا ممكن تبعت ServerFailure مثلاً
+      throw Exception("General Error: $e");
+    }
+  }
+}

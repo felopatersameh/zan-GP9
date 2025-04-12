@@ -40,7 +40,6 @@ class MessageLookup extends MessageLookupByLibrary {
     "Carpentry_selection": MessageLookupByLibrary.simpleMessage(
       "Select the type of Service you need.",
     ),
-    "Cart": MessageLookupByLibrary.simpleMessage("Cart"),
     "Cash": MessageLookupByLibrary.simpleMessage("Cash"),
     "Categories": MessageLookupByLibrary.simpleMessage("Categories"),
     "ChangePassword": MessageLookupByLibrary.simpleMessage("Change Password"),
@@ -83,6 +82,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "Login": MessageLookupByLibrary.simpleMessage("Login"),
     "LoginByGoogle": MessageLookupByLibrary.simpleMessage(
       "Sign in with Google",
+    ),
+    "MessageEmptyProduct": MessageLookupByLibrary.simpleMessage(
+      "No Product Found",
     ),
     "NewPassword": MessageLookupByLibrary.simpleMessage("New Password"),
     "Next": MessageLookupByLibrary.simpleMessage("Next"),
@@ -176,7 +178,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "boarding3_title": MessageLookupByLibrary.simpleMessage(
       "Let\'s achieve your housing needs together",
     ),
-    "cart": MessageLookupByLibrary.simpleMessage("Items"),
+    "cart": MessageLookupByLibrary.simpleMessage("Cart"),
     "checkout": MessageLookupByLibrary.simpleMessage("Check it out >"),
     "city": MessageLookupByLibrary.simpleMessage("City"),
     "completed_services": MessageLookupByLibrary.simpleMessage(
