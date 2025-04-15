@@ -37,7 +37,8 @@ class DefaultTextFormField extends StatelessWidget {
     this.maxLine,
     this.isLogin = false,
     this.enable = true,
-    this.isTextOut = true, this.isTextIn = true,
+    this.isTextOut = true,
+    this.isTextIn = true,
   });
 
   @override
@@ -65,10 +66,11 @@ class DefaultTextFormField extends StatelessWidget {
             onChanged: onChanged,
             controller: controller,
             keyboardType: type,
+            // onFieldSubmitted: (_) => FocusScope.of(context).nextFocus(),
             obscureText: isPassword ?? false,
             validator: inputValidator,
             decoration: InputDecoration(
-              hintText: "${isTextIn == true ? context.local.Enter:""} $text",
+              hintText: "${isTextIn == true ? context.local.Enter : ""} $text",
               hintStyle: AppTextStyles.bodyMediumBold
                   .copyWith(color: AppColors.grayscale70),
               fillColor: AppColors.backgroundColor,

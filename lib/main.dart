@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_stripe/flutter_stripe.dart';
+import 'package:zan/Features/client/Service/Recommendation/presentation/Cubit/recommendation_cubit.dart';
 import 'Config/Themes/light.dart';
 import 'Config/Cubit/settings_cubit.dart';
 import 'Config/Routes/Navigation/navigation_service.dart';
@@ -39,9 +40,8 @@ class MyApp extends StatelessWidget {
         BlocProvider(create: (_) => sl<HomeCubit>()),
         BlocProvider(create: (_) => sl<UserCubit>()),
         BlocProvider(create: (_) => sl<ExploreCubit>()),
-        BlocProvider(
-          create: (_) => AreaMeasurementCubit(),
-        ),
+        BlocProvider(create: (_) => AreaMeasurementCubit()),
+        BlocProvider(create: (_) => RecommendationCubit()..getOptionsRoom())
       ],
       child: ScreenUtilInit(
         designSize: const Size(375, 812),

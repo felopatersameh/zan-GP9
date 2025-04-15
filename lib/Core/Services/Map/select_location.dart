@@ -26,7 +26,7 @@ class _SelectLocationState extends State<SelectLocation> {
     target: LatLng(27.669593268876408, 30.789149139355608), // point of the map
     zoom: 6,
   );
-   LocationService locationService =LocationService();
+  LocationService locationService = LocationService();
   GoogleMapController? mapController;
 
   @override
@@ -44,7 +44,6 @@ class _SelectLocationState extends State<SelectLocation> {
                 CameraUpdate.newCameraPosition(
                   CameraPosition(target: argument, zoom: 17),
                 ),
-
               );
 
               final myMarker = await CustomIconMaps.getImageFromRawData(
@@ -54,8 +53,7 @@ class _SelectLocationState extends State<SelectLocation> {
                   position: argument,
                   icon: BitmapDescriptor.bytes(myMarker));
               context.read<UserCubit>().addMark(marker);
-              context.read<UserCubit>().selectAddress(argument) ;
-
+              context.read<UserCubit>().selectAddress(argument);
             },
             onMapCreated: (GoogleMapController controller) async {
               mapController = controller;
@@ -75,8 +73,9 @@ class _SelectLocationState extends State<SelectLocation> {
                       zoom: 17),
                 ),
               );
-              context.read<UserCubit>().selectAddress(LatLng(data.latitude!, data.longitude!)) ;
-
+              context
+                  .read<UserCubit>()
+                  .selectAddress(LatLng(data.latitude!, data.longitude!));
             },
           ),
           floatingActionButton: BuildSocialLoginButton(
