@@ -16,12 +16,14 @@ class DropdownFieldList extends StatelessWidget {
         child: DropdownButtonFormField<String>(
           value: context.watch<RecommendationCubit>().state.selectedOptionsRoom,
           decoration: InputDecoration(
+            
             enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.all(Radius.circular(81.r))),
             labelText: 'Select Type of Room',
             border: OutlineInputBorder(
                 borderRadius: BorderRadius.all(Radius.circular(81.r))),
           ),
+         
           items: context
               .read<RecommendationCubit>()
               .state

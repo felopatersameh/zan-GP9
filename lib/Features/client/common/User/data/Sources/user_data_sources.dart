@@ -19,6 +19,17 @@ class UserDataSources {
     return UpdateUser.fromMap(response.data["data"]);
   }
 
+  static Future<bool> logout() async {
+    final token = await LocalStorageService.getValue(LocalStorageKeys.token);
+    final response = await DioHelper.postData(
+      data: {
+        "token": token,
+      },
+      path: ApiEndpoints.logout,
+    );
+    return response.statusCode == 200;
+  }
+
   static Future<bool> updatePassword(
       {required UpdatePassword updateUser}) async {
     final response = await DioHelper.postData(

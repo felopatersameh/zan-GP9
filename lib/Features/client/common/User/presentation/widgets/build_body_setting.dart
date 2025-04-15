@@ -1,1 +1,82 @@
-import 'package:flutter/material.dart';import 'package:flutter_screenutil/flutter_screenutil.dart';import '../../../../../../Config/Routes/route_name.dart';import '../../../../../../Core/Resources/app_colors.dart';import '../../../../../../Core/Resources/app_fonts.dart';import '../../../../../../Core/Resources/app_icons.dart';import '../../../../../../Core/Utils/Extensions/localizations_extension.dart';import '../../../../../../Core/Utils/Functions/show_bottom_sheet_methods.dart';import '../../../../../../main.dart';import 'build_item_setting.dart';class BuildBodySetting extends StatelessWidget {  const BuildBodySetting({    super.key,  });  @override  Widget build(BuildContext context) {    final local = context.local;    return SliverFillRemaining(      fillOverscroll: true,      hasScrollBody: false,      child: Column(        crossAxisAlignment: CrossAxisAlignment.start,        children: [          _buildSetting(local.Setting),          BuildItemSetting(            title: local.YourCard,            icon: AppIcons.card,            onTap: () {},          ),          BuildItemSetting(            title: local.Security,            icon: AppIcons.shield,            onTap: () {},          ),          BuildItemSetting(            title: local.Favourite,            icon: AppIcons.heartsOutline,            onTap: () {              kNavigationService.navigateTo(AppRoutes.favorite);            },          ),          BuildItemSetting(            title: local.cart,            icon: AppIcons.bag,            onTap: () {              kNavigationService.navigateTo(AppRoutes.cart);            },          ),          BuildItemSetting(            title: local.Languages,            icon: AppIcons.globe,            onTap: () => ShowBottomSheetMethods.showLanguage(context),          ),          BuildItemSetting(            title: local.Info,            icon: AppIcons.circleInfo,            onTap: () {},          ),        ],      ),    );  }  Padding _buildSetting(String local) => Padding(        padding: const EdgeInsets.symmetric(vertical: 24).r,        child: Text(          local,          style: AppTextStyles.h7Bold.copyWith(            color: AppColors.grayscale60,          ),        ),      );}
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../../../../../Config/Routes/route_name.dart';
+import '../../../../../../Core/Resources/app_colors.dart';
+import '../../../../../../Core/Resources/app_fonts.dart';
+import '../../../../../../Core/Resources/app_icons.dart';
+import '../../../../../../Core/Utils/Extensions/localizations_extension.dart';
+import '../../../../../../Core/Utils/Functions/show_bottom_sheet_methods.dart';
+import '../../../../../../main.dart';
+import '../Cubit/user_cubit.dart';
+import 'build_item_setting.dart';
+
+class BuildBodySetting extends StatelessWidget {
+  const BuildBodySetting({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final local = context.local;
+    return SliverFillRemaining(
+      fillOverscroll: true,
+      hasScrollBody: false,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          _buildSetting(local.Setting),
+          BuildItemSetting(
+            title: local.YourCard,
+            icon: AppIcons.card,
+            onTap: () {},
+          ),
+          BuildItemSetting(
+            title: local.Security,
+            icon: AppIcons.shield,
+            onTap: () {},
+          ),
+          BuildItemSetting(
+            title: local.Favourite,
+            icon: AppIcons.heartsOutline,
+            onTap: () {
+              kNavigationService.navigateTo(AppRoutes.favorite);
+            },
+          ),
+          BuildItemSetting(
+            title: local.cart,
+            icon: AppIcons.bag,
+            onTap: () {
+              kNavigationService.navigateTo(AppRoutes.cart);
+            },
+          ),
+          BuildItemSetting(
+            title: local.Languages,
+            icon: AppIcons.globe,
+            onTap: () => ShowBottomSheetMethods.showLanguage(context),
+          ),
+          BuildItemSetting(
+            title: local.Info,
+            icon: AppIcons.circleInfo,
+            onTap: () {},
+          ), 
+           BuildItemSetting(
+            title: local.Logout,
+            icon: AppIcons.logout,
+            onTap: () => context.read<UserCubit>().logout(),
+                     ),
+        ],
+      ),
+    );
+  }
+
+  Padding _buildSetting(String local) => Padding(
+        padding: const EdgeInsets.symmetric(vertical: 24).r,
+        child: Text(
+          local,
+          style: AppTextStyles.h7Bold.copyWith(
+            color: AppColors.grayscale60,
+          ),
+        ),
+      );
+}

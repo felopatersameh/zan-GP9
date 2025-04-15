@@ -1,1 +1,31 @@
-import 'package:flutter/material.dart';import '../../../Resources/app_colors.dart';class PriceSlider extends StatelessWidget {  final double? value;  final double min;  final double max;  final ValueChanged<double>? onChanged;  const PriceSlider({    super.key,    this.value,    required this.min,    required this.max,    this.onChanged,  });  @override  Widget build(BuildContext context) {    return Slider(      value: value ?? min,      min: min,      max: max,      activeColor: AppColors.primaryColor,      inactiveColor: AppColors.grayscale20,      onChanged: onChanged,    );  }}
+import 'package:flutter/material.dart';
+
+import '../../../Resources/app_colors.dart';
+
+class PriceSlider extends StatelessWidget {
+  final double? value;
+  final double min;
+  final double max;
+  final ValueChanged<double>? onChanged;
+
+  const PriceSlider({
+    super.key,
+    this.value,
+    required this.min,
+    required this.max,
+    this.onChanged,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Slider(
+      value: value ?? min,
+      min: min,
+      max: max,
+      divisions: 10,
+      activeColor: AppColors.primaryColor,
+      inactiveColor: AppColors.grayscale20,
+      onChanged: onChanged,
+    );
+  }
+}

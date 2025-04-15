@@ -28,6 +28,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Address": MessageLookupByLibrary.simpleMessage("العنوان"),
         "ApplyFilters": MessageLookupByLibrary.simpleMessage("تطبيق المرشحات"),
         "Back": MessageLookupByLibrary.simpleMessage("السابق"),
+        "Bio": MessageLookupByLibrary.simpleMessage("السيرة الذاتية"),
         "BuyNow": MessageLookupByLibrary.simpleMessage("اشتري الآن"),
         "CM": MessageLookupByLibrary.simpleMessage("سم"),
         "Camera": MessageLookupByLibrary.simpleMessage("كاميرا"),
@@ -71,6 +72,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "GoodMorning": MessageLookupByLibrary.simpleMessage("صباح الخير"),
         "GoodNight": MessageLookupByLibrary.simpleMessage("مساء خير"),
         "Home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
+        "IDCard_Passport": MessageLookupByLibrary.simpleMessage("بطاقة الهوية"),
+        "IDCard_PassportDescription": MessageLookupByLibrary.simpleMessage(
+            "رفع صورة واضحة من بطاقة الهوية."),
         "InStock": MessageLookupByLibrary.simpleMessage("متوفر"),
         "Info": MessageLookupByLibrary.simpleMessage("المساعدة والدعم"),
         "Languages": MessageLookupByLibrary.simpleMessage("اللغات"),
@@ -79,9 +83,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "Login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "LoginByGoogle":
             MessageLookupByLibrary.simpleMessage("تسجيل باستخدام جوجل"),
+        "Logout": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
         "NewPassword":
             MessageLookupByLibrary.simpleMessage("كلمة المرور الجديدة"),
         "Next": MessageLookupByLibrary.simpleMessage("التالي"),
+        "NoImageSelected":
+            MessageLookupByLibrary.simpleMessage("لا يوجد صورة محددة"),
         "Note": MessageLookupByLibrary.simpleMessage("ملاحظة"),
         "Notifications": MessageLookupByLibrary.simpleMessage("إشعارات"),
         "OnlinePayment":
@@ -89,9 +96,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "OutStock": MessageLookupByLibrary.simpleMessage("غير متوفر"),
         "Photo": MessageLookupByLibrary.simpleMessage("صورة"),
         "PickTime": MessageLookupByLibrary.simpleMessage("اختر الوقت"),
+        "PoliceRecord": MessageLookupByLibrary.simpleMessage("السجل الجنائي"),
+        "PoliceRecordDescription": MessageLookupByLibrary.simpleMessage(
+            "رفع صورة واضحة من السجل الجنائي."),
         "Price": MessageLookupByLibrary.simpleMessage("سعر"),
         "Proceed": MessageLookupByLibrary.simpleMessage("تابع"),
         "Profile": MessageLookupByLibrary.simpleMessage("حسابي"),
+        "ProfilePhoto": MessageLookupByLibrary.simpleMessage("صورة الحساب"),
         "PromoCode": MessageLookupByLibrary.simpleMessage("كود الترويجي"),
         "Quantity": MessageLookupByLibrary.simpleMessage("كمية"),
         "Recommendation": MessageLookupByLibrary.simpleMessage("توصية مخصصة"),
@@ -136,8 +147,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "Trucks": MessageLookupByLibrary.simpleMessage("خدمات النقل بالشاحنات"),
         "TrucksDes": MessageLookupByLibrary.simpleMessage(
             "نوفر لك شاحنات لنقل الأثاث الذي تحتاجه بسهولة."),
+        "UploadImage": MessageLookupByLibrary.simpleMessage("رفع صورة"),
+        "UploadImageCarpenter":
+            MessageLookupByLibrary.simpleMessage("رفع صورة واضحة من نفسك."),
         "Width": MessageLookupByLibrary.simpleMessage("العرض"),
         "WorkingPrice": MessageLookupByLibrary.simpleMessage("ساعات العمل"),
+        "Workshop": MessageLookupByLibrary.simpleMessage("الورشة"),
+        "WorkshopDescription":
+            MessageLookupByLibrary.simpleMessage("رفع صورة واضحة من الورشة."),
         "YourCard": MessageLookupByLibrary.simpleMessage("بطاقتك"),
         "YourRating": MessageLookupByLibrary.simpleMessage("تقييمك"),
         "address_line": MessageLookupByLibrary.simpleMessage("خط العنوان"),

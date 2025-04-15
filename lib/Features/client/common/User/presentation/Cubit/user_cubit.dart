@@ -5,6 +5,7 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 import '../../../../../../Core/Services/Map/Static/location_service.dart';
 import '../../data/models/add_address_model.dart';
 import '../../domain/useCase/address_use_case.dart';
+import '../../domain/useCase/logout_use_case.dart';
 import '../../domain/useCase/refresh_token_use_case.dart';
 import '../../../../../../Config/Routes/route_name.dart';
 import '../../../../../../Core/Storage/Local/local_storage_keys.dart';
@@ -23,13 +24,14 @@ part 'user_state.dart';
 
 class UserCubit extends Cubit<UserClassState> {
   UserCubit(this.updateUserUseCase, this.updatePasswordUseCase,
-      this.getUserDataUseCase, this.refreshTokenUseCase, this.addressUseCase)
+      this.getUserDataUseCase, this.refreshTokenUseCase, this.addressUseCase, this.logoutUseCase)
       : super(UserClassState(userDataModel: UserDataModel.empty()));
   final UpdateUserUseCase updateUserUseCase;
   final UpdatePasswordUseCase updatePasswordUseCase;
   final GetUserDataUseCase getUserDataUseCase;
   final RefreshTokenUseCase refreshTokenUseCase;
   final AddressUseCase addressUseCase;
+  final LogoutUseCase logoutUseCase;
   LocationService locationService = LocationService();
 
   get id => state.userDataModel.id;
@@ -214,5 +216,15 @@ class UserCubit extends Cubit<UserClassState> {
       address.postalCode,
     ].where((element) => element != null).join(', ');
     return addressLine;
+  }
+
+  Future<void> logout() async {
+    final response = await logoutUseCase.call();
+    response.fold((error) {}, (data) async{
+
+     await LocalStorageService.removeValue(LocalStorageKeys.token);
+    await kNavigationService.clearAndNavigateTo(AppRoutes.authentication);
+    });
+   
   }
 }
