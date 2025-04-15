@@ -96,13 +96,12 @@ class UserDataSources {
     return response.statusCode == 200 ? true : false;
   }
 
-  static Future<bool> setDefaultAddress(AddressModel address) async {
-    final endpoints = ApiEndpoints.updateAddress
-        .replaceFirstMapped(RegExp(r'{id}'), (match) => address.id.toString());
+  static Future<AddressModel> setDefaultAddress(AddressModel address) async {
+    final endpoints = ApiEndpoints.setDefaultAddress
+        .replaceFirstMapped(RegExp('0'), (match) => address.id.toString());
     final response = await DioHelper.postData(
       path: endpoints,
     );
-    // print(response);
-    return response.statusCode == 200 ? true : false;
+    return AddressModel.fromJson(response.data["data"]["address"]);
   }
 }

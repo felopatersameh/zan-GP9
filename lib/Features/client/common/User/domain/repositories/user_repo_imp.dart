@@ -125,7 +125,7 @@ class UserRepoImp extends UserRepo {
   }
 
   @override
-  Future<Either<Failure, bool>> setDefaultAddress(AddressModel address) async{
+  Future<Either<Failure, AddressModel>> setDefaultAddress(AddressModel address) async{
     try {
       final response = await UserDataSources.setDefaultAddress(address);
       return right(response);

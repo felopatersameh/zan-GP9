@@ -1,1 +1,44 @@
-import 'package:flutter/material.dart';enum NumbersOfCrossAxisCount {  small([150, (52 / 75)]),  large([400, 2.5]);  final List<num> value;  const NumbersOfCrossAxisCount(this.value);}enum ImageType { svgAsset, svgNetwork, asset, network, none }void showSnackBar(BuildContext context, String message) {  ScaffoldMessenger.of(context).showSnackBar(    SnackBar(      padding: const EdgeInsets.all(20),      shape: const ContinuousRectangleBorder(        borderRadius: BorderRadius.all(Radius.circular(10)),      ),      content: Stack(        children: [          // BackdropFilter(          //   filter: ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),          //   child: Container(          //     color: Colors.black,          //   ),          // ),          Column(            crossAxisAlignment: CrossAxisAlignment.start,            children: [              Text(                message, // style: Styles.textStyle20.copyWith(color: Colors.white),              ),            ],          ),        ],      ),      // backgroundColor: Colors.transparent,      elevation: 8.0,      behavior: SnackBarBehavior.fixed,    ),  );}
+import 'package:flutter/material.dart';
+
+enum NumbersOfCrossAxisCount {
+  small([150, (52 / 75)]),
+  large([400, 2.5]);
+
+  final List<num> value;
+
+  const NumbersOfCrossAxisCount(this.value);
+}
+enum ImageType { svgAsset, svgNetwork, asset, network, file, none }
+
+
+void showSnackBar(BuildContext context, String message) {
+  ScaffoldMessenger.of(context).showSnackBar(
+    SnackBar(
+      padding: const EdgeInsets.all(20),
+      shape: const ContinuousRectangleBorder(
+        borderRadius: BorderRadius.all(Radius.circular(10)),
+      ),
+      content: Stack(
+        children: [
+          // BackdropFilter(
+          //   filter: ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
+          //   child: Container(
+          //     color: Colors.black,
+          //   ),
+          // ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                message, // style: Styles.textStyle20.copyWith(color: Colors.white),
+              ),
+            ],
+          ),
+        ],
+      ),
+      // backgroundColor: Colors.transparent,
+      elevation: 8.0,
+      behavior: SnackBarBehavior.fixed,
+    ),
+  );
+}

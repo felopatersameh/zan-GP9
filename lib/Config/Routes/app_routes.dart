@@ -11,6 +11,7 @@ import '../../Features/client/App/View_3D/Page/screen_3d.dart';
 import '../../Features/client/Service/AreaMeasurement/Pages/area_measurement_screen.dart';
 import '../../Features/client/Service/Carpenter/presentation/pages/carpenters_screens.dart';
 import '../../Features/client/Service/Chat/presentation/pages/chat_screeen.dart';
+import '../../Features/client/Service/Recommendation/presentation/pages/recommendation_screen.dart';
 import '../../Features/client/common/Search/presentation/pages/search_screen.dart';
 import '../../Features/client/common/User/presentation/pages/add_address_screen.dart';
 import '../../Features/client/common/User/presentation/pages/change_password_screen.dart';
@@ -51,6 +52,8 @@ class AppRouteBuilders {
         return _defaultPageRoute(const CarpentersScreen());
         case AppRoutes.chatPage:
         return _defaultPageRoute(const ChatAiScreen());
+        case AppRoutes.recommendation:
+        return _defaultPageRoute(const RecommendationScreen());
         case AppRoutes.productDetails:
           final args = settings.arguments as int;
         return _defaultPageRoute( ProductDetailsScreen(id: args,));

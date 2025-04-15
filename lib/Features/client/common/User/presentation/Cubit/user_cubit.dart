@@ -186,10 +186,12 @@ class UserCubit extends Cubit<UserClassState> {
 
   Future<void> setDefaultAddress(AddressModel address) async {
     final response = await addressUseCase.setDefaultAddress(address);
-    response.fold((error) {}, (data) {
-      final oldModel = state.address!;
+    response.fold((error) {
+
+    }, (data) {
+      final oldModel = state.address??[];
       final newList = oldModel.map((e) {
-        if (e.id == address.id) {
+        if (e.id == data.id) {
           return e.copyWith(isDefault: true);
         } else {
           return e.copyWith(isDefault: false);
