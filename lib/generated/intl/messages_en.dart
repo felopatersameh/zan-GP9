@@ -28,6 +28,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Address": MessageLookupByLibrary.simpleMessage("Address"),
         "ApplyFilters": MessageLookupByLibrary.simpleMessage("Apply Filters"),
         "Back": MessageLookupByLibrary.simpleMessage("Back"),
+        "Bio": MessageLookupByLibrary.simpleMessage("Bio"),
         "BuyNow": MessageLookupByLibrary.simpleMessage("Buy Now"),
         "CM": MessageLookupByLibrary.simpleMessage("CM"),
         "Camera": MessageLookupByLibrary.simpleMessage("Camera"),
@@ -74,6 +75,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "GoodMorning": MessageLookupByLibrary.simpleMessage("Good Morning"),
         "GoodNight": MessageLookupByLibrary.simpleMessage("Good Night"),
         "Home": MessageLookupByLibrary.simpleMessage("Home"),
+        "IDCard_Passport": MessageLookupByLibrary.simpleMessage("ID Card"),
+        "IDCard_PassportDescription": MessageLookupByLibrary.simpleMessage(
+            "Upload clear image of the ID card."),
         "InStock": MessageLookupByLibrary.simpleMessage("In Stock"),
         "Info": MessageLookupByLibrary.simpleMessage("Help & Support"),
         "Languages": MessageLookupByLibrary.simpleMessage("Languages"),
@@ -83,19 +87,26 @@ class MessageLookup extends MessageLookupByLibrary {
         "Login": MessageLookupByLibrary.simpleMessage("Login"),
         "LoginByGoogle":
             MessageLookupByLibrary.simpleMessage("Sign in with Google"),
+        "Logout": MessageLookupByLibrary.simpleMessage("Logout"),
         "MessageEmptyProduct":
             MessageLookupByLibrary.simpleMessage("No Product Found"),
         "NewPassword": MessageLookupByLibrary.simpleMessage("New Password"),
         "Next": MessageLookupByLibrary.simpleMessage("Next"),
+        "NoImageSelected":
+            MessageLookupByLibrary.simpleMessage("No Image Selected"),
         "Note": MessageLookupByLibrary.simpleMessage("Note"),
         "Notifications": MessageLookupByLibrary.simpleMessage("Notifications"),
         "OnlinePayment": MessageLookupByLibrary.simpleMessage("OnlinePayment"),
         "OutStock": MessageLookupByLibrary.simpleMessage("Out of Stock"),
         "Photo": MessageLookupByLibrary.simpleMessage("Photo"),
         "PickTime": MessageLookupByLibrary.simpleMessage("Pick time"),
+        "PoliceRecord": MessageLookupByLibrary.simpleMessage("Police Record"),
+        "PoliceRecordDescription": MessageLookupByLibrary.simpleMessage(
+            "Upload clear image of the police record."),
         "Price": MessageLookupByLibrary.simpleMessage("Price"),
         "Proceed": MessageLookupByLibrary.simpleMessage("Proceed"),
         "Profile": MessageLookupByLibrary.simpleMessage("Profile"),
+        "ProfilePhoto": MessageLookupByLibrary.simpleMessage("Profile Photo"),
         "PromoCode": MessageLookupByLibrary.simpleMessage("Promo code"),
         "Quantity": MessageLookupByLibrary.simpleMessage("Quantity"),
         "Recommendation":
@@ -142,8 +153,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "Trucks": MessageLookupByLibrary.simpleMessage("Trucks"),
         "TrucksDes": MessageLookupByLibrary.simpleMessage(
             "Trucks can take the loads you need to move the furniture"),
+        "UploadImage": MessageLookupByLibrary.simpleMessage("Upload Image"),
+        "UploadImageCarpenter": MessageLookupByLibrary.simpleMessage(
+            "Upload clear image of yourself."),
         "Width": MessageLookupByLibrary.simpleMessage("Width"),
         "WorkingPrice": MessageLookupByLibrary.simpleMessage("Working Hour"),
+        "Workshop": MessageLookupByLibrary.simpleMessage("Workshop"),
+        "WorkshopDescription": MessageLookupByLibrary.simpleMessage(
+            "Upload clear image of the workshop."),
         "YourCard": MessageLookupByLibrary.simpleMessage("Your Card"),
         "YourRating": MessageLookupByLibrary.simpleMessage("Your Rating"),
         "address_line": MessageLookupByLibrary.simpleMessage("Address Line"),

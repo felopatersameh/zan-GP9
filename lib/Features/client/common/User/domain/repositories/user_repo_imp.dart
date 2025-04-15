@@ -156,4 +156,16 @@ class UserRepoImp extends UserRepo {
       return Left(ServerFailure("Unknown error occurred"));
     }
   }
+  
+  @override
+  Future<Either<Failure, bool>> logout()async{
+    try {
+      final response = await UserDataSources.logout();
+      return right(response);
+    } on DioException catch (e) {
+      return Left(ServerFailure.fromDioError(e));
+    } catch (e) {
+      return Left(ServerFailure("Unknown error occurred"));
+    }
+  }
 }

@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
-import '../../../../../../../Core/Services/Payment/enum_payments.dart';
+import '../../../../../../../Core/Utils/Enums/enum_payments.dart';
 import '../../../../../../../Core/Utils/Widget/custom_scaffold_messenger.dart';
 import '../../../data/Models/create_orders.dart';
 import '../../../data/Models/get_carpenter_available_model.dart';

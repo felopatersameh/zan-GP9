@@ -44,6 +44,18 @@
     "city": "City",
     "state": "State",
     "postal_code": "Postal Code",
+    "Bio": "Bio",
+    "ProfilePhoto": "Profile Photo",
+   "IDCard_Passport": "ID Card",
+    "PoliceRecord": "Police Record",
+   "Workshop": "Workshop",
+    "UploadImage": "Upload Image",
+    "NoImageSelected": "No Image Selected",
+    "UploadImageCarpenter": "Upload clear image of yourself.",
+    "IDCard_PassportDescription": "Upload clear image of the ID card.",
+    "PoliceRecordDescription": "Upload clear image of the police record.",
+    "WorkshopDescription": "Upload clear image of the workshop.",
+      
   
     "Home": "Home",
     "Scan": "Scan",
@@ -53,7 +65,8 @@
     "Favourite": "Favorite",
     "Search": "Search",
     "cart": "Cart",
-  
+
+
     "SeeAll": "See All",
     "popular": "Popular",
     "GoodMorning": "Good Morning",
@@ -75,6 +88,8 @@
     "Security": "Security",
     "Languages": "Languages",
     "Info": "Help & Support",
+    "Logout": "Logout",
+    
     "massageInCart": "Sorry! No items here yet.",
   
     "offerPrice": "Off",

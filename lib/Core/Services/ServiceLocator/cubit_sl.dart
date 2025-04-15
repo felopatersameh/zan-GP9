@@ -14,6 +14,7 @@ import '../../../Features/client/App/Home/domain/useCase/get_featured.dart';
 import '../../../Features/client/App/Home/domain/useCase/product_details.dart';
 import '../../../Features/client/App/Home/presentation/manager/home_cubit.dart';
 import '../../../Features/client/common/User/domain/useCase/get_user_data_use_case.dart';
+import '../../../Features/client/common/User/domain/useCase/logout_use_case.dart';
 import '../../../Features/client/common/User/domain/useCase/refresh_token_use_case.dart';
 import '../../../Features/client/common/User/domain/useCase/update_password_use_case.dart';
 import '../../../Features/client/common/User/domain/useCase/update_user_use_case.dart';
@@ -48,6 +49,7 @@ Future<void> getManyCubit() async {
       sl<GetUserDataUseCase>(),
       sl<RefreshTokenUseCase>(),
       sl<AddressUseCase>(),
+      sl<LogoutUseCase>(),
     ),
   );
   //--------------------------------------------------

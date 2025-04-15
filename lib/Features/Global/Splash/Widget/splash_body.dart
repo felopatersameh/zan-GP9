@@ -57,13 +57,21 @@ class _SplashBodyState extends State<SplashBody> {
       LocalStorageKeys.isFirstTime,
       defaultValue: false,
     );
+    
+    final bool isToken = await LocalStorageService.getValue(
+      LocalStorageKeys.token,
+      defaultValue: false,
+    );
 
     if (!isOnboardingCompleted) {
       await kNavigationService.clearAndNavigateTo(AppRoutes.boarding);
       return;
     }
-    final String nextRoute =
-        isFirstTime ? AppRoutes.main : AppRoutes.authentication;
+    final String nextRoute = isFirstTime
+        ? isToken
+            ? AppRoutes.main
+            : AppRoutes.authentication
+        : AppRoutes.authentication;
     await Future.delayed(Duration(milliseconds: 2000));
     await kNavigationService.clearAndNavigateTo(nextRoute);
   }

@@ -42,6 +42,18 @@
   "city": "مدينة",
   "state": "ولاية",
   "postal_code": "رمز بريدي",
+  
+  "Bio": "السيرة الذاتية",
+  "ProfilePhoto": "صورة الحساب",
+  "IDCard_Passport": "بطاقة الهوية",
+  "PoliceRecord": "السجل الجنائي",
+  "Workshop": "الورشة",
+  "UploadImage": "رفع صورة",
+  "NoImageSelected": "لا يوجد صورة محددة",
+  "UploadImageCarpenter": "رفع صورة واضحة من نفسك.",
+  "IDCard_PassportDescription": "رفع صورة واضحة من بطاقة الهوية.",
+  "PoliceRecordDescription": "رفع صورة واضحة من السجل الجنائي.",
+  "WorkshopDescription": "رفع صورة واضحة من الورشة.",
 
 
   "Home": "الرئيسية",
@@ -76,6 +88,9 @@
   "Security": "حماية",
   "Languages": "اللغات",
   "Info":"المساعدة والدعم",
+  "Logout":"تسجيل الخروج",
+
+
   "massageInCart": "آسف! لا توجد عناصر هنا بعد.",
 
 

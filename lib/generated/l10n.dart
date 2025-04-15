@@ -450,6 +450,116 @@ class S {
     );
   }
 
+  /// `Bio`
+  String get Bio {
+    return Intl.message(
+      'Bio',
+      name: 'Bio',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Profile Photo`
+  String get ProfilePhoto {
+    return Intl.message(
+      'Profile Photo',
+      name: 'ProfilePhoto',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `ID Card`
+  String get IDCard_Passport {
+    return Intl.message(
+      'ID Card',
+      name: 'IDCard_Passport',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Police Record`
+  String get PoliceRecord {
+    return Intl.message(
+      'Police Record',
+      name: 'PoliceRecord',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Workshop`
+  String get Workshop {
+    return Intl.message(
+      'Workshop',
+      name: 'Workshop',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Upload Image`
+  String get UploadImage {
+    return Intl.message(
+      'Upload Image',
+      name: 'UploadImage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No Image Selected`
+  String get NoImageSelected {
+    return Intl.message(
+      'No Image Selected',
+      name: 'NoImageSelected',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Upload clear image of yourself.`
+  String get UploadImageCarpenter {
+    return Intl.message(
+      'Upload clear image of yourself.',
+      name: 'UploadImageCarpenter',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Upload clear image of the ID card.`
+  String get IDCard_PassportDescription {
+    return Intl.message(
+      'Upload clear image of the ID card.',
+      name: 'IDCard_PassportDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Upload clear image of the police record.`
+  String get PoliceRecordDescription {
+    return Intl.message(
+      'Upload clear image of the police record.',
+      name: 'PoliceRecordDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Upload clear image of the workshop.`
+  String get WorkshopDescription {
+    return Intl.message(
+      'Upload clear image of the workshop.',
+      name: 'WorkshopDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Home`
   String get Home {
     return Intl.message(
@@ -715,6 +825,16 @@ class S {
     return Intl.message(
       'Help & Support',
       name: 'Info',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Logout`
+  String get Logout {
+    return Intl.message(
+      'Logout',
+      name: 'Logout',
       desc: '',
       args: [],
     );
