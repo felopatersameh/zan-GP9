@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:zan/Core/Utils/Enums/role.dart';
 
-import '../../../../../client/Service/Recommendation/presentation/Cubit/recommendation_cubit.dart';
+import '../../../../../App/Service/Recommendation/presentation/Cubit/recommendation_cubit.dart';
 
 class AnimatedCrossFadeCubit extends Cubit<CrossFadeStateModel> {
   AnimatedCrossFadeCubit()

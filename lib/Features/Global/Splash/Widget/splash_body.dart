@@ -3,9 +3,9 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../Config/Cubit/settings_cubit.dart';
-import '../../../client/App/Explore/presentation/Cubit/explore_cubit.dart';
-import '../../../client/App/Home/presentation/manager/home_cubit.dart';
-import '../../../client/common/User/presentation/Cubit/user_cubit.dart';
+import '../../../App/common/Explore/presentation/Cubit/explore_cubit.dart';
+import '../../../App/common/Home/presentation/manager/home_cubit.dart';
+import '../../../App/User/presentation/Cubit/user_cubit.dart';
 import '../../../../Core/Resources/app_list.dart';
 
 import '../../../../../Config/Routes/route_name.dart';

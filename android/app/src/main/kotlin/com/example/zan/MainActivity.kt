@@ -1,4 +1,4 @@
-package com.example.zan
+package com.Gp.Zan
 
 import io.flutter.embedding.android.FlutterActivity
 import io.flutter.embedding.android.FlutterFragmentActivity

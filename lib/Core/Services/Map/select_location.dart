@@ -6,7 +6,7 @@ import '../../Resources/app_colors.dart';
 import '../../Utils/Extensions/localizations_extension.dart';
 
 import '../../../Features/Global/Authentication/presentation/components/build_social_login_button.dart';
-import '../../../Features/client/common/User/presentation/Cubit/user_cubit.dart';
+import '../../../Features/App/User/presentation/Cubit/user_cubit.dart';
 import '../../../main.dart';
 import '../../../Config/Assets/image_png.dart';
 import 'custom_icon_maps.dart';
