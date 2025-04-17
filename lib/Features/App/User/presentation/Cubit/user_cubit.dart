@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:geocoding/geocoding.dart' as geocoding;
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import '../../../../../Config/Cubit/settings_cubit.dart';
 import '../../../../../Core/Services/Map/Static/location_service.dart';
 import '../../data/models/add_address_model.dart';
 import '../../domain/useCase/address_use_case.dart';
@@ -42,16 +43,19 @@ class UserCubit extends Cubit<UserClassState> {
 
   void clearMark() async => emit(state.copyWith(setMarkers: {}));
 
-  Future<void> init() async {
-    final String token = await LocalStorageService.getValue(
-      LocalStorageKeys.token,
-      defaultValue: "",
-    );
-
-    if (token.isNotEmpty) {
-      await refreshToken();
-      await getAddress();
-    }
+  Future<void> init(BuildContext context) async {
+    context.read<SettingsCubit>().stream.listen((event) async {
+      if (event.internet) {
+        final String token = await LocalStorageService.getValue(
+          LocalStorageKeys.token,
+          defaultValue: "",
+        );
+        if (token.isNotEmpty) {
+          refreshToken();
+          getAddress();
+        }
+      }
+    });
   }
 
   Future<void> getUserData() async {

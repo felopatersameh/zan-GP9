@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:zan/Features/Global/Authentication/presentation/components/build_social_login_button.dart';
+import '../../../../../Global/Authentication/presentation/components/build_social_login_button.dart';
 import '../../../../../../Core/Utils/Widget/Filters/filter_model.dart';
 import '../../../../../../Config/app_config.dart';
 import '../../../../../../../Core/Utils/Extensions/localizations_extension.dart';

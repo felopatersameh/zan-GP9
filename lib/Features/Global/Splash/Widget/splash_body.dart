@@ -39,9 +39,9 @@ class _SplashBodyState extends State<SplashBody> {
     });
     context.read<SettingsCubit>().startAnimations();
     context.read<SettingsCubit>().endAnimations();
-    context.read<HomeCubit>().init();
-    context.read<UserCubit>().init();
-    context.read<ExploreCubit>().init();
+    context.read<HomeCubit>().init(context);
+    context.read<UserCubit>().init(context);
+    context.read<ExploreCubit>().init(context);
      _navigateToNextScreen();
 
 
@@ -58,9 +58,9 @@ class _SplashBodyState extends State<SplashBody> {
       defaultValue: false,
     );
     
-    final bool isToken = await LocalStorageService.getValue(
+    final String  isToken = await LocalStorageService.getValue(
       LocalStorageKeys.token,
-      defaultValue: false,
+      defaultValue: "",
     );
 
     if (!isOnboardingCompleted) {
@@ -68,7 +68,7 @@ class _SplashBodyState extends State<SplashBody> {
       return;
     }
     final String nextRoute = isFirstTime
-        ? isToken
+        ? isToken.isNotEmpty
             ? AppRoutes.main
             : AppRoutes.authentication
         : AppRoutes.authentication;

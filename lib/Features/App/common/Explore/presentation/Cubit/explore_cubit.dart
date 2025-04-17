@@ -1,1 +1,82 @@
-import 'package:bloc/bloc.dart';import 'package:meta/meta.dart';import '../../data/Model/all_categories.dart';import '../../../../../../Core/Models/review_products_model.dart';import '../../domain/UseCase/all_categories_use_case.dart';import '../../domain/UseCase/preview_categories_use_case.dart';class ExploreCubit extends Cubit<ExploreStateClass> {  ExploreCubit(this.allCategoriesUseCase, this.previewCategoriesUseCase)      : super(ExploreStateClass());  final AllCategoriesUseCase allCategoriesUseCase;  final PreviewCategoriesUseCase previewCategoriesUseCase;  int index = 0;  final Map<int, List<ReviewProductsModel>> _cachedCategories = {};  Future<void> init() async {    emit(state.copyWith(loading: true, categories: []));    await getCategories();    if (state.categories.isNotEmpty) {      await previewCategories(id: state.categories.first.id);    }    emit(state.copyWith(loading: false));  }  Future<void> getCategories() async {    final response = await allCategoriesUseCase.call();    response.fold(      (failure) {},      (data) {        emit(state.copyWith(categories: data));      },    );  }  Future<void> previewCategories({required int id}) async {    if (_cachedCategories.containsKey(id)) {      emit(state.copyWith(categoryDataPreview: _cachedCategories[id]!));      return;    }    emit(state.copyWith(categoryDataPreview: []));    final response = await previewCategoriesUseCase.call(id: id);    response.fold(      (failure) {},      (data) {        _cachedCategories[id] = data;        emit(state.copyWith(categoryDataPreview: data));      },    );  }}@immutableclass ExploreStateClass {  final List<AllCategories> categories;  final List<AllCategories> subCategories;  final List<ReviewProductsModel> categoryDataPreview;  final bool loading;  const ExploreStateClass({    this.categories = const [],    this.subCategories = const [],    this.categoryDataPreview = const [],    this.loading = false,  });  ExploreStateClass copyWith({    List<AllCategories>? categories,    List<AllCategories>? subCategories,    List<ReviewProductsModel>? categoryDataPreview,    bool?loading,  }) {    return ExploreStateClass(      categories: categories ?? this.categories,      categoryDataPreview: categoryDataPreview ?? this.categoryDataPreview,      subCategories: subCategories ?? this.subCategories,      loading: loading ?? this.loading,    );  }}
+import 'package:flutter/widgets.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import '../../../../../../Config/Cubit/settings_cubit.dart';
+import '../../data/Model/all_categories.dart';
+import '../../../../../../Core/Models/review_products_model.dart';
+import '../../domain/UseCase/all_categories_use_case.dart';
+import '../../domain/UseCase/preview_categories_use_case.dart';
+
+class ExploreCubit extends Cubit<ExploreStateClass> {
+  ExploreCubit(this.allCategoriesUseCase, this.previewCategoriesUseCase)
+      : super(ExploreStateClass());
+  final AllCategoriesUseCase allCategoriesUseCase;
+  final PreviewCategoriesUseCase previewCategoriesUseCase;
+  int index = 0;
+  final Map<int, List<ReviewProductsModel>> _cachedCategories = {};
+
+  Future<void> init(BuildContext context) async {
+    context.read<SettingsCubit>().stream.listen((event) async {
+      if (event.internet) {
+        emit(state.copyWith(loading: true, categories: []));
+        await getCategories();
+        if (state.categories.isNotEmpty) {
+          await previewCategories(id: state.categories.first.id);
+        }
+        emit(state.copyWith(loading: false));
+      }
+    });
+  }
+
+  Future<void> getCategories() async {
+    final response = await allCategoriesUseCase.call();
+    response.fold(
+      (failure) {},
+      (data) {
+        emit(state.copyWith(categories: data));
+      },
+    );
+  }
+
+  Future<void> previewCategories({required int id}) async {
+    if (_cachedCategories.containsKey(id)) {
+      emit(state.copyWith(categoryDataPreview: _cachedCategories[id]!));
+      return;
+    }
+    emit(state.copyWith(categoryDataPreview: []));
+    final response = await previewCategoriesUseCase.call(id: id);
+    response.fold(
+      (failure) {},
+      (data) {
+        _cachedCategories[id] = data;
+        emit(state.copyWith(categoryDataPreview: data));
+      },
+    );
+  }
+}
+
+@immutable
+class ExploreStateClass {
+  final List<AllCategories> categories;
+  final List<AllCategories> subCategories;
+  final List<ReviewProductsModel> categoryDataPreview;
+  final bool loading;
+  const ExploreStateClass({
+    this.categories = const [],
+    this.subCategories = const [],
+    this.categoryDataPreview = const [],
+    this.loading = false,
+  });
+  ExploreStateClass copyWith({
+    List<AllCategories>? categories,
+    List<AllCategories>? subCategories,
+    List<ReviewProductsModel>? categoryDataPreview,
+    bool? loading,
+  }) {
+    return ExploreStateClass(
+      categories: categories ?? this.categories,
+      categoryDataPreview: categoryDataPreview ?? this.categoryDataPreview,
+      subCategories: subCategories ?? this.subCategories,
+      loading: loading ?? this.loading,
+    );
+  }
+}

@@ -3,10 +3,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:zan/Config/app_config.dart';
-import 'package:zan/Core/Resources/app_colors.dart';
-import 'package:zan/Features/Global/Authentication/presentation/components/build_social_login_button.dart';
-import 'package:zan/generated/l10n.dart';
+import '../../../../../../Config/app_config.dart';
+import '../../../../../../Core/Resources/app_colors.dart';
+import '../../../../../Global/Authentication/presentation/components/build_social_login_button.dart';
+
+import '../../../../../../generated/l10n.dart';
 
 import '../../../../../../Core/Utils/Widget/Images/build_image.dart';
 import '../Cubit/recommendation_cubit.dart';
