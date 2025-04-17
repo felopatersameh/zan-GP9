@@ -3,6 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_stripe/flutter_stripe.dart';
+import 'Features/App/Service/Recommendation/presentation/pages/recommendation_screen.dart';
+import 'Features/App/Service/AreaMeasurement/Pages/area_measurement_screen.dart';
 import 'Features/App/Service/Recommendation/presentation/Cubit/recommendation_cubit.dart';
 import 'Config/Themes/light.dart';
 import 'Config/Cubit/settings_cubit.dart';
@@ -40,9 +42,11 @@ class MyApp extends StatelessWidget {
         BlocProvider(create: (_) => sl<HomeCubit>()),
         BlocProvider(create: (_) => sl<UserCubit>()),
         BlocProvider(create: (_) => sl<ExploreCubit>()),
-        BlocProvider(create: (_) => AreaMeasurementCubit()),
-        BlocProvider(create: (_) => RecommendationCubit()..getOptionsRoom())
+        BlocProvider(create: (_) => AreaMeasurementCubit(),child: AreaMeasurementScreen(),),
+        BlocProvider(create: (_) => RecommendationCubit()..getOptionsRoom(),child: RecommendationScreen(),),
+        
       ],
+      
       child: ScreenUtilInit(
         designSize: const Size(375, 812),
         minTextAdapt: true,
