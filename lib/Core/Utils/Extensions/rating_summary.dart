@@ -1,1 +1,39 @@
-import 'package:rating_summary/rating_summary.dart';import '../../../Features/client/App/ProductsDetails/data/entities/product_details_model.dart';extension ProductDetailsExtensions on ViewProductDetails {  RatingSummary getRatingSummary() {    if (reviews!.isEmpty) {      return RatingSummary(        counter: 0,        average: 0.0,        counterFiveStars: 0,        counterFourStars: 0,        counterThreeStars: 0,        counterTwoStars: 0,        counterOneStars: 0,      );    }    int totalRatings = reviews!.length;    int? fiveStars = reviews?.where((r) => r.rating == 5).length;    int? fourStars = reviews?.where((r) => r.rating == 4).length;    int? threeStars = reviews?.where((r) => r.rating == 3).length;    int? twoStars = reviews?.where((r) => r.rating == 2).length;    int? oneStar = reviews?.where((r) => r.rating == 1).length;    double averageRating =        (reviews??[]).map((r) => r.rating).reduce((a, b) => a + b) / totalRatings;    return RatingSummary(      counter: totalRatings,      average: averageRating,      counterFiveStars: fiveStars ?? 0,      counterFourStars: fourStars ?? 0,      counterThreeStars: threeStars ?? 0,      counterTwoStars: twoStars ?? 0,      counterOneStars: oneStar ?? 0,    );  }}
+import 'package:rating_summary/rating_summary.dart';
+
+import '../../../Features/App/common/ProductsDetails/data/entities/product_details_model.dart';
+
+extension ProductDetailsExtensions on ViewProductDetails {
+  RatingSummary getRatingSummary() {
+    if (reviews!.isEmpty) {
+      return RatingSummary(
+        counter: 0,
+        average: 0.0,
+        counterFiveStars: 0,
+        counterFourStars: 0,
+        counterThreeStars: 0,
+        counterTwoStars: 0,
+        counterOneStars: 0,
+      );
+    }
+
+    int totalRatings = reviews!.length;
+    int? fiveStars = reviews?.where((r) => r.rating == 5).length;
+    int? fourStars = reviews?.where((r) => r.rating == 4).length;
+    int? threeStars = reviews?.where((r) => r.rating == 3).length;
+    int? twoStars = reviews?.where((r) => r.rating == 2).length;
+    int? oneStar = reviews?.where((r) => r.rating == 1).length;
+
+    double averageRating =
+        (reviews??[]).map((r) => r.rating).reduce((a, b) => a + b) / totalRatings;
+
+    return RatingSummary(
+      counter: totalRatings,
+      average: averageRating,
+      counterFiveStars: fiveStars ?? 0,
+      counterFourStars: fourStars ?? 0,
+      counterThreeStars: threeStars ?? 0,
+      counterTwoStars: twoStars ?? 0,
+      counterOneStars: oneStar ?? 0,
+    );
+  }
+}

@@ -4,7 +4,7 @@ import '../../../../../Resources/app_colors.dart';
 import '../../../../../Utils/Extensions/localizations_extension.dart';
 import '../../../../../../Features/Global/Authentication/presentation/components/build_social_login_button.dart';
 
-import '../../../../../../Features/client/Service/Carpenter/presentation/components/order_details_container.dart';
+import '../../../../../../Features/App/Service/Carpenter/presentation/components/order_details_container.dart';
 import '../../../../ServiceLocator/service_locator.dart';
 import '../../data/data_sources/dio.dart';
 import '../../domain/entities/payment_input_entities.dart';
