@@ -69,7 +69,6 @@ class _FilterSectionState extends State<FilterSection> {
           BuildTitleFilterItem(title: local.Price),
           PriceSlider(
             value: filter.price,
-          
             min: filter.minPrice,
             max: filter.maxPrice,
             onChanged: (value) => setState(() => filter.price = value),
@@ -78,10 +77,12 @@ class _FilterSectionState extends State<FilterSection> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text("\$${filter.minPrice.toInt()}", style: TextStyle(fontSize: 14)),
+              Text("\$${filter.minPrice.toInt()}",
+                  style: TextStyle(fontSize: 14)),
               Text("\$${filter.price?.toInt() ?? filter.minPrice.toInt()}",
                   style: TextStyle(fontSize: 14)),
-              Text("\$${filter.maxPrice.toInt()}", style: TextStyle(fontSize: 14)),
+              Text("\$${filter.maxPrice.toInt()}",
+                  style: TextStyle(fontSize: 14)),
             ],
           ),
 
@@ -97,11 +98,13 @@ class _FilterSectionState extends State<FilterSection> {
 
           Expanded(
             child: Align(
-                child: BuildSocialLoginButton(
+                child: CustomBuildButtonApp(
                     text: local.ApplyFilters,
                     backgroundColor: AppColors.primaryColor,
                     onPressed: () {
-                        context.read<SearchCubit>().searchByPrice(price: filter.price?.toInt()??filter.maxPrice.toInt());
+                      context.read<SearchCubit>().searchByPrice(
+                          price:
+                              filter.price?.toInt() ?? filter.maxPrice.toInt());
                     })),
           ),
         ],

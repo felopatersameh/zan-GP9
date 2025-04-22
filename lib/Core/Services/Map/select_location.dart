@@ -78,7 +78,7 @@ class _SelectLocationState extends State<SelectLocation> {
                   .selectAddress(LatLng(data.latitude!, data.longitude!));
             },
           ),
-          floatingActionButton: BuildSocialLoginButton(
+          floatingActionButton: CustomBuildButtonApp(
               text: context.local.Confirm,
               isSpace: false,
               backgroundColor: AppColors.primaryColor,

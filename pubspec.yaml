@@ -13,7 +13,7 @@ dependencies:
     sdk: flutter
   intl_utils: ^2.8.8
 
-# ------------------ Core Packages ------------------
+  # ------------------ Core Packages ------------------
   flutter_bloc: ^9.1.0
   bloc: ^9.0.0
   get_it: ^8.0.3
@@ -28,6 +28,7 @@ dependencies:
   cached_network_image: ^3.4.1
   top_snackbar_flutter: ^3.2.0
   rating_summary: ^1.0.4
+  fl_chart: ^0.71.0
 
   # ------------------ Navigation & Bottom Bars ------------------
   convex_bottom_bar: ^3.2.0
@@ -56,19 +57,20 @@ dependencies:
   model_viewer_plus: ^1.9.3
   ar_flutter_plugin_updated: ^0.0.1
   vector_math: ^2.1.4
+
   # ------------------ Connectivity & Meta ------------------
   meta: ^1.16.0
   connectivity_plus: ^6.1.3
   table_calendar: ^3.1.3
 
+  # ------------------ Maps & Location ------------------
   google_maps_flutter: ^2.12.1
   location: ^8.0.0
   geocoding: ^3.0.0
 
+  # ------------------ Chat & Media ------------------
   flutter_chat_ui: ^1.6.15
   flutter_chat_types: ^3.6.2
-  uuid: ^4.5.1
-  sensors_plus: ^6.1.1
   flutter_stripe: ^11.5.0
   image_picker: ^1.1.2
   permission_handler: ^11.3.1

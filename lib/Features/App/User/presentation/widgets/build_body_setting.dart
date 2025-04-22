@@ -27,6 +27,12 @@ class BuildBodySetting extends StatelessWidget {
         children: [
           _buildSetting(local.Setting),
           BuildItemSetting(
+            title: local.WorkshopDashboard,
+            icon: AppIcons.workshopDashboardDefualt,
+            onTap: () =>
+                kNavigationService.navigateTo(AppRoutes.dashBoredMainScreen),
+          ),
+          BuildItemSetting(
             title: local.YourCard,
             icon: AppIcons.card,
             onTap: () {},
@@ -59,12 +65,12 @@ class BuildBodySetting extends StatelessWidget {
             title: local.Info,
             icon: AppIcons.circleInfo,
             onTap: () {},
-          ), 
-           BuildItemSetting(
+          ),
+          BuildItemSetting(
             title: local.Logout,
             icon: AppIcons.logout,
             onTap: () => context.read<UserCubit>().logout(),
-                     ),
+          ),
         ],
       ),
     );

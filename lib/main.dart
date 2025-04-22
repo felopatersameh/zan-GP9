@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_stripe/flutter_stripe.dart';
+import 'Features/App/common/Search/presentation/pages/search_screen.dart';
 import 'Features/App/Service/Recommendation/presentation/pages/recommendation_screen.dart';
 import 'Features/App/Service/AreaMeasurement/Pages/area_measurement_screen.dart';
 import 'Features/App/Service/Recommendation/presentation/Cubit/recommendation_cubit.dart';
@@ -17,9 +18,15 @@ import 'Core/Services/Payment/Strip/data/data_sources/api_keys.dart';
 import 'Core/Services/ServiceLocator/service_locator.dart';
 import 'Core/Storage/Remote/api_service.dart';
 import 'Features/App/common/Explore/presentation/Cubit/explore_cubit.dart';
+import 'Features/App/common/Explore/presentation/pages/explore_srceen.dart';
 import 'Features/App/common/Home/presentation/manager/home_cubit.dart';
 import 'Features/App/Service/AreaMeasurement/Cubit/area_measurement_cubit.dart';
 import 'Features/App/User/presentation/Cubit/user_cubit.dart';
+import 'Features/App/common/Main/Cubit/main_cubit.dart';
+import 'Features/App/common/Main/pages/main_app_screen.dart';
+import 'Features/App/common/Search/domain/repositories/search_repo_impl.dart';
+import 'Features/App/common/Search/domain/useCases/search_use_case.dart';
+import 'Features/App/common/Search/presentation/manager/search_cubit.dart';
 import 'generated/l10n.dart';
 
 final AppNavigationService kNavigationService = AppNavigationService();
@@ -41,12 +48,29 @@ class MyApp extends StatelessWidget {
         BlocProvider(create: (_) => SettingsCubit(), lazy: false),
         BlocProvider(create: (_) => sl<HomeCubit>()),
         BlocProvider(create: (_) => sl<UserCubit>()),
-        BlocProvider(create: (_) => sl<ExploreCubit>()),
-        BlocProvider(create: (_) => AreaMeasurementCubit(),child: AreaMeasurementScreen(),),
-        BlocProvider(create: (_) => RecommendationCubit()..getOptionsRoom(),child: RecommendationScreen(),),
-        
+        BlocProvider(
+          create: (_) => MainCubit(),
+          child: MainAppScreen(),
+        ),
+        BlocProvider(
+          create: (_) =>
+              SearchCubit(SearchUseCase(SearchRepoImpl()))..getAllProducts(),
+          child: SearchScreen(),
+        ),
+        BlocProvider(
+          create: (_) => sl<ExploreCubit>(),
+          child: ExploreScreen(),
+        ),
+        BlocProvider(
+          create: (_) => AreaMeasurementCubit(),
+          child: AreaMeasurementScreen(),
+        ),
+        BlocProvider(
+          create: (_) => RecommendationCubit()..getOptionsRoom(),
+          child: RecommendationScreen(),
+        ),
+        // BlocProvider(create: (_) => WorkshopDashboardCubit(),child: WorkshopDashboardScreen(),),
       ],
-      
       child: ScreenUtilInit(
         designSize: const Size(375, 812),
         minTextAdapt: true,

@@ -1,0 +1,41 @@
+{
+  "Domain": {
+    "type": "d",
+    "children": {
+      "Repository": {
+        "type": "d"
+      },
+      "UseCase": {
+        "type": "d"
+      }
+    }
+  },
+  "Data": {
+    "type": "d", 
+    "children": {
+      "Sources": {
+        "type": "d"
+      },
+      "Models": {
+        "type": "d"
+      },
+      "Repositories": {
+        "type": "d"
+      }
+    }
+  },
+  "View": {
+    "type": "d",
+    "children": {
+      "pages": {
+        "type": "d"
+      },
+      "components": {
+        "type": "d"
+      },
+      "Cubit": {
+        "type": "d"
+      }
+    }
+  }
+}

@@ -27,30 +27,40 @@ class ChoosePhotoForRecommendation extends StatelessWidget {
         padding: AppConfig.customPadding,
         child: Column(
           children: [
-           context.watch<RecommendationCubit>().state.image != null ? BuildImageAssets(file: context.read<RecommendationCubit>().showphoto,height: 500.h,fit: BoxFit.contain,):SizedBox(),
+            context.watch<RecommendationCubit>().state.image != null
+                ? BuildImageAssets(
+                    file: context.read<RecommendationCubit>().showphoto,
+                    height: 500.h,
+                    fit: BoxFit.contain,
+                  )
+                : SizedBox(),
             Row(
               children: [
                 Expanded(
-                  child: BuildSocialLoginButton(
+                  child: CustomBuildButtonApp(
                     radius: 0,
                     size: Size(50, 100),
                     text: local.Photo,
                     isSpace: false,
                     textColor: AppColors.textColorBlack,
                     backgroundColor: AppColors.backgroundColor,
-                    onPressed: () => context.read<RecommendationCubit>().takePhotoFromGallery(),
+                    onPressed: () => context
+                        .read<RecommendationCubit>()
+                        .takePhotoFromGallery(),
                   ),
                 ),
                 10.horizontalSpace,
                 Expanded(
-                  child: BuildSocialLoginButton(
+                  child: CustomBuildButtonApp(
                     radius: 0,
                     size: Size(50, 100),
                     text: local.Camera,
                     textColor: AppColors.textColorBlack,
                     isSpace: false,
                     backgroundColor: AppColors.backgroundColor,
-                    onPressed: () => context.read<RecommendationCubit>().takePhotoFromCamera(),
+                    onPressed: () => context
+                        .read<RecommendationCubit>()
+                        .takePhotoFromCamera(),
                   ),
                 ),
               ],
@@ -61,5 +71,3 @@ class ChoosePhotoForRecommendation extends StatelessWidget {
     );
   }
 }
-
-

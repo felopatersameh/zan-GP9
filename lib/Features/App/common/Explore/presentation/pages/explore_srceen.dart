@@ -77,7 +77,7 @@ class ExploreScreen extends StatelessWidget {
                       padding: EdgeInsets.only(
                         top: AppConfig.customPaddingFromTopBottom,
                       ).r,
-                      child:state.categoryDataPreview.isEmpty?  CustomMassage(massage: local.MessageEmptyProduct): TabBarView(
+                      child:state.loadingPreview? CustomLoadingAnimation(): state.categoryDataPreview.isEmpty?  CustomMassage(massage: local.MessageEmptyProduct): TabBarView(
                         physics: NeverScrollableScrollPhysics(),
                         children:List.generate(
                           state.categories.length,
