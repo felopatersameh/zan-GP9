@@ -1,6 +1,7 @@
 import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'package:skeletonizer/skeletonizer.dart';
+import 'build_animatedview_list_box.dart';
 
 import '../../../Features/App/common/ProductsDetails/presentation/pages/product_details.dart';
 import '../../Models/review_products_model.dart';
@@ -51,8 +52,12 @@ class _BuildCustomGridBuilderState extends State<BuildCustomGridBuilder> {
       name: "منتج افتراضي ${index + 1}",
       price: "00.00",
       discountPrice: "00.00",
-      primaryImage:PrimaryImage(imageUrl: "https://www.electricianlicense.com/wp-content/uploads/2020/06/placeholder-img.jpg")
-          , description: '', additionalInfo: '', dimensions: '',
+      primaryImage: PrimaryImage(
+          imageUrl:
+              "https://www.electricianlicense.com/wp-content/uploads/2020/06/placeholder-img.jpg"),
+      description: '',
+      additionalInfo: '',
+      dimensions: '',
     );
   }
 
@@ -91,18 +96,21 @@ class _BuildCustomGridBuilderState extends State<BuildCustomGridBuilder> {
   }
 
   NullableIndexedWidgetBuilder _itemBuilder() => (context, index) {
-        return Skeletonizer(
-          enabled: widget.loading ?? true,
-          child: OpenContainer(
-            transitionDuration: Duration(milliseconds: 500),
-            openBuilder: (context, action) {
-              return ProductDetailsScreen(id: _data[index].id);
-            },
-            closedBuilder: (_, openContainer) =>
-                widget.builder ??
-                BuildCardProduct(
-                  item: _data[index],
-                ),
+        return BuildAnimatedviewListBox(
+          index: index,
+          child: Skeletonizer(
+            enabled: widget.loading ?? true,
+            child: OpenContainer(
+              transitionDuration: Duration(milliseconds: 500),
+              openBuilder: (context, action) {
+                return ProductDetailsScreen(id: _data[index].id);
+              },
+              closedBuilder: (_, openContainer) =>
+                  widget.builder ??
+                  BuildCardProduct(
+                    item: _data[index],
+                  ),
+            ),
           ),
         );
       };

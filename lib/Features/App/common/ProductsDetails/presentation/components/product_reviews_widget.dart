@@ -12,9 +12,9 @@ import '../../../../../../generated/l10n.dart';
 import '../../../../User/presentation/Cubit/user_cubit.dart';
 import '../../data/entities/product_details_model.dart';
 import '../Manager/product_details_cubit.dart';
-class ProductReviewsWidget extends StatefulWidget {
 
- const  ProductReviewsWidget({super.key});
+class ProductReviewsWidget extends StatefulWidget {
+  const ProductReviewsWidget({super.key});
 
   @override
   State<ProductReviewsWidget> createState() => _ProductReviewsWidgetState();
@@ -73,14 +73,18 @@ class _ProductReviewsWidgetState extends State<ProductReviewsWidget> {
 
         // Submit Button
 
-        context.watch<UserCubit>().id == -1 ? SizedBox():  BuildSocialLoginButton(
-          text: local.Submit,
-          isSpace: false,
-          backgroundColor: AppColors.secondaryColor,
-          onPressed: () {
-            context.read<ProductDetailsCubit>().addReview(commentController.text,context);
-          },
-        ),
+        context.watch<UserCubit>().id == -1
+            ? SizedBox()
+            : CustomBuildButtonApp(
+                text: local.Submit,
+                isSpace: false,
+                backgroundColor: AppColors.secondaryColor,
+                onPressed: () {
+                  context
+                      .read<ProductDetailsCubit>()
+                      .addReview(commentController.text, context);
+                },
+              ),
       ],
     );
   }
@@ -107,7 +111,7 @@ class _ProductReviewsWidgetState extends State<ProductReviewsWidget> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    review.user?.name?? "",
+                    review.user?.name ?? "",
                     style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                   ),
                   SizedBox(height: 4),
@@ -121,7 +125,6 @@ class _ProductReviewsWidgetState extends State<ProductReviewsWidget> {
                     ),
                   ),
                   SizedBox(height: 4),
-
 
                   // Review Text
                   Text(
@@ -152,12 +155,14 @@ class _ProductReviewsWidgetState extends State<ProductReviewsWidget> {
       children: List.generate(
         5,
         (index) => GestureDetector(
-          onTap: () => ratingCubit.changeRating(index+1),
+          onTap: () => ratingCubit.changeRating(index + 1),
           child: Icon(
             ratingCubit.state.ratingIndex! >= index + 1
                 ? Icons.star
                 : Icons.star_border,
-            color: ratingCubit.state.ratingIndex! >= index + 1 ? AppColors.primaryColor : AppColors.grayscale60,
+            color: ratingCubit.state.ratingIndex! >= index + 1
+                ? AppColors.primaryColor
+                : AppColors.grayscale60,
             size: 24,
           ),
         ),

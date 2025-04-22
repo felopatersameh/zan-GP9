@@ -77,6 +77,16 @@ class AppIcons {
   static Widget shield = SvgPicture.asset(AppImagesSvg.shield);
   static Widget globe = SvgPicture.asset(AppImagesSvg.global);
   static Widget circleInfo = SvgPicture.asset(AppImagesSvg.info);
+  static Widget workshopDashboardDefualt =
+      Image.asset(AppImagesPng.workshopDashboard);
+  static Widget workshopDashboard =
+      Image.asset(AppImagesPng.workshopDashboard2);
   static FaIcon logout =
       FaIcon(FontAwesomeIcons.arrowRightFromBracket, color: AppColors.error);
+
+  //* WorkshopDashboard
+  static Widget orderCarpenterActive =
+      SvgPicture.asset(AppImagesSvg.orderCarpenterActive);
+  static Widget orderCarpenterDisActive =
+      SvgPicture.asset(AppImagesSvg.orderCarpenterDisActive);
 }

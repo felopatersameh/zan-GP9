@@ -153,6 +153,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "Width": MessageLookupByLibrary.simpleMessage("العرض"),
         "WorkingPrice": MessageLookupByLibrary.simpleMessage("ساعات العمل"),
         "Workshop": MessageLookupByLibrary.simpleMessage("الورشة"),
+        "WorkshopDashboard":
+            MessageLookupByLibrary.simpleMessage("لوحة التحكم"),
         "WorkshopDescription":
             MessageLookupByLibrary.simpleMessage("رفع صورة واضحة من الورشة."),
         "YourCard": MessageLookupByLibrary.simpleMessage("بطاقتك"),
@@ -178,6 +180,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "cart": MessageLookupByLibrary.simpleMessage("عربة التسوق"),
         "checkout": MessageLookupByLibrary.simpleMessage("تحقق من ذلك >"),
         "city": MessageLookupByLibrary.simpleMessage("مدينة"),
+        "completed_orders":
+            MessageLookupByLibrary.simpleMessage("طلبات مكتملة"),
         "completed_services":
             MessageLookupByLibrary.simpleMessage("خدمات مكتملة"),
         "couponDiscount": MessageLookupByLibrary.simpleMessage("خصم القسيمة"),
@@ -201,19 +205,32 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تم تسجيل الخروج بنجاح"),
         "messageRegisterSuccess":
             MessageLookupByLibrary.simpleMessage("تم التسجيل بنجاح"),
+        "monthly_sales":
+            MessageLookupByLibrary.simpleMessage("المبيعات الشهرية"),
         "name": MessageLookupByLibrary.simpleMessage(" الاسم"),
+        "no_pending_orders":
+            MessageLookupByLibrary.simpleMessage("لا يوجد طلبات معلقة"),
+        "no_today_orders":
+            MessageLookupByLibrary.simpleMessage("لا يوجد طلبات اليوم"),
         "offerPrice": MessageLookupByLibrary.simpleMessage("خصم"),
         "offerTittle": MessageLookupByLibrary.simpleMessage("أعلى منتجات جودة"),
         "orLogin": MessageLookupByLibrary.simpleMessage("هل لديك بالفعل حساب؟"),
         "orSingUp": MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),
         "password": MessageLookupByLibrary.simpleMessage(" كلمه المرور"),
+        "pending_orders": MessageLookupByLibrary.simpleMessage("طلبات معلقة"),
         "phone": MessageLookupByLibrary.simpleMessage(" الموبيل"),
         "police_record_photo_url":
             MessageLookupByLibrary.simpleMessage("صورة السجل الجنائي"),
         "popular": MessageLookupByLibrary.simpleMessage("شائع "),
         "postal_code": MessageLookupByLibrary.simpleMessage("رمز بريدي"),
+        "profile_status": MessageLookupByLibrary.simpleMessage("حالة الحساب"),
+        "rating": MessageLookupByLibrary.simpleMessage("التقييم"),
         "services": MessageLookupByLibrary.simpleMessage("خدمات"),
         "state": MessageLookupByLibrary.simpleMessage("ولاية"),
+        "today_orders": MessageLookupByLibrary.simpleMessage("طلبات اليوم"),
+        "total_earnings":
+            MessageLookupByLibrary.simpleMessage("إجمالي الأرباح"),
+        "welcome": MessageLookupByLibrary.simpleMessage("مرحبا بك"),
         "workshop_photo_url":
             MessageLookupByLibrary.simpleMessage("صورة الورشة"),
         "years_experience": MessageLookupByLibrary.simpleMessage("سنوات الخبرة")

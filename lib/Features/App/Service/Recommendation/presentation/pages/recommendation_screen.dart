@@ -30,7 +30,7 @@ class RecommendationScreen extends StatelessWidget {
             text: local.Width,
             type: TextInputType.number,
           ),
-          BuildSocialLoginButton(
+          CustomBuildButtonApp(
             text: local.Proceed,
             isSpace: false,
             backgroundColor: AppColors.primaryColor,

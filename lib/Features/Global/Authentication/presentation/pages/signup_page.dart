@@ -97,7 +97,7 @@ class _SignUpPageState extends State<SignUpPage> {
                   bioController: bioController,
                   formKey: formKeyCarpenter,
                 ),
-                BuildSocialLoginButton(
+                CustomBuildButtonApp(
                     loading: state is AuthenticationCreateAccountLoading,
                     text: local.SignUp,
                     backgroundColor: AppColors.secondaryColor,

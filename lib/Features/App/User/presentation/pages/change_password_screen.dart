@@ -64,7 +64,7 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
                 isLogin: false,
               ),
               30.verticalSpace,
-              BuildSocialLoginButton(
+              CustomBuildButtonApp(
                 onPressed: () {
                   if (formKey.currentState!.validate()) {
                     if (newController.text != verifyController.text) {
@@ -77,8 +77,9 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
                       newPassword: newController.text,
                       passwordConfirmation: verifyController.text,
                     );
-                    context.read<UserCubit>().updatePassword(
-                        context, updatePasswordUser);
+                    context
+                        .read<UserCubit>()
+                        .updatePassword(context, updatePasswordUser);
                   }
                 },
                 isSpace: false,

@@ -159,6 +159,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "Width": MessageLookupByLibrary.simpleMessage("Width"),
         "WorkingPrice": MessageLookupByLibrary.simpleMessage("Working Hour"),
         "Workshop": MessageLookupByLibrary.simpleMessage("Workshop"),
+        "WorkshopDashboard":
+            MessageLookupByLibrary.simpleMessage("Workshop Dashboard"),
         "WorkshopDescription": MessageLookupByLibrary.simpleMessage(
             "Upload clear image of the workshop."),
         "YourCard": MessageLookupByLibrary.simpleMessage("Your Card"),
@@ -185,6 +187,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "cart": MessageLookupByLibrary.simpleMessage("Cart"),
         "checkout": MessageLookupByLibrary.simpleMessage("Check it out >"),
         "city": MessageLookupByLibrary.simpleMessage("City"),
+        "completed_orders":
+            MessageLookupByLibrary.simpleMessage("Completed Orders"),
         "completed_services":
             MessageLookupByLibrary.simpleMessage("Completed Services"),
         "couponDiscount":
@@ -208,7 +212,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Logged out successfully"),
         "messageRegisterSuccess":
             MessageLookupByLibrary.simpleMessage("Registered successfully"),
+        "monthly_sales": MessageLookupByLibrary.simpleMessage("Monthly Sales"),
         "name": MessageLookupByLibrary.simpleMessage("Name"),
+        "no_pending_orders":
+            MessageLookupByLibrary.simpleMessage("No Pending Orders"),
+        "no_today_orders":
+            MessageLookupByLibrary.simpleMessage("No Today Orders"),
         "offerPrice": MessageLookupByLibrary.simpleMessage("Off"),
         "offerTittle":
             MessageLookupByLibrary.simpleMessage("Top Quality Products"),
@@ -217,13 +226,22 @@ class MessageLookup extends MessageLookupByLibrary {
         "orSingUp":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
+        "pending_orders":
+            MessageLookupByLibrary.simpleMessage("Pending Orders"),
         "phone": MessageLookupByLibrary.simpleMessage("Phone"),
         "police_record_photo_url":
             MessageLookupByLibrary.simpleMessage("Police Record Photo"),
         "popular": MessageLookupByLibrary.simpleMessage("Popular"),
         "postal_code": MessageLookupByLibrary.simpleMessage("Postal Code"),
+        "profile_status":
+            MessageLookupByLibrary.simpleMessage("Profile Status"),
+        "rating": MessageLookupByLibrary.simpleMessage("Rating"),
         "services": MessageLookupByLibrary.simpleMessage("Services"),
         "state": MessageLookupByLibrary.simpleMessage("State"),
+        "today_orders": MessageLookupByLibrary.simpleMessage("Today Orders"),
+        "total_earnings":
+            MessageLookupByLibrary.simpleMessage("Total Earnings"),
+        "welcome": MessageLookupByLibrary.simpleMessage("Welcome"),
         "workshop_photo_url":
             MessageLookupByLibrary.simpleMessage("Workshop Photo"),
         "years_experience":

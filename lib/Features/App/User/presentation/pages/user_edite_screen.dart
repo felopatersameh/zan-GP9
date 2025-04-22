@@ -70,7 +70,7 @@ class _UserEditeScreenState extends State<UserEditeScreen> {
                   isTextIn: false,
                   controller: phoneController,
                 ),
-                BuildSocialLoginButton(
+                CustomBuildButtonApp(
                   loading: state.loading,
                   isSpace: false,
                   text: local.Save,
@@ -90,13 +90,13 @@ class _UserEditeScreenState extends State<UserEditeScreen> {
                 20.verticalSpace,
                 ...(state.address ?? []).map((address) {
                   return AddressContainer(
-                    address: address.address??"",
+                    address: address.address ?? "",
                     model: address,
                     isDefault: address.isDefault ?? false,
                   );
                 }),
                 10.verticalSpace,
-                BuildSocialLoginButton(
+                CustomBuildButtonApp(
                     isSpace: false,
                     text: local.AddAddress,
                     backgroundColor: AppColors.grayscale70,
@@ -104,7 +104,7 @@ class _UserEditeScreenState extends State<UserEditeScreen> {
                       kNavigationService.navigateTo(AppRoutes.selectLocation);
                     }),
                 10.verticalSpace,
-                BuildSocialLoginButton(
+                CustomBuildButtonApp(
                   isSpace: false,
                   text: local.ChangePassword,
                   backgroundColor: AppColors.grayscale70,
@@ -128,4 +128,3 @@ class _UserEditeScreenState extends State<UserEditeScreen> {
     );
   }
 }
-

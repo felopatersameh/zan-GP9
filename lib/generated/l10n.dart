@@ -840,6 +840,16 @@ class S {
     );
   }
 
+  /// `Workshop Dashboard`
+  String get WorkshopDashboard {
+    return Intl.message(
+      'Workshop Dashboard',
+      name: 'WorkshopDashboard',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Sorry! No items here yet.`
   String get massageInCart {
     return Intl.message(
@@ -1565,6 +1575,106 @@ class S {
     return Intl.message(
       'Camera',
       name: 'Camera',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Welcome`
+  String get welcome {
+    return Intl.message(
+      'Welcome',
+      name: 'welcome',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Profile Status`
+  String get profile_status {
+    return Intl.message(
+      'Profile Status',
+      name: 'profile_status',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Total Earnings`
+  String get total_earnings {
+    return Intl.message(
+      'Total Earnings',
+      name: 'total_earnings',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Completed Orders`
+  String get completed_orders {
+    return Intl.message(
+      'Completed Orders',
+      name: 'completed_orders',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Rating`
+  String get rating {
+    return Intl.message(
+      'Rating',
+      name: 'rating',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pending Orders`
+  String get pending_orders {
+    return Intl.message(
+      'Pending Orders',
+      name: 'pending_orders',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Today Orders`
+  String get today_orders {
+    return Intl.message(
+      'Today Orders',
+      name: 'today_orders',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No Today Orders`
+  String get no_today_orders {
+    return Intl.message(
+      'No Today Orders',
+      name: 'no_today_orders',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No Pending Orders`
+  String get no_pending_orders {
+    return Intl.message(
+      'No Pending Orders',
+      name: 'no_pending_orders',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Monthly Sales`
+  String get monthly_sales {
+    return Intl.message(
+      'Monthly Sales',
+      name: 'monthly_sales',
       desc: '',
       args: [],
     );

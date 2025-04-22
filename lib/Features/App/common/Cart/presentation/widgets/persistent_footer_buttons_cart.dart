@@ -17,7 +17,8 @@ final TextEditingController textCoupon = TextEditingController();
 class PersistentFooterButtonsCart extends StatelessWidget {
   const PersistentFooterButtonsCart({
     super.key,
-    required this.local, required this.state,
+    required this.local,
+    required this.state,
   });
 
   final S local;
@@ -27,7 +28,8 @@ class PersistentFooterButtonsCart extends StatelessWidget {
   Widget build(BuildContext context) {
     return Align(
       child: Padding(
-        padding:  EdgeInsets.symmetric(horizontal:AppConfig.customPaddingFromRightLeft),
+        padding: EdgeInsets.symmetric(
+            horizontal: AppConfig.customPaddingFromRightLeft),
         child: Column(
           children: [
             Row(
@@ -40,20 +42,18 @@ class PersistentFooterButtonsCart extends StatelessWidget {
                   controller: textCoupon,
                   onChanged: (value) async {
                     if (value.isEmpty) {
-                      return ;
+                      return;
                     }
                     await Future.delayed(const Duration(milliseconds: 1500));
                     context.read<CartCubit>().applyCoupon(textCoupon.text);
-
                   },
                 ),
                 InkWell(
-                    onTap: (){
+                    onTap: () {
                       context.read<CartCubit>().cancelCoupon(textCoupon.text);
                       textCoupon.clear();
                     },
                     child: AppIcons.uncheck),
-
               ],
             ),
             Row(
@@ -114,7 +114,7 @@ class PersistentFooterButtonsCart extends StatelessWidget {
               ],
             ),
             10.verticalSpace,
-            BuildSocialLoginButton(
+            CustomBuildButtonApp(
               //
               size: Size(.8.sw, 56.h),
               text: context.local.BuyNow,

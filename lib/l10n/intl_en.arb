@@ -89,7 +89,8 @@
     "Languages": "Languages",
     "Info": "Help & Support",
     "Logout": "Logout",
-    
+    "WorkshopDashboard": "Workshop Dashboard",
+
     "massageInCart": "Sorry! No items here yet.",
   
     "offerPrice": "Off",
@@ -173,7 +174,19 @@
     "Width": "Width",
     "RoomType": "Room type",
     "Photo":"Photo",
-    "Camera":"Camera"
+    "Camera":"Camera",
+  
+
+  "welcome": "Welcome",
+  "profile_status": "Profile Status",
+  "total_earnings": "Total Earnings",
+  "completed_orders": "Completed Orders",
+  "rating": "Rating",
+  "pending_orders": "Pending Orders",
+  "today_orders": "Today Orders",
+  "no_today_orders": "No Today Orders",
+  "no_pending_orders": "No Pending Orders",
+  "monthly_sales": "Monthly Sales"
   
   }
   

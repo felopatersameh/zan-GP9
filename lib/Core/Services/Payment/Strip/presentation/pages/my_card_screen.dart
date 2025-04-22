@@ -23,7 +23,7 @@ class BottomPaymentMethod extends StatelessWidget {
       create: (context) => PaymentCubit(sl<PaymentStripUseCase>()),
       child: BlocBuilder<PaymentCubit, PaymentState>(
         builder: (context, state) {
-          return BuildSocialLoginButton(
+          return CustomBuildButtonApp(
             text: context.local.Confirm,
             onPressed: () async {
               final totalStrip = total * 100;

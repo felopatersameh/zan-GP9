@@ -1,1 +1,125 @@
-import 'package:flutter/material.dart';import 'package:flutter_bloc/flutter_bloc.dart';import 'package:flutter_screenutil/flutter_screenutil.dart';import '../Cubit/authentication_cubit.dart';import '../../../../../Core/Resources/app_constants.dart';import '../../../../../Core/Utils/validators/email_validate.dart';// import '../../../../../Config/Assets/image_png.dart';import '../../../../../Core/Resources/app_colors.dart';import '../../../../../Core/Utils/Extensions/localizations_extension.dart';import '../../../../../Core/Utils/Widget/TextField/build_text_field.dart';import '../../../../../Core/Utils/Widget/TextField/password_text__form_field.dart';import '../../data/Models/login_model.dart';import '../Cubit/AnimatedCrossFade/animated_cross_fade_cubit.dart';import '../components/build_social_login_button.dart';import '../components/two_text_buttons_switch.dart';class LoginPage extends StatefulWidget {  const LoginPage({super.key});  @override  State<LoginPage> createState() => _LoginPageState();}final formKey = GlobalKey<FormState>();final TextEditingController emailController = TextEditingController();final TextEditingController passwordController = TextEditingController();class _LoginPageState extends State<LoginPage> {  @override  void initState() {    emailController.text="felopatersameh@gmail.com";    passwordController.text="Felopater123";    super.initState();  }  @override  Widget build(BuildContext context) {    final local = context.local;    final isRtl = context.isRtl;    final showForgetPasswordPage =        context.watch<AnimatedCrossFadeCubit>().state.forgetPassword;    return BlocBuilder<AuthenticationCubit, AuthenticationState>(      builder: (context, state) {        return Align(            child: Form(          key: formKey,          child: Column(            mainAxisSize: MainAxisSize.max,            mainAxisAlignment: MainAxisAlignment.spaceEvenly,            children: [              !showForgetPasswordPage                  ? SizedBox(                      width: 320.w,                      child: Row(                        crossAxisAlignment: CrossAxisAlignment.start,                        children: [                          BackButton(                            onPressed: () => context                                .read<AnimatedCrossFadeCubit>()                                .viewForgetPasswordPage(),                            color: Colors.red,                          )                        ],                      ))                  : SizedBox(),              DefaultTextFormField(                text: local.email,                type: TextInputType.emailAddress,                controller: emailController,                inputValidator: (p0) =>                    validateEmail(email: p0 ?? "", isRtl: isRtl),              ),              showForgetPasswordPage                  ? CustomPasswordTextFromField(                      hintText: local.password,                      fieldId: AppConstants.passwordLogin,                      controller: passwordController,                      showForgetMessage: true,                      isLogin: false,                    )                  : SizedBox(),              BuildSocialLoginButton(                  loading: state is AuthenticationLoginLoading,                  text: local.Login,                  backgroundColor: AppColors.secondaryColor,                  textColor: AppColors.textColorWhite,                  isSpace: false,                  onPressed: () {                    if (formKey.currentState?.validate() == true) {                      final loginModel = LoginModel(                        email: emailController.text,                        password: passwordController.text,                      );                      context.read<AuthenticationCubit>().loginByEmail(                            context,                            loginModel,                            local.messageLoginSuccess,                          );                    }                    // Handle Google login},                  }),              3.verticalSpace,              // showForgetPasswordPage              //     ? BuildSocialLoginButton(              //         imagePath: AppImagesPng.google,              //         text: local.LoginByGoogle,              //         backgroundColor: AppColors.backgroundColor,              //         textColor: AppColors.textColorBlack,              //         onPressed: () {              //           // Handle Google login              //         },              //       )              //     : SizedBox(),              TwoTextButtonsSwitch(                firstText: local.orSingUp,                secondText: local.SignUp,              ),            ],          ),        ));      },    );  }}
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../Cubit/authentication_cubit.dart';
+import '../../../../../Core/Resources/app_constants.dart';
+import '../../../../../Core/Utils/validators/email_validate.dart';
+// import '../../../../../Config/Assets/image_png.dart';
+import '../../../../../Core/Resources/app_colors.dart';
+import '../../../../../Core/Utils/Extensions/localizations_extension.dart';
+import '../../../../../Core/Utils/Widget/TextField/build_text_field.dart';
+import '../../../../../Core/Utils/Widget/TextField/password_text__form_field.dart';
+import '../../data/Models/login_model.dart';
+import '../Cubit/AnimatedCrossFade/animated_cross_fade_cubit.dart';
+import '../components/build_social_login_button.dart';
+import '../components/two_text_buttons_switch.dart';
+
+class LoginPage extends StatefulWidget {
+  const LoginPage({super.key});
+
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+final formKey = GlobalKey<FormState>();
+final TextEditingController emailController = TextEditingController();
+final TextEditingController passwordController = TextEditingController();
+
+class _LoginPageState extends State<LoginPage> {
+  @override
+  void initState() {
+    emailController.text = "felopatersameh@gmail.com";
+    passwordController.text = "Felopater123";
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final local = context.local;
+    final isRtl = context.isRtl;
+    final showForgetPasswordPage =
+        context.watch<AnimatedCrossFadeCubit>().state.forgetPassword;
+    return BlocBuilder<AuthenticationCubit, AuthenticationState>(
+      builder: (context, state) {
+        return Align(
+            child: Form(
+          key: formKey,
+          child: Column(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              !showForgetPasswordPage
+                  ? SizedBox(
+                      width: 320.w,
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          BackButton(
+                            onPressed: () => context
+                                .read<AnimatedCrossFadeCubit>()
+                                .viewForgetPasswordPage(),
+                            color: Colors.red,
+                          )
+                        ],
+                      ))
+                  : SizedBox(),
+              DefaultTextFormField(
+                text: local.email,
+                type: TextInputType.emailAddress,
+                controller: emailController,
+                inputValidator: (p0) =>
+                    validateEmail(email: p0 ?? "", isRtl: isRtl),
+              ),
+              showForgetPasswordPage
+                  ? CustomPasswordTextFromField(
+                      hintText: local.password,
+                      fieldId: AppConstants.passwordLogin,
+                      controller: passwordController,
+                      showForgetMessage: true,
+                      isLogin: false,
+                    )
+                  : SizedBox(),
+              CustomBuildButtonApp(
+                  loading: state is AuthenticationLoginLoading,
+                  text: local.Login,
+                  backgroundColor: AppColors.secondaryColor,
+                  textColor: AppColors.textColorWhite,
+                  isSpace: false,
+                  onPressed: () {
+                    if (formKey.currentState?.validate() == true) {
+                      final loginModel = LoginModel(
+                        email: emailController.text,
+                        password: passwordController.text,
+                      );
+                      context.read<AuthenticationCubit>().loginByEmail(
+                            context,
+                            loginModel,
+                            local.messageLoginSuccess,
+                          );
+                    }
+
+                    // Handle Google login},
+                  }),
+              3.verticalSpace,
+              // showForgetPasswordPage
+              //     ? BuildSocialLoginButton(
+              //         imagePath: AppImagesPng.google,
+              //         text: local.LoginByGoogle,
+              //         backgroundColor: AppColors.backgroundColor,
+              //         textColor: AppColors.textColorBlack,
+              //         onPressed: () {
+              //           // Handle Google login
+              //         },
+              //       )
+              //     : SizedBox(),
+              TwoTextButtonsSwitch(
+                firstText: local.orSingUp,
+                secondText: local.SignUp,
+              ),
+            ],
+          ),
+        ));
+      },
+    );
+  }
+}

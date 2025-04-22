@@ -42,13 +42,15 @@ class ExploreCubit extends Cubit<ExploreStateClass> {
       emit(state.copyWith(categoryDataPreview: _cachedCategories[id]!));
       return;
     }
-    emit(state.copyWith(categoryDataPreview: []));
+    emit(state.copyWith(categoryDataPreview: [], loadingPreview: true));
     final response = await previewCategoriesUseCase.call(id: id);
     response.fold(
-      (failure) {},
+      (failure) {
+        emit(state.copyWith(loadingPreview: false));
+      },
       (data) {
         _cachedCategories[id] = data;
-        emit(state.copyWith(categoryDataPreview: data));
+        emit(state.copyWith(categoryDataPreview: data, loadingPreview: false));
       },
     );
   }
@@ -60,23 +62,27 @@ class ExploreStateClass {
   final List<AllCategories> subCategories;
   final List<ReviewProductsModel> categoryDataPreview;
   final bool loading;
+  final bool loadingPreview;
   const ExploreStateClass({
     this.categories = const [],
     this.subCategories = const [],
     this.categoryDataPreview = const [],
     this.loading = false,
+    this.loadingPreview = false,
   });
   ExploreStateClass copyWith({
     List<AllCategories>? categories,
     List<AllCategories>? subCategories,
     List<ReviewProductsModel>? categoryDataPreview,
     bool? loading,
+    bool? loadingPreview,
   }) {
     return ExploreStateClass(
       categories: categories ?? this.categories,
       categoryDataPreview: categoryDataPreview ?? this.categoryDataPreview,
       subCategories: subCategories ?? this.subCategories,
       loading: loading ?? this.loading,
+      loadingPreview: loadingPreview ?? this.loadingPreview,
     );
   }
 }

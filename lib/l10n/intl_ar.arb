@@ -89,6 +89,7 @@
   "Languages": "اللغات",
   "Info":"المساعدة والدعم",
   "Logout":"تسجيل الخروج",
+  "WorkshopDashboard":"لوحة التحكم",
 
 
   "massageInCart": "آسف! لا توجد عناصر هنا بعد.",
@@ -171,6 +172,20 @@
   "Width": "العرض",
   "RoomType": "نوع الغرفه",
   "Photo":"صورة",
-  "Camera":"كاميرا"
+  "Camera":"كاميرا",
+
+  "welcome": "مرحبا بك",
+  "profile_status": "حالة الحساب",
+  "total_earnings": "إجمالي الأرباح",
+  "completed_orders": "طلبات مكتملة",
+  "rating": "التقييم",
+  "today_orders": "طلبات اليوم",
+  "no_today_orders": "لا يوجد طلبات اليوم",
+  "pending_orders": "طلبات معلقة",
+  "no_pending_orders": "لا يوجد طلبات معلقة",
+  "monthly_sales": "المبيعات الشهرية"
+
+
+
 
 }

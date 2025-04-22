@@ -1,1 +1,50 @@
-const String _svg = 'Assets/Svg/';class AppImagesSvg {  //* Images in SplashScreen  // static const String logoLightMode = "${_svg}dark.svg";  static const String logoDarkMode = "${_svg}white.svg";  static const String email = "${_svg}email.svg";  static const String loading = "${_svg}Loading.svg";  //* Images in MainScreen  static const String scanImage = "${_svg}Scan.svg";  static const String homeFill = "${_svg}homeFill.svg";  static const String homeOutline = "${_svg}homeOutlin.svg";  static const String bagWithBackGround = "${_svg}bag.svg";  static const String bag = "${_svg}BagWithout.svg";  static const String bagWithout = "${_svg}card.svg";  static const String truck = "${_svg}truck.svg";  static const String notificationWithBackGround =      "${_svg}notificationWithBackGround.svg";  static const String notificationWithoutBackGround =      "${_svg}notificationWithoutBackGround.svg";  //* Images in Search  static const String filter = "${_svg}Filter.svg";  static const String vector = "${_svg}Vector 1.svg";  //* Images in profile  static const String shield = "${_svg}shield.svg";  static const String info = "${_svg}info.svg";  static const String help = "${_svg}help.svg";  static const String global = "${_svg}global.svg";  static const String edit = "${_svg}Edit.svg";  static const String card = "${_svg}card.svg";  //* Images in cart  static const String cartEmpty = "${_svg}cartEmpty.svg";  static const String carpenter = "${_svg}Carpenter.svg";  static const String cardOffersCarpenters = "${_svg}OfferCarpenters.svg";  static const String cardOffersCarpenters1 = "${_svg}Offer2Carpenters.svg";  static const String cardOffersCarpenters2 = "${_svg}Offer3Carpenters.svg";  static const String leftIcon= "${_svg}left icon.svg";  static const String rightIcons = "${_svg}right icon.svg";}
+const String _svg = 'Assets/Svg/';
+
+class AppImagesSvg {
+  //* Images in SplashScreen
+  // static const String logoLightMode = "${_svg}dark.svg";
+  static const String logoDarkMode = "${_svg}white.svg";
+  static const String email = "${_svg}email.svg";
+  static const String loading = "${_svg}Loading.svg";
+
+  //* Images in MainScreen
+  static const String scanImage = "${_svg}Scan.svg";
+  static const String homeFill = "${_svg}homeFill.svg";
+  static const String homeOutline = "${_svg}homeOutlin.svg";
+  static const String bagWithBackGround = "${_svg}bag.svg";
+  static const String bag = "${_svg}BagWithout.svg";
+  static const String bagWithout = "${_svg}card.svg";
+  static const String truck = "${_svg}truck.svg";
+
+  static const String notificationWithBackGround =
+      "${_svg}notificationWithBackGround.svg";
+  static const String notificationWithoutBackGround =
+      "${_svg}notificationWithoutBackGround.svg";
+
+  //* Images in Search
+  static const String filter = "${_svg}Filter.svg";
+  static const String vector = "${_svg}Vector 1.svg";
+
+  //* Images in profile
+  static const String shield = "${_svg}shield.svg";
+  static const String info = "${_svg}info.svg";
+  static const String help = "${_svg}help.svg";
+  static const String global = "${_svg}global.svg";
+  static const String edit = "${_svg}Edit.svg";
+  static const String card = "${_svg}card.svg";
+
+  //* Images in cart
+  static const String cartEmpty = "${_svg}cartEmpty.svg";
+  static const String carpenter = "${_svg}Carpenter.svg";
+  static const String cardOffersCarpenters = "${_svg}OfferCarpenters.svg";
+  static const String cardOffersCarpenters1 = "${_svg}Offer2Carpenters.svg";
+  static const String cardOffersCarpenters2 = "${_svg}Offer3Carpenters.svg";
+  static const String leftIcon = "${_svg}left icon.svg";
+  static const String rightIcons = "${_svg}right icon.svg";
+
+  //* Images in WorkshopDashboard
+  static const String orderCarpenterDisActive =
+      "${_svg}order_carpenter_disActive.svg";
+  static const String orderCarpenterActive =
+      "${_svg}order_carpenter_active.svg";
+}

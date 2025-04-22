@@ -26,7 +26,6 @@ final TextEditingController stateController = TextEditingController();
 final TextEditingController postalCodeController = TextEditingController();
 
 class _AddAddressScreenState extends State<AddAddressScreen> {
-
   @override
   void initState() {
     final address = context.read<UserCubit>().state.place!.first;
@@ -36,8 +35,8 @@ class _AddAddressScreenState extends State<AddAddressScreen> {
     final addressLine = (address.thoroughfare?.isNotEmpty == true)
         ? address.thoroughfare!
         : (address.street?.isNotEmpty == true && !address.street!.contains('+'))
-        ? address.street!
-        : '${address.locality ?? ''}, ${address.subAdministrativeArea ?? ''}';
+            ? address.street!
+            : '${address.locality ?? ''}, ${address.subAdministrativeArea ?? ''}';
 
     addressController.text = addressLine;
     areaController.text = address.subAdministrativeArea ?? '';
@@ -46,6 +45,7 @@ class _AddAddressScreenState extends State<AddAddressScreen> {
     postalCodeController.text = address.postalCode ?? '';
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
     final local = context.local;
@@ -109,7 +109,7 @@ class _AddAddressScreenState extends State<AddAddressScreen> {
                 controller: postalCodeController,
               ),
               30.verticalSpace,
-              BuildSocialLoginButton(
+              CustomBuildButtonApp(
                 text: local.Save,
                 onPressed: () {
                   // final address = AddressModel.input(
@@ -124,8 +124,8 @@ class _AddAddressScreenState extends State<AddAddressScreen> {
                   // );
 
                   // context.read<UserCubit>().addAddress(address);
-                  LocationService loca = LocationService() ;
-                  loca.getDetailsAddressByLatLong(isMyLocation: true) ;
+                  LocationService loca = LocationService();
+                  loca.getDetailsAddressByLatLong(isMyLocation: true);
                 },
                 isSpace: false,
                 loading: false,
