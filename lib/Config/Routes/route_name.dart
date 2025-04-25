@@ -22,4 +22,6 @@ class AppRoutes {
   static const String chatPage = '/chat';
   static const String recommendation = '/recommendation';
   static const String dashBoredMainScreen = '/dashBoredMainScreen';
+  static const String imageViewer = '/imageViewer';
+  static const String imageView = '/ImageView';
 }

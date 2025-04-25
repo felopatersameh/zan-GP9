@@ -77,8 +77,14 @@ class AppIcons {
   static Widget shield = SvgPicture.asset(AppImagesSvg.shield);
   static Widget globe = SvgPicture.asset(AppImagesSvg.global);
   static Widget circleInfo = SvgPicture.asset(AppImagesSvg.info);
-  static Widget workshopDashboardDefualt =
-      Image.asset(AppImagesPng.workshopDashboard,height: 25,width: 25,);
+
+  //=====================================================================================
+  //* WorkshopDashboard
+  static Widget workshopDashboardDefualt = Image.asset(
+    AppImagesPng.workshopDashboard,
+    height: 25,
+    width: 25,
+  );
 
   static Widget workshopDashboardDefualtHome = Container(
       padding: EdgeInsets.all(7),
@@ -89,10 +95,18 @@ class AppIcons {
         shape: BoxShape.circle,
       ),
       child: Image.asset(
-        AppImagesPng.workshopDashboard,
+        AppImagesPng.workshopDashboardWhite,
       ));
-  static Widget workshopDashboard =
-      Image.asset(AppImagesPng.workshopDashboard2);
+
+  static Widget workshopDashboardSettingProfile = Image.asset(
+    AppImagesPng.workshopDashboardBlack,
+    height: 30,
+    width: 30,
+  );  
+  
+  static Widget workshopDashboardMainScreen = Image.asset(
+    AppImagesPng.workshopDashboardGray,
+  );
   static FaIcon logout =
       FaIcon(FontAwesomeIcons.arrowRightFromBracket, color: AppColors.error);
 
@@ -101,4 +115,10 @@ class AppIcons {
       SvgPicture.asset(AppImagesSvg.orderCarpenterActive);
   static Widget orderCarpenterDisActive =
       SvgPicture.asset(AppImagesSvg.orderCarpenterDisActive);
+
+  static FaIcon toogleoff =
+      FaIcon(FontAwesomeIcons.toggleOff, color: AppColors.secondaryColor);
+
+  static FaIcon toogleon =
+      FaIcon(FontAwesomeIcons.toggleOn, color: AppColors.primaryColor);
 }

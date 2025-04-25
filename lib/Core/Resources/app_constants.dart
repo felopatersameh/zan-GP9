@@ -1,6 +1,9 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:introduction_screen/introduction_screen.dart';
+import '../../main.dart';
 import 'app_colors.dart';
 import '../../generated/l10n.dart';
 import '../Utils/Extensions/localizations_extension.dart';
@@ -111,9 +114,29 @@ class AppConstants {
       ),
     ];
   }
-
-
-
+  static BoxDecoration boxDecoration = BoxDecoration(
+    color: AppColors.backgroundColor,
+    borderRadius: BorderRadius.circular(12),
+    boxShadow: [
+      BoxShadow(
+        color: Colors.grey.withAlpha(50),
+        spreadRadius: 2,
+        blurRadius: 8,
+        offset: const Offset(0, 2),
+      ),
+    ],
+  );
+  static Positioned positionedFilter = Positioned.fill(
+    child: GestureDetector(
+      onTap: () => kNavigationService.goBack(),
+      child: BackdropFilter(
+        filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+        child: Container(
+          color: Colors.transparent,
+        ),
+      ),
+    ),
+  );
 
   static const String passwordLogin = "passwordLogin";
   static const String passwordSignup = "passwordSignup";

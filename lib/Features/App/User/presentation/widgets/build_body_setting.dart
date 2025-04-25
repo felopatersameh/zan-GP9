@@ -30,7 +30,7 @@ class BuildBodySetting extends StatelessWidget {
          context.isCarpenter?
           BuildItemSetting(
             title: local.WorkshopDashboard,
-            icon: AppIcons.workshopDashboardDefualt,
+            icon: AppIcons.workshopDashboardSettingProfile,
             onTap: () {
               context.read<UserCubit>().getUserData();
               kNavigationService.navigateTo(AppRoutes.dashBoredMainScreen);

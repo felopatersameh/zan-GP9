@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../../Config/app_config.dart';
 import '../../../../../../Core/Resources/app_colors.dart';
+import '../../../../../../Core/Resources/app_constants.dart';
 import '../../../../../../Core/Resources/app_fonts.dart';
 
 import '../../../../../../Core/Utils/Widget/Animations/build_animatedview_list_box.dart';
@@ -26,18 +27,10 @@ class ViewTypeOrders extends StatelessWidget {
           padding:
         EdgeInsets.symmetric(horizontal: AppConfig.customPaddingFromRightLeft,vertical: 10.h),
         margin: EdgeInsets.only(bottom: 20.h),
-          decoration: BoxDecoration(
-            color: AppColors.backgroundColor,
-            borderRadius: BorderRadius.circular(12),
-            boxShadow: [
-        BoxShadow(
-          color: Colors.grey.withAlpha(50),
-          spreadRadius: 2,
-          blurRadius: 8,
-          offset: const Offset(0, 2),
-        ),
-            ],
-            ),
+          decoration: AppConstants.boxDecoration,
+
+          
+            
             child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [

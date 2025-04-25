@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:zan/Core/Utils/Widget/Images/view_image_user.dart';
 import '../../../../../Core/Utils/Extensions/localizations_extension.dart';
 import '../Cubit/user_cubit.dart';
 import '../../../../../Config/Routes/route_name.dart';
@@ -34,23 +35,12 @@ class BuildUserDataAppBar extends StatelessWidget {
           ),
         ),
         minLeadingWidth: 50.w,
-        leading: Container(
-            clipBehavior: Clip.hardEdge,
-            decoration: BoxDecoration(
-              color: Colors.transparent,
-              shape: BoxShape.circle,
-            ),
-            child: BuildImageAssets(
-              url: context
-                  .read<UserCubit>()
-                  .state
-                  .userDataModel
-                  .photoUrl
-                  .toString(),
-              setDefaultImage: true,
-              width: 60.w,
-              height: 60.h,
-            )),
+        leading: GestureDetector(
+          onTap: () {
+            kNavigationService.navigateTo(AppRoutes.imageView,arguments: context.read<UserCubit>().state.userDataModel.photoUrl);
+          },
+          child: ViewImageUser(),
+        ),
         trailing: context.isLogin
             ? GestureDetector(
                 onTap: () {

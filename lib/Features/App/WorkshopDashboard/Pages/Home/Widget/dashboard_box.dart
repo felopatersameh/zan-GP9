@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../../Config/app_config.dart';
 import '../../../../../../Core/Resources/app_colors.dart';
+import '../../../../../../Core/Resources/app_constants.dart';
 import '../../../../../../Core/Resources/app_fonts.dart';
 
 class DashboredBox extends StatelessWidget {
@@ -23,18 +24,7 @@ class DashboredBox extends StatelessWidget {
       height: 100.h,
       padding:
           EdgeInsets.symmetric(vertical: AppConfig.customPaddingFromTopBottom),
-      decoration: BoxDecoration(
-        color: AppColors.backgroundColor,
-        borderRadius: BorderRadius.circular(12),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.grey.withAlpha(50),
-            spreadRadius: 2,
-            blurRadius: 8,
-            offset: const Offset(0, 2),
-          ),
-        ],
-      ),
+      decoration: AppConstants.boxDecoration,
       child: ListTile(
         title: Text(
           title,

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../Core/Services/Map/select_location.dart';
+import '../../Core/Utils/Widget/Images/image_gallery_viewer.dart';
+import '../../Core/Utils/Widget/Images/image_view.dart';
 import '../../Features/App/WorkshopDashboard/Main/Pages/main_dashbored_screen.dart';
 import '../../Features/Global/Authentication/presentation/pages/authentication_screen.dart';
 import '../../Features/Global/Boarding/boarding_screen.dart';
@@ -54,7 +56,13 @@ class AppRouteBuilders {
       case AppRoutes.chatPage:
         return _defaultPageRoute(const ChatAiScreen());
       case AppRoutes.recommendation:
-        return _defaultPageRoute(const RecommendationScreen());
+        return _defaultPageRoute(const RecommendationScreen()); 
+      case AppRoutes.imageViewer:
+        final args = settings.arguments as List<String>;
+        return _secondPageRoute(ImageViewer(imageUrls: args));  
+      case AppRoutes.imageView:
+        final args = settings.arguments as String;
+        return _secondPageRoute(ImageView(photo: args));
       case AppRoutes.productDetails:
         final args = settings.arguments as int;
         return _defaultPageRoute(ProductDetailsScreen(
@@ -69,6 +77,13 @@ class AppRouteBuilders {
 
   static MaterialPageRoute<dynamic> _defaultPageRoute(Widget screen) {
     return MaterialPageRoute(builder: (_) => screen);
+  }  
+  
+  static PageRouteBuilder _secondPageRoute(Widget screen) {
+    return PageRouteBuilder(
+        opaque: false,
+        pageBuilder: (BuildContext context, _, __) => screen,
+      );
   }
 
   static Route<dynamic> _errorRoute(String message) {

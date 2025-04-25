@@ -67,14 +67,12 @@ class _MainAppScreenState extends State<MainAppScreen> {
             items: AppList.itemsNavBar(context: context, scanKey: scanKey),
             onTap: (int i) {
               if (i == 2) {
-                // kNavigationService.navigateTo(AppRoutes.authentication);
               } else {
                 context.read<MainCubit>().changeIndex(i);
               }
             },
             onTabNotify: (index) {
               if (index == 2) {
-                // kNavigationService.navigateTo(AppRoutes.authentication);
                 context.buildCustomBottomSheet(
                   maxHeight: .3.sh,
                   widget: SpaceOptimizerScreen(),

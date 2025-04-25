@@ -107,7 +107,7 @@ class BuildCardProduct extends StatelessWidget {
                         decorationColor: AppColors.grayscale60,
                         decorationStyle: TextDecorationStyle.solid,
                       ),
-
+      
                       // style: context.getTextStyle.headlineMedium,
                     ),
                   ],
