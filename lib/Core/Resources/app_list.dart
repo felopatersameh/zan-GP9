@@ -12,8 +12,7 @@ import '../../Config/Assets/image_png.dart';
 import 'app_icons.dart';
 
 class AppList {
-  static List<PageViewModel> buildPagesIntroductionScreen(
-      S local) {
+  static List<PageViewModel> buildPagesIntroductionScreen(S local) {
     return [
       buildPageViewModel(
         title: local.boarding1_title,
@@ -49,61 +48,53 @@ class AppList {
         filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
         blendMode: BlendMode.darken,
         child: Container(
-          color:AppColors.textColorBlack.withAlpha(0x40),
+          color: AppColors.textColorBlack.withAlpha(0x40),
         ),
       ),
     ),
   ];
 
   static List<DashboardBoxConfig> dashboardBoxConfigs(S local) => [
-    DashboardBoxConfig(
-      title: local.total_earnings,
-      subtitle: '100',
-      icon: Icon(Icons.shopping_cart),
-      color: AppColors.dashboardColor1,
-      buttonText: 'View Details'
+        DashboardBoxConfig(
+            title: local.total_earnings,
+            subtitle: '100',
+            icon: Icon(Icons.shopping_cart),
+            color: AppColors.dashboardColor1,
+            buttonText: 'View Details'),
+        DashboardBoxConfig(
+            title: local.completed_orders,
+            subtitle: '100',
+            icon: Icon(Icons.shopping_cart),
+            color: AppColors.dashboardColor2,
+            buttonText: 'View All'),
+        DashboardBoxConfig(
+            title: local.rating,
+            subtitle: '100',
+            icon: Icon(Icons.star),
+            color: AppColors.dashboardColor3,
+            buttonText: 'Review'),
+        DashboardBoxConfig(
+            title: local.pending_orders,
+            subtitle: '100',
+            icon: Icon(Icons.star),
+            color: AppColors.dashboardColor4,
+            buttonText: 'View All'),
+      ];
+
+  static List<TabItem> bottomNavigatorItemsDashBored = [
+    TabItem(
+      icon: AppIcons.orderCarpenterDisActive,
+      activeIcon: AppIcons.orderCarpenterActive,
     ),
-    DashboardBoxConfig(
-      title: local.completed_orders, 
-      subtitle: '100',
-      icon: Icon(Icons.shopping_cart),
-      color: AppColors.dashboardColor2,
-      buttonText: 'View All'
-    ),
-    DashboardBoxConfig(
-      title: local.rating,
-      subtitle: '100', 
-      icon: Icon(Icons.star),
-      color: AppColors.dashboardColor3,
-      buttonText: 'Review'
-    ),
-    DashboardBoxConfig(
-      title: local.pending_orders,
-      subtitle: '100',
-      icon: Icon(Icons.star), 
-      color: AppColors.dashboardColor4,
-      buttonText: 'View All'
+    TabItem(
+        icon: AppIcons.workshopDashboardMainScreen,
+        activeIcon: AppIcons.workshopDashboardDefualt),
+    TabItem(
+      icon: AppIcons.profileOutline,
+      activeIcon: AppIcons.profileFill,
     ),
   ];
-
-
-  static List<TabItem> bottomNavigatorItemsDashBored = 
-    [
-        TabItem(
-          icon: AppIcons.orderCarpenterDisActive,
-          activeIcon: AppIcons.orderCarpenterActive,
-        ),
-        TabItem(
-          icon: AppIcons.workshopDashboard,
-          activeIcon:
-              AppIcons.workshopDashboardDefualt
-        ),
-        TabItem(
-          icon: AppIcons.profileOutline,
-          activeIcon: AppIcons.profileFill,
-        ),
-      ];
-     static List<TabItem> itemsNavBar({
+  static List<TabItem> itemsNavBar({
     required BuildContext context,
     required Key scanKey,
   }) {

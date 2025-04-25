@@ -18,5 +18,7 @@ class AppImagesPng {
   static const String toolbox = "$_path/toolbox.png";
   static const String successOrderCarpenter = "$_path/SuccessOrderCarpenter.png";
   static const String workshopDashboard = "$_path/Dashboard.png";
-  static const String workshopDashboard2 = "$_path/Dashboard2.png";
+  static const String workshopDashboardGray = "$_path/DashboardGray.png";
+  static const String workshopDashboardBlack = "$_path/DashboardBlack.png";
+  static const String workshopDashboardWhite = "$_path/DashboardWhite.png";
 }

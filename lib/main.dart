@@ -42,27 +42,18 @@ class MyApp extends StatelessWidget {
         BlocProvider(create: (_) => SettingsCubit(), lazy: false),
         BlocProvider(create: (_) => sl<HomeCubit>()),
         BlocProvider(create: (_) => sl<UserCubit>()),
+        BlocProvider(create: (_) => MainCubit(), child: MainAppScreen()),
         BlocProvider(
-          create: (_) => MainCubit(),
-          child: MainAppScreen()
-        ),
+            create: (_) =>
+                SearchCubit(SearchUseCase(SearchRepoImpl()))..getAllProducts(),
+            child: SearchScreen()),
+        BlocProvider(create: (_) => sl<ExploreCubit>(), child: ExploreScreen()),
         BlocProvider(
-          create: (_) =>
-              SearchCubit(SearchUseCase(SearchRepoImpl()))..getAllProducts(),
-          child: SearchScreen()
-        ),
+            create: (_) => AreaMeasurementCubit(),
+            child: AreaMeasurementScreen()),
         BlocProvider(
-          create: (_) => sl<ExploreCubit>(),
-          child: ExploreScreen()
-        ),
-        BlocProvider(
-          create: (_) => AreaMeasurementCubit(),
-          child: AreaMeasurementScreen()
-        ),
-        BlocProvider(
-          create: (_) => RecommendationCubit()..getOptionsRoom(),
-          child: RecommendationScreen()
-        ),
+            create: (_) => RecommendationCubit()..getOptionsRoom(),
+            child: RecommendationScreen()),
         // BlocProvider(create: (_) => WorkshopDashboardCubit(),child: WorkshopDashboardScreen(),),
       ],
       child: ScreenUtilInit(

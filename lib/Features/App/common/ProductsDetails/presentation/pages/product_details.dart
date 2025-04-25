@@ -64,10 +64,15 @@ class ProductDetailsScreen extends StatelessWidget {
                                   .read<ProductDetailsCubit>()
                                   .changeIndex(index),
                               itemCount: state.product!.images.length,
-                              itemBuilder: (context, index) => BuildImageAssets(
-                                height: 300.h,
-                                width: 1.sw,
-                                url: state.product!.images[index].imageUrl,
+                              itemBuilder: (context, index) => GestureDetector(
+                                onTap: () => kNavigationService.navigateTo(
+                                    AppRoutes.imageViewer,
+                                    arguments: state.product!.images.map((e) => e.imageUrl).toList()),
+                                child: BuildImageAssets(
+                                  height: 300.h,
+                                  width: 1.sw,
+                                  url: state.product!.images[index].imageUrl,
+                                ),
                               ),
                             ),
                           ),

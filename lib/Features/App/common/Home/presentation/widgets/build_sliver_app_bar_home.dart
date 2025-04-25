@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../../../../../Core/Utils/Extensions/localizations_extension.dart';
+import '../../../../../../Core/Utils/Widget/Images/view_image_user.dart';
 import '../../../../User/presentation/Cubit/user_cubit.dart';
 import '../../../../../../Config/app_config.dart';
 import '../../../../../../Core/Utils/Extensions/context_extension.dart';
@@ -10,7 +12,6 @@ import '../../../../../../Config/Routes/route_name.dart';
 import '../../../../../../Core/Resources/app_colors.dart';
 import '../../../../../../Core/Resources/app_fonts.dart';
 import '../../../../../../Core/Resources/app_icons.dart';
-import '../../../../../../Core/Utils/Widget/Images/build_image.dart';
 import '../../../../../../main.dart';
 
 class SliverAppBarHome extends StatelessWidget {
@@ -70,22 +71,12 @@ class SliverAppBarHome extends StatelessWidget {
           ? null
           : Padding(
               padding: const EdgeInsets.all(10.0),
-              child: Container(
-                clipBehavior: Clip.hardEdge,
-                decoration: BoxDecoration(
-                  color: Colors.transparent,
-                  shape: BoxShape.circle,
-                ),
-                child: BuildImageAssets(
-                  url: context.watch<UserCubit>().state.userDataModel.photoUrl,
-                  setDefaultImage: true,
-                ),
-              ),
+              child: ViewImageUser(),
             ),
       title: context.watch<UserCubit>().id == -1 ? null : _buildTitle(context),
       elevation: 0,
       actions: [
-        IconButton(
+         context.isCarpenter ? IconButton(
             iconSize: 30,
             icon: AppIcons.workshopDashboardDefualtHome,
             onPressed: () async {
@@ -94,7 +85,7 @@ class SliverAppBarHome extends StatelessWidget {
               // LocationService location =LocationService();
               // await  location.getDetailsAddressByLatLong();
               // await  location.getDetailsAddressByAddress("HGX6+8C7, , Kafr Al Hosr, Al-Sharqia Governorate 7122073, Egypt");
-            }),
+            }):const SizedBox(),
         12.horizontalSpace,
         InkWell(
           onTap: () => kNavigationService.navigateTo(AppRoutes.cart),
