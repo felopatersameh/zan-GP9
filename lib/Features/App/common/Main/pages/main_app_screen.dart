@@ -4,15 +4,12 @@ import 'package:flutter_expandable_fab/flutter_expandable_fab.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../Core/Resources/app_list.dart';
 import '../../../../../Core/Utils/Extensions/context_extension.dart';
-import '../../../../../Core/Utils/Widget/loading_animation.dart';
+import '../../../../../Core/Utils/Widget/Animations/loading_animation.dart';
 
 import '../../../../../Core/Resources/app_constants.dart';
 import '../../../../../Core/Storage/Local/local_storage_keys.dart';
 import '../../../../../Core/Storage/Local/local_storage_service.dart';
 import '../../../../../Core/Utils/Widget/tutorial_helper.dart';
-import '../../Search/domain/repositories/search_repo_impl.dart';
-import '../../Search/domain/useCases/search_use_case.dart';
-import '../../Search/presentation/manager/search_cubit.dart';
 import '../../SpaceOptimizer/presentation/pages/space_optimizer_screen.dart';
 import '../Cubit/main_cubit.dart';
 import '../../../../../Core/Utils/Widget/build_bottom_navigation_bar.dart';

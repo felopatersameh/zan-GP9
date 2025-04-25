@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../Cubit/CarpenterService/carpenter_service_cubit.dart';
+import '../../Cubit/CarpenterService/carpenter_service_cubit.dart';
 
-import '../../../../../../Core/Utils/Enums/enum_payments.dart';
+import '../../../../../../../Core/Utils/Enums/enum_payments.dart';
 
 class PaymentMethodRow extends StatelessWidget {
   const PaymentMethodRow({super.key});

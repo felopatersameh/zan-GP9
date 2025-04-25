@@ -8,7 +8,7 @@ import '../../../../../../Config/Cubit/settings_cubit.dart';
 import '../../../../../../Core/Resources/app_colors.dart';
 import '../../../../../../Core/Utils/Extensions/localizations_extension.dart';
 import '../../../../../../Core/Utils/Extensions/widget_extension.dart';
-import '../../../../../../Core/Utils/Widget/default_app_bar.dart';
+import '../../../../../../Core/Utils/Widget/AppBar/default_app_bar.dart';
 import '../../data/Model/message.dart';
 import '../../domain/UseCase/get_faqs_use_case.dart';
 import '../../domain/repository/chat_ai_repo_imp.dart';

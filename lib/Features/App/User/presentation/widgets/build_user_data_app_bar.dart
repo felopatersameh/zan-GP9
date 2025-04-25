@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../../../../Core/Utils/Extensions/localizations_extension.dart';
 import '../Cubit/user_cubit.dart';
 import '../../../../../Config/Routes/route_name.dart';
 import '../../../../../main.dart';
@@ -33,9 +34,12 @@ class BuildUserDataAppBar extends StatelessWidget {
           ),
         ),
         minLeadingWidth: 50.w,
-        leading: CircleAvatar(
-            backgroundColor: Colors.transparent,
-            radius: 30.r,
+        leading: Container(
+            clipBehavior: Clip.hardEdge,
+            decoration: BoxDecoration(
+              color: Colors.transparent,
+              shape: BoxShape.circle,
+            ),
             child: BuildImageAssets(
               url: context
                   .read<UserCubit>()
@@ -47,13 +51,13 @@ class BuildUserDataAppBar extends StatelessWidget {
               width: 60.w,
               height: 60.h,
             )),
-        trailing: context.watch<UserCubit>().id == -1
-            ? null
-            : GestureDetector(
+        trailing: context.isLogin
+            ? GestureDetector(
                 onTap: () {
                   kNavigationService.navigateTo(AppRoutes.userEditeScreen);
                 },
-                child: AppIcons.edit),
+                child: AppIcons.edit)
+            : null,
       ),
     );
   }

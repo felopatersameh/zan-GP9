@@ -66,32 +66,35 @@ class SliverAppBarHome extends StatelessWidget {
       scrolledUnderElevation: 0,
       pinned: true,
       leadingWidth: 100.w,
-      leading:context.watch<UserCubit>().id== -1 ? null: Padding(
-        padding: const EdgeInsets.all(10.0),
-        child: CircleAvatar(
-          backgroundColor: Colors.transparent,
-          radius: 18.r,
-          child: BuildImageAssets(
-            url: context.watch<UserCubit>().state.userDataModel.photoUrl,
-            setDefaultImage: true,
-          ),
-        ),
-      ),
-      title:context.watch<UserCubit>().id== -1 ? null: _buildTitle(context),
+      leading: context.watch<UserCubit>().id == -1
+          ? null
+          : Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Container(
+                clipBehavior: Clip.hardEdge,
+                decoration: BoxDecoration(
+                  color: Colors.transparent,
+                  shape: BoxShape.circle,
+                ),
+                child: BuildImageAssets(
+                  url: context.watch<UserCubit>().state.userDataModel.photoUrl,
+                  setDefaultImage: true,
+                ),
+              ),
+            ),
+      title: context.watch<UserCubit>().id == -1 ? null : _buildTitle(context),
       elevation: 0,
       actions: [
-        //! removed or replaced with orders button
-        // IconButton(
-        //   icon: AppIcons.notification,
-        //   onPressed: () async {
-        //     kNavigationService.navigateTo(AppRoutes.authentication);
-        //     // LocationService location =LocationService();
-        //   // await  location.getDetailsAddressByLatLong();
-        //   // await  location.getDetailsAddressByAddress("HGX6+8C7, , Kafr Al Hosr, Al-Sharqia Governorate 7122073, Egypt");
-        //   }
-        //   // /30.59813
-        // // I/flutter ( 8196): 31.51094
-        // ),
+        IconButton(
+            iconSize: 30,
+            icon: AppIcons.workshopDashboardDefualtHome,
+            onPressed: () async {
+              context.read<UserCubit>().getUserData();
+              kNavigationService.navigateTo(AppRoutes.dashBoredMainScreen);
+              // LocationService location =LocationService();
+              // await  location.getDetailsAddressByLatLong();
+              // await  location.getDetailsAddressByAddress("HGX6+8C7, , Kafr Al Hosr, Al-Sharqia Governorate 7122073, Egypt");
+            }),
         12.horizontalSpace,
         InkWell(
           onTap: () => kNavigationService.navigateTo(AppRoutes.cart),

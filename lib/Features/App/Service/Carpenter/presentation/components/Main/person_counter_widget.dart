@@ -1,0 +1,98 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../../../../../../Core/Utils/Extensions/localizations_extension.dart';
+import '../../../../../../../Core/Resources/app_colors.dart';
+import '../../../../../../../Core/Resources/app_fonts.dart';
+
+import '../../Cubit/CarpenterService/carpenter_service_cubit.dart';
+
+class PersonCounterWidget extends StatefulWidget {
+  const PersonCounterWidget({super.key});
+
+  @override
+  State<PersonCounterWidget> createState() => _PersonCounterWidgetState();
+}
+
+class _PersonCounterWidgetState extends State<PersonCounterWidget> {
+  @override
+  Widget build(BuildContext context) {
+    final local = context.local;
+    return Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+        child: Row(
+          children: [
+            // Profile Icon
+            CircleAvatar(
+              radius: 24,
+              backgroundColor: Colors.orange.withAlpha(50),
+              child: Icon(
+                Icons.person,
+                color: Colors.orange,
+                size: 28,
+              ),
+            ),
+            15.horizontalSpace,
+
+
+            // Text Column
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    local.Required_person,
+                    style: AppTextStyles.bodyLargeBold,
+
+                  ),
+                  4.verticalSpace,
+                  Text(
+                    local.Regular_cost,
+                    style: AppTextStyles.bodyMediumMedium.copyWith(color: AppColors.grayscale50),
+                    maxLines: local.Regular_cost.length,
+                  ),
+                ],
+              ),
+            ),
+
+            // Counter Row
+            Row(
+              children: [
+                // Decrement Button
+                // IconButton(
+                //   onPressed:(){
+                //     context.read<CarpenterServiceCubit>().changeNumberOFCarpenter("-") ;
+                //   },
+                //   icon: Icon(Icons.remove),
+                //   color: Colors.black,
+                //   iconSize: 20,
+                //   splashRadius: 20,
+                //   disabledColor: Colors.black.withAlpha(100),
+                // ),
+
+                // Counter Text
+                Padding(
+                  padding: const EdgeInsets.all(10),
+                  child: Text(
+                  context.watch<CarpenterServiceCubit>().state.number.toString(),
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                ),
+                ),
+
+                // Increment Button
+                // IconButton(
+                //   onPressed:(){
+                //     context.read<CarpenterServiceCubit>().changeNumberOFCarpenter("+") ;
+                //   },
+                //   icon: Icon(Icons.add),
+                //   color: Colors.black,
+                //   iconSize: 20,
+                //   splashRadius: 20,
+                // ),
+              ],
+            ),
+          ],
+        ),
+      );
+  }
+}

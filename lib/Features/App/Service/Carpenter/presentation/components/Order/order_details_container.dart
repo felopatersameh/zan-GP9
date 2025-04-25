@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../../../../Core/Resources/app_colors.dart';
-import '../../../../../../Core/Utils/Extensions/localizations_extension.dart';
-import '../../../../User/presentation/Cubit/user_cubit.dart';
-import '../../data/Models/get_all_services_model.dart';
-import '../../../../../../../Config/app_config.dart';
+import '../../../../../../../Core/Resources/app_colors.dart';
+import '../../../../../../../Core/Utils/Extensions/localizations_extension.dart';
+import '../../../../../User/presentation/Cubit/user_cubit.dart';
+import '../../../data/Models/get_all_services_model.dart';
+import '../../../../../../../../Config/app_config.dart';
 
-import '../../../../../../../Core/Resources/app_fonts.dart';
-import '../../../../../../../Core/Resources/app_icons.dart';
-import '../Cubit/CarpenterService/carpenter_service_cubit.dart';
-import 'build_list_services_carpenters.dart';
-import 'person_counter_widget.dart';
+import '../../../../../../../../Core/Resources/app_fonts.dart';
+import '../../../../../../../../Core/Resources/app_icons.dart';
+import '../../Cubit/CarpenterService/carpenter_service_cubit.dart';
+import '../Main/build_list_services_carpenters.dart';
+import '../Main/person_counter_widget.dart';
 
 class OrderDetailsContainer extends StatefulWidget {
   const OrderDetailsContainer({super.key});

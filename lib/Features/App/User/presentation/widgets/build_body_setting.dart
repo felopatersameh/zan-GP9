@@ -8,6 +8,7 @@ import '../../../../../Core/Resources/app_icons.dart';
 import '../../../../../Core/Utils/Extensions/localizations_extension.dart';
 import '../../../../../Core/Utils/Functions/show_bottom_sheet_methods.dart';
 import '../../../../../main.dart';
+import '../../../../Global/Authentication/presentation/components/build_social_login_button.dart';
 import '../Cubit/user_cubit.dart';
 import 'build_item_setting.dart';
 
@@ -26,12 +27,15 @@ class BuildBodySetting extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           _buildSetting(local.Setting),
+         context.isCarpenter?
           BuildItemSetting(
             title: local.WorkshopDashboard,
             icon: AppIcons.workshopDashboardDefualt,
-            onTap: () =>
-                kNavigationService.navigateTo(AppRoutes.dashBoredMainScreen),
-          ),
+            onTap: () {
+              context.read<UserCubit>().getUserData();
+              kNavigationService.navigateTo(AppRoutes.dashBoredMainScreen);
+            },
+          ):SizedBox(),
           BuildItemSetting(
             title: local.YourCard,
             icon: AppIcons.card,
@@ -66,11 +70,17 @@ class BuildBodySetting extends StatelessWidget {
             icon: AppIcons.circleInfo,
             onTap: () {},
           ),
+          context.isLogin?
           BuildItemSetting(
             title: local.Logout,
             icon: AppIcons.logout,
             onTap: () => context.read<UserCubit>().logout(),
-          ),
+          ): Expanded(
+            child: Align(
+              child: CustomBuildButtonApp(text: context.local.Login, backgroundColor: AppColors.secondaryColor, onPressed: () => kNavigationService.navigateTo(AppRoutes.authentication),isSpace: false,),
+            ),
+          )
+,
         ],
       ),
     );

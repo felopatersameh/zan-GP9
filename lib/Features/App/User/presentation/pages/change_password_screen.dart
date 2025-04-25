@@ -7,7 +7,7 @@ import '../../../../../Core/Resources/app_colors.dart';
 import '../../../../../Core/Resources/app_constants.dart';
 import '../../../../../Core/Utils/Extensions/widget_extension.dart';
 import '../../../../../Core/Utils/Widget/TextField/password_text__form_field.dart';
-import '../../../../../Core/Utils/Widget/custom_scaffold_messenger.dart';
+import '../../../../../Core/Utils/Widget/Massages/custom_scaffold_messenger.dart';
 import '../../../../Global/Authentication/presentation/components/build_social_login_button.dart';
 import '../../data/models/update_password.dart';
 

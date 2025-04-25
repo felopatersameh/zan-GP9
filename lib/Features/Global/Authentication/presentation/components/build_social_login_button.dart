@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../Core/Resources/app_fonts.dart';
 import '../../../../../Core/Utils/Widget/Images/build_image.dart';
-import '../../../../../Core/Utils/Widget/loading_animation.dart';
+import '../../../../../Core/Utils/Widget/Animations/loading_animation.dart';
 
 class CustomBuildButtonApp extends StatelessWidget {
   final bool? loading;

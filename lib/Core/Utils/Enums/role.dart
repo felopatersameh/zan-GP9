@@ -1,8 +1,9 @@
 enum Role {
-  user("User"),
-  carpenter("Carpenter");
+  user("user"),
+  carpenter("carpenter"),
+  admin("admin");
 
-   const Role(this.value);
+  const Role(this.value);
   final String value;
 }
 

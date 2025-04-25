@@ -2,8 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:geocoding/geocoding.dart' as geocoding;
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:zan/Core/Utils/Enums/role.dart';
 import '../../../../../Config/Cubit/settings_cubit.dart';
 import '../../../../../Core/Services/Map/Static/location_service.dart';
+import '../../../Service/Carpenter/data/Models/carpenters_model.dart';
 import '../../data/models/add_address_model.dart';
 import '../../domain/useCase/address_use_case.dart';
 import '../../domain/useCase/logout_use_case.dart';
@@ -11,7 +13,7 @@ import '../../domain/useCase/refresh_token_use_case.dart';
 import '../../../../../Config/Routes/route_name.dart';
 import '../../../../../Core/Storage/Local/local_storage_keys.dart';
 import '../../../../../Core/Storage/Local/local_storage_service.dart';
-import '../../../../../Core/Utils/Widget/custom_scaffold_messenger.dart';
+import '../../../../../Core/Utils/Widget/Massages/custom_scaffold_messenger.dart';
 import '../../../../../main.dart';
 import '../../../../Global/Authentication/data/Models/user_data_model.dart';
 import '../../data/models/update_password.dart';
@@ -73,7 +75,25 @@ class UserCubit extends Cubit<UserClassState> {
         }
       },
       (data) {
-        emit(state.copyWith(userDataModel: data, errorUser: false));
+        bool isCarpenter = data.role == Role.carpenter.value;
+        emit(state.copyWith(
+            userDataModel: data.copyWith(
+              carpenterProfile: isCarpenter ? data.carpenterProfile?.copyWith(
+                user: User(
+                    id: id,
+                    name: data.name,
+                    email: data.email,
+                    emailVerifiedAt: data.emailVerifiedAt,
+                    phone: data.phone,
+                    photo: data.photo,
+                    role: data.role,
+                    status: data.status,
+                    createdAt: data.createdAt,
+                    updatedAt: data.updatedAt,
+                    photoUrl: data.photoUrl),
+              ):CarpentersModel.empty(),
+            ),  
+            errorUser: false));
       },
     );
   }
