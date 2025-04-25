@@ -78,7 +78,19 @@ class AppIcons {
   static Widget globe = SvgPicture.asset(AppImagesSvg.global);
   static Widget circleInfo = SvgPicture.asset(AppImagesSvg.info);
   static Widget workshopDashboardDefualt =
-      Image.asset(AppImagesPng.workshopDashboard);
+      Image.asset(AppImagesPng.workshopDashboard,height: 25,width: 25,);
+
+  static Widget workshopDashboardDefualtHome = Container(
+      padding: EdgeInsets.all(7),
+      width: 44,
+      height: 44,
+      decoration: BoxDecoration(
+        color: Color(0x8C000000),
+        shape: BoxShape.circle,
+      ),
+      child: Image.asset(
+        AppImagesPng.workshopDashboard,
+      ));
   static Widget workshopDashboard =
       Image.asset(AppImagesPng.workshopDashboard2);
   static FaIcon logout =

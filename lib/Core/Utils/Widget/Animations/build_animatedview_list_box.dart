@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../Config/Cubit/settings_cubit.dart';
+import '../../../../Config/Cubit/settings_cubit.dart';
 
 class BuildAnimatedviewListBox extends StatefulWidget {
   final Widget child;
@@ -49,8 +49,8 @@ class _BuildAnimatedviewListBoxState extends State<BuildAnimatedviewListBox>
       child: SlideTransition(
         position: Tween<Offset>(
           begin: context.read<SettingsCubit>().state.locale.languageCode == 'ar'
-              ? const Offset(0.2, 0)
-              : const Offset(-0.2, 0),
+              ? const Offset(-0.2, 0)
+              : const Offset(0.2, 0),
           end: Offset.zero,
         ).animate(_animation),
         child: AnimatedBuilder(

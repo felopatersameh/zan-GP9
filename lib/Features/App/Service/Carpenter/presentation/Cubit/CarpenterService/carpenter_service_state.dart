@@ -1,1 +1,73 @@
-part of 'carpenter_service_cubit.dart';@immutableclass CarpenterServiceState {  final int number;  final bool? success;  final bool? loading;  final bool? loading2;  final String? errorMessage;  final int? selectedService;  final Widget screen;  final DateTime? selectedDay;  final List<GetAllServicesModel>? services;  final List<CarpentersModel>? carpenters;  final CarpentersModel? selectCarpenter;  final List<OffersModel>? bestOffers;  final String selectedTimePeriod ;  final String selectedTime;  final PaymentMethod paymentMethod;  const CarpenterServiceState( {    this.number = 1,    this.screen = const BodyWidgetViewDetails(),    this.selectedService,    this.services=const[],    this.carpenters=const[],    this.bestOffers=const[],     this.selectCarpenter ,     this.success ,     this.loading ,     this.paymentMethod = PaymentMethod.creditCard,     this.loading2 ,     this.errorMessage ,     this.selectedDay,    this.selectedTime ='',    this.selectedTimePeriod = '',  });  CarpenterServiceState copyWith({     int ?number,     bool? success,     bool? loading,     bool? loading2,     String? errorMessage,     int? selectedService,     Widget? screen,     List<GetAllServicesModel>? services,     List<OffersModel>? bestOffers,     DateTime? selectedDay,     String? selectedTimePeriod,     String? selectedTime,     List<CarpentersModel>? carpenters,     CarpentersModel? selectCarpenter,    PaymentMethod? paymentMethod  }) {    return CarpenterServiceState(      number: number ?? this.number,      success: success ?? this.success,      loading: loading ?? this.loading,      loading2: loading2 ?? this.loading2,      errorMessage: errorMessage ?? this.errorMessage,      selectedService: selectedService ?? this.selectedService,      screen: screen ?? this.screen,      services: services ?? this.services,      bestOffers: bestOffers ?? this.bestOffers,      selectedDay: selectedDay ?? this.selectedDay,      selectedTimePeriod: selectedTimePeriod ?? this.selectedTimePeriod,      selectedTime: selectedTime ?? this.selectedTime,      carpenters: carpenters ?? this.carpenters,      selectCarpenter: selectCarpenter ?? this.selectCarpenter,      paymentMethod: paymentMethod ?? this.paymentMethod,    );  }}
+part of 'carpenter_service_cubit.dart';
+
+@immutable
+class CarpenterServiceState {
+  final int number;
+  final bool? success;
+  final bool? loading;
+  final bool? loading2;
+  final String? errorMessage;
+  final int? selectedService;
+  final Widget screen;
+  final DateTime? selectedDay;
+  final List<GetAllServicesModel>? services;
+  final List<CarpentersModel>? carpenters;
+  final CarpentersModel? selectCarpenter;
+  final List<OffersModel>? bestOffers;
+  final String selectedTimePeriod;
+  final String selectedTime;
+  final PaymentMethod paymentMethod;
+
+  const CarpenterServiceState({
+    this.number = 1,
+    this.screen = const MainCarpenterServicesScreen(),
+    this.selectedService,
+    this.services = const [],
+    this.carpenters = const [],
+    this.bestOffers = const [],
+    this.selectCarpenter,
+    this.success,
+    this.loading,
+    this.paymentMethod = PaymentMethod.creditCard,
+    this.loading2,
+    this.errorMessage,
+    this.selectedDay,
+    this.selectedTime = '',
+    this.selectedTimePeriod = '',
+  });
+
+  CarpenterServiceState copyWith(
+      {int? number,
+      bool? success,
+      bool? loading,
+      bool? loading2,
+      String? errorMessage,
+      int? selectedService,
+      Widget? screen,
+      List<GetAllServicesModel>? services,
+      List<OffersModel>? bestOffers,
+      DateTime? selectedDay,
+      String? selectedTimePeriod,
+      String? selectedTime,
+      List<CarpentersModel>? carpenters,
+      CarpentersModel? selectCarpenter,
+      PaymentMethod? paymentMethod}) {
+    return CarpenterServiceState(
+      number: number ?? this.number,
+      success: success ?? this.success,
+      loading: loading ?? this.loading,
+      loading2: loading2 ?? this.loading2,
+      errorMessage: errorMessage ?? this.errorMessage,
+      selectedService: selectedService ?? this.selectedService,
+      screen: screen ?? this.screen,
+      services: services ?? this.services,
+      bestOffers: bestOffers ?? this.bestOffers,
+      selectedDay: selectedDay ?? this.selectedDay,
+      selectedTimePeriod: selectedTimePeriod ?? this.selectedTimePeriod,
+      selectedTime: selectedTime ?? this.selectedTime,
+      carpenters: carpenters ?? this.carpenters,
+      selectCarpenter: selectCarpenter ?? this.selectCarpenter,
+      paymentMethod: paymentMethod ?? this.paymentMethod,
+    );
+  }
+}

@@ -5,7 +5,7 @@ import '../../../../../../Core/Resources/app_colors.dart';
 import '../../../../../../Core/Utils/Extensions/localizations_extension.dart';
 import '../../../../../../Config/app_config.dart';
 import '../../../../../../Core/Resources/app_icons.dart';
-import '../../../../../../Core/Utils/Widget/loading_animation.dart';
+import '../../../../../../Core/Utils/Widget/Animations/loading_animation.dart';
 import '../../../../../../Core/Utils/Extensions/widget_extension.dart';
 import '../../../../../../Config/Routes/route_name.dart';
 import '../../../../../../Core/Resources/app_fonts.dart';

@@ -5,7 +5,7 @@ import '../../../../../../Config/app_config.dart';
 import '../../../../../../Core/Resources/app_colors.dart';
 import '../../../../../../Core/Resources/app_fonts.dart';
 import '../../../../../../Core/Utils/Extensions/localizations_extension.dart';
-import '../../../../../../Core/Utils/Widget/build_animatedview_list_box.dart';
+import '../../../../../../Core/Utils/Widget/Animations/build_animatedview_list_box.dart';
 
 class MonthlySalesChart extends StatelessWidget {
   final List<String> months = [

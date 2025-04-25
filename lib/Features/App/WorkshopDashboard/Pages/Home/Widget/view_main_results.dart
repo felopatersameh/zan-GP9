@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../../../../Core/Utils/Widget/build_animatedview_list_box.dart';
+import '../../../../../../Core/Utils/Widget/Animations/build_animatedview_list_box.dart';
 import '../../../../../../Core/Utils/Extensions/localizations_extension.dart';
 import '../../../../../../Core/Resources/app_list.dart';
 import 'dashboard_box.dart';

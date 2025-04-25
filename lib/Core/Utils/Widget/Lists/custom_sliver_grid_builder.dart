@@ -1,16 +1,16 @@
 import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'package:skeletonizer/skeletonizer.dart';
-import 'build_animatedview_list_box.dart';
+import '../Animations/build_animatedview_list_box.dart';
 
-import '../../../Features/App/common/ProductsDetails/presentation/pages/product_details.dart';
-import '../../Models/review_products_model.dart';
-import 'title_box.dart';
-import '../../../Config/app_config.dart';
+import '../../../../Features/App/common/ProductsDetails/presentation/pages/product_details.dart';
+import '../../../Models/review_products_model.dart';
+import '../title_box.dart';
+import '../../../../Config/app_config.dart';
 
-import '../Enums/numbers_of_cross_axis_count.dart';
-import 'card_product.dart';
-import '../../Resources/app_constants.dart';
+import '../../Enums/numbers_of_cross_axis_count.dart';
+import '../card_product.dart';
+import '../../../Resources/app_constants.dart';
 
 class BuildCustomGridBuilder extends StatefulWidget {
   const BuildCustomGridBuilder({

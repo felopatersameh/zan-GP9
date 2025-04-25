@@ -7,7 +7,7 @@ import '../../../../../../Core/Resources/app_colors.dart';
 import '../../../../../../Core/Utils/Extensions/localizations_extension.dart';
 import '../../../../../../Core/Utils/Extensions/widget_extension.dart';
 import '../../../../../../Core/Utils/Widget/TextField/build_text_field.dart';
-import '../../../../../../Core/Utils/Widget/default_app_bar.dart';
+import '../../../../../../Core/Utils/Widget/AppBar/default_app_bar.dart';
 import '../../../../../Global/Authentication/presentation/components/build_social_login_button.dart';
 import '../components/dropdown_field_list.dart';
 

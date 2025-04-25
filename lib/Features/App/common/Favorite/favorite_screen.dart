@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import '../../../../Core/Utils/Extensions/localizations_extension.dart';
-import '../../../../Core/Utils/Widget/default_app_bar.dart';
+import '../../../../Core/Utils/Widget/AppBar/default_app_bar.dart';
 import '../../../../Core/Models/review_products_model.dart';
 import '../../../../Core/Utils/Extensions/widget_extension.dart';
 import '../../../../Core/Storage/Local/local_storage_service.dart';
-import '../../../../Core/Utils/Widget/custom_sliver_grid_builder.dart';
+import '../../../../Core/Utils/Widget/Lists/custom_sliver_grid_builder.dart';
 
 class FavoriteScreen extends StatefulWidget {
   const FavoriteScreen({super.key});
