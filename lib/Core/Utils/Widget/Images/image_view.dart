@@ -28,7 +28,7 @@ class ImageView extends StatelessWidget {
             child: CircleAvatar(
               radius: .4.sw,
               backgroundImage:
-                  FileImage(File(photo)), // Same photo for the avatar
+                 NetworkImage(photo), // Same photo for the avatar
             ),
           ),
         ],

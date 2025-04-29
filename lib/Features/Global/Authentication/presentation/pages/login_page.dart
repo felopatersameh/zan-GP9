@@ -28,8 +28,8 @@ final TextEditingController passwordController = TextEditingController();
 class _LoginPageState extends State<LoginPage> {
   @override
   void initState() {
-    emailController.text = "felopatersameh@gmail.com";
-    passwordController.text = "Felopater123";
+    emailController.text = "samosasa222@gmail.com";
+    passwordController.text = "12345678";
     super.initState();
   }
 
