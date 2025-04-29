@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:zan/Core/Resources/app_constants.dart';
+import '../../../../../../Core/Resources/app_constants.dart';
 import '../../../../../../Core/Utils/Extensions/localizations_extension.dart';
 import '../../Calender/Widget/view_card_orders.dart';
 import '../../Calender/Widget/view_list_pending_orders.dart';

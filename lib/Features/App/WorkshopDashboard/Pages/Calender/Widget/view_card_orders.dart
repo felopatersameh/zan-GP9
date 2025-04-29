@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:zan/Core/Resources/app_colors.dart';
-import 'package:zan/Core/Resources/app_fonts.dart';
-import 'package:zan/Core/Utils/Widget/Images/build_image.dart';
+import '../../../../../../Core/Resources/app_colors.dart';
+import '../../../../../../Core/Resources/app_fonts.dart';
+import '../../../../../../Core/Utils/Widget/Images/build_image.dart';
 
 class ViewCardOrders extends StatelessWidget {
   const ViewCardOrders({
