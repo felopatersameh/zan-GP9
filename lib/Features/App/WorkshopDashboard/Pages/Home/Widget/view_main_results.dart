@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:zan/Core/Utils/Extensions/context_extension.dart';
-import 'package:zan/Core/Utils/Extensions/widget_extension.dart';
-import 'package:zan/Features/App/WorkshopDashboard/Pages/Calender/Widget/build_view_orderes.dart';
-import 'package:zan/Features/App/WorkshopDashboard/Pages/Calender/Widget/view_card_orders.dart';
-import 'package:zan/Features/App/WorkshopDashboard/Pages/Calender/Widget/view_list_pending_orders.dart';
+import '../../../../../../Core/Utils/Extensions/context_extension.dart';
+import '../../../../../../Core/Utils/Extensions/widget_extension.dart';
+import '../../Calender/Widget/build_view_orderes.dart';
+import '../../Calender/Widget/view_card_orders.dart';
+import '../../Calender/Widget/view_list_pending_orders.dart';
 import '../../../../../../Core/Utils/Widget/Animations/build_animatedview_list_box.dart';
 import '../../../../../../Core/Utils/Extensions/localizations_extension.dart';
 import '../../../../../../Core/Resources/app_list.dart';

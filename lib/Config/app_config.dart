@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:zan/generated/l10n.dart';
+import '../generated/l10n.dart';
 
 class AppConfig {
   static const String appName = 'Zan';

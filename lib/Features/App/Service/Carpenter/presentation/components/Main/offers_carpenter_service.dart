@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:skeletonizer/skeletonizer.dart';
-import 'package:zan/Core/Utils/Widget/Animations/build_animatedview_list_box.dart';
+import '../../../../../../../Core/Utils/Widget/Animations/build_animatedview_list_box.dart';
 import '../../Cubit/CarpenterService/carpenter_service_cubit.dart';
 import '../../../../../../../Core/Utils/Extensions/localizations_extension.dart';
 import '../../../data/Models/offers_services_carpenter.dart';

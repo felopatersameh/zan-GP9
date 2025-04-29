@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:zan/Core/Resources/app_colors.dart';
-import 'package:zan/Features/Global/Authentication/presentation/components/build_social_login_button.dart';
+import '../../../../../../Core/Resources/app_colors.dart';
+import '../../../../../Global/Authentication/presentation/components/build_social_login_button.dart';
 
 class ViewActionsButtonsOrder extends StatelessWidget {
   const ViewActionsButtonsOrder({

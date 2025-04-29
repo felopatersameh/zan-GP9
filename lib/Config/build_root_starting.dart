@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:zan/Config/Cubit/settings_cubit.dart';
-import 'package:zan/Config/Routes/route_generator.dart';
-import 'package:zan/Config/Routes/route_name.dart';
-import 'package:zan/Config/Themes/dark_theme.dart';
-import 'package:zan/Config/Themes/light.dart';
-import 'package:zan/Config/app_config.dart';
-import 'package:zan/generated/l10n.dart';
+import 'Cubit/settings_cubit.dart';
+import 'Routes/route_generator.dart';
+import 'Routes/route_name.dart';
+import 'Themes/dark_theme.dart';
+import 'Themes/light.dart';
+import 'app_config.dart';
+import '../generated/l10n.dart';
 
 class BuildRootStarting extends StatelessWidget {
   const BuildRootStarting({
