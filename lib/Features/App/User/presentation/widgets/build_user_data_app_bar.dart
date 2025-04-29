@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:zan/Core/Utils/Widget/Images/view_image_user.dart';
+import '../../../../../Core/Utils/Widget/Images/view_image_user.dart';
 import '../../../../../Core/Utils/Extensions/localizations_extension.dart';
 import '../Cubit/user_cubit.dart';
 import '../../../../../Config/Routes/route_name.dart';
@@ -10,7 +10,6 @@ import '../../../../../main.dart';
 import '../../../../../Core/Resources/app_colors.dart';
 import '../../../../../Core/Resources/app_fonts.dart';
 import '../../../../../Core/Resources/app_icons.dart';
-import '../../../../../Core/Utils/Widget/Images/build_image.dart';
 
 class BuildUserDataAppBar extends StatelessWidget {
   const BuildUserDataAppBar({

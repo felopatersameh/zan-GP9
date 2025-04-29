@@ -24,4 +24,5 @@ class AppRoutes {
   static const String dashBoredMainScreen = '/dashBoredMainScreen';
   static const String imageViewer = '/imageViewer';
   static const String imageView = '/ImageView';
+  static const String calenderOrdersScreen = '/CalenderOrdersScreen';
 }

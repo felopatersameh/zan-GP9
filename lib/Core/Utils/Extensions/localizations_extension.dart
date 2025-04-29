@@ -11,7 +11,8 @@ extension AppLocalizationsExtension on BuildContext {
   S get local => S.of(this);
 
   bool get isRtl =>
-      watch<SettingsCubit>().state.locale == AppConfig.languageMain;
+      watch<SettingsCubit>().state.locale == AppConfig.languageMain; 
+      
 
   bool get isCarpenter =>
       watch<UserCubit>().state.userDataModel.role == Role.carpenter.value;

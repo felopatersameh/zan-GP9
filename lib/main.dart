@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_stripe/flutter_stripe.dart';
+import 'package:zan/Features/App/WorkshopDashboard/Main/Pages/main_dashbored_screen.dart';
+import 'package:zan/Features/App/WorkshopDashboard/Pages/Calender/Cubit/cubit/calender_orders_dash_board_cubit.dart';
 import 'Config/build_root_starting.dart';
 import 'Features/App/common/Search/presentation/pages/search_screen.dart';
 import 'Features/App/Service/Recommendation/presentation/pages/recommendation_screen.dart';
@@ -54,6 +56,9 @@ class MyApp extends StatelessWidget {
         BlocProvider(
             create: (_) => RecommendationCubit()..getOptionsRoom(),
             child: RecommendationScreen()),
+            BlocProvider(
+            create: (_) => CalenderOrdersDashBoardCubit(),
+            child: MainDashBoredScreen()),
         // BlocProvider(create: (_) => WorkshopDashboardCubit(),child: WorkshopDashboardScreen(),),
       ],
       child: ScreenUtilInit(

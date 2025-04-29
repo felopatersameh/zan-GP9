@@ -117,15 +117,17 @@ class AppConstants {
   static BoxDecoration boxDecoration = BoxDecoration(
     color: AppColors.backgroundColor,
     borderRadius: BorderRadius.circular(12),
-    boxShadow: [
+    boxShadow: boxShadow
+  
+  );
+  static List<BoxShadow>  boxShadow = [
       BoxShadow(
         color: Colors.grey.withAlpha(50),
         spreadRadius: 2,
         blurRadius: 8,
         offset: const Offset(0, 2),
       ),
-    ],
-  );
+    ];
   static Positioned positionedFilter = Positioned.fill(
     child: GestureDetector(
       onTap: () => kNavigationService.goBack(),

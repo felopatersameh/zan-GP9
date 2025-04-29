@@ -25,13 +25,17 @@ class BuildCalenderServices extends StatelessWidget {
       calendarFormat: CalendarFormat.month,
       startingDayOfWeek: StartingDayOfWeek.saturday,
       selectedDayPredicate: (day) => isSameDay(watch.state.selectedDay, day),
-      onDaySelected: (selectedDay, focusedDay) =>read.onDaySelected(selectedDay, focusedDay),
+      onDaySelected: (selectedDay, focusedDay) =>
+          read.onDaySelected(selectedDay, focusedDay),
       headerVisible: true,
       daysOfWeekStyle: DaysOfWeekStyle(
-          weekdayStyle: AppTextStyles.bodySmallBold
-              .copyWith(color: AppColors.primaryColor),
-          weekendStyle: AppTextStyles.bodySmallBold
-              .copyWith(color: AppColors.primaryColor)),
+        weekdayStyle: AppTextStyles.bodySmallBold.copyWith(
+          color: AppColors.primaryColor,
+        ),
+        weekendStyle: AppTextStyles.bodySmallBold.copyWith(
+          color: AppColors.primaryColor,
+        ),
+      ),
       calendarStyle: CalendarStyle(
         selectedDecoration: BoxDecoration(
           color: AppColors.primaryColor,
@@ -41,17 +45,22 @@ class BuildCalenderServices extends StatelessWidget {
           color: AppColors.secondaryColor,
           shape: BoxShape.circle,
         ),
-        defaultTextStyle: AppTextStyles.bodySmallBold
-            .copyWith(color: AppColors.textColorBlack),
-        weekendTextStyle: AppTextStyles.bodySmallBold
-            .copyWith(color: AppColors.textColorBlack),
+        defaultTextStyle: AppTextStyles.bodySmallBold.copyWith(
+          color: AppColors.textColorBlack,
+        ),
+        weekendTextStyle: AppTextStyles.bodySmallBold.copyWith(
+          color: AppColors.textColorBlack,
+        ),
       ),
       headerStyle: HeaderStyle(
         titleTextStyle: AppTextStyles.h3Bold,
         formatButtonVisible: false,
-        rightChevronIcon: BuildImageAssets(svg: AppImagesSvg.rightIcons,),
-       leftChevronIcon: BuildImageAssets(svg: AppImagesSvg.leftIcon,),
-    
+        rightChevronIcon: BuildImageAssets(
+          svg: AppImagesSvg.rightIcons,
+        ),
+        leftChevronIcon: BuildImageAssets(
+          svg: AppImagesSvg.leftIcon,
+        ),
       ),
     );
   }

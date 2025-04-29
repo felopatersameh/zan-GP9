@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../../../../../../Core/Utils/Extensions/localizations_extension.dart';
 import '../../../../../../../../Config/Routes/route_name.dart';
 import '../../../../../../../../Core/Resources/app_fonts.dart';
 import '../../../../../../../../Core/Utils/Widget/Animations/build_animatedview_list_box.dart';
@@ -8,21 +9,20 @@ import 'build_profile1_info.dart';
 import '../../../../../../../../Features/App/Service/Carpenter/presentation/components/Carpenter/build_profile_avatar.dart';
 import '../../../../../../../../Features/App/Service/Carpenter/presentation/components/Carpenter/build_profile_info.dart';
 import '../../../../../../../../Features/App/Service/Carpenter/presentation/components/Carpenter/build_service_details.dart';
-import '../../../../../../../../generated/l10n.dart';
 import '../../../../../../../../main.dart';
 
 class ViewAllCarpenterInformationScreen extends StatelessWidget {
   const ViewAllCarpenterInformationScreen({
     super.key,
     required this.model,
-    required this.local,
   });
 
   final CarpentersModel model;
-  final S local;
+
 
   @override
   Widget build(BuildContext context) {
+    final local = context.local;
     List<Widget> children = [
       20.verticalSpace,
       BuildProfileAvatar(model: model),
@@ -34,11 +34,11 @@ class ViewAllCarpenterInformationScreen extends StatelessWidget {
       30.verticalSpace,
       GestureDetector(
         onTap: () {
-        kNavigationService.navigateTo( AppRoutes.imageViewer, arguments: [
-          model.idCardPhotoUrl,
-          model.policeRecordPhotoUrl,
-          model.workshopPhotoUrl
-        ]);
+          kNavigationService.navigateTo(AppRoutes.imageViewer, arguments: [
+            model.idCardPhotoUrl,
+            model.policeRecordPhotoUrl,
+            model.workshopPhotoUrl
+          ]);
         },
         child: BuildServiceDetails(local: local, model: model),
       ),
@@ -50,8 +50,8 @@ class ViewAllCarpenterInformationScreen extends StatelessWidget {
               BuildAnimatedviewListBox(index: index, child: children[index]))
     ]);
   }
+
   Widget _buildBioSection() {
     return Text(model.bio, style: AppTextStyles.bodyLargeSemiBold);
   }
-
 }

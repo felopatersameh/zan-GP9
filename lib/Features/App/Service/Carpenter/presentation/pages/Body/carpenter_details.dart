@@ -15,10 +15,9 @@ class CarpenterDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final local = context.local;
     
     return [
-      ViewAllCarpenterInformationScreen(model: model,local: local),
+      ViewAllCarpenterInformationScreen(model: model),
       !context.isProfileCarpenter(model)
           ? BuildButtonCarpenterService(
               onPressed: () {
@@ -27,7 +26,7 @@ class CarpenterDetails extends StatelessWidget {
                     .read<CarpenterServiceCubit>()
                     .changeScreen(OrderDetailsBody());
               },
-              text: local.Confirm,
+              text: context.local.Confirm,
             )
           : SliverToBoxAdapter(child: SizedBox()),
     ].styledAppPages(withScroll: true, withPadding: true);
