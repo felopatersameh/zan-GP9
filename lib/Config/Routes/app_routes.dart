@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import '../../Core/Models/review_products_model.dart';
 import '../../Core/Services/Map/select_location.dart';
 import '../../Core/Utils/Widget/Images/image_gallery_viewer.dart';
 import '../../Core/Utils/Widget/Images/image_view.dart';
+import '../../Features/App/Service/Recommendation/presentation/pages/result_recommendation_screen.dart';
 import '../../Features/App/WorkshopDashboard/Main/Pages/main_dashbored_screen.dart';
 import '../../Features/App/WorkshopDashboard/Pages/Calender/Pages/calender_orders_screen.dart';
+import '../../Features/App/common/Home/presentation/pages/see_all_page.dart';
 import '../../Features/Global/Authentication/presentation/pages/authentication_screen.dart';
 import '../../Features/Global/Boarding/boarding_screen.dart';
 import '../../Features/Global/Splash/splash_screen.dart';
@@ -11,7 +14,7 @@ import '../../Features/App/common/Cart/presentation/pages/cart_screen.dart';
 import '../../Features/App/common/Favorite/favorite_screen.dart';
 import '../../Features/App/common/Main/pages/main_app_screen.dart';
 import '../../Features/App/common/ProductsDetails/presentation/pages/product_details.dart';
-import '../../Features/App/common/View_3D/Page/screen_3d.dart';
+import '../../Features/App/common/SpaceOptimizer/pages/Page/screen_3d.dart';
 import '../../Features/App/Service/AreaMeasurement/Pages/area_measurement_screen.dart';
 import '../../Features/App/Service/Carpenter/presentation/pages/carpenters_screens.dart';
 import '../../Features/App/Service/Chat/presentation/pages/chat_screeen.dart';
@@ -68,6 +71,26 @@ class AppRouteBuilders {
         final args = settings.arguments as int;
         return _defaultPageRoute(ProductDetailsScreen(
           id: args,
+        ));
+      case AppRoutes.resultRecommendationScreen:
+        final args = settings.arguments as List;
+        final photo = args[0] as String;
+        final list = args[1] != null
+            ? args[1] as List<ReviewProductsModel>
+            : <ReviewProductsModel>[];
+        return _defaultPageRoute(ResultRecommendationScreen(
+          photo: photo,
+          list: list,
+        ));
+      case AppRoutes.seeAllPage:
+        final args = settings.arguments as List;
+        final title = args[0] as String;
+        final list = args[1] != null
+            ? args[1] as List<ReviewProductsModel>
+            : <ReviewProductsModel>[];
+        return _defaultPageRoute(SeeAllPage(
+          title: title,
+          list: list,
         ));
       case AppRoutes.dashBoredMainScreen:
         return _defaultPageRoute(const MainDashBoredScreen());

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../../../../Config/Routes/route_name.dart';
-import '../../../../../../main.dart';
-import '../../../../../../Core/Utils/Extensions/localizations_extension.dart';
-import '../../../../../../Core/Resources/app_colors.dart';
-import '../../../../../../Core/Utils/Extensions/widget_extension.dart';
-import '../../../../../Global/Authentication/presentation/components/build_social_login_button.dart';
+import '../../../../../Config/Routes/route_name.dart';
+import '../../../../../main.dart';
+import '../../../../../Core/Utils/Extensions/localizations_extension.dart';
+import '../../../../../Core/Resources/app_colors.dart';
+import '../../../../../Core/Utils/Extensions/widget_extension.dart';
+import '../../../../Global/Authentication/presentation/components/build_social_login_button.dart';
 
 class SpaceOptimizerScreen extends StatelessWidget {
   const SpaceOptimizerScreen({super.key});

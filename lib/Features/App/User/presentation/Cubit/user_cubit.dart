@@ -29,6 +29,7 @@ class UserCubit extends Cubit<UserClassState> {
   UserCubit(this.updateUserUseCase, this.updatePasswordUseCase,
       this.getUserDataUseCase, this.refreshTokenUseCase, this.addressUseCase, this.logoutUseCase)
       : super(UserClassState(userDataModel: UserDataModel.empty()));
+  
   final UpdateUserUseCase updateUserUseCase;
   final UpdatePasswordUseCase updatePasswordUseCase;
   final GetUserDataUseCase getUserDataUseCase;
@@ -39,9 +40,7 @@ class UserCubit extends Cubit<UserClassState> {
 
   get id => state.userDataModel.id;
 
-  void addMark(value) async {
-    emit(state.copyWith(setMarkers: {value}));
-  }
+  void addMark(value) async => emit(state.copyWith(setMarkers: {value}));
 
   void clearMark() async => emit(state.copyWith(setMarkers: {}));
 

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import '../../../../../../Config/Routes/route_name.dart';
+import '../../../../../../Core/Models/review_products_model.dart';
+import '../../../../../../main.dart';
 import '../Cubit/recommendation_cubit.dart';
 import '../components/choose_photo_for_recommendation.dart';
 
@@ -34,7 +37,9 @@ class RecommendationScreen extends StatelessWidget {
             text: local.Proceed,
             isSpace: false,
             backgroundColor: AppColors.primaryColor,
-            onPressed: () {},
+            onPressed: () => kNavigationService.navigateTo(
+                AppRoutes.resultRecommendationScreen,
+                arguments: [context.read<RecommendationCubit>().showphoto, <ReviewProductsModel>[]]),
           ),
         ])
       ].styledAppPages(

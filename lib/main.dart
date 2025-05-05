@@ -5,7 +5,6 @@ import 'package:flutter_stripe/flutter_stripe.dart';
 import 'Features/App/WorkshopDashboard/Main/Pages/main_dashbored_screen.dart';
 import 'Features/App/WorkshopDashboard/Pages/Calender/Cubit/cubit/calender_orders_dash_board_cubit.dart';
 import 'Config/build_root_starting.dart';
-import 'Features/App/common/Search/presentation/pages/search_screen.dart';
 import 'Features/App/Service/Recommendation/presentation/pages/recommendation_screen.dart';
 import 'Features/App/Service/AreaMeasurement/Pages/area_measurement_screen.dart';
 import 'Features/App/Service/Recommendation/presentation/Cubit/recommendation_cubit.dart';
@@ -48,7 +47,7 @@ class MyApp extends StatelessWidget {
         BlocProvider(
             create: (_) =>
                 SearchCubit(SearchUseCase(SearchRepoImpl()))..getAllProducts(),
-            child: SearchScreen()),
+            child: MainAppScreen()),
         BlocProvider(create: (_) => sl<ExploreCubit>(), child: ExploreScreen()),
         BlocProvider(
             create: (_) => AreaMeasurementCubit(),

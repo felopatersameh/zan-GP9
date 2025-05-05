@@ -5,11 +5,11 @@ import '../Animations/build_animatedview_list_box.dart';
 
 import '../../../../Features/App/common/ProductsDetails/presentation/pages/product_details.dart';
 import '../../../Models/review_products_model.dart';
-import '../title_box.dart';
+import 'title_box.dart';
 import '../../../../Config/app_config.dart';
 
 import '../../Enums/numbers_of_cross_axis_count.dart';
-import '../card_product.dart';
+import 'card_product.dart';
 import '../../../Resources/app_constants.dart';
 
 class BuildCustomGridBuilder extends StatefulWidget {
@@ -75,6 +75,7 @@ class _BuildCustomGridBuilderState extends State<BuildCustomGridBuilder> {
               BuildCustomTitleBox(
                 title: widget.title ?? "",
                 isSliver: widget.isSliver,
+                list: widget.model ?? [],
               ),
             SliverGrid.builder(
               gridDelegate: AppConstants.gridDelegateSmallBuilder(
