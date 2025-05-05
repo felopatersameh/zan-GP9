@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../Features/App/common/Home/presentation/manager/home_state_model.dart';
-import '../../Models/review_products_model.dart';
-import '../../Resources/app_icons.dart';
-import '../../../Features/App/common/Home/presentation/manager/home_cubit.dart';
-import 'Images/build_image.dart';
-import '../../Resources/app_fonts.dart';
-import '../../Resources/app_colors.dart';
+import '../../../../Features/App/common/Home/presentation/manager/home_state_model.dart';
+import '../../../Models/review_products_model.dart';
+import '../../../Resources/app_icons.dart';
+import '../../../../Features/App/common/Home/presentation/manager/home_cubit.dart';
+import '../Images/build_image.dart';
+import '../../../Resources/app_fonts.dart';
+import '../../../Resources/app_colors.dart';
 
 class BuildCardProduct extends StatelessWidget {
   final ReviewProductsModel item;
@@ -94,11 +94,11 @@ class BuildCardProduct extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      item.discountPrice,
+                      item.discountPrice.isEmpty?item.price.split(".").first:item.discountPrice.split(".").first,
                       style: AppTextStyles.bodySmallSemiBold,
                     ),
                     6.horizontalSpace,
-                    Text(
+                   item.discountPrice.isEmpty?SizedBox(): Text(
                       item.price.split(".").first,
                       style: AppTextStyles.bodyXtraSmallMedium.copyWith(
                         color: AppColors.grayscale60,

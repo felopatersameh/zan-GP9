@@ -40,11 +40,12 @@ class PersistentFooterButtonsCart extends StatelessWidget {
                   text: local.PromoCode,
                   type: TextInputType.text,
                   controller: textCoupon,
+                  
                   onChanged: (value) async {
                     if (value.isEmpty) {
                       return;
                     }
-                    await Future.delayed(const Duration(milliseconds: 1500));
+                     Future.delayed(const Duration(milliseconds: 1500));
                     context.read<CartCubit>().applyCoupon(textCoupon.text);
                   },
                 ),

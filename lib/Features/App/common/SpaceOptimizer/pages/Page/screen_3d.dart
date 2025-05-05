@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:model_viewer_plus/model_viewer_plus.dart';
-import '../../../../../Core/Utils/Widget/Images/build_image.dart';
 
 class Screen3D extends StatelessWidget {
 
@@ -12,9 +11,7 @@ class Screen3D extends StatelessWidget {
       appBar: AppBar(title: const Text('Model Viewer')),
       body: Stack(
         children: [
-          Positioned.fill(
-            child: BuildImageAssets(url: "https://moccasin-manatee-172732.hostingersite.com/storage/products/1742761154_67e06cc2c0bb3.jpg",)
-          ),
+          
           ModelViewer(
             src: 'https://raw.githubusercontent.com/felopatersameh/Models3DCreator/main/tripo_pbr_model_18f50e08-3c6b-4ea6-831f-476e0b43f4f0.glb',
             alt: '3D product preview',
@@ -27,7 +24,7 @@ class Screen3D extends StatelessWidget {
             disablePan: false,  // يقدر يحرك الموديل
 
             // 🚫 وقف الدوران التلقائي:
-            autoRotate: false,
+            autoRotate: true,
 
             // 🎥 الكاميرا تبدأ من زاوية مريحة:
             // cameraOrbit: "0deg 75deg 2.5m",

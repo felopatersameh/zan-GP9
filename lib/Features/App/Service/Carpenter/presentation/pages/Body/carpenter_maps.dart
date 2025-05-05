@@ -89,11 +89,11 @@ class MapSampleState extends State<MapSample> {
       );
       await initMarkers();
     } on LocationServiceException {
-      // TODO:
+        // print("Location Service Exception");
     } on LocationPermissionException {
-      // TODO :
+      // print("Location Permission Exception");
     } catch (e) {
-      // TODO:
+      // print("Unknown Exception");
     }
   }
 
@@ -113,16 +113,7 @@ class MapSampleState extends State<MapSample> {
           infoWindow: InfoWindow(
             title: e.user!.name,
           ),
-          onTap: () {
-            // context.buildCustomBottomSheet(
-            //
-            //     widget:CarpenterDetails(model: e,)
-            //
-            // );
-            context.read<CarpenterServiceCubit>().changeScreen(CarpenterDetails(model: e,));
-
-
-          },
+          onTap: () => context.read<CarpenterServiceCubit>().changeScreen(CarpenterDetails(model: e,)),
           icon:icon,
           markerId: MarkerId(e.id.toString()),
           position: MarkersModel.generateRandomPoint(),

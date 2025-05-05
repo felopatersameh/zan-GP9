@@ -10,7 +10,7 @@ import '../../../../../Core/Resources/app_constants.dart';
 import '../../../../../Core/Storage/Local/local_storage_keys.dart';
 import '../../../../../Core/Storage/Local/local_storage_service.dart';
 import '../../../../../Core/Utils/Widget/tutorial_helper.dart';
-import '../../SpaceOptimizer/presentation/pages/space_optimizer_screen.dart';
+import '../../SpaceOptimizer/pages/space_optimizer_screen.dart';
 import '../Cubit/main_cubit.dart';
 import '../../../../../Core/Utils/Widget/build_bottom_navigation_bar.dart';
 import '../widgets/build_fade_floating_action_button.dart';
