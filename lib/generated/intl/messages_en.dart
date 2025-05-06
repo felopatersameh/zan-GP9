@@ -53,8 +53,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Coupon Discount"),
         "CurrentPassword":
             MessageLookupByLibrary.simpleMessage("Current Password"),
+        "CustomerInformation":
+            MessageLookupByLibrary.simpleMessage("Customer Information"),
         "CustomerReviews":
             MessageLookupByLibrary.simpleMessage("Customer Reviews"),
+        "Date": MessageLookupByLibrary.simpleMessage("Date "),
         "DeliveryCharge":
             MessageLookupByLibrary.simpleMessage("Delivery Charge"),
         "Description": MessageLookupByLibrary.simpleMessage("Description"),
@@ -84,6 +87,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "LatestProduct":
             MessageLookupByLibrary.simpleMessage("Latest Products"),
         "Length": MessageLookupByLibrary.simpleMessage("Length"),
+        "LocationInformation":
+            MessageLookupByLibrary.simpleMessage("Location Information"),
         "Login": MessageLookupByLibrary.simpleMessage("Login"),
         "LoginByGoogle":
             MessageLookupByLibrary.simpleMessage("Sign in with Google"),
@@ -97,6 +102,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "Note": MessageLookupByLibrary.simpleMessage("Note"),
         "Notifications": MessageLookupByLibrary.simpleMessage("Notifications"),
         "OnlinePayment": MessageLookupByLibrary.simpleMessage("OnlinePayment"),
+        "OrderDetails": MessageLookupByLibrary.simpleMessage("Order Details"),
+        "OrderStatus": MessageLookupByLibrary.simpleMessage("Order Status"),
         "OutStock": MessageLookupByLibrary.simpleMessage("Out of Stock"),
         "Photo": MessageLookupByLibrary.simpleMessage("Photo"),
         "PickTime": MessageLookupByLibrary.simpleMessage("Pick time"),
@@ -134,6 +141,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "ServiceCharge": MessageLookupByLibrary.simpleMessage("Service Charge"),
         "ServiceDes":
             MessageLookupByLibrary.simpleMessage("Tap here for more services"),
+        "ServiceInformation":
+            MessageLookupByLibrary.simpleMessage("Service Information"),
+        "ServiceName": MessageLookupByLibrary.simpleMessage("Service Name"),
         "Setting": MessageLookupByLibrary.simpleMessage("Settings"),
         "SignUp": MessageLookupByLibrary.simpleMessage("Sign Up"),
         "Size": MessageLookupByLibrary.simpleMessage("Size"),
@@ -145,6 +155,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "StarRating": MessageLookupByLibrary.simpleMessage("Rating"),
         "Submit": MessageLookupByLibrary.simpleMessage("Submit"),
         "Subtotal": MessageLookupByLibrary.simpleMessage("Subtotal"),
+        "Time": MessageLookupByLibrary.simpleMessage("Time"),
         "TitleLogoSplash": MessageLookupByLibrary.simpleMessage(
             "Find the best parts for your home"),
         "TitleStartApp": MessageLookupByLibrary.simpleMessage(
@@ -165,6 +176,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Upload clear image of the workshop."),
         "YourCard": MessageLookupByLibrary.simpleMessage("Your Card"),
         "YourRating": MessageLookupByLibrary.simpleMessage("Your Rating"),
+        "accept": MessageLookupByLibrary.simpleMessage("Accept"),
+        "accepted": MessageLookupByLibrary.simpleMessage("Finshed"),
         "address_line": MessageLookupByLibrary.simpleMessage("Address Line"),
         "age": MessageLookupByLibrary.simpleMessage("Age"),
         "all": MessageLookupByLibrary.simpleMessage("All"),
@@ -199,6 +212,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Confirmation Dialogs"),
         "couponDiscount":
             MessageLookupByLibrary.simpleMessage("Coupon Discount"),
+        "delay": MessageLookupByLibrary.simpleMessage("Delay"),
         "delete": MessageLookupByLibrary.simpleMessage("Delete"),
         "delete_all_item_confirmation":
             MessageLookupByLibrary.simpleMessage("Delete all Items "),
@@ -267,6 +281,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "order_submitted":
             MessageLookupByLibrary.simpleMessage("Order submitted"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
+        "pending": MessageLookupByLibrary.simpleMessage("Pending"),
         "pending_orders":
             MessageLookupByLibrary.simpleMessage("Pending Orders"),
         "phone": MessageLookupByLibrary.simpleMessage("Phone"),
@@ -278,6 +293,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "profile_status":
             MessageLookupByLibrary.simpleMessage("Profile Status"),
         "rating": MessageLookupByLibrary.simpleMessage("Rating"),
+        "reject": MessageLookupByLibrary.simpleMessage("Reject"),
+        "running": MessageLookupByLibrary.simpleMessage("Running"),
         "save_info_confirmation": MessageLookupByLibrary.simpleMessage(
             "Save Information Confirmation"),
         "save_info_confirmation_message": MessageLookupByLibrary.simpleMessage(
