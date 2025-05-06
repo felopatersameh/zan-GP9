@@ -2,8 +2,8 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:zan/Core/Utils/Extensions/widget_extension.dart';
-import 'package:zan/Core/Utils/Widget/Images/build_image.dart';
+import '../../../../../../Core/Utils/Extensions/widget_extension.dart';
+import '../../../../../../Core/Utils/Widget/Images/build_image.dart';
 import '../../../../../../Core/Utils/Widget/AppBar/default_app_bar.dart';
 import '../../../../../Global/Authentication/presentation/components/build_social_login_button.dart';
 import '../../../../../../Core/Resources/app_colors.dart';

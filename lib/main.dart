@@ -33,16 +33,11 @@ import 'Features/App/common/Search/presentation/manager/search_cubit.dart';
 //  Orders ui Tools in page show all tools is rent or sall or both and setup same order ui carpenter
 //! Orders ui trucks in page
 
-//*( show infomation order for carpenter ) => 2h
-// contain informatin about services
-// contain informatin about user
-// contain informatin about location
-// if pending or accepted or running  
+
 
 
 
 // TODO: one day => (Orders Carpenter and Orders Cart )  
-// TODO: second day => ( show infomation order for carpenter ) 
 // TODO: last day => ( ui Tools and ui Truck )
 
 //? try edit measurement camera ar 
