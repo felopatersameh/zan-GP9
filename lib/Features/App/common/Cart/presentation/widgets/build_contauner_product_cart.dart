@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:zan/Core/Utils/Widget/Dialogs/dialog_examples.dart';
 import '../../../../../../Config/Routes/route_name.dart';
 import '../../../../../../Core/Resources/app_colors.dart';
 import '../../../../../../Core/Resources/app_constants.dart';
@@ -16,16 +17,16 @@ class BuildContaunerProductCart extends StatelessWidget {
   const BuildContaunerProductCart({
     super.key,
     required this.items,
-   required this.local,
+    required this.local,
   });
   final CartItemModel? items;
   final S local;
   @override
   Widget build(BuildContext context) {
-        final product = items?.product;
-        final discountPrice = product?.discountPrice;
-        final price = product?.price;
-        final isRtl = context.isRtl;
+    final product = items?.product;
+    final discountPrice = product?.discountPrice;
+    final price = product?.price;
+    final isRtl = context.isRtl;
     return GestureDetector(
       onTap: () {
         kNavigationService.navigateTo(
@@ -57,10 +58,10 @@ class BuildContaunerProductCart extends StatelessWidget {
                       SizedBox(
                           width: 200.w,
                           child: Text(
-                        product?.name ?? "",
-                        style: AppTextStyles.h5Bold,
-                        maxLines: 3,
-                      )),
+                            product?.name ?? "",
+                            style: AppTextStyles.h5Bold,
+                            maxLines: 3,
+                          )),
                       items?.color == null
                           ? Container()
                           : Text.rich(
@@ -146,9 +147,13 @@ class BuildContaunerProductCart extends StatelessWidget {
               hoverColor: Colors.transparent,
               onHover: (value) => false,
               highlightColor: Colors.transparent,
-              onPressed: () {
-                context.read<CartCubit>().removeItems(id: items!.id);
-              },
+              onPressed: () async =>
+                  await DialogExamples.showDeleteItemConfirmationDialog(
+                context,
+                itemName: product?.name ?? "",
+                onConfirm: () =>
+                    context.read<CartCubit>().removeItems(id: items!.id),
+              ),
               icon: const Icon(
                 Icons.close,
                 color: AppColors.primaryColor,

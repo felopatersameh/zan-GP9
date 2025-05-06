@@ -3,6 +3,7 @@ import '../../Core/Models/review_products_model.dart';
 import '../../Core/Services/Map/select_location.dart';
 import '../../Core/Utils/Widget/Images/image_gallery_viewer.dart';
 import '../../Core/Utils/Widget/Images/image_view.dart';
+import '../../Core/Utils/Widget/back_confirmation_wrapper.dart';
 import '../../Features/App/Service/Recommendation/presentation/pages/result_recommendation_screen.dart';
 import '../../Features/App/WorkshopDashboard/Main/Pages/main_dashbored_screen.dart';
 import '../../Features/App/WorkshopDashboard/Pages/Calender/Pages/calender_orders_screen.dart';
@@ -56,7 +57,13 @@ class AppRouteBuilders {
       case AppRoutes.selectLocation:
         return _defaultPageRoute(const SelectLocation());
       case AppRoutes.carpenterScreen:
-        return _defaultPageRoute(const CarpentersScreen());
+        return _defaultPageRoute(
+          BackConfirmationWrapper(
+            showConfirmation: true,
+            child: const CarpentersScreen(),
+          ),
+        );
+
       case AppRoutes.chatPage:
         return _defaultPageRoute(const ChatAiScreen());
       case AppRoutes.recommendation:
@@ -96,6 +103,10 @@ class AppRouteBuilders {
         return _defaultPageRoute(const MainDashBoredScreen());
       case AppRoutes.calenderOrdersScreen:
         return _defaultPageRoute(const CalenderOrdersScreen());
+      // case AppRoutes.dialogTestPage:
+      //   return _defaultPageRoute(const DialogTestPage());
+      // case AppRoutes.backConfirmationExample:
+      //   return _defaultPageRoute(const BackConfirmationExampleScreen());
       default:
         return _errorRoute('No route defined for "${settings.name}"');
     }

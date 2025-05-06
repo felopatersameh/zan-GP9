@@ -172,6 +172,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "available": MessageLookupByLibrary.simpleMessage("Is Available"),
         "average_rating":
             MessageLookupByLibrary.simpleMessage("Average Rating"),
+        "back_confirmation": MessageLookupByLibrary.simpleMessage("Leave Page"),
+        "back_confirmation_message": MessageLookupByLibrary.simpleMessage(
+            "Are you sure you want to leave this page? Any unsaved changes will be lost."),
         "boarding1_body": MessageLookupByLibrary.simpleMessage(
             "Always in a large and diverse selection of options. Guaranteed items, great design."),
         "boarding1_title":
@@ -184,6 +187,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "This text is an example of text that can be replaced in the same space."),
         "boarding3_title": MessageLookupByLibrary.simpleMessage(
             "Let\'s achieve your housing needs together"),
+        "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "cart": MessageLookupByLibrary.simpleMessage("Cart"),
         "checkout": MessageLookupByLibrary.simpleMessage("Check it out >"),
         "city": MessageLookupByLibrary.simpleMessage("City"),
@@ -191,9 +195,27 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Completed Orders"),
         "completed_services":
             MessageLookupByLibrary.simpleMessage("Completed Services"),
+        "confirmation_dialogs":
+            MessageLookupByLibrary.simpleMessage("Confirmation Dialogs"),
         "couponDiscount":
             MessageLookupByLibrary.simpleMessage("Coupon Discount"),
+        "delete": MessageLookupByLibrary.simpleMessage("Delete"),
+        "delete_all_item_confirmation":
+            MessageLookupByLibrary.simpleMessage("Delete all Items "),
+        "delete_all_item_confirmation_message":
+            MessageLookupByLibrary.simpleMessage(
+                " Are you sure you want to delete all items ? "),
+        "delete_item_confirmation":
+            MessageLookupByLibrary.simpleMessage("Delete Item Confirmation"),
+        "delete_item_confirmation_message":
+            MessageLookupByLibrary.simpleMessage(
+                "Are you sure you want to delete this item?"),
+        "dialog_examples":
+            MessageLookupByLibrary.simpleMessage("Dialog Examples"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
+        "error_dialog": MessageLookupByLibrary.simpleMessage("Error Dialog"),
+        "error_message": MessageLookupByLibrary.simpleMessage(
+            "Something went wrong. Please try again."),
         "experience": MessageLookupByLibrary.simpleMessage("Experience"),
         "forgetPassword":
             MessageLookupByLibrary.simpleMessage("Forgot your password?"),
@@ -201,7 +223,18 @@ class MessageLookup extends MessageLookupByLibrary {
         "hourly_rate": MessageLookupByLibrary.simpleMessage("Hourly Rate"),
         "id_card_photo_url":
             MessageLookupByLibrary.simpleMessage("ID Card Photo"),
+        "info_saved": MessageLookupByLibrary.simpleMessage("Information saved"),
+        "item_deleted": MessageLookupByLibrary.simpleMessage("Item deleted"),
         "later": MessageLookupByLibrary.simpleMessage("Later"),
+        "leave": MessageLookupByLibrary.simpleMessage("Leave"),
+        "loading_dialog":
+            MessageLookupByLibrary.simpleMessage("Loading Dialog"),
+        "loading_dialog_title":
+            MessageLookupByLibrary.simpleMessage("Loading..."),
+        "logout_confirmation":
+            MessageLookupByLibrary.simpleMessage("Logout Confirmation"),
+        "logout_confirmation_message": MessageLookupByLibrary.simpleMessage(
+            "Are you sure you want to logout?"),
         "massageInCart":
             MessageLookupByLibrary.simpleMessage("Sorry! No items here yet."),
         "messageChangeLanguageSuccess": MessageLookupByLibrary.simpleMessage(
@@ -214,6 +247,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Registered successfully"),
         "monthly_sales": MessageLookupByLibrary.simpleMessage("Monthly Sales"),
         "name": MessageLookupByLibrary.simpleMessage("Name"),
+        "navigating_back":
+            MessageLookupByLibrary.simpleMessage("Navigating back"),
+        "no": MessageLookupByLibrary.simpleMessage("No"),
         "no_pending_orders":
             MessageLookupByLibrary.simpleMessage("No Pending Orders"),
         "no_today_orders":
@@ -221,14 +257,20 @@ class MessageLookup extends MessageLookupByLibrary {
         "offerPrice": MessageLookupByLibrary.simpleMessage("Off"),
         "offerTittle":
             MessageLookupByLibrary.simpleMessage("Top Quality Products"),
+        "ok": MessageLookupByLibrary.simpleMessage("OK"),
+        "operation_completed":
+            MessageLookupByLibrary.simpleMessage("Operation completed"),
         "orLogin":
             MessageLookupByLibrary.simpleMessage("Already have an account?"),
         "orSingUp":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
+        "order_submitted":
+            MessageLookupByLibrary.simpleMessage("Order submitted"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "pending_orders":
             MessageLookupByLibrary.simpleMessage("Pending Orders"),
         "phone": MessageLookupByLibrary.simpleMessage("Phone"),
+        "please_wait": MessageLookupByLibrary.simpleMessage("Please wait..."),
         "police_record_photo_url":
             MessageLookupByLibrary.simpleMessage("Police Record Photo"),
         "popular": MessageLookupByLibrary.simpleMessage("Popular"),
@@ -236,15 +278,36 @@ class MessageLookup extends MessageLookupByLibrary {
         "profile_status":
             MessageLookupByLibrary.simpleMessage("Profile Status"),
         "rating": MessageLookupByLibrary.simpleMessage("Rating"),
+        "save_info_confirmation": MessageLookupByLibrary.simpleMessage(
+            "Save Information Confirmation"),
+        "save_info_confirmation_message": MessageLookupByLibrary.simpleMessage(
+            "Do you want to save your information?"),
         "services": MessageLookupByLibrary.simpleMessage("Services"),
         "state": MessageLookupByLibrary.simpleMessage("State"),
+        "status_dialogs":
+            MessageLookupByLibrary.simpleMessage("Status Dialogs"),
+        "stay": MessageLookupByLibrary.simpleMessage("Stay"),
+        "submit_order_confirmation":
+            MessageLookupByLibrary.simpleMessage("Submit Order Confirmation"),
+        "submit_order_confirmation_message":
+            MessageLookupByLibrary.simpleMessage(
+                "Are you sure you want to submit this order?"),
+        "success_dialog":
+            MessageLookupByLibrary.simpleMessage("Success Dialog"),
+        "success_message": MessageLookupByLibrary.simpleMessage(
+            "Operation completed successfully!"),
         "today_orders": MessageLookupByLibrary.simpleMessage("Today Orders"),
         "total_earnings":
             MessageLookupByLibrary.simpleMessage("Total Earnings"),
+        "warning_dialog":
+            MessageLookupByLibrary.simpleMessage("Warning Dialog"),
+        "warning_message": MessageLookupByLibrary.simpleMessage(
+            "This action might have consequences."),
         "welcome": MessageLookupByLibrary.simpleMessage("Welcome"),
         "workshop_photo_url":
             MessageLookupByLibrary.simpleMessage("Workshop Photo"),
         "years_experience":
-            MessageLookupByLibrary.simpleMessage("Years Experience")
+            MessageLookupByLibrary.simpleMessage("Years Experience"),
+        "yes": MessageLookupByLibrary.simpleMessage("Yes")
       };
 }

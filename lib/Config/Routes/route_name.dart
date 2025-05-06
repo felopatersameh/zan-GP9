@@ -25,6 +25,9 @@ class AppRoutes {
   static const String imageViewer = '/imageViewer';
   static const String imageView = '/ImageView';
   static const String calenderOrdersScreen = '/CalenderOrdersScreen';
-  static const String resultRecommendationScreen = '/ResultRecommendationScreen';
+  static const String resultRecommendationScreen =
+      '/ResultRecommendationScreen';
   static const String seeAllPage = '/SeeAllPage';
+  static const String dialogTestPage = '/dialogTestPage';
+  static const String backConfirmationExample = '/backConfirmationExample';
 }

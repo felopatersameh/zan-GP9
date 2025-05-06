@@ -1679,6 +1679,366 @@ class S {
       args: [],
     );
   }
+
+  /// `Dialog Examples`
+  String get dialog_examples {
+    return Intl.message(
+      'Dialog Examples',
+      name: 'dialog_examples',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirmation Dialogs`
+  String get confirmation_dialogs {
+    return Intl.message(
+      'Confirmation Dialogs',
+      name: 'confirmation_dialogs',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Status Dialogs`
+  String get status_dialogs {
+    return Intl.message(
+      'Status Dialogs',
+      name: 'status_dialogs',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Loading Dialog`
+  String get loading_dialog {
+    return Intl.message(
+      'Loading Dialog',
+      name: 'loading_dialog',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Logout Confirmation`
+  String get logout_confirmation {
+    return Intl.message(
+      'Logout Confirmation',
+      name: 'logout_confirmation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Are you sure you want to logout?`
+  String get logout_confirmation_message {
+    return Intl.message(
+      'Are you sure you want to logout?',
+      name: 'logout_confirmation_message',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delete Item Confirmation`
+  String get delete_item_confirmation {
+    return Intl.message(
+      'Delete Item Confirmation',
+      name: 'delete_item_confirmation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Are you sure you want to delete this item?`
+  String get delete_item_confirmation_message {
+    return Intl.message(
+      'Are you sure you want to delete this item?',
+      name: 'delete_item_confirmation_message',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delete all Items `
+  String get delete_all_item_confirmation {
+    return Intl.message(
+      'Delete all Items ',
+      name: 'delete_all_item_confirmation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ` Are you sure you want to delete all items ? `
+  String get delete_all_item_confirmation_message {
+    return Intl.message(
+      ' Are you sure you want to delete all items ? ',
+      name: 'delete_all_item_confirmation_message',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Submit Order Confirmation`
+  String get submit_order_confirmation {
+    return Intl.message(
+      'Submit Order Confirmation',
+      name: 'submit_order_confirmation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Are you sure you want to submit this order?`
+  String get submit_order_confirmation_message {
+    return Intl.message(
+      'Are you sure you want to submit this order?',
+      name: 'submit_order_confirmation_message',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Save Information Confirmation`
+  String get save_info_confirmation {
+    return Intl.message(
+      'Save Information Confirmation',
+      name: 'save_info_confirmation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Do you want to save your information?`
+  String get save_info_confirmation_message {
+    return Intl.message(
+      'Do you want to save your information?',
+      name: 'save_info_confirmation_message',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Leave Page`
+  String get back_confirmation {
+    return Intl.message(
+      'Leave Page',
+      name: 'back_confirmation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Are you sure you want to leave this page? Any unsaved changes will be lost.`
+  String get back_confirmation_message {
+    return Intl.message(
+      'Are you sure you want to leave this page? Any unsaved changes will be lost.',
+      name: 'back_confirmation_message',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Success Dialog`
+  String get success_dialog {
+    return Intl.message(
+      'Success Dialog',
+      name: 'success_dialog',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Operation completed successfully!`
+  String get success_message {
+    return Intl.message(
+      'Operation completed successfully!',
+      name: 'success_message',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Error Dialog`
+  String get error_dialog {
+    return Intl.message(
+      'Error Dialog',
+      name: 'error_dialog',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Something went wrong. Please try again.`
+  String get error_message {
+    return Intl.message(
+      'Something went wrong. Please try again.',
+      name: 'error_message',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Warning Dialog`
+  String get warning_dialog {
+    return Intl.message(
+      'Warning Dialog',
+      name: 'warning_dialog',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This action might have consequences.`
+  String get warning_message {
+    return Intl.message(
+      'This action might have consequences.',
+      name: 'warning_message',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Loading...`
+  String get loading_dialog_title {
+    return Intl.message(
+      'Loading...',
+      name: 'loading_dialog_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please wait...`
+  String get please_wait {
+    return Intl.message(
+      'Please wait...',
+      name: 'please_wait',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Yes`
+  String get yes {
+    return Intl.message(
+      'Yes',
+      name: 'yes',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No`
+  String get no {
+    return Intl.message(
+      'No',
+      name: 'no',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delete`
+  String get delete {
+    return Intl.message(
+      'Delete',
+      name: 'delete',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cancel`
+  String get cancel {
+    return Intl.message(
+      'Cancel',
+      name: 'cancel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Leave`
+  String get leave {
+    return Intl.message(
+      'Leave',
+      name: 'leave',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Stay`
+  String get stay {
+    return Intl.message(
+      'Stay',
+      name: 'stay',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `OK`
+  String get ok {
+    return Intl.message(
+      'OK',
+      name: 'ok',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Item deleted`
+  String get item_deleted {
+    return Intl.message(
+      'Item deleted',
+      name: 'item_deleted',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Order submitted`
+  String get order_submitted {
+    return Intl.message(
+      'Order submitted',
+      name: 'order_submitted',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Information saved`
+  String get info_saved {
+    return Intl.message(
+      'Information saved',
+      name: 'info_saved',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Navigating back`
+  String get navigating_back {
+    return Intl.message(
+      'Navigating back',
+      name: 'navigating_back',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Operation completed`
+  String get operation_completed {
+    return Intl.message(
+      'Operation completed',
+      name: 'operation_completed',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

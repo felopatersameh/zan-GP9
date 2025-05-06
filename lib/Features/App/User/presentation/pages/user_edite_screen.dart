@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:zan/Core/Utils/Widget/Dialogs/dialog_examples.dart';
 import '../Cubit/user_cubit.dart';
 import '../../../../../main.dart';
 import '../../../../../Config/Routes/route_name.dart';
@@ -75,7 +76,7 @@ class _UserEditeScreenState extends State<UserEditeScreen> {
                   isSpace: false,
                   text: local.Save,
                   backgroundColor: AppColors.primaryColor,
-                  onPressed: () {
+                  onPressed: () async {
                     if (formKey.currentState!.validate()) {
                       final UpdateUser updateUser = UpdateUser(
                         nameController.text,
@@ -83,7 +84,17 @@ class _UserEditeScreenState extends State<UserEditeScreen> {
                         phoneController.text,
                         state.userDataModel.photoUrl.toString(),
                       );
-                      context.read<UserCubit>().updateUser(context, updateUser);
+                      if (updateUser.name != state.userDataModel.name ||
+                          updateUser.email != state.userDataModel.email ||
+                          updateUser.phone != state.userDataModel.phone) {
+                        await DialogExamples.showSaveUserInfoConfirmationDialog(
+                            context,
+                            onConfirm: () async => await context
+                                .read<UserCubit>()
+                                .updateUser(context, updateUser));
+                      } else {
+                        return;
+                      }
                     }
                   },
                 ),

@@ -20,7 +20,7 @@ class BuildUserDataAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return SliverToBoxAdapter(
       child: ListTile(
-        contentPadding: EdgeInsets.only(top: 35).w,
+        contentPadding: EdgeInsets.only(top: 35, left: 16, right: 16).r,
         minVerticalPadding: 0,
         style: ListTileStyle.drawer,
         title: Text(
@@ -33,12 +33,18 @@ class BuildUserDataAppBar extends StatelessWidget {
             color: AppColors.grayscale80,
           ),
         ),
-        minLeadingWidth: 50.w,
-        leading: GestureDetector(
-          onTap: () {
-            kNavigationService.navigateTo(AppRoutes.imageView,arguments: context.read<UserCubit>().state.userDataModel.photoUrl);
-          },
-          child: ViewImageUser(),
+        minLeadingWidth: 60.w,
+        leading: SizedBox(
+          width: 50.w,
+          height: 50.w,
+          child: GestureDetector(
+            onTap: () {
+              kNavigationService.navigateTo(AppRoutes.imageView,
+                  arguments:
+                      context.read<UserCubit>().state.userDataModel.photoUrl);
+            },
+            child: ViewImageUser(),
+          ),
         ),
         trailing: context.isLogin
             ? GestureDetector(
