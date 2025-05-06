@@ -39,16 +39,10 @@ import 'Features/App/common/Search/presentation/manager/search_cubit.dart';
 // contain informatin about location
 // if pending or accepted or running  
 
-//*( show dialogs ) => one day
-  // when logout (done)
-  // when deleting items or one item (done)
-  // when order submit (done)
-  // save new information user  (done)
-  // when back in sevices screen (done)
 
 
 // TODO: one day => (Orders Carpenter and Orders Cart )  
-// TODO: second day => ( show infomation order for carpenter ) &&  ( show dialogs )
+// TODO: second day => ( show infomation order for carpenter ) 
 // TODO: last day => ( ui Tools and ui Truck )
 
 //? try edit measurement camera ar 
