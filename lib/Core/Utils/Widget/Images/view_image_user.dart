@@ -19,7 +19,7 @@ class ViewImageUser extends StatelessWidget {
       child: BuildImageAssets(
         url: context.watch<UserCubit>().state.userDataModel.photoUrl,
         setDefaultImage: true,
-       
+        fit: BoxFit.cover,
       ),
     );
   }

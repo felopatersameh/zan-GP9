@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:zan/Core/Utils/Widget/Dialogs/dialog_examples.dart';
 import '../../../../../../Core/Resources/app_icons.dart';
 import '../../../../../../Core/Services/ServiceLocator/service_locator.dart';
 import '../../../../../../Core/Utils/Widget/Massages/custom_scaffold_messenger.dart';
@@ -13,7 +14,6 @@ import '../widgets/body_page_cart_items.dart';
 import '../widgets/no_item.dart';
 import '../widgets/persistent_footer_buttons_cart.dart';
 
-
 class CartScreen extends StatelessWidget {
   const CartScreen({super.key});
 
@@ -23,32 +23,43 @@ class CartScreen extends StatelessWidget {
     return BlocProvider(
       create: (context) => sl<CartCubit>()..initItems(),
       child: BlocConsumer<CartCubit, CartStates>(
-      listener: (context, state) {
-        if (state.success == false) {
-          showCustomSnackBar(context, state.error.toString(), SnackBarType.error);
-        }
-      },
+        listener: (context, state) {
+          if (state.success == false) {
+            showCustomSnackBar(
+                context, state.error.toString(), SnackBarType.error);
+          }
+        },
         builder: (context, state) {
           return Scaffold(
-            appBar: DefaultAppBar(local: local.cart,action:  [
-            InkWell(
-              onTap: ()=>context.read<CartCubit>().clearItems(),
-            child: AppIcons.trash,
+            appBar: DefaultAppBar(
+              local: local.cart,
+              action: [
+                InkWell(
+                  onTap: () =>
+                      DialogExamples.showDeleteAllItemsConfirmationDialog(
+                          context,
+                          onConfirm: () =>
+                              context.read<CartCubit>().clearItems()),
+                  child: AppIcons.trash,
+                ),
+                30.horizontalSpace,
+              ],
             ),
-              30.horizontalSpace,
-            ],),
             body: state.loading == true
                 ? CustomLoadingAnimation()
-                : state.loading == null || state.cartItems?.cartItems.isEmpty == true
+                : state.loading == null ||
+                        state.cartItems?.cartItems.isEmpty == true
                     ? NoItemsCart(local: local)
-                    :  BodyPageCartItems(
-                            cartItems: state.cartItems?.cartItems ?? [],
-                            local: local,
-                          ),
+                    : BodyPageCartItems(
+                        cartItems: state.cartItems?.cartItems ?? [],
+                        local: local,
+                      ),
             persistentFooterButtons: [
-              PersistentFooterButtonsCart(local: local,state: state,)
+              PersistentFooterButtonsCart(
+                local: local,
+                state: state,
+              )
             ],
-
             resizeToAvoidBottomInset: true,
           );
         },
@@ -56,4 +67,3 @@ class CartScreen extends StatelessWidget {
     );
   }
 }
-

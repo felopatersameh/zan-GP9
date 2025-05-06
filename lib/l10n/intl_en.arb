@@ -1,10 +1,10 @@
 {
     "@@locale": "en",
     "MessageEmptyProduct":"No Product Found",
-  
+
     "TitleLogoSplash": "Find the best parts for your home",
     "messageChangeLanguageSuccess": "Language changed successfully",
-  
+
     "boarding1_title": "Guaranteed quality products",
     "boarding1_body": "Always in a large and diverse selection of options. Guaranteed items, great design.",
     "boarding2_title": "Comprehensive guarantee if the product doesn't suit you",
@@ -14,10 +14,10 @@
     "Next": "Next",
     "Back": "Back",
     "Continue": "Continue",
-  
+
     "TitleStartApp": "Find the perfect furniture for your beautiful home",
     "LoginByGoogle": "Sign in with Google",
-  
+
     "email": "Email",
     "name": "Name",
     "phone": "Phone",
@@ -55,8 +55,8 @@
     "IDCard_PassportDescription": "Upload clear image of the ID card.",
     "PoliceRecordDescription": "Upload clear image of the police record.",
     "WorkshopDescription": "Upload clear image of the workshop.",
-      
-  
+
+
     "Home": "Home",
     "Scan": "Scan",
     "Explore": "Explore",
@@ -75,13 +75,13 @@
     "LatestProduct": "Latest Products",
     "all": "All",
     "Categories": "Categories",
-  
+
     "Price": "Price",
     "StarRating": "Rating",
     "Filter": "Filter",
     "ResetFilters": "Reset Filters",
     "ApplyFilters": "Apply Filters",
-  
+
     "Setting": "Settings",
     "YourCard": "Your Card",
     "Notifications": "Notifications",
@@ -92,11 +92,11 @@
     "WorkshopDashboard": "Workshop Dashboard",
 
     "massageInCart": "Sorry! No items here yet.",
-  
+
     "offerPrice": "Off",
     "offerTittle": "Top Quality Products",
     "checkout": "Check it out >",
-  
+
     "Recommendation": "Service Recommendation",
     "RecommendationDes": "You can take any picture in your room and get a recommendation on what's best for you",
     "Service": "More Services",
@@ -107,9 +107,9 @@
     "TrucksDes": "Trucks can take the loads you need to move the furniture",
     "Rent": "Rent",
     "RentDes": "For rental tools and materials you need",
-  
+
     "Skip": "Skip",
-  
+
     "InStock": "In Stock",
     "OutStock": "Out of Stock",
     "Color": "Color",
@@ -131,14 +131,14 @@
     "DeliveryCharge": "Delivery Charge",
     "CouponDiscount": "Coupon Discount",
     "TotalAmount": "Total amount",
-  
+
     "SmartAssistantFeature": "Smart Assistant",
     "SmartAssistantFeatureDes": "can chat with it and answer any question you have about furniture",
     "FurnitureRecommendationFeature": "Furniture Recommendation",
     "EmptySpaceCalculatorFeature": "Empty Space Calculator",
     "FurnitureMeasurementFeature": "Furniture Measurement",
     "RoomMeasurementFeature": "Room Measurement",
-  
+
     "Carpenter_service": "Carpenter Service",
     "Carpentry_selection": "Select the type of Service you need.",
     "Required_person": "Required Person",
@@ -146,9 +146,9 @@
     "Proceed": "Proceed",
     "Confirm": "Confirm",
     "PickTime": "Pick time",
-  
-  
-  
+
+
+
     "age": "Age",
     "years_experience": "Years Experience",
     "hourly_rate": "Hourly Rate",
@@ -168,14 +168,14 @@
     "Cash": "Cash",
     "OnlinePayment": "OnlinePayment",
     "hour": "One Hour",
-  
-  
+
+
     "Length": "Length",
     "Width": "Width",
     "RoomType": "Room type",
     "Photo":"Photo",
     "Camera":"Camera",
-  
+
 
   "welcome": "Welcome",
   "profile_status": "Profile Status",
@@ -186,7 +186,56 @@
   "today_orders": "Today Orders",
   "no_today_orders": "No Today Orders",
   "no_pending_orders": "No Pending Orders",
-  "monthly_sales": "Monthly Sales"
-  
+  "monthly_sales": "Monthly Sales",
+
+
+
+
+  "dialog_examples": "Dialog Examples",
+  "confirmation_dialogs": "Confirmation Dialogs",
+  "status_dialogs": "Status Dialogs",
+  "loading_dialog": "Loading Dialog",
+
+  "logout_confirmation": "Logout Confirmation",
+  "logout_confirmation_message": "Are you sure you want to logout?",
+
+  "delete_item_confirmation": "Delete Item Confirmation",
+  "delete_item_confirmation_message": "Are you sure you want to delete this item?", 
+  "delete_all_item_confirmation": "Delete all Items ",
+  "delete_all_item_confirmation_message": " Are you sure you want to delete all items ? ",
+
+  "submit_order_confirmation": "Submit Order Confirmation",
+  "submit_order_confirmation_message": "Are you sure you want to submit this order?",
+
+  "save_info_confirmation": "Save Information Confirmation",
+  "save_info_confirmation_message": "Do you want to save your information?",
+
+  "back_confirmation": "Leave Page",
+  "back_confirmation_message": "Are you sure you want to leave this page? Any unsaved changes will be lost.",
+
+  "success_dialog": "Success Dialog",
+  "success_message": "Operation completed successfully!",
+
+  "error_dialog": "Error Dialog",
+  "error_message": "Something went wrong. Please try again.",
+
+  "warning_dialog": "Warning Dialog",
+  "warning_message": "This action might have consequences.",
+
+  "loading_dialog_title": "Loading...",
+  "please_wait": "Please wait...",
+
+  "yes": "Yes",
+  "no": "No",
+  "delete": "Delete",
+  "cancel": "Cancel",
+  "leave": "Leave",
+  "stay": "Stay",
+  "ok": "OK",
+  "item_deleted": "Item deleted",
+  "order_submitted": "Order submitted",
+  "info_saved": "Information saved",
+  "navigating_back": "Navigating back",
+  "operation_completed": "Operation completed"
+
   }
-  

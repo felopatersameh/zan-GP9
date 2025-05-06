@@ -26,10 +26,15 @@ import '../../data/models/update_user.dart';
 part 'user_state.dart';
 
 class UserCubit extends Cubit<UserClassState> {
-  UserCubit(this.updateUserUseCase, this.updatePasswordUseCase,
-      this.getUserDataUseCase, this.refreshTokenUseCase, this.addressUseCase, this.logoutUseCase)
+  UserCubit(
+      this.updateUserUseCase,
+      this.updatePasswordUseCase,
+      this.getUserDataUseCase,
+      this.refreshTokenUseCase,
+      this.addressUseCase,
+      this.logoutUseCase)
       : super(UserClassState(userDataModel: UserDataModel.empty()));
-  
+
   final UpdateUserUseCase updateUserUseCase;
   final UpdatePasswordUseCase updatePasswordUseCase;
   final GetUserDataUseCase getUserDataUseCase;
@@ -77,21 +82,23 @@ class UserCubit extends Cubit<UserClassState> {
         bool isCarpenter = data.role == Role.carpenter.value;
         emit(state.copyWith(
             userDataModel: data.copyWith(
-              carpenterProfile: isCarpenter ? data.carpenterProfile?.copyWith(
-                user: User(
-                    id: id,
-                    name: data.name,
-                    email: data.email,
-                    emailVerifiedAt: data.emailVerifiedAt,
-                    phone: data.phone,
-                    photo: data.photo,
-                    role: data.role,
-                    status: data.status,
-                    createdAt: data.createdAt,
-                    updatedAt: data.updatedAt,
-                    photoUrl: data.photoUrl),
-              ):CarpentersModel.empty(),
-            ),  
+              carpenterProfile: isCarpenter
+                  ? data.carpenterProfile?.copyWith(
+                      user: User(
+                          id: id,
+                          name: data.name,
+                          email: data.email,
+                          emailVerifiedAt: data.emailVerifiedAt,
+                          phone: data.phone,
+                          photo: data.photo,
+                          role: data.role,
+                          status: data.status,
+                          createdAt: data.createdAt,
+                          updatedAt: data.updatedAt,
+                          photoUrl: data.photoUrl),
+                    )
+                  : CarpentersModel.empty(),
+            ),
             errorUser: false));
       },
     );
@@ -211,10 +218,8 @@ class UserCubit extends Cubit<UserClassState> {
 
   Future<void> setDefaultAddress(AddressModel address) async {
     final response = await addressUseCase.setDefaultAddress(address);
-    response.fold((error) {
-
-    }, (data) {
-      final oldModel = state.address??[];
+    response.fold((error) {}, (data) {
+      final oldModel = state.address ?? [];
       final newList = oldModel.map((e) {
         if (e.id == data.id) {
           return e.copyWith(isDefault: true);
@@ -228,7 +233,7 @@ class UserCubit extends Cubit<UserClassState> {
 
   get loading => state.loading;
 
-  String get defaultAddress  {
+  String get defaultAddress {
     final address = (state.address ?? [])
         .firstWhere((element) => element.isDefault == true);
     String addressLine = [
@@ -243,11 +248,11 @@ class UserCubit extends Cubit<UserClassState> {
 
   Future<void> logout() async {
     final response = await logoutUseCase.call();
-    response.fold((error) {}, (data) async{
-
-     await LocalStorageService.removeValue(LocalStorageKeys.token);
-    await kNavigationService.clearAndNavigateTo(AppRoutes.authentication);
+    response.fold((error) {}, (data) async {
+      emit(state.copyWith(userDataModel: UserDataModel.empty()));
+      await LocalStorageService.removeValue(LocalStorageKeys.token);
+      await kNavigationService.clearAndNavigateTo(AppRoutes.authentication);
+      
     });
-   
   }
 }

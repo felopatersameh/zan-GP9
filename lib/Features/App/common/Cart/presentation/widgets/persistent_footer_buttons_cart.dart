@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:zan/Core/Utils/Widget/Dialogs/dialog_examples.dart';
 import '../../../../../../generated/l10n.dart';
 import '../../../../../../Core/Resources/app_icons.dart';
 import '../../../../../../Config/app_config.dart';
@@ -40,12 +41,11 @@ class PersistentFooterButtonsCart extends StatelessWidget {
                   text: local.PromoCode,
                   type: TextInputType.text,
                   controller: textCoupon,
-                  
                   onChanged: (value) async {
                     if (value.isEmpty) {
                       return;
                     }
-                     Future.delayed(const Duration(milliseconds: 1500));
+                    Future.delayed(const Duration(milliseconds: 1500));
                     context.read<CartCubit>().applyCoupon(textCoupon.text);
                   },
                 ),
@@ -124,7 +124,18 @@ class PersistentFooterButtonsCart extends StatelessWidget {
               ),
               isSpace: false,
               backgroundColor: AppColors.primaryColor,
-              onPressed: () {},
+              onPressed: () {
+                if (state.cartItems == null ||
+                    state.cartItems!.cartItems.isEmpty ) {
+                  return;
+                }
+                DialogExamples.showOrderSubmitConfirmationDialog(
+                  context,
+                  onConfirm: () {
+                    
+                  },
+                );
+              },
             )
           ],
         ),

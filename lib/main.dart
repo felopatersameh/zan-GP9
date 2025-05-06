@@ -31,19 +31,20 @@ import 'Features/App/common/Search/presentation/manager/search_cubit.dart';
 
 //*( ui Tools and ui Truck ) => two day or three
 //  Orders ui Tools in page show all tools is rent or sall or both and setup same order ui carpenter
-//!  Orders ui trucks in page
+//! Orders ui trucks in page
 
 //*( show infomation order for carpenter ) => 2h
-// show informatin about services
-// show informatin about user
-// show informatin about location
+// contain informatin about services
+// contain informatin about user
+// contain informatin about location
+// if pending or accepted or running  
 
 //*( show dialogs ) => one day
-  // when logout
-  // when deleting items or one item
-  // when order submit
-  // save new information user 
-  // when back in sevices screen 
+  // when logout (done)
+  // when deleting items or one item (done)
+  // when order submit (done)
+  // save new information user  (done)
+  // when back in sevices screen (done)
 
 
 // TODO: one day => (Orders Carpenter and Orders Cart )  

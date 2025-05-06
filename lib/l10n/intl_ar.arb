@@ -42,7 +42,7 @@
   "city": "مدينة",
   "state": "ولاية",
   "postal_code": "رمز بريدي",
-  
+
   "Bio": "السيرة الذاتية",
   "ProfilePhoto": "صورة الحساب",
   "IDCard_Passport": "بطاقة الهوية",
@@ -183,9 +183,54 @@
   "no_today_orders": "لا يوجد طلبات اليوم",
   "pending_orders": "طلبات معلقة",
   "no_pending_orders": "لا يوجد طلبات معلقة",
-  "monthly_sales": "المبيعات الشهرية"
+  "monthly_sales": "المبيعات الشهرية",
+
+  "dialog_examples": "أمثلة الحوارات",
+  "confirmation_dialogs": "حوارات التأكيد",
+  "status_dialogs": "حوارات الحالة",
+  "loading_dialog": "حوار التحميل",
+
+  "logout_confirmation": "تأكيد تسجيل الخروج",
+  "logout_confirmation_message": "هل أنت متأكد أنك تريد تسجيل الخروج؟",
+
+  "delete_item_confirmation": "تأكيد حذف العنصر",
+  "delete_item_confirmation_message": "هل أنت متأكد أنك تريد حذف هذا العنصر؟",
+  "delete_all_item_confirmation": " حذف جميع العناصر",
+  "delete_all_item_confirmation_message": "هل أنت متأكد أنك تريد حذف جميع العناصر؟",
 
 
+  "submit_order_confirmation": "تأكيد إرسال الطلب",
+  "submit_order_confirmation_message": "هل أنت متأكد أنك تريد إرسال هذا الطلب؟",
 
+  "save_info_confirmation": "تأكيد حفظ المعلومات",
+  "save_info_confirmation_message": "هل تريد حفظ معلوماتك؟",
+
+  "back_confirmation": "مغادرة الصفحة",
+  "back_confirmation_message": "هل أنت متأكد أنك تريد مغادرة هذه الصفحة؟ سيتم فقدان أي تغييرات غير محفوظة.",
+
+  "success_dialog": "حوار النجاح",
+  "success_message": "تمت العملية بنجاح!",
+
+  "error_dialog": "حوار الخطأ",
+  "error_message": "حدث خطأ ما. يرجى المحاولة مرة أخرى.",
+
+  "warning_dialog": "حوار التحذير",
+  "warning_message": "قد يكون لهذا الإجراء عواقب.",
+
+  "loading_dialog_title": "جاري التحميل...",
+  "please_wait": "يرجى الانتظار...",
+
+  "yes": "نعم",
+  "no": "لا",
+  "delete": "حذف",
+  "cancel": "إلغاء",
+  "leave": "مغادرة",
+  "stay": "البقاء",
+  "ok": "موافق",
+  "item_deleted": "تم حذف العنصر",
+  "order_submitted": "تم إرسال الطلب",
+  "info_saved": "تم حفظ المعلومات",
+  "navigating_back": "جاري العودة",
+  "operation_completed": "اكتملت العملية"
 
 }

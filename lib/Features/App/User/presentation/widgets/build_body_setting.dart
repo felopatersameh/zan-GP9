@@ -7,6 +7,7 @@ import '../../../../../Core/Resources/app_fonts.dart';
 import '../../../../../Core/Resources/app_icons.dart';
 import '../../../../../Core/Utils/Extensions/localizations_extension.dart';
 import '../../../../../Core/Utils/Functions/show_bottom_sheet_methods.dart';
+import '../../../../../Core/Utils/Widget/Dialogs/dialog_examples.dart';
 import '../../../../../main.dart';
 import '../../../../Global/Authentication/presentation/components/build_social_login_button.dart';
 import '../Cubit/user_cubit.dart';
@@ -74,7 +75,7 @@ class BuildBodySetting extends StatelessWidget {
           BuildItemSetting(
             title: local.Logout,
             icon: AppIcons.logout,
-            onTap: () => context.read<UserCubit>().logout(),
+            onTap: () async=> await DialogExamples.showLogoutConfirmationDialog(context),
           ): Expanded(
             child: Align(
               child: CustomBuildButtonApp(text: context.local.Login, backgroundColor: AppColors.secondaryColor, onPressed: () => kNavigationService.navigateTo(AppRoutes.authentication),isSpace: false,),
