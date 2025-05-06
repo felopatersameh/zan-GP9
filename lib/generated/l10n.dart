@@ -1340,6 +1340,26 @@ class S {
     );
   }
 
+  /// `Time`
+  String get Time {
+    return Intl.message(
+      'Time',
+      name: 'Time',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Date `
+  String get Date {
+    return Intl.message(
+      'Date ',
+      name: 'Date',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Age`
   String get age {
     return Intl.message(
@@ -2035,6 +2055,126 @@ class S {
     return Intl.message(
       'Operation completed',
       name: 'operation_completed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Order Details`
+  String get OrderDetails {
+    return Intl.message(
+      'Order Details',
+      name: 'OrderDetails',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Order Status`
+  String get OrderStatus {
+    return Intl.message(
+      'Order Status',
+      name: 'OrderStatus',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Reject`
+  String get reject {
+    return Intl.message(
+      'Reject',
+      name: 'reject',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pending`
+  String get pending {
+    return Intl.message(
+      'Pending',
+      name: 'pending',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Running`
+  String get running {
+    return Intl.message(
+      'Running',
+      name: 'running',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Finshed`
+  String get accepted {
+    return Intl.message(
+      'Finshed',
+      name: 'accepted',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Accept`
+  String get accept {
+    return Intl.message(
+      'Accept',
+      name: 'accept',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delay`
+  String get delay {
+    return Intl.message(
+      'Delay',
+      name: 'delay',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Location Information`
+  String get LocationInformation {
+    return Intl.message(
+      'Location Information',
+      name: 'LocationInformation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Customer Information`
+  String get CustomerInformation {
+    return Intl.message(
+      'Customer Information',
+      name: 'CustomerInformation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Service Information`
+  String get ServiceInformation {
+    return Intl.message(
+      'Service Information',
+      name: 'ServiceInformation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Service Name`
+  String get ServiceName {
+    return Intl.message(
+      'Service Name',
+      name: 'ServiceName',
       desc: '',
       args: [],
     );

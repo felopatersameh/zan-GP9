@@ -147,6 +147,8 @@
   "Proceed": "تابع",
   "Confirm": "تأكيد",
   "PickTime": "اختر الوقت",
+  "Time": "الوقت",
+  "Date": "التاريخ",
 
   "age": "العمر",
   "years_experience": "سنوات الخبرة",
@@ -231,6 +233,19 @@
   "order_submitted": "تم إرسال الطلب",
   "info_saved": "تم حفظ المعلومات",
   "navigating_back": "جاري العودة",
-  "operation_completed": "اكتملت العملية"
+  "operation_completed": "اكتملت العملية",
+  "OrderDetails": "تفاصيل الطلب",
+  "OrderStatus": "حالة الطلب",
+  "reject": "رفض",
+  "pending": "قيد الانتظار",
+  "running": "جاري",
+  "accepted": "اتنهاء",
+  "accept": "قبول",
+  "delay": "تأخير",
+    "LocationInformation": "معلومات الموقع",
+  "CustomerInformation": "معلومات العميل",
+    "ServiceInformation": "معلومات الخدمة",
+  "ServiceName": "اسم الخدمة"
+
 
 }

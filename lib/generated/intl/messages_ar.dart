@@ -52,8 +52,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "CouponDiscount": MessageLookupByLibrary.simpleMessage("خصم القسيمة"),
         "CurrentPassword":
             MessageLookupByLibrary.simpleMessage("كلمة المرور الحالية"),
+        "CustomerInformation":
+            MessageLookupByLibrary.simpleMessage("معلومات العميل"),
         "CustomerReviews":
             MessageLookupByLibrary.simpleMessage("مراجعات العملاء"),
+        "Date": MessageLookupByLibrary.simpleMessage("التاريخ"),
         "DeliveryCharge": MessageLookupByLibrary.simpleMessage("رسوم التوصيل"),
         "Description": MessageLookupByLibrary.simpleMessage("الوصف"),
         "Details": MessageLookupByLibrary.simpleMessage("التفاصيل"),
@@ -80,6 +83,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "Languages": MessageLookupByLibrary.simpleMessage("اللغات"),
         "LatestProduct": MessageLookupByLibrary.simpleMessage("أحدث منتجات"),
         "Length": MessageLookupByLibrary.simpleMessage("الطول"),
+        "LocationInformation":
+            MessageLookupByLibrary.simpleMessage("معلومات الموقع"),
         "Login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "LoginByGoogle":
             MessageLookupByLibrary.simpleMessage("تسجيل باستخدام جوجل"),
@@ -93,6 +98,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "Notifications": MessageLookupByLibrary.simpleMessage("إشعارات"),
         "OnlinePayment":
             MessageLookupByLibrary.simpleMessage("دفع عبر الإنترنت"),
+        "OrderDetails": MessageLookupByLibrary.simpleMessage("تفاصيل الطلب"),
+        "OrderStatus": MessageLookupByLibrary.simpleMessage("حالة الطلب"),
         "OutStock": MessageLookupByLibrary.simpleMessage("غير متوفر"),
         "Photo": MessageLookupByLibrary.simpleMessage("صورة"),
         "PickTime": MessageLookupByLibrary.simpleMessage("اختر الوقت"),
@@ -128,6 +135,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "ServiceCharge": MessageLookupByLibrary.simpleMessage("رسوم الخدمة"),
         "ServiceDes": MessageLookupByLibrary.simpleMessage(
             "اكتشف المزيد من الخدمات المتاحة هنا."),
+        "ServiceInformation":
+            MessageLookupByLibrary.simpleMessage("معلومات الخدمة"),
+        "ServiceName": MessageLookupByLibrary.simpleMessage("اسم الخدمة"),
         "Setting": MessageLookupByLibrary.simpleMessage("الاعدادات"),
         "SignUp": MessageLookupByLibrary.simpleMessage("انشاء حساب"),
         "Size": MessageLookupByLibrary.simpleMessage("حجم"),
@@ -139,6 +149,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "StarRating": MessageLookupByLibrary.simpleMessage("تصنيف"),
         "Submit": MessageLookupByLibrary.simpleMessage("إرسال"),
         "Subtotal": MessageLookupByLibrary.simpleMessage("المجموع الفرعي"),
+        "Time": MessageLookupByLibrary.simpleMessage("الوقت"),
         "TitleLogoSplash": MessageLookupByLibrary.simpleMessage(
             "اكتشف أفضل قطع الأثاث لمنزلك"),
         "TitleStartApp": MessageLookupByLibrary.simpleMessage(
@@ -159,6 +170,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("رفع صورة واضحة من الورشة."),
         "YourCard": MessageLookupByLibrary.simpleMessage("بطاقتك"),
         "YourRating": MessageLookupByLibrary.simpleMessage("تقييمك"),
+        "accept": MessageLookupByLibrary.simpleMessage("قبول"),
+        "accepted": MessageLookupByLibrary.simpleMessage("اتنهاء"),
         "address_line": MessageLookupByLibrary.simpleMessage("خط العنوان"),
         "age": MessageLookupByLibrary.simpleMessage("العمر"),
         "all": MessageLookupByLibrary.simpleMessage("الكل"),
@@ -192,6 +205,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "confirmation_dialogs":
             MessageLookupByLibrary.simpleMessage("حوارات التأكيد"),
         "couponDiscount": MessageLookupByLibrary.simpleMessage("خصم القسيمة"),
+        "delay": MessageLookupByLibrary.simpleMessage("تأخير"),
         "delete": MessageLookupByLibrary.simpleMessage("حذف"),
         "delete_all_item_confirmation":
             MessageLookupByLibrary.simpleMessage(" حذف جميع العناصر"),
@@ -257,6 +271,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "order_submitted":
             MessageLookupByLibrary.simpleMessage("تم إرسال الطلب"),
         "password": MessageLookupByLibrary.simpleMessage(" كلمه المرور"),
+        "pending": MessageLookupByLibrary.simpleMessage("قيد الانتظار"),
         "pending_orders": MessageLookupByLibrary.simpleMessage("طلبات معلقة"),
         "phone": MessageLookupByLibrary.simpleMessage(" الموبيل"),
         "please_wait": MessageLookupByLibrary.simpleMessage("يرجى الانتظار..."),
@@ -266,6 +281,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "postal_code": MessageLookupByLibrary.simpleMessage("رمز بريدي"),
         "profile_status": MessageLookupByLibrary.simpleMessage("حالة الحساب"),
         "rating": MessageLookupByLibrary.simpleMessage("التقييم"),
+        "reject": MessageLookupByLibrary.simpleMessage("رفض"),
+        "running": MessageLookupByLibrary.simpleMessage("جاري"),
         "save_info_confirmation":
             MessageLookupByLibrary.simpleMessage("تأكيد حفظ المعلومات"),
         "save_info_confirmation_message":

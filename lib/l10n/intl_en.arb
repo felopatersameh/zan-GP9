@@ -146,6 +146,8 @@
     "Proceed": "Proceed",
     "Confirm": "Confirm",
     "PickTime": "Pick time",
+    "Time": "Time",
+    "Date": "Date ",
 
 
 
@@ -236,6 +238,19 @@
   "order_submitted": "Order submitted",
   "info_saved": "Information saved",
   "navigating_back": "Navigating back",
-  "operation_completed": "Operation completed"
+  "operation_completed": "Operation completed",
+  "OrderDetails": "Order Details",
+  "OrderStatus": "Order Status",
+  "reject": "Reject",
+  "pending": "Pending",
+  "running": "Running",
+  "accepted": "Finshed",
+  "accept": "Accept",
+  "delay": "Delay",
+  "LocationInformation": "Location Information",
+  "CustomerInformation": "Customer Information",
+  "ServiceInformation": "Service Information",
+  "ServiceName": "Service Name"
+
 
   }
