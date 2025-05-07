@@ -103,6 +103,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Notifications": MessageLookupByLibrary.simpleMessage("Notifications"),
         "OnlinePayment": MessageLookupByLibrary.simpleMessage("OnlinePayment"),
         "OrderDetails": MessageLookupByLibrary.simpleMessage("Order Details"),
+        "OrderNames": MessageLookupByLibrary.simpleMessage("Order Names"),
         "OrderStatus": MessageLookupByLibrary.simpleMessage("Order Status"),
         "OutStock": MessageLookupByLibrary.simpleMessage("Out of Stock"),
         "Photo": MessageLookupByLibrary.simpleMessage("Photo"),
@@ -167,6 +168,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "UploadImage": MessageLookupByLibrary.simpleMessage("Upload Image"),
         "UploadImageCarpenter": MessageLookupByLibrary.simpleMessage(
             "Upload clear image of yourself."),
+        "ViewOrders": MessageLookupByLibrary.simpleMessage("View"),
         "Width": MessageLookupByLibrary.simpleMessage("Width"),
         "WorkingPrice": MessageLookupByLibrary.simpleMessage("Working Hour"),
         "Workshop": MessageLookupByLibrary.simpleMessage("Workshop"),
@@ -280,6 +282,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
         "order_submitted":
             MessageLookupByLibrary.simpleMessage("Order submitted"),
+        "orders": MessageLookupByLibrary.simpleMessage("Orders"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "pending": MessageLookupByLibrary.simpleMessage("Pending"),
         "pending_orders":

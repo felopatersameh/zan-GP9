@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:zan/Core/Utils/Widget/Dialogs/dialog_examples.dart';
+import '../../../../../../Core/Utils/Widget/Dialogs/dialog_examples.dart';
 import '../../../../../../Config/Routes/route_name.dart';
 import '../../../../../../Core/Resources/app_colors.dart';
 import '../../../../../../Core/Resources/app_constants.dart';
 import '../../../../../../Core/Resources/app_fonts.dart';
 import '../../../../../../Core/Utils/Extensions/localizations_extension.dart';
 import '../../../../../../Core/Utils/Widget/Images/build_image.dart';
-import '../../../../../../Features/App/common/Cart/data/Model/cart_item_model.dart';
+import '../../data/Model/cart_item_model.dart';
 import '../../../../../../Features/App/common/Cart/presentation/Cubit/Cart/cart_cubit.dart';
 import '../../../../../../generated/l10n.dart';
 import '../../../../../../main.dart';

@@ -58,7 +58,7 @@ class BuildBodySetting extends StatelessWidget {
             title: local.cart,
             icon: AppIcons.bag,
             onTap: () {
-              kNavigationService.navigateTo(AppRoutes.cart);
+              kNavigationService.navigateTo(AppRoutes.orderScreen);
             },
           ),
           BuildItemSetting(

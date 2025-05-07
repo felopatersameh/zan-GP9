@@ -1,1 +1,8 @@
-enum PaymentMethod {  creditCard('credit_card'),  cash('cash');  final String value;  const PaymentMethod(this.value);}
+enum PaymentMethodEnum {
+  creditCard('credit_card'),
+  cash('cash');
+
+  final String value;
+
+  const PaymentMethodEnum(this.value);
+}

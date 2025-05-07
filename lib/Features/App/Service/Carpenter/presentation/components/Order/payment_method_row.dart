@@ -17,8 +17,10 @@ class PaymentMethodRow extends StatelessWidget {
           child: _buildPaymentMethod(
             icon: Icons.credit_card,
             title: 'Online Payment',
-            isSelected: cubitWatch.paymentMethod == PaymentMethod.creditCard,
-            onTap: () => cubitRead.chosePaymentMethod(PaymentMethod.creditCard),
+            isSelected:
+                cubitWatch.paymentMethod == PaymentMethodEnum.creditCard,
+            onTap: () =>
+                cubitRead.chosePaymentMethod(PaymentMethodEnum.creditCard),
           ),
         ),
         const SizedBox(width: 12),
@@ -26,8 +28,8 @@ class PaymentMethodRow extends StatelessWidget {
           child: _buildPaymentMethod(
             icon: Icons.wallet,
             title: 'Cash',
-            isSelected: cubitWatch.paymentMethod == PaymentMethod.cash,
-            onTap: () => cubitRead.chosePaymentMethod(PaymentMethod.cash),
+            isSelected: cubitWatch.paymentMethod == PaymentMethodEnum.cash,
+            onTap: () => cubitRead.chosePaymentMethod(PaymentMethodEnum.cash),
           ),
         ),
       ],

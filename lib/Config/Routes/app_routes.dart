@@ -8,6 +8,7 @@ import '../../Features/App/Service/Recommendation/presentation/pages/result_reco
 import '../../Features/App/WorkshopDashboard/Main/Pages/main_dashbored_screen.dart';
 import '../../Features/App/WorkshopDashboard/Pages/Calender/Pages/calender_orders_screen.dart';
 import '../../Features/App/WorkshopDashboard/Pages/Calender/Pages/order_details_page.dart';
+import '../../Features/App/common/Orders/Presentation/Pages/order_products_screen.dart';
 import '../../Features/App/common/Home/presentation/pages/see_all_page.dart';
 import '../../Features/Global/Authentication/presentation/pages/authentication_screen.dart';
 import '../../Features/Global/Boarding/boarding_screen.dart';
@@ -56,9 +57,11 @@ class AppRouteBuilders {
       case AppRoutes.addAddressScreen:
         return _defaultPageRoute(const AddAddressScreen());
       case AppRoutes.selectLocation:
-        return _defaultPageRoute(const SelectLocation()); 
-       case AppRoutes.orderDetailsPage:
+        return _defaultPageRoute(const SelectLocation());
+      case AppRoutes.orderDetailsPage:
         return _defaultPageRoute(const OrderDetailsPage());
+      case AppRoutes.orderScreen:
+        return _defaultPageRoute(const OrderProductsScreen());
       case AppRoutes.carpenterScreen:
         return _defaultPageRoute(
           BackConfirmationWrapper(

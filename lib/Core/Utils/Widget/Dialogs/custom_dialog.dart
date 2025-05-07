@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:zan/Config/Assets/image_svg.dart';
-import 'package:zan/Core/Resources/app_constants.dart';
-import 'package:zan/Core/Utils/Widget/Images/build_image.dart';
+import '../../../../Config/Assets/image_svg.dart';
+import '../../../Resources/app_constants.dart';
+import '../Images/build_image.dart';
 import '../../../../Config/Assets/image_png.dart';
 import '../../../../Features/Global/Authentication/presentation/components/build_social_login_button.dart';
 import '../../../Resources/app_colors.dart';
@@ -117,7 +117,6 @@ Future<T?> showCustomAnimatedDialog<T>({
   );
 }
 
-/// Shows a confirmation dialog with Yes/No buttons
 Future<bool?> showConfirmationDialog({
   required BuildContext context,
   required String title,
@@ -139,7 +138,6 @@ Future<bool?> showConfirmationDialog({
   );
 }
 
-/// Shows a success dialog with a checkmark icon
 Future<void> showSuccessDialog({
   required BuildContext context,
   required String title,
@@ -157,7 +155,6 @@ Future<void> showSuccessDialog({
   );
 }
 
-/// Shows an error dialog with an error icon
 Future<void> showErrorDialog({
   required BuildContext context,
   required String title,
@@ -175,7 +172,6 @@ Future<void> showErrorDialog({
   );
 }
 
-/// Shows a warning dialog with a warning icon
 Future<void> showWarningDialog({
   required BuildContext context,
   required String title,
@@ -193,7 +189,6 @@ Future<void> showWarningDialog({
   );
 }
 
-/// Shows a loading dialog with a circular progress indicator
 Future<void> showLoadingDialog({
   required BuildContext context,
   String? title,

@@ -250,7 +250,11 @@
   "LocationInformation": "Location Information",
   "CustomerInformation": "Customer Information",
   "ServiceInformation": "Service Information",
-  "ServiceName": "Service Name"
+  "ServiceName": "Service Name",
+
+  "orders": "Orders",
+   "ViewOrders": "View",
+  "OrderNames": "Order Names"
 
 
   }

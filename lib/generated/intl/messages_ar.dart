@@ -99,6 +99,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "OnlinePayment":
             MessageLookupByLibrary.simpleMessage("دفع عبر الإنترنت"),
         "OrderDetails": MessageLookupByLibrary.simpleMessage("تفاصيل الطلب"),
+        "OrderNames": MessageLookupByLibrary.simpleMessage("اسم الطلب"),
         "OrderStatus": MessageLookupByLibrary.simpleMessage("حالة الطلب"),
         "OutStock": MessageLookupByLibrary.simpleMessage("غير متوفر"),
         "Photo": MessageLookupByLibrary.simpleMessage("صورة"),
@@ -161,6 +162,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "UploadImage": MessageLookupByLibrary.simpleMessage("رفع صورة"),
         "UploadImageCarpenter":
             MessageLookupByLibrary.simpleMessage("رفع صورة واضحة من نفسك."),
+        "ViewOrders": MessageLookupByLibrary.simpleMessage("عرض"),
         "Width": MessageLookupByLibrary.simpleMessage("العرض"),
         "WorkingPrice": MessageLookupByLibrary.simpleMessage("ساعات العمل"),
         "Workshop": MessageLookupByLibrary.simpleMessage("الورشة"),
@@ -270,6 +272,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "orSingUp": MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),
         "order_submitted":
             MessageLookupByLibrary.simpleMessage("تم إرسال الطلب"),
+        "orders": MessageLookupByLibrary.simpleMessage("الطلبات"),
         "password": MessageLookupByLibrary.simpleMessage(" كلمه المرور"),
         "pending": MessageLookupByLibrary.simpleMessage("قيد الانتظار"),
         "pending_orders": MessageLookupByLibrary.simpleMessage("طلبات معلقة"),

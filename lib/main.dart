@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_stripe/flutter_stripe.dart';
+import 'package:zan/Features/App/common/Orders/Presentation/Pages/order_products_screen.dart';
 import 'Features/App/WorkshopDashboard/Main/Pages/main_dashbored_screen.dart';
 import 'Features/App/WorkshopDashboard/Pages/Calender/Cubit/cubit/calender_orders_dash_board_cubit.dart';
 import 'Config/build_root_starting.dart';
@@ -13,6 +14,7 @@ import 'Config/Routes/Navigation/navigation_service.dart';
 import 'Core/Services/Payment/Strip/data/data_sources/api_keys.dart';
 import 'Core/Services/ServiceLocator/service_locator.dart';
 import 'Core/Storage/Remote/api_service.dart';
+import 'Features/App/common/Orders/Presentation/Cubit/orders_cubit.dart';
 import 'Features/App/common/Explore/presentation/Cubit/explore_cubit.dart';
 import 'Features/App/common/Explore/presentation/pages/explore_srceen.dart';
 import 'Features/App/common/Home/presentation/manager/home_cubit.dart';
@@ -24,27 +26,18 @@ import 'Features/App/common/Search/domain/repositories/search_repo_impl.dart';
 import 'Features/App/common/Search/domain/useCases/search_use_case.dart';
 import 'Features/App/common/Search/presentation/manager/search_cubit.dart';
 
-
-//*(Orders Carpenter and Orders Cart ) => one day
+//* ( Orders Carpenter and Orders Cart ) => one day
 //  Orders Cart in page show pending orders and success orders in column when press for any one show view as cart and in ui pending orders show where the order stuats now
 //  Order  Carpenter in page show pending orders and success orders in column when press for any one show view as cart and in ui pending orders show where the order stuats now
 
-//*( ui Tools and ui Truck ) => two day or three
+//* ( ui Tools and ui Truck ) => two day or three
 //  Orders ui Tools in page show all tools is rent or sall or both and setup same order ui carpenter
 //! Orders ui trucks in page
 
-
-
-
-
-// TODO: one day => (Orders Carpenter and Orders Cart )  
+// TODO: one day => (Orders Carpenter and Orders Cart )
 // TODO: last day => ( ui Tools and ui Truck )
 
-//? try edit measurement camera ar 
-
-
-
-
+//? try edit measurement camera ar
 
 final AppNavigationService kNavigationService = AppNavigationService();
 
@@ -66,6 +59,8 @@ class MyApp extends StatelessWidget {
         BlocProvider(create: (_) => sl<HomeCubit>()),
         BlocProvider(create: (_) => sl<UserCubit>()),
         BlocProvider(create: (_) => MainCubit(), child: MainAppScreen()),
+        BlocProvider(
+            create: (_) => OrdersCubit(), child: OrderProductsScreen()),
         BlocProvider(
             create: (_) =>
                 SearchCubit(SearchUseCase(SearchRepoImpl()))..getAllProducts(),
