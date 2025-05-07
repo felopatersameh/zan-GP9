@@ -1,1 +1,66 @@
-import 'summary_model.dart';import 'cart_item_model.dart';import 'coupon_model.dart';class CartModel {  final dynamic removedCoupon;  final int? removedDiscount;  final CouponModel? coupon;  final String discount;  final List<CartItemModel> cartItems;  final SummaryModel? summary;  CartModel({    this.removedCoupon,    this.removedDiscount,    this.coupon,    String? discount,    List<CartItemModel>? cartItems,    this.summary,  })  : discount = discount ?? "",        cartItems = cartItems ?? [];  factory CartModel.fromJson(Map<String, dynamic> json) {    return CartModel(      removedCoupon: json["removed_coupon"],      removedDiscount: json["removed_discount"] as int?,      coupon: json["coupon"] != null ? CouponModel.fromJson(json["coupon"]) : null,      discount: json["discount"]?.toString() ?? "",      cartItems: (json["cart_items"] as List<dynamic>?)          ?.map((e) => CartItemModel.fromJson(e))          .toList() ??          [],      summary: json["summary"] != null ? SummaryModel.fromJson(json["summary"]) : null,    );  }  CartModel copyWith({    dynamic removedCoupon,    int? removedDiscount,    CouponModel? coupon,    String? discount,    List<CartItemModel>? cartItems,    SummaryModel? summary,  }) {    return CartModel(      removedCoupon: removedCoupon ?? this.removedCoupon,      removedDiscount: removedDiscount ?? this.removedDiscount,      coupon: coupon ?? this.coupon,      discount: discount ?? this.discount,      cartItems: cartItems ?? this.cartItems,      summary: summary ?? this.summary,    );  }  Map<String, dynamic> toJson() {    return {      "removed_coupon": removedCoupon,      "removed_discount": removedDiscount,      "coupon": coupon?.toJson(),      "discount": discount,      "cart_items": cartItems.map((e) => e.toJson()).toList(),      "summary": summary?.toJson(),    };  }}
+import 'summary_model.dart';
+
+import 'cart_item_model.dart';
+import 'coupon_model.dart';
+
+class CartModel {
+  final dynamic removedCoupon;
+  final int? removedDiscount;
+  final CouponModel? coupon;
+  final String discount;
+  final List<CartItemModel> cartItems;
+  final SummaryModel? summary;
+
+  CartModel({
+    this.removedCoupon,
+    this.removedDiscount,
+    this.coupon,
+    String? discount,
+    List<CartItemModel>? cartItems,
+    this.summary,
+  })  : discount = discount ?? "",
+        cartItems = cartItems ?? [];
+
+  factory CartModel.fromJson(Map<String, dynamic> json) {
+    return CartModel(
+      removedCoupon: json["removed_coupon"],
+      removedDiscount: json["removed_discount"] as int?,
+      coupon: json["coupon"] != null ? CouponModel.fromJson(json["coupon"]) : null,
+      discount: json["discount"]?.toString() ?? "",
+      cartItems: (json["cart_items"] as List<dynamic>?)
+          ?.map((e) => CartItemModel.fromJson(e))
+          .toList() ??
+          [],
+      summary: json["summary"] != null ? SummaryModel.fromJson(json["summary"]) : null,
+    );
+  }
+
+  CartModel copyWith({
+    dynamic removedCoupon,
+    int? removedDiscount,
+    CouponModel? coupon,
+    String? discount,
+    List<CartItemModel>? cartItems,
+    SummaryModel? summary,
+  }) {
+    return CartModel(
+      removedCoupon: removedCoupon ?? this.removedCoupon,
+      removedDiscount: removedDiscount ?? this.removedDiscount,
+      coupon: coupon ?? this.coupon,
+      discount: discount ?? this.discount,
+      cartItems: cartItems ?? this.cartItems,
+      summary: summary ?? this.summary,
+    );
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      "removed_coupon": removedCoupon,
+      "removed_discount": removedDiscount,
+      "coupon": coupon?.toJson(),
+      "discount": discount,
+      "cart_items": cartItems.map((e) => e.toJson()).toList(),
+      "summary": summary?.toJson(),
+    };
+  }
+}

@@ -191,22 +191,21 @@ class CarpenterServiceCubit extends Cubit<CarpenterServiceState> {
   //-------------------------------------------------------------------
   //* ORDER SCREEN
 
-  Future<void> createOrder(BuildContext context,String notes) async {
+  Future<void> createOrder(BuildContext context, String notes) async {
     emit(state.copyWith(loading2: true));
     final day = state.selectedDay!.day;
     final month = state.selectedDay!.month;
     final year = state.selectedDay!.year;
     final dateTime = DateTime(year, month, day);
     final CreateOrdersModel order = CreateOrdersModel(
-      serviceId: state.selectedService!,
-      addressId: 0,
-      appointmentDate: dateTime,
-      appointmentTimeSlot: state.selectedTimePeriod,
-      carpentersRequired: 1,
-      carpenterIds: [state.selectCarpenter!.id],
-      paymentMethod: state.paymentMethod.value,
-      notes: notes
-    );
+        serviceId: state.selectedService!,
+        addressId: 0,
+        appointmentDate: dateTime,
+        appointmentTimeSlot: state.selectedTimePeriod,
+        carpentersRequired: 1,
+        carpenterIds: [state.selectCarpenter!.id],
+        paymentMethod: state.paymentMethod.value,
+        notes: notes);
     final response = await createOrdersUseCase.call(order);
     response.fold((error) {
       showCustomSnackBar(context, error.errMessage, SnackBarType.error);
@@ -217,7 +216,7 @@ class CarpenterServiceCubit extends Cubit<CarpenterServiceState> {
     });
   }
 
-  void chosePaymentMethod(PaymentMethod paymentMethod) {
+  void chosePaymentMethod(PaymentMethodEnum paymentMethod) {
     emit(state.copyWith(paymentMethod: paymentMethod));
   }
 }

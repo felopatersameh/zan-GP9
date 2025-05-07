@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:zan/Core/Utils/Widget/Dialogs/dialog_examples.dart';
+import '../../../../../../Core/Utils/Widget/Dialogs/dialog_examples.dart';
 import '../../../../../../Core/Resources/app_icons.dart';
 import '../../../../../../Core/Services/ServiceLocator/service_locator.dart';
 import '../../../../../../Core/Utils/Widget/Massages/custom_scaffold_messenger.dart';

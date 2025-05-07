@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:zan/Core/Utils/Widget/Dialogs/dialog_examples.dart';
+import '../../../../../Core/Utils/Widget/Dialogs/dialog_examples.dart';
 import '../Cubit/user_cubit.dart';
 import '../../../../../main.dart';
 import '../../../../../Config/Routes/route_name.dart';

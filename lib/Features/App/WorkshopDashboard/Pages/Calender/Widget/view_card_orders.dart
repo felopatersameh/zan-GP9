@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:zan/Config/Routes/route_name.dart';
-import 'package:zan/main.dart';
+import '../../../../../../Config/Routes/route_name.dart';
+import '../../../../../../main.dart';
 import '../../../../../../Core/Resources/app_colors.dart';
 import '../../../../../../Core/Resources/app_fonts.dart';
 import '../../../../../../Core/Utils/Widget/Images/build_image.dart';

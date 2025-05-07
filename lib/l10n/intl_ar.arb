@@ -245,7 +245,12 @@
     "LocationInformation": "معلومات الموقع",
   "CustomerInformation": "معلومات العميل",
     "ServiceInformation": "معلومات الخدمة",
-  "ServiceName": "اسم الخدمة"
+  "ServiceName": "اسم الخدمة",
+
+  "orders": "الطلبات",
+  "ViewOrders": "عرض",
+  "OrderNames": "اسم الطلب"
+  
 
 
 }

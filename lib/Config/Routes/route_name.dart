@@ -31,4 +31,5 @@ class AppRoutes {
   static const String dialogTestPage = '/dialogTestPage';
   static const String backConfirmationExample = '/backConfirmationExample';
   static const String orderDetailsPage = '/orderDetailsPage';
+  static const String orderScreen = '/OrderScreen';
 }

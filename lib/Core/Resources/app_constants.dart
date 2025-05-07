@@ -12,10 +12,11 @@ import '../Utils/Extensions/int_extension.dart';
 import '../Utils/Widget/tutorial_helper.dart';
 import 'package:tutorial_coach_mark/tutorial_coach_mark.dart';
 
-
 class AppConstants {
-  static const String imagePathProducts ="https://darkturquoise-eagle-921470.hostingersite.com/storage/products/" ;
-  static const String imagePathUser ="https://darkturquoise-eagle-921470.hostingersite.com/storage/profile/" ;
+  static const String imagePathProducts =
+      "https://darkturquoise-eagle-921470.hostingersite.com/storage/products/";
+  static const String imagePathUser =
+      "https://darkturquoise-eagle-921470.hostingersite.com/storage/profile/";
   static DotsDecorator get dotsDecoration {
     return DotsDecorator(
       size: Size(8.w, 8.h),
@@ -114,20 +115,32 @@ class AppConstants {
       ),
     ];
   }
+
   static BoxDecoration boxDecoration = BoxDecoration(
-    color: AppColors.backgroundColor,
-    borderRadius: BorderRadius.circular(12),
-    boxShadow: boxShadow
-  
+      color: AppColors.backgroundColor,
+      borderRadius: BorderRadius.circular(12),
+      boxShadow: boxShadow);
+
+
+  static BoxDecoration boxDecorationCard = BoxDecoration(
+    borderRadius: BorderRadius.circular(12.r),
+    gradient: LinearGradient(
+      begin: Alignment.topLeft,
+      end: Alignment.bottomRight,
+      colors: [
+        Colors.white,
+        Colors.grey.shade50,
+      ],
+    ),
   );
-  static List<BoxShadow>  boxShadow = [
-      BoxShadow(
-        color: Colors.grey.withAlpha(50),
-        spreadRadius: 2,
-        blurRadius: 8,
-        offset: const Offset(0, 2),
-      ),
-    ];
+  static List<BoxShadow> boxShadow = [
+    BoxShadow(
+      color: Colors.grey.withAlpha(50),
+      spreadRadius: 2,
+      blurRadius: 8,
+      offset: const Offset(0, 2),
+    ),
+  ];
   static Positioned positionedFilter = Positioned.fill(
     child: GestureDetector(
       onTap: () => kNavigationService.goBack(),

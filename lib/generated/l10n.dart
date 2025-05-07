@@ -2179,6 +2179,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Orders`
+  String get orders {
+    return Intl.message(
+      'Orders',
+      name: 'orders',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `View`
+  String get ViewOrders {
+    return Intl.message(
+      'View',
+      name: 'ViewOrders',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Order Names`
+  String get OrderNames {
+    return Intl.message(
+      'Order Names',
+      name: 'OrderNames',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

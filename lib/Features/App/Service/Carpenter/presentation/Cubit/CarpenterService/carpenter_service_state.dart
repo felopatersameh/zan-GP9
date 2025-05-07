@@ -16,7 +16,7 @@ class CarpenterServiceState {
   final List<OffersModel>? bestOffers;
   final String selectedTimePeriod;
   final String selectedTime;
-  final PaymentMethod paymentMethod;
+  final PaymentMethodEnum paymentMethod;
 
   const CarpenterServiceState({
     this.number = 1,
@@ -28,7 +28,7 @@ class CarpenterServiceState {
     this.selectCarpenter,
     this.success,
     this.loading,
-    this.paymentMethod = PaymentMethod.creditCard,
+    this.paymentMethod = PaymentMethodEnum.creditCard,
     this.loading2,
     this.errorMessage,
     this.selectedDay,
@@ -51,7 +51,7 @@ class CarpenterServiceState {
       String? selectedTime,
       List<CarpentersModel>? carpenters,
       CarpentersModel? selectCarpenter,
-      PaymentMethod? paymentMethod}) {
+      PaymentMethodEnum? paymentMethod}) {
     return CarpenterServiceState(
       number: number ?? this.number,
       success: success ?? this.success,
