@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../Config/Assets/image_svg.dart';
+import '../../../../Config/Routes/route_name.dart';
+import '../../../../main.dart';
 import '../../../Resources/app_constants.dart';
 import '../Images/build_image.dart';
 import '../../../../Config/Assets/image_png.dart';
@@ -152,6 +154,7 @@ Future<void> showSuccessDialog({
     confirmButtonText: buttonText ?? local.ok,
     icon: BuildImageAssets(png: AppImagesPng.successOrderCarpenter,),
     iconColor: AppColors.success,
+    onConfirm: () => kNavigationService.replaceWith(AppRoutes.orderScreen),
   );
 }
 

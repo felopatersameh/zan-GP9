@@ -67,7 +67,9 @@ Future<void> getAllUseCase() async {
    sl.registerLazySingleton<ApplyCouponUseCase>(
          () => ApplyCouponUseCase(sl<CartRepoImpl>()));
    sl.registerLazySingleton<RemoveCouponUseCase>(
-         () => RemoveCouponUseCase(sl<CartRepoImpl>()));
+         () => RemoveCouponUseCase(sl<CartRepoImpl>())); 
+           sl.registerLazySingleton<CreatOrderUseCase>(
+         () => CreatOrderUseCase(sl<CartRepoImpl>()));
   //------------------------------------------------------
     sl.registerLazySingleton<PaymentStripUseCase>(
           () => PaymentStripUseCase( sl<PaymentRepo>()));

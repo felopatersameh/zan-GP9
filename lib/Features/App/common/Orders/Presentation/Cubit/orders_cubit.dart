@@ -1,14 +1,51 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import '../../../../../../Core/Utils/Extensions/localizations_extension.dart';
+import '../../Data/Models/get_order_model.dart';
+import '../../Domain/UseCase/product_order_use_case.dart';
 
 part 'orders_state.dart';
+
+enum OrderStatus {
+  running("pending"),
+  completed("completed"),
+  canceled("canceled");
+  const OrderStatus(this.value);
+  final String value;
+}
 
 class OrdersCubit extends Cubit<OrdersState> {
   TabController? _tabController;
   final int _tabCount = 4;
+  final ProductOrderUseCase productOrderUseCase;
+  OrdersCubit(this.productOrderUseCase) : super(OrdersState());
 
-  OrdersCubit() : super(OrdersState());
+  Future<void> getOrders() async {
+    emit(state.copyWith(loading: true));
+    final response = await productOrderUseCase.call();
+    response.fold((failure) {
+      emit(state.copyWith(error: failure.errMessage, success: false));
+    }, (data) {
+      List<GetOrderModel> canceled = [];
+      List<GetOrderModel> pending = [];
+      List<GetOrderModel> completed = [];
+      for (final element in data) {
+        if (element.status == OrderStatus.canceled.value) {
+          canceled.add(element);
+        } else if (element.status == OrderStatus.running.value) {
+          pending.add(element);
+        } else {
+          completed.add(element);
+        }
+      }
+      emit(state.copyWith(
+          success: true,
+          ordersCanceling: canceled,
+          ordersRunning: pending,
+          ordersCompleted: completed,
+          orders: data));
+    });
+  }
 
   void initTabController(TickerProvider vsync) {
     _tabController = TabController(length: _tabCount, vsync: vsync);

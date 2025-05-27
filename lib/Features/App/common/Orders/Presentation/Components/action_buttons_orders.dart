@@ -5,9 +5,10 @@ import 'package:zan/Features/Global/Authentication/presentation/components/build
 import 'package:zan/generated/l10n.dart';
 
 class ActionButtonsOrders extends StatelessWidget {
+  final bool isShow;
   const ActionButtonsOrders({
     super.key,
-    required this.local,
+    required this.local, required this.isShow,
   });
 
   final S local;
@@ -17,7 +18,7 @@ class ActionButtonsOrders extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        Expanded(
+       isShow? Expanded(
           child: CustomBuildButtonApp(
             size: Size(double.infinity, 40.h),
             text: local.cancel,
@@ -25,7 +26,7 @@ class ActionButtonsOrders extends StatelessWidget {
             onPressed: () {},
             isSpace: false,
           ),
-        ),
+        ):SizedBox(),
         SizedBox(width: 12.w),
         Expanded(
           child: CustomBuildButtonApp(
@@ -42,4 +43,3 @@ class ActionButtonsOrders extends StatelessWidget {
     );
   }
 }
-

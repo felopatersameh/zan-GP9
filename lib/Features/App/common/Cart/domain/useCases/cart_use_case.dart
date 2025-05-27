@@ -2,6 +2,7 @@ import 'package:dartz/dartz.dart';
 
 import '../../data/Model/cart.dart';
 import '../../../../../../Core/Storage/Remote/api_error_handler.dart';
+import '../../data/Model/creat_order.dart';
 import '../repositories/cart_repo_impl.dart';
 
 class GetCartUseCase {
@@ -58,4 +59,13 @@ class RemoveCouponUseCase {
 
   Future<Either<Failure, CartModel>> call({required String code}) async =>
       await repoImpl.removeCoupon(code: code);
+}
+
+class CreatOrderUseCase {
+  CartRepoImpl repoImpl;
+
+  CreatOrderUseCase(this.repoImpl);
+
+  Future<Either<Failure, bool>> call({required CreateOrderProducts  order}) async =>
+      await repoImpl.createOrder(order: order);
 }

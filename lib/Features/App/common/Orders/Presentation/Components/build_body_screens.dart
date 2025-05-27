@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:zan/Features/App/common/Orders/Presentation/Components/build_view_orders_carpenter.dart';
 import '../../../../../../Config/app_config.dart';
+import '../../../../../../Core/Utils/Widget/Animations/loading_animation.dart';
 import 'build_view_orders_products.dart';
 import '../Cubit/orders_cubit.dart';
 import '../../../../../../generated/l10n.dart';
@@ -25,16 +26,17 @@ class BuildBodyScreens extends StatelessWidget {
         padding: EdgeInsets.only(
           top: AppConfig.customPaddingFromTopBottom,
         ).r,
-        child: TabBarView(
+        child:state.loading == false ? CustomLoadingAnimation(): TabBarView(
           controller: _mainTabController,
           physics: AppConfig.physicsCustomScrollView,
-          children: state.selectedSupTabIndex == 0
-              ? [
+          children: state.selectedSupTabIndex == 0 ||  state.selectedSupTabIndex == 2
+              ? 
+                   [
 
-            BuildViewOrdersProducts(local: local),
-            BuildViewOrdersProducts(local: local),
-            BuildViewOrdersProducts(local: local),
-            BuildViewOrdersProducts(local: local)
+            BuildViewOrdersProducts(local: local,orders: state.orders??[],),
+            BuildViewOrdersProducts(local: local,orders: state.ordersRunning??[],),
+            BuildViewOrdersProducts(local: local,orders: state.ordersCompleted??[],),
+            BuildViewOrdersProducts(local: local,orders: state.ordersCanceling??[],)
                 
           ]:[
            BuildViewOrdersCarpenter(local: local,),

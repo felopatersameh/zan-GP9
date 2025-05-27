@@ -26,11 +26,11 @@ class _OrderProductsScreenState extends State<OrderProductsScreen>
     context.read<OrdersCubit>().initTabController(this);
   }
 
-  @override
-  void dispose() {
-    context.read<OrdersCubit>().disposeTabController();
-    super.dispose();
-  }
+  // @override
+  // void dispose() {
+  //   context.read<OrdersCubit>().disposeTabController();
+  //   super.dispose();
+  // }
 
   @override
   Widget build(BuildContext context) {

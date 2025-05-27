@@ -244,6 +244,12 @@ class UserCubit extends Cubit<UserClassState> {
       address.postalCode,
     ].where((element) => element != null).join(', ');
     return addressLine;
+  } 
+  
+   num get defaultAddressID {
+    final address = (state.address ?? [])
+        .firstWhere((element) => element.isDefault == true);
+    return address.id!;
   }
 
   Future<void> logout() async {

@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:zan/Core/Resources/app_colors.dart';
-import 'package:zan/Core/Resources/app_fonts.dart';
-import 'package:zan/Features/App/common/Orders/Presentation/Components/custom_text_rich.dart';
-import 'package:zan/generated/l10n.dart';
+import 'package:intl/intl.dart';
+import '../../../../../../Core/Resources/app_colors.dart';
+import '../../../../../../Core/Resources/app_fonts.dart';
+import 'custom_text_rich.dart';
+import '../../../../../../generated/l10n.dart';
 
 class BuildHeaderWithOrderNumberAndDate extends StatelessWidget {
+  final String name;
+  final DateTime date;
   const BuildHeaderWithOrderNumberAndDate({
     super.key,
-    required this.local,
+    required this.local, required this.name, required this.date,
   });
 
   final S local;
@@ -27,15 +30,15 @@ class BuildHeaderWithOrderNumberAndDate extends StatelessWidget {
           Expanded(
             child: CustomTextRich(
               title: local.OrderNames,
-              subTitle: "ORD-68113ACF6FE37",
+              subTitle: name,
               isprice: false,
               color: AppColors.textColorWhite,
             ),
           ),
           Text(
-            "15 Jul 2023",
-                                 style: AppTextStyles.bodySmallSemiBold.copyWith(color: AppColors.textColorWhite),
-    
+            DateFormat.yMMMMEEEEd().format(date),
+            style: AppTextStyles.bodySmallSemiBold
+                .copyWith(color: AppColors.textColorWhite),
           ),
         ],
       ),
