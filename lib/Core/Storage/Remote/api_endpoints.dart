@@ -47,4 +47,7 @@ class ApiEndpoints {
   static const String chatAiSend = "$chat/send";
   static const String chatAiGet = "$chat/history";
   static const String chatAiFaqs = "$chat/faqs";
+
+  //*Order 
+  static const String orders = "orders";
 }

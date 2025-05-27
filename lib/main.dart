@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_stripe/flutter_stripe.dart';
+import 'package:zan/Features/App/common/Orders/Domain/Repositories/order_repo_impl.dart';
+import 'package:zan/Features/App/common/Orders/Domain/UseCase/product_order_use_case.dart';
 import 'package:zan/Features/App/common/Orders/Presentation/Pages/order_products_screen.dart';
 import 'Features/App/WorkshopDashboard/Main/Pages/main_dashbored_screen.dart';
 import 'Features/App/WorkshopDashboard/Pages/Calender/Cubit/cubit/calender_orders_dash_board_cubit.dart';
@@ -60,7 +62,9 @@ class MyApp extends StatelessWidget {
         BlocProvider(create: (_) => sl<UserCubit>()),
         BlocProvider(create: (_) => MainCubit(), child: MainAppScreen()),
         BlocProvider(
-            create: (_) => OrdersCubit(), child: OrderProductsScreen()),
+            create: (_) => OrdersCubit(
+                ProductOrderUseCase(
+                    repoImpl: OrderRepoImpl()))..getOrders(), child: OrderProductsScreen()),
         BlocProvider(
             create: (_) =>
                 SearchCubit(SearchUseCase(SearchRepoImpl()))..getAllProducts(),

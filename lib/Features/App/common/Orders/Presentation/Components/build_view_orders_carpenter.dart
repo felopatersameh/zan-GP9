@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:zan/Config/app_config.dart';
-import 'package:zan/Core/Resources/app_constants.dart';
-import 'package:zan/Features/App/common/Orders/Presentation/Components/action_buttons_orders.dart';
-import 'package:zan/Features/App/common/Orders/Presentation/Components/build_header_with_order_number_and_date.dart';
-import 'package:zan/Features/App/common/Orders/Presentation/Components/build_status_section_carpenter.dart';
-import 'package:zan/Features/App/common/Orders/Presentation/Components/custom_text_rich.dart';
-import 'package:zan/generated/l10n.dart';
+import '../../../../../../Core/Resources/app_constants.dart';
+import 'action_buttons_orders.dart';
+import 'build_header_with_order_number_and_date.dart';
+import 'build_status_section_carpenter.dart';
+import 'custom_text_rich.dart';
+import '../../../../../../generated/l10n.dart';
 
 class BuildViewOrdersCarpenter extends StatelessWidget {
   const BuildViewOrdersCarpenter({
@@ -37,6 +37,8 @@ class BuildViewOrdersCarpenter extends StatelessWidget {
             children: [
               BuildHeaderWithOrderNumberAndDate(
                 local: local,
+                date: DateTime.now(),
+                name: "",
               ),
 
               SizedBox(height: 12.h),
@@ -55,13 +57,13 @@ class BuildViewOrdersCarpenter extends StatelessWidget {
 
               Divider(height: 16.h),
 
-BuildStatusSectionCarpenter(),
+              BuildStatusSectionCarpenter(),
               SizedBox(height: 16.h),
 
-              ActionButtonsOrders(local: local),
+              ActionButtonsOrders(local: local,isShow:  true),
             ],
           ),
-        ),
+        ), 
       ),
     );
   }

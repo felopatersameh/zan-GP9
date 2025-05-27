@@ -61,6 +61,7 @@ Future<void> getManyCubit() async {
             sl<ClearItemUseCase>(),
             sl<ApplyCouponUseCase>(),
             sl<RemoveCouponUseCase>(),
+            sl<CreatOrderUseCase>(),
         )
     );
 }

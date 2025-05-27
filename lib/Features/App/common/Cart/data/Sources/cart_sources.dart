@@ -1,7 +1,7 @@
 import '../Model/cart.dart';
 import '../../../../../../Core/Storage/Remote/api_endpoints.dart';
 import '../../../../../../Core/Storage/Remote/api_service.dart';
-import '../../../Orders/Data/Models/create_order.dart';
+import '../Model/creat_order.dart';
 
 class CartSources {
   static Future<CartModel> getCarts() async {
@@ -12,7 +12,7 @@ class CartSources {
     return data;
   }
 
- static Future<CartModel> removeFromCart({required int id}) async {
+  static Future<CartModel> removeFromCart({required int id}) async {
     final response = await DioHelper.deleteData(
       path: "${ApiEndpoints.removeCart}/$id",
     );
@@ -20,7 +20,7 @@ class CartSources {
     return data;
   }
 
- static Future<bool> clearCart() async {
+  static Future<bool> clearCart() async {
     final response = await DioHelper.postData(
       path: ApiEndpoints.clearCart,
     );
@@ -45,12 +45,12 @@ class CartSources {
       path: ApiEndpoints.applyCoupon,
     );
 
-      final data = CartModel.fromJson(response.data["data"]);
+    final data = CartModel.fromJson(response.data["data"]);
 
     return data;
   }
 
-  static  Future<CartModel> removeCoupon({required String code}) async {
+  static Future<CartModel> removeCoupon({required String code}) async {
     final response = await DioHelper.postData(
       data: {"code": code},
       path: ApiEndpoints.removeCoupon,
@@ -59,5 +59,12 @@ class CartSources {
     return data;
   }
 
-  static Future<void> createOrder({required CreateOrderProducts order}) async {}
+  static Future<bool> createOrder({required CreateOrderProducts order}) async {
+    final response = await DioHelper.postData(
+      data: order.toMap(),
+      path: ApiEndpoints.orders,
+    );
+    print(response);
+    return response.statusCode == 200 ? true : false;
+  }
 }

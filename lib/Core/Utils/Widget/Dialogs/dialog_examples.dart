@@ -74,10 +74,7 @@ class DialogExamples {
     );
 
     if (result == true) {
-      showLoadingDialogDuring(context ,asyncOperation: () async {
-        await Future.delayed(Duration(seconds: 5));
-        return true;
-      });
+      
       onConfirm();
     }
   }
@@ -123,6 +120,7 @@ class DialogExamples {
       context: context,
       title: title,
       content: message,
+    
     );
   }
 

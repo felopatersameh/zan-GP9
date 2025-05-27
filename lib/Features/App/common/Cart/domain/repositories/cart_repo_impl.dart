@@ -1,11 +1,11 @@
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
-import 'package:zan/Features/App/common/Orders/Data/Models/create_order.dart';
 import '../../data/Model/cart.dart';
 
 
 import '../../../../../../Core/Storage/Remote/api_error_handler.dart';
 
+import '../../data/Model/creat_order.dart';
 import '../../data/Sources/cart_sources.dart';
 import '../../data/repositories/cart_repo.dart';
 
@@ -83,9 +83,15 @@ class CartRepoImpl extends CartRepo {
   }
 
   @override
-  Future<Either<Failure, bool>> createOrder({required CreateOrderProducts order}) {
-    // TODO: implement createOrder
-    throw UnimplementedError();
+  Future<Either<Failure, bool>> createOrder({required CreateOrderProducts order}) async{
+    try {
+      final response = await CartSources.createOrder(order: order);
+      return right(response);
+    } on DioException catch (e) {
+      return Left(ServerFailure.fromDioError(e));
+    } catch (e) {
+      return Left(ServerFailure("Unknown error occurred"));
+    }
   }
 
 

@@ -6,7 +6,11 @@ import 'package:zan/generated/l10n.dart';
 
 class PriceDetailsOrder extends StatelessWidget {
   final S local;
-  const PriceDetailsOrder({super.key, required this.local});
+  final String price;
+  final String discount;
+  final String deliveryCharge;
+  final String totalAmount;
+  const PriceDetailsOrder({super.key, required this.local, required this.price, required this.discount, required this.deliveryCharge, required this.totalAmount});
 
   @override
   Widget build(BuildContext context) {
@@ -21,25 +25,25 @@ class PriceDetailsOrder extends StatelessWidget {
         children: [
           _buildPriceRow(
             title: local.Price,
-            value: "99593",
+            value: price,
             isTotal: false,
           ),
           Divider(height: 8.h),
           _buildPriceRow(
             title: local.Discount,
-            value: "0.0",
+            value:discount,
             isTotal: false,
           ),
           Divider(height: 8.h),
           _buildPriceRow(
             title: local.DeliveryCharge,
-            value: "5",
+            value: deliveryCharge,
             isTotal: false,
           ),
           Divider(height: 8.h),
           _buildPriceRow(
             title: local.TotalAmount,
-            value: "99598",
+            value: totalAmount,
             isTotal: true,
           ),
         ],
@@ -63,7 +67,7 @@ class PriceDetailsOrder extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(title, style: titleStyle),
-        Text("$value EGP", style: valueStyle),
+        Text("${value.replaceAll(".00", ".0")} EGP", style: valueStyle),
       ],
     );
   }

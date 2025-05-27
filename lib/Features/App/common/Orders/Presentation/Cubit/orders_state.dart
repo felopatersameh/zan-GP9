@@ -8,10 +8,10 @@ class OrdersState {
   final bool? success;
   final int selectedSupTabIndex;
   final int selectedTabIndex;
-  // final List<OrdersModel>? orders;
-  // final List<OrdersModel>? ordersCompleted;
-  // final List<OrdersModel>? ordersRunning;
-  // final List<OrdersModel>? ordersCanceling;
+  final List<GetOrderModel>? orders;
+  final List<GetOrderModel>? ordersCompleted;
+  final List<GetOrderModel>? ordersRunning;
+  final List<GetOrderModel>? ordersCanceling;
   const OrdersState({
     this.loading,
     this.message,
@@ -19,10 +19,10 @@ class OrdersState {
     this.success,
     this.selectedSupTabIndex = 0,
     this.selectedTabIndex = 0,
-    // this.orders,
-    // this.ordersCompleted,
-    // this.ordersRunning,
-    // this.ordersCanceling,
+    this.orders,
+    this.ordersCompleted,
+    this.ordersRunning,
+    this.ordersCanceling,
   });
   OrdersState copyWith({
     bool? loading,
@@ -31,10 +31,10 @@ class OrdersState {
     bool? success,
     int? selectedSupTabIndex,
     int? selectedTabIndex,
-    // List<OrdersModel>? orders,
-    // List<OrdersModel>? ordersCompleted,
-    // List<OrdersModel>? ordersRunning,
-    // List<OrdersModel>? ordersCanceling,
+    List<GetOrderModel>? orders,
+    List<GetOrderModel>? ordersCompleted,
+    List<GetOrderModel>? ordersRunning,
+    List<GetOrderModel>? ordersCanceling,
   }) {
     return OrdersState(
       loading: loading ?? this.loading,
@@ -43,10 +43,10 @@ class OrdersState {
       success: success ?? this.success,
       selectedSupTabIndex: selectedSupTabIndex ?? this.selectedSupTabIndex,
       selectedTabIndex: selectedTabIndex ?? this.selectedTabIndex,
-      // orders: orders ?? this.orders,
-      // ordersCompleted: ordersCompleted ?? this.ordersCompleted,
-      // ordersRunning: ordersRunning ?? this.ordersRunning,
-      // ordersCanceling: ordersCanceling ?? this.ordersCanceling,
+      orders: orders ?? this.orders,
+      ordersCompleted: ordersCompleted ?? this.ordersCompleted,
+      ordersRunning: ordersRunning ?? this.ordersRunning,
+      ordersCanceling: ordersCanceling ?? this.ordersCanceling,
     );
   }
 }
