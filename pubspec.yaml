@@ -50,7 +50,7 @@ dependencies:
   flutter_launcher_icons: ^0.14.3
   flutter_expandable_fab: ^2.4.1
   choice: ^2.3.2
-  intl: ^0.19.0
+  intl: ^0.20.2
   translator: ^1.0.3+1
 
   # ------------------ AR & 3D ------------------

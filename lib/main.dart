@@ -28,19 +28,6 @@ import 'Features/App/common/Search/domain/repositories/search_repo_impl.dart';
 import 'Features/App/common/Search/domain/useCases/search_use_case.dart';
 import 'Features/App/common/Search/presentation/manager/search_cubit.dart';
 
-//* ( Orders Carpenter and Orders Cart ) => one day
-//  Orders Cart in page show pending orders and success orders in column when press for any one show view as cart and in ui pending orders show where the order stuats now
-//  Order  Carpenter in page show pending orders and success orders in column when press for any one show view as cart and in ui pending orders show where the order stuats now
-
-//* ( ui Tools and ui Truck ) => two day or three
-//  Orders ui Tools in page show all tools is rent or sall or both and setup same order ui carpenter
-//! Orders ui trucks in page
-
-// TODO: one day => (Orders Carpenter and Orders Cart )
-// TODO: last day => ( ui Tools and ui Truck )
-
-//? try edit measurement camera ar
-
 final AppNavigationService kNavigationService = AppNavigationService();
 
 Future<void> main() async {
