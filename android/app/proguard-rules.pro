@@ -1,0 +1,10 @@
+-dontwarn com.google.ar.sceneform.assets.AnimationPlayer
+-dontwarn com.google.ar.sceneform.assets.Loader
+-dontwarn com.google.ar.sceneform.assets.ModelData
+-dontwarn com.google.devtools.build.android.desugar.runtime.ThrowableExtension
+
+-dontwarn com.stripe.android.pushProvisioning.PushProvisioningActivity$g
+-dontwarn com.stripe.android.pushProvisioning.PushProvisioningActivityStarter$Args
+-dontwarn com.stripe.android.pushProvisioning.PushProvisioningActivityStarter$Error
+-dontwarn com.stripe.android.pushProvisioning.PushProvisioningActivityStarter
+-dontwarn com.stripe.android.pushProvisioning.PushProvisioningEphemeralKeyProvider

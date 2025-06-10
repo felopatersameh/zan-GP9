@@ -1,5 +1,5 @@
 class ApiEndpoints {
-  static var baseUrl = 'https://moccasin-manate-172732.hostingersite.com/api/';
+  static var baseUrl = 'https://moccasin-manatee-172732.hostingersite.com/api/';
 
   // * Automation page
   static const String loginUser = 'login';
