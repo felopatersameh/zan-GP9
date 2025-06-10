@@ -4,6 +4,8 @@ import '../../../../../../Core/Storage/Remote/api_service.dart';
 import '../Model/creat_order.dart';
 
 class CartSources {
+
+
   static Future<CartModel> getCarts() async {
     final response = await DioHelper.getData(
       path: ApiEndpoints.cart,
@@ -64,7 +66,9 @@ class CartSources {
       data: order.toMap(),
       path: ApiEndpoints.orders,
     );
-    print(response);
+    // print(response);
     return response.statusCode == 200 ? true : false;
   }
+
+
 }
