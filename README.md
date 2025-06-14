@@ -129,7 +129,7 @@ The application follows **Clean Architecture** principles with a well-structured
 ## 👥 Development Team
 
 - **Samuael Adel Fareed** - Project Lead & Backend Developer
-- **Mahmoud Elsayed Khiralla** - Backend Developer & API Integration
+- **Mahmoud Elsayed Khiralla** - Backend Developer 
 - **Ziad Mohamed Elnagar** - Security & Penetration Testing
 - **Maha Abdelmoneam Mohamed** - AI/ML Developer & Computer Vision
 - **Ahmed Mohamed Ahmed** - Frontend Developer & Web Interface
