@@ -45,3 +45,10 @@ app.*.map.json
 /android/app/release
 
 
+
+/lib/Core/Services/Map
+/lib/Core/Storage/Remote/api_password.dart
+/lib/Core/Storage/Remote/api_endpoints.dart
+/lib/main.dart
+/lib/Core/Utils/Widget/Animations
+/lib/Config/build_root_starting.dart
