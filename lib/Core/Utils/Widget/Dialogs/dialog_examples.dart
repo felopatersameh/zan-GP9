@@ -17,6 +17,8 @@ class DialogExamples {
     );
 
     if (result == true) {
+      if(!context.mounted) return;
+
       context.read<UserCubit>().logout();
     }
   }

@@ -138,6 +138,8 @@ class UserCubit extends Cubit<UserClassState> {
           success: true,
         ));
         await refreshToken();
+          if(!context.mounted) return;
+
         showCustomSnackBar(context, "Update Succeed", SnackBarType.success);
       },
     );

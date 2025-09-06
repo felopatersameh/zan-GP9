@@ -198,7 +198,7 @@ class _AreaMeasurementScreenState extends State<AreaMeasurementScreen> {
     addedNodes.add(node);
 
     // Add line from previous point if applicable
-    final state = context.read<AreaMeasurementCubit>().state;
+   final state =  context.read<AreaMeasurementCubit>().state;
     if (state.points.length >= 2) {
       // await _addLineBetweenLastPoints(state.points);
 
@@ -317,6 +317,8 @@ class _AreaMeasurementScreenState extends State<AreaMeasurementScreen> {
     lineNodes.clear();
 
     // Reset state
+    
+  if(!context.mounted) return;
     context.read<AreaMeasurementCubit>().clearAllPoints();
   }
 

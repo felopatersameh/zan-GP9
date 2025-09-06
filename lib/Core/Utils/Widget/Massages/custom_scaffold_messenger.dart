@@ -42,6 +42,6 @@ final masLine= message.isEmpty ? 1 : message.length;
       );
       break;
   }
-
+ if(!context.mounted) return;
   showTopSnackBar(Overlay.of(context), customSnackBar);
 }

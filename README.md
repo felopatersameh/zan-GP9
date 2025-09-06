@@ -1,5 +1,5 @@
-<div align="center"> 
-  <picture> <source srcset="Assets/Svg/white.svg" media="(prefers-color-scheme: dark)" /> <img src="Assets/Svg/dark.svg" alt="Home Screen" width="300"/> </picture> 
+<div align="center">
+  <picture> <source srcset="Assets/Svg/white.svg" media="(prefers-color-scheme: dark)" /> <img src="Assets/Svg/dark.svg" alt="Home Screen" width="300"/> </picture>
 </div>
 
 # AI-Powered Furniture & Carpentry Mobile Application
@@ -33,7 +33,7 @@
 ## 🏗️ Architecture Overview
 
 The application follows **Clean Architecture** principles with a well-structured, scalable design:
-<div align="center"> 
+<div align="center">
 <picture>  
 <img src="Assets/test_images/Architecture.jpg" width="300"/>
 </picture>
@@ -129,7 +129,7 @@ The application follows **Clean Architecture** principles with a well-structured
 ## 👥 Development Team
 
 - **Samuael Adel Fareed** - Project Lead & Backend Developer
-- **Mahmoud Elsayed Khiralla** - Backend Developer 
+- **Mahmoud Elsayed Khiralla** - Backend Developer
 - **Ziad Mohamed Elnagar** - Security & Penetration Testing
 - **Maha Abdelmoneam Mohamed** - AI/ML Developer & Computer Vision
 - **Ahmed Mohamed Ahmed** - Frontend Developer & Web Interface
