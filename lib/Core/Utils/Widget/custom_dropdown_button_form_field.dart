@@ -32,7 +32,7 @@ class CustomDropdownButtonFormField<T> extends StatelessWidget {
                 ),
                 10.verticalSpace,
           DropdownButtonFormField<T>(
-            value: value,
+            initialValue: value,
             items: items,
             onChanged: onChanged,
             decoration: decoration ??

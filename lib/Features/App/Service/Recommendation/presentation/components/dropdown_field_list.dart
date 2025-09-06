@@ -14,7 +14,7 @@ class DropdownFieldList extends StatelessWidget {
       child: Padding(
         padding: AppConfig.customPadding,
         child: DropdownButtonFormField<String>(
-          value: context.watch<RecommendationCubit>().state.selectedOptionsRoom,
+          initialValue: context.watch<RecommendationCubit>().state.selectedOptionsRoom,
           decoration: InputDecoration(
             
             enabledBorder: OutlineInputBorder(

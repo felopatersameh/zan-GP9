@@ -43,9 +43,9 @@ class UserCubit extends Cubit<UserClassState> {
   final LogoutUseCase logoutUseCase;
   LocationService locationService = LocationService();
 
-  get id => state.userDataModel.id;
+  int get id => state.userDataModel.id;
 
-  void addMark(value) async => emit(state.copyWith(setMarkers: {value}));
+  void addMark(dynamic  value) async => emit(state.copyWith(setMarkers: {value}));
 
   void clearMark() async => emit(state.copyWith(setMarkers: {}));
 
@@ -233,7 +233,7 @@ class UserCubit extends Cubit<UserClassState> {
     });
   }
 
-  get loading => state.loading;
+  bool get loading => state.loading;
 
   String get defaultAddress {
     final address = (state.address ?? [])

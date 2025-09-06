@@ -10,7 +10,7 @@ class RecommendationCubit extends Cubit<RecommendationState> {
 
   String? showphoto;
 
-  setSelectedOptionsRoom(String? selectedOptionsRoom) {
+  void setSelectedOptionsRoom(String? selectedOptionsRoom) {
     emit(state.copyWith(selectedOptionsRoom: selectedOptionsRoom));
   }
 

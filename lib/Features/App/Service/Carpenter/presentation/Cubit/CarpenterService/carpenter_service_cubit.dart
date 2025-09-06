@@ -26,7 +26,7 @@ class CarpenterServiceCubit extends Cubit<CarpenterServiceState> {
   final CarpentersUseCase carpentersUseCase;
   final CreateOrdersUseCase createOrdersUseCase;
 
-  init() async {
+  Future<void> init() async {
     _screens.add(state.screen);
     emit(state.copyWith(loading: true));
     await getAllServices();

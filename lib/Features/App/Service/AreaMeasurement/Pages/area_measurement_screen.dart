@@ -171,6 +171,7 @@ class _AreaMeasurementScreenState extends State<AreaMeasurementScreen> {
   }
 
   Future<void> _onPlaneTapped(List<ARHitTestResult> hits) async {
+   final state =  context.read<AreaMeasurementCubit>().state;
 
     final hit = hits.first;
     final position = math.Vector3(
@@ -198,7 +199,7 @@ class _AreaMeasurementScreenState extends State<AreaMeasurementScreen> {
     addedNodes.add(node);
 
     // Add line from previous point if applicable
-   final state =  context.read<AreaMeasurementCubit>().state;
+    
     if (state.points.length >= 2) {
       // await _addLineBetweenLastPoints(state.points);
 

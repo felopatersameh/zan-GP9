@@ -5,7 +5,7 @@ import 'api_keys.dart';
 class DioHelperPayment {
   static late Dio dio;
 
-  static init() {
+  static void init() {
     dio = Dio(
       BaseOptions(
         baseUrl: AppEndPoint.baseUrlStripe,
